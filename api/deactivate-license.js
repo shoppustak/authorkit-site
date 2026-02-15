@@ -8,11 +8,18 @@
  * Returns: { success: boolean, message: string, data: object }
  */
 
+import {
+  setCorsHeaders,
+  setSecurityHeaders,
+  rateLimit,
+  validateInput,
+  logSecurityEvent
+} from './_lib/security.js';
+
 export default async function handler(req, res) {
-  // CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  // Set security headers
+  setSecurityHeaders(res);
+  setCorsHeaders(req, res);
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
@@ -25,14 +32,63 @@ export default async function handler(req, res) {
     });
   }
 
-  try {
-    const { license_key, site_url, instance_id } = req.body;
+  // Rate limiting - 15 deactivations per hour per IP
+  const clientIp = req.headers['x-forwarded-for']?.split(',')[0] || req.headers['x-real-ip'] || 'unknown';
+  const rateLimitResult = rateLimit(`deactivate:${clientIp}`, 15, 3600000);
 
-    // Validate input
-    if (!license_key || (!site_url && !instance_id)) {
+  if (!rateLimitResult.allowed) {
+    logSecurityEvent('rate_limit_exceeded', {
+      ip: clientIp,
+      endpoint: '/api/deactivate-license'
+    });
+
+    return res.status(429).json({
+      success: false,
+      message: 'Too many deactivation attempts. Please try again later.',
+      retryAfter: rateLimitResult.retryAfter
+    });
+  }
+
+  try {
+    // Validate and sanitize input
+    const validation = validateInput(req.body, {
+      license_key: {
+        type: 'string',
+        required: true,
+        maxLength: 500,
+        minLength: 10
+      },
+      site_url: {
+        type: 'url',
+        required: false
+      },
+      instance_id: {
+        type: 'string',
+        required: false,
+        maxLength: 100
+      }
+    });
+
+    if (!validation.isValid) {
+      logSecurityEvent('invalid_input', {
+        ip: clientIp,
+        errors: validation.errors
+      });
+
       return res.status(400).json({
         success: false,
-        message: 'Missing required fields: license_key and (site_url or instance_id)'
+        message: 'Invalid input',
+        errors: validation.errors
+      });
+    }
+
+    const { license_key, site_url, instance_id } = validation.data;
+
+    // Require either site_url or instance_id
+    if (!site_url && !instance_id) {
+      return res.status(400).json({
+        success: false,
+        message: 'Either site_url or instance_id is required'
       });
     }
 
@@ -80,19 +136,10 @@ export default async function handler(req, res) {
       });
     }
 
-    // Sanitize site URL for response
-    const cleanSiteUrl = site_url
-      ? site_url
-          .replace(/^https?:\/\//, '')
-          .replace(/^www\./, '')
-          .replace(/\/$/, '')
-          .toLowerCase()
-      : 'this site';
-
     // Return success
     return res.status(200).json({
       success: true,
-      message: `License successfully deactivated from ${cleanSiteUrl}`,
+      message: `License successfully deactivated from ${site_url || 'site'}`,
       data: {
         deactivated_at: new Date().toISOString()
       }
@@ -100,10 +147,18 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('License deactivation error:', error);
+
+    logSecurityEvent('deactivation_error', {
+      ip: clientIp,
+      error: error.message
+    });
+
+    const isDev = process.env.NODE_ENV === 'development';
+
     return res.status(500).json({
       success: false,
       message: 'Internal server error during license deactivation',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined
+      ...(isDev && { error: error.message })
     });
   }
 }

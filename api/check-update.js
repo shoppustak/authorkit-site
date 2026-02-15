@@ -8,6 +8,15 @@
  * Returns: { update_available: boolean, new_version: string, package: string, changelog: string }
  */
 
+import {
+  setCorsHeaders,
+  setSecurityHeaders,
+  rateLimit,
+  validateInput,
+  generateSecureToken,
+  logSecurityEvent
+} from './_lib/security.js';
+
 // Define available plugin versions
 // In production, you'd store this in a database or config file
 const PLUGIN_VERSIONS = {
@@ -61,10 +70,9 @@ const PLUGIN_VERSIONS = {
 };
 
 export default async function handler(req, res) {
-  // CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  // Set security headers
+  setSecurityHeaders(res);
+  setCorsHeaders(req, res);
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
@@ -76,15 +84,62 @@ export default async function handler(req, res) {
     });
   }
 
-  try {
-    const { license_key, plugin_slug, current_version, site_url } = req.body;
+  // Rate limiting - 30 update checks per hour per IP
+  const clientIp = req.headers['x-forwarded-for']?.split(',')[0] || req.headers['x-real-ip'] || 'unknown';
+  const rateLimitResult = rateLimit(`update:${clientIp}`, 30, 3600000);
 
-    // Validate input
-    if (!license_key || !plugin_slug || !current_version || !site_url) {
+  if (!rateLimitResult.allowed) {
+    logSecurityEvent('rate_limit_exceeded', {
+      ip: clientIp,
+      endpoint: '/api/check-update'
+    });
+
+    return res.status(429).json({
+      error: 'Too many requests',
+      retryAfter: rateLimitResult.retryAfter
+    });
+  }
+
+  try {
+    // Validate and sanitize input
+    const validation = validateInput(req.body, {
+      license_key: {
+        type: 'string',
+        required: true,
+        maxLength: 500,
+        minLength: 10
+      },
+      plugin_slug: {
+        type: 'string',
+        required: true,
+        maxLength: 100,
+        pattern: /^[a-z0-9-]+$/
+      },
+      current_version: {
+        type: 'string',
+        required: true,
+        maxLength: 20,
+        pattern: /^\d+\.\d+\.\d+$/
+      },
+      site_url: {
+        type: 'url',
+        required: true
+      }
+    });
+
+    if (!validation.isValid) {
+      logSecurityEvent('invalid_input', {
+        ip: clientIp,
+        errors: validation.errors
+      });
+
       return res.status(400).json({
-        error: 'Missing required fields'
+        error: 'Invalid input',
+        errors: validation.errors
       });
     }
+
+    const { license_key, plugin_slug, current_version, site_url } = validation.data;
 
     const lsApiKey = process.env.LEMON_SQUEEZY_API_KEY;
 
@@ -161,9 +216,14 @@ export default async function handler(req, res) {
       });
     }
 
-    // Generate secure download URL with temporary token
-    const downloadToken = generateDownloadToken(license_key, plugin_slug);
-    const secureDownloadUrl = `${latestVersion.download_url}?token=${downloadToken}&license=${encodeURIComponent(license_key)}`;
+    // Generate secure download URL with JWT-like token (1 hour expiry)
+    const downloadToken = generateSecureToken({
+      license_key: license_key.substring(0, 16), // Only store partial key
+      plugin_slug: plugin_slug,
+      site_url: site_url
+    }, 3600); // 1 hour expiry
+
+    const secureDownloadUrl = `${latestVersion.download_url}?token=${encodeURIComponent(downloadToken)}`;
 
     // Update available - return update info in WordPress format
     return res.status(200).json({
@@ -192,9 +252,18 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('Update check error:', error);
+
+    logSecurityEvent('update_check_error', {
+      ip: clientIp,
+      error: error.message
+    });
+
+    const isDev = process.env.NODE_ENV === 'development';
+
     return res.status(500).json({
       error: 'Internal server error',
-      message: 'Failed to check for updates'
+      message: 'Failed to check for updates',
+      ...(isDev && { details: error.message })
     });
   }
 }
@@ -216,16 +285,4 @@ function compareVersions(v1, v2) {
   }
 
   return 0;
-}
-
-/**
- * Generate a secure download token
- * In production, use JWT or a proper signing mechanism
- */
-function generateDownloadToken(licenseKey, pluginSlug) {
-  const timestamp = Date.now();
-  const payload = `${licenseKey}:${pluginSlug}:${timestamp}`;
-
-  // Simple base64 encoding (in production, use proper JWT)
-  return Buffer.from(payload).toString('base64');
 }

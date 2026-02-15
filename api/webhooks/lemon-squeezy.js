@@ -9,11 +9,39 @@
  */
 
 import crypto from 'crypto';
+import { setSecurityHeaders, logSecurityEvent } from '../_lib/security.js';
+
+// Vercel configuration to get raw body for signature verification
+export const config = {
+  api: {
+    bodyParser: false // Disable body parsing to get raw body
+  }
+};
+
+/**
+ * Parse raw body from request
+ */
+async function getRawBody(req) {
+  return new Promise((resolve, reject) => {
+    let data = '';
+    req.on('data', chunk => {
+      data += chunk;
+    });
+    req.on('end', () => {
+      resolve(data);
+    });
+    req.on('error', reject);
+  });
+}
 
 export default async function handler(req, res) {
+  setSecurityHeaders(res);
+
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
+
+  const clientIp = req.headers['x-forwarded-for']?.split(',')[0] || req.headers['x-real-ip'] || 'unknown';
 
   try {
     // Get webhook signature from headers
@@ -22,12 +50,15 @@ export default async function handler(req, res) {
 
     if (!webhookSecret) {
       console.error('Webhook secret not configured');
+      logSecurityEvent('webhook_config_error', { ip: clientIp });
       return res.status(500).json({ error: 'Webhook not configured' });
     }
 
+    // Get raw body for signature verification
+    const rawBody = await getRawBody(req);
+
     // Verify webhook signature
     if (signature) {
-      const rawBody = JSON.stringify(req.body);
       const expectedSignature = crypto
         .createHmac('sha256', webhookSecret)
         .update(rawBody)
@@ -35,12 +66,22 @@ export default async function handler(req, res) {
 
       if (signature !== expectedSignature) {
         console.error('Invalid webhook signature');
+        logSecurityEvent('webhook_invalid_signature', {
+          ip: clientIp,
+          signature: signature.substring(0, 10) + '...'
+        });
         return res.status(401).json({ error: 'Invalid signature' });
+      }
+    } else {
+      // Signature missing - reject in production
+      if (process.env.NODE_ENV === 'production') {
+        logSecurityEvent('webhook_missing_signature', { ip: clientIp });
+        return res.status(401).json({ error: 'Missing signature' });
       }
     }
 
-    // Parse webhook event
-    const event = req.body;
+    // Parse body after verification
+    const event = JSON.parse(rawBody);
     const eventName = event.meta?.event_name;
     const eventData = event.data;
 
@@ -104,9 +145,17 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('[Webhook] Error processing webhook:', error);
+
+    logSecurityEvent('webhook_processing_error', {
+      ip: clientIp,
+      error: error.message
+    });
+
+    const isDev = process.env.NODE_ENV === 'development';
+
     return res.status(500).json({
       error: 'Webhook processing failed',
-      message: error.message
+      ...(isDev && { message: error.message })
     });
   }
 }

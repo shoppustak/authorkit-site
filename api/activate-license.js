@@ -8,11 +8,18 @@
  * Returns: { success: boolean, message: string, data: object }
  */
 
+import {
+  setCorsHeaders,
+  setSecurityHeaders,
+  rateLimit,
+  validateInput,
+  logSecurityEvent
+} from './_lib/security.js';
+
 export default async function handler(req, res) {
-  // CORS headers
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  // Set security headers
+  setSecurityHeaders(res);
+  setCorsHeaders(req, res);
 
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
@@ -25,23 +32,57 @@ export default async function handler(req, res) {
     });
   }
 
-  try {
-    const { license_key, site_url, site_name } = req.body;
+  // Rate limiting - 10 activations per hour per IP
+  const clientIp = req.headers['x-forwarded-for']?.split(',')[0] || req.headers['x-real-ip'] || 'unknown';
+  const rateLimitResult = rateLimit(`activate:${clientIp}`, 10, 3600000);
 
-    // Validate input
-    if (!license_key || !site_url) {
+  if (!rateLimitResult.allowed) {
+    logSecurityEvent('rate_limit_exceeded', {
+      ip: clientIp,
+      endpoint: '/api/activate-license'
+    });
+
+    return res.status(429).json({
+      success: false,
+      message: 'Too many activation attempts. Please try again later.',
+      retryAfter: rateLimitResult.retryAfter
+    });
+  }
+
+  try {
+    // Validate and sanitize input
+    const validation = validateInput(req.body, {
+      license_key: {
+        type: 'string',
+        required: true,
+        maxLength: 500,
+        minLength: 10
+      },
+      site_url: {
+        type: 'url',
+        required: true
+      },
+      site_name: {
+        type: 'string',
+        required: false,
+        maxLength: 255
+      }
+    });
+
+    if (!validation.isValid) {
+      logSecurityEvent('invalid_input', {
+        ip: clientIp,
+        errors: validation.errors
+      });
+
       return res.status(400).json({
         success: false,
-        message: 'Missing required fields: license_key and site_url'
+        message: 'Invalid input',
+        errors: validation.errors
       });
     }
 
-    // Sanitize site URL
-    const cleanSiteUrl = site_url
-      .replace(/^https?:\/\//, '')
-      .replace(/^www\./, '')
-      .replace(/\/$/, '')
-      .toLowerCase();
+    const { license_key, site_url, site_name } = validation.data;
 
     const lsApiKey = process.env.LEMON_SQUEEZY_API_KEY;
 
@@ -206,10 +247,18 @@ export default async function handler(req, res) {
 
   } catch (error) {
     console.error('License activation error:', error);
+
+    logSecurityEvent('activation_error', {
+      ip: clientIp,
+      error: error.message
+    });
+
+    const isDev = process.env.NODE_ENV === 'development';
+
     return res.status(500).json({
       success: false,
       message: 'Internal server error during license activation',
-      error: process.env.NODE_ENV === 'development' ? error.message : undefined
+      ...(isDev && { error: error.message })
     });
   }
 }
