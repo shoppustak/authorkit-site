@@ -1,43 +1,64 @@
-# Astro Starter Kit: Minimal
+# AuthorKit Website
 
-```sh
-npm create astro@latest -- --template minimal
+Professional static website for AuthorKit WordPress plugins.
+
+## 🌐 Overview
+
+This is the marketing website for AuthorKit, a suite of WordPress plugins designed for self-publishing authors. The site is built with vanilla HTML, CSS (Tailwind via CDN), and JavaScript for maximum performance and simplicity.
+
+## 📁 Structure
+
+```
+authorkit-site/
+├── index.html              # Homepage
+├── pages/
+│   ├── features.html       # Features page
+│   ├── pricing.html        # Pricing page
+│   ├── docs.html           # Documentation
+│   └── download.html       # Download page
+├── css/
+│   └── style.css          # Custom styles
+├── js/
+│   └── main.js            # Interactive features
+├── images/                # Images and icons
+└── README.md             # This file
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Features
 
-## 🚀 Project Structure
+- **Fully Responsive** - Works on all devices
+- **Fast Loading** - Vanilla HTML/CSS/JS, no build process
+- **SEO Optimized** - Semantic HTML, meta tags
+- **Accessible** - WCAG compliant, keyboard navigation
+- **Tailwind CSS** - Via CDN for rapid styling
+- **Mobile Menu** - Touch-friendly navigation
+- **Smooth Scrolling** - Enhanced user experience
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠️ Technologies
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+- HTML5
+- CSS3 (Tailwind CSS via CDN)
+- Vanilla JavaScript (ES6+)
+- No build tools required
+
+## 🚀 Deployment
+
+**Recommended: Vercel**
+1. Push code to GitHub
+2. Import repository in Vercel
+3. Deploy (automatic)
+4. Connect domain: authorkit.pro
+
+## 🔧 Local Development
+
+Simply open `index.html` in a browser, or use a local server:
+
+```bash
+python3 -m http.server 8000
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Then visit `http://localhost:8000`
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+---
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+**Built with ❤️ for self-publishing authors**

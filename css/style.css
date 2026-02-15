@@ -1,0 +1,321 @@
+/* AuthorKit Site Custom Styles */
+
+/* ==========================================
+   AUTHORKIT BRAND COLORS - Matches WordPress Plugins
+   ========================================== */
+:root {
+    /* Primary Orange (from plugins - buttons, CTAs, badges) */
+    --authorkit-orange: #ff9900;
+    --authorkit-orange-hover: #e88900;
+    --authorkit-orange-dark: #d97706;
+
+    /* Secondary Navy Blue (from logo - text, accents) */
+    --authorkit-navy: #1E3A5F;
+    --authorkit-navy-light: #2C5282;
+    --authorkit-navy-dark: #152C46;
+
+    /* Additional Colors */
+    --authorkit-star-orange: #ffa41c;
+    --authorkit-price-orange: #c45500;
+    --authorkit-wp-blue: #2271b1;
+
+    /* Neutrals */
+    --authorkit-gray-50: #F9FAFB;
+    --authorkit-gray-100: #F3F4F6;
+    --authorkit-gray-200: #e0e0e0;
+    --authorkit-gray-600: #646970;
+    --authorkit-gray-900: #1d2327;
+}
+
+/* ==========================================
+   TAILWIND OVERRIDES - Match Plugin Styling
+   ========================================== */
+
+/* Primary Buttons = ORANGE (like plugins) */
+.bg-blue-600 { background-color: var(--authorkit-orange) !important; }
+.bg-blue-700 { background-color: var(--authorkit-orange-hover) !important; }
+.hover\:bg-blue-700:hover { background-color: var(--authorkit-orange-hover) !important; }
+.hover\:bg-blue-800:hover { background-color: var(--authorkit-orange-dark) !important; }
+
+/* Text Links = Navy Blue */
+.text-blue-600 { color: var(--authorkit-navy) !important; }
+.text-blue-700 { color: var(--authorkit-navy-dark) !important; }
+.hover\:text-blue-600:hover { color: var(--authorkit-orange) !important; }
+.hover\:text-blue-700:hover { color: var(--authorkit-orange) !important; }
+
+/* Borders */
+.border-blue-600 { border-color: var(--authorkit-orange) !important; }
+.border-blue-200 { border-color: #BFDBFE !important; }
+
+/* Backgrounds - Light */
+.bg-blue-50 { background-color: #fff7ed !important; }
+.bg-blue-100 { background-color: #ffedd5 !important; }
+.text-blue-100 { color: #ffedd5 !important; }
+
+/* Orange Utility Classes */
+.bg-orange-600 { background-color: var(--authorkit-orange) !important; }
+.text-orange-600 { color: var(--authorkit-orange) !important; }
+.border-orange-600 { border-color: var(--authorkit-orange) !important; }
+.hover\:bg-orange-700:hover { background-color: var(--authorkit-orange-hover) !important; }
+
+/* Navy Utility Classes */
+.bg-navy-600 { background-color: var(--authorkit-navy) !important; }
+.text-navy-600 { color: var(--authorkit-navy) !important; }
+.border-navy-600 { border-color: var(--authorkit-navy) !important; }
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Code Blocks */
+code {
+    font-family: 'Monaco', 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+/* Custom Utilities */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+/* Focus States */
+a:focus,
+button:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    nav,
+    footer,
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out;
+}
+
+#mobile-menu.hidden {
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobile-menu:not(.hidden) {
+    max-height: 500px;
+}
+
+/* Hero Background Pattern (optional) */
+.hero-pattern {
+    background-image:
+        linear-gradient(to right, rgba(30, 58, 95, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(30, 58, 95, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* AuthorKit Plugin-Style Components */
+
+/* Buttons matching plugin style */
+.authorkit-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--authorkit-orange);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.authorkit-button:hover {
+    background-color: var(--authorkit-orange-hover);
+    color: white;
+}
+
+.authorkit-button-secondary {
+    background-color: transparent;
+    color: var(--authorkit-navy);
+    border: 2px solid var(--authorkit-navy);
+}
+
+.authorkit-button-secondary:hover {
+    background-color: var(--authorkit-navy);
+    color: white;
+}
+
+/* Coming Soon Badge - matching plugins */
+.authorkit-badge {
+    display: inline-block;
+    background: var(--authorkit-orange);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Star Rating - matching plugins */
+.authorkit-star-rating {
+    display: inline-flex;
+    gap: 2px;
+    color: var(--authorkit-star-orange);
+}
+
+/* Card with plugin-style shadow */
+.authorkit-card {
+    background: white;
+    border: 1px solid var(--authorkit-gray-200);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.authorkit-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient Text - Navy to Orange */
+.gradient-text {
+    background: linear-gradient(135deg, var(--authorkit-navy), var(--authorkit-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Custom Scrollbar - Orange */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--authorkit-orange);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--authorkit-orange-hover);
+}
+
+/* Loading State */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Success/Error Messages */
+.message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.message-success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border-left: 4px solid #10b981;
+}
+
+.message-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border-left: 4px solid #ef4444;
+}
+
+.message-info {
+    background-color: #fff7ed;
+    color: var(--authorkit-navy-dark);
+    border-left: 4px solid var(--authorkit-orange);
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.5rem !important;
+    }
+
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    h3 {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Skip to main content link - Orange */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--authorkit-orange);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Logo Styling */
+.logo-img {
+    height: 40px;
+    width: auto;
+}
+
+/* Dark mode support (optional for future) */
+@media (prefers-color-scheme: dark) {
+    /* Dark mode styles can be added here if needed */
+}
