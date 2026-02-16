@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog - AuthorKit</title>
+    <meta name="description" content="AuthorKit version history and changelog.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="flex items-center">
+                        <img src="../images/logo.jpg" alt="AuthorKit" class="logo-img">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="features.html" class="text-gray-600 hover:text-blue-600">Features</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-blue-600">Pricing</a>
+                    <a href="docs.html" class="text-gray-600 hover:text-blue-600">Docs</a>
+                    <a href="download.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Download Free</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Home</a>
+                <a href="features.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Features</a>
+                <a href="pricing.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Pricing</a>
+                <a href="docs.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Docs</a>
+                <a href="download.html" class="block px-3 py-2 text-blue-600 font-medium">Download Free</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl font-bold text-gray-900 mb-4">Changelog</h1>
+            <p class="text-xl text-gray-600">Version history and updates</p>
+        </div>
+    </section>
+
+    <!-- Changelog Content -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Version 1.0.0 -->
+            <div class="bg-white rounded-xl shadow-sm p-8 mb-6">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">Version 1.0.0</h2>
+                        <p class="text-gray-600">February 16, 2026</p>
+                    </div>
+                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">Latest</span>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-2">🎉 New Features</h3>
+                        <ul class="list-disc pl-6 text-gray-700 space-y-1">
+                            <li>Initial release of AuthorKit Core plugin</li>
+                            <li>Books Module with 27 custom meta fields</li>
+                            <li>3 taxonomies: Categories, Series, Age Range</li>
+                            <li>Amazon-style book display templates</li>
+                            <li>Schema.org structured data for SEO</li>
+                            <li>Multiple format support (Kindle, Paperback, Audio, etc.)</li>
+                            <li>Purchase links integration</li>
+                            <li>Coming soon badges for unreleased books</li>
+                            <li>Author bio and social links</li>
+                            <li>Shortcodes for displaying books</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-2">🔧 Technical</h3>
+                        <ul class="list-disc pl-6 text-gray-700 space-y-1">
+                            <li>Built with vanilla PHP and JavaScript (no dependencies)</li>
+                            <li>WordPress 5.0+ compatibility</li>
+                            <li>PHP 7.0+ required</li>
+                            <li>GPL v2.0+ licensed</li>
+                            <li>Optimized for performance and speed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Releases -->
+            <div class="bg-blue-50 rounded-xl p-8 border-2 border-blue-200">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Upcoming Releases</h2>
+
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <h3 class="font-bold text-gray-900">Version 1.1.0</h3>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-semibold">Q2 2026</span>
+                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 space-y-1 text-sm">
+                            <li>AuthorKit Reviews module release</li>
+                            <li>5-star rating system</li>
+                            <li>Review moderation queue</li>
+                            <li>Verified purchase badges</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <h3 class="font-bold text-gray-900">Version 1.2.0</h3>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-semibold">Q2 2026</span>
+                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 space-y-1 text-sm">
+                            <li>AuthorKit Contest Manager module release</li>
+                            <li>Giveaway and competition functionality</li>
+                            <li>Entry management dashboard</li>
+                            <li>Random winner selection</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <h3 class="font-bold text-gray-900">Premium Add-ons</h3>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-semibold">Q3 2026</span>
+                        </div>
+                        <ul class="list-disc pl-6 text-gray-700 space-y-1 text-sm">
+                            <li>Launch Countdown module</li>
+                            <li>Landing Page Generator</li>
+                            <li>Series Tracker</li>
+                            <li>Reader Magnets</li>
+                            <li>Book Links Hub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscribe for Updates -->
+            <div class="mt-12 text-center">
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Stay Updated</h3>
+                <p class="text-gray-600 mb-6">Want to be notified about new releases and updates?</p>
+                <a href="mailto:support@authorkit.pro?subject=Subscribe to Updates" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">
+                    Subscribe to Updates
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-bold mb-4">AuthorKit</h3>
+                    <p class="text-sm">Professional WordPress plugins designed for self-publishing authors.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="features.html" class="hover:text-white">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                        <li><a href="download.html" class="hover:text-white">Free Plugins</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="docs.html" class="hover:text-white">Documentation</a></li>
+                        <li><a href="support.html" class="hover:text-white">Support</a></li>
+                        <li><a href="changelog.html" class="hover:text-white">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="terms-of-use.html" class="hover:text-white">Terms of Use</a></li>
+                        <li><a href="refund-policy.html" class="hover:text-white">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm text-center">
+                <p>&copy; 2026 AuthorKit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
