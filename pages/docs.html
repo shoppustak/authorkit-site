@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation - AuthorKit</title>
-    <meta name="description" content="Complete documentation for AuthorKit WordPress plugins.">
+    <meta name="description" content="Complete documentation for AuthorKit WordPress plugins. Installation guides, shortcode reference, developer docs and more.">
+    <meta http-equiv="refresh" content="0; url=https://authorkit.gitbook.io/authorkit-documentation">
+    <script>window.location.replace("https://authorkit.gitbook.io/authorkit-documentation");</script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -45,240 +47,20 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl font-bold text-gray-900 mb-4">Documentation</h1>
-            <p class="text-xl text-gray-600">Everything you need to get started with AuthorKit</p>
-        </div>
-    </section>
-
-    <!-- Content -->
-    <section class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Sidebar -->
-                <div class="lg:col-span-1">
-                    <div class="bg-white rounded-xl shadow-sm p-6 sticky top-24">
-                        <h3 class="font-bold text-gray-900 mb-4">Quick Links</h3>
-                        <ul class="space-y-2">
-                            <li><a href="#getting-started" class="text-blue-600 hover:text-blue-700">Getting Started</a></li>
-                            <li><a href="#installation" class="text-gray-600 hover:text-blue-600">Installation</a></li>
-                            <li><a href="#books-module" class="text-gray-600 hover:text-blue-600">Books Module</a></li>
-                            <li><a href="#reviews-module" class="text-gray-600 hover:text-blue-600">Reviews Module</a></li>
-                            <li><a href="#contest-manager" class="text-gray-600 hover:text-blue-600">Contest Manager</a></li>
-                            <li><a href="#shortcodes" class="text-gray-600 hover:text-blue-600">Shortcodes</a></li>
-                            <li><a href="#faq" class="text-gray-600 hover:text-blue-600">FAQ</a></li>
-                            <li><a href="#support" class="text-gray-600 hover:text-blue-600">Support</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Main Content -->
-                <div class="lg:col-span-2 space-y-12">
-                    <!-- Getting Started -->
-                    <div id="getting-started" class="bg-white rounded-xl shadow-sm p-8">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Getting Started</h2>
-                        <p class="text-gray-600 mb-4">
-                            AuthorKit is a suite of WordPress plugins designed specifically for self-publishing authors.
-                            This guide will help you get up and running in minutes.
-                        </p>
-                        <div class="bg-blue-50 border-l-4 border-blue-600 p-4 my-6">
-                            <p class="text-blue-900">
-                                <strong>Prerequisites:</strong> WordPress 5.0+ and PHP 7.0+ required.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Installation -->
-                    <div id="installation" class="bg-white rounded-xl shadow-sm p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Installation</h2>
-
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 mt-6">Method 1: WordPress.org (Recommended)</h3>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-4">
-                            <li>Log in to your WordPress admin panel</li>
-                            <li>Navigate to <strong>Plugins → Add New</strong></li>
-                            <li>Search for "AuthorKit"</li>
-                            <li>Click <strong>Install Now</strong> on the AuthorKit plugin</li>
-                            <li>Click <strong>Activate</strong> once installed</li>
-                        </ol>
-
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 mt-6">Method 2: Manual Upload</h3>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-4">
-                            <li>Download the plugin .zip file from WordPress.org</li>
-                            <li>Navigate to <strong>Plugins → Add New → Upload Plugin</strong></li>
-                            <li>Choose the .zip file and click <strong>Install Now</strong></li>
-                            <li>Click <strong>Activate</strong> once installed</li>
-                        </ol>
-
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 mt-6">Method 3: FTP Upload</h3>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-4">
-                            <li>Extract the .zip file</li>
-                            <li>Upload the <code class="bg-gray-100 px-2 py-1 rounded">authorkit</code> folder to <code class="bg-gray-100 px-2 py-1 rounded">/wp-content/plugins/</code></li>
-                            <li>Activate the plugin in WordPress admin under <strong>Plugins</strong></li>
-                        </ol>
-                    </div>
-
-                    <!-- Books Module -->
-                    <div id="books-module" class="bg-white rounded-xl shadow-sm p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Books Module</h2>
-                        <p class="text-gray-600 mb-4">
-                            The Books module provides complete catalog management for your published works.
-                        </p>
-
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 mt-6">Adding a Book</h3>
-                        <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-4">
-                            <li>Navigate to <strong>AuthorKit → Add New Book</strong></li>
-                            <li>Enter the book title and description</li>
-                            <li>Add a featured image (book cover)</li>
-                            <li>Fill in meta fields (ISBN, price, rating, etc.)</li>
-                            <li>Add purchase links (Amazon, etc.)</li>
-                            <li>Assign categories and series</li>
-                            <li>Click <strong>Publish</strong></li>
-                        </ol>
-
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 mt-6">Book Meta Fields</h3>
-                        <div class="bg-gray-50 p-4 rounded-lg">
-                            <ul class="space-y-1 text-gray-600 text-sm">
-                                <li>• Sort Order</li>
-                                <li>• Coming Soon Status + Release Date</li>
-                                <li>• Author Name + Profile URL</li>
-                                <li>• Illustrator Name + Profile URL</li>
-                                <li>• Star Rating (0-5)</li>
-                                <li>• Review Count</li>
-                                <li>• Available Formats (Kindle, Paperback, Hardcover, Board Book, Audio CD, Audiobook)</li>
-                                <li>• ISBN, ASIN</li>
-                                <li>• Pages, Publisher</li>
-                                <li>• Publication Date, Language</li>
-                                <li>• Dimensions, Weight</li>
-                                <li>• Prices (INR, USD)</li>
-                                <li>• Purchase Links (Amazon India, Amazon.com, Other)</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Reviews Module -->
-                    <div id="reviews-module" class="bg-white rounded-xl shadow-sm p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Reviews Module</h2>
-                        <p class="text-gray-600 mb-4">
-                            Add Amazon-style reader reviews to your books with moderation controls.
-                        </p>
-
-                        <h3 class="text-xl font-semibold text-gray-900 mb-3 mt-6">Features</h3>
-                        <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
-                            <li>5-star rating system</li>
-                            <li>Frontend submission forms</li>
-                            <li>Moderation queue</li>
-                            <li>Verified purchase badges</li>
-                            <li>Helpful/not helpful voting</li>
-                            <li>Schema.org markup for SEO</li>
-                        </ul>
-
-                        <div class="bg-yellow-50 border-l-4 border-yellow-600 p-4 my-6">
-                            <p class="text-yellow-900">
-                                <strong>Coming Soon:</strong> Full documentation will be available when the Reviews module is released.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Contest Manager -->
-                    <div id="contest-manager" class="bg-white rounded-xl shadow-sm p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Contest Manager</h2>
-                        <p class="text-gray-600 mb-4">
-                            Run book giveaways and competitions to grow your audience.
-                        </p>
-
-                        <div class="bg-yellow-50 border-l-4 border-yellow-600 p-4 my-6">
-                            <p class="text-yellow-900">
-                                <strong>Coming Soon:</strong> Full documentation will be available when Contest Manager is released.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Shortcodes -->
-                    <div id="shortcodes" class="bg-white rounded-xl shadow-sm p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Shortcodes</h2>
-                        <p class="text-gray-600 mb-4">
-                            Display books anywhere on your site using shortcodes.
-                        </p>
-
-                        <div class="space-y-6">
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Display Single Book</h3>
-                                <code class="block bg-gray-100 p-3 rounded text-sm">[authorkit_book id="123"]</code>
-                                <p class="text-sm text-gray-600 mt-2">Replace <code class="bg-gray-100 px-1">123</code> with your book's post ID</p>
-                            </div>
-
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Display Book Grid</h3>
-                                <code class="block bg-gray-100 p-3 rounded text-sm">[authorkit_books count="6" columns="3"]</code>
-                            </div>
-
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Display Books by Category</h3>
-                                <code class="block bg-gray-100 p-3 rounded text-sm">[authorkit_books category="fiction" count="4"]</code>
-                            </div>
-                        </div>
-
-                        <div class="bg-yellow-50 border-l-4 border-yellow-600 p-4 my-6">
-                            <p class="text-yellow-900">
-                                <strong>Coming Soon:</strong> Full shortcode documentation with all parameters.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ -->
-                    <div id="faq" class="bg-white rounded-xl shadow-sm p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">FAQ</h2>
-
-                        <div class="space-y-6">
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Is AuthorKit compatible with my theme?</h3>
-                                <p class="text-gray-600">Yes! AuthorKit is designed to work with any properly coded WordPress theme.</p>
-                            </div>
-
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Will it slow down my website?</h3>
-                                <p class="text-gray-600">No. AuthorKit uses vanilla PHP and JavaScript with no dependencies, ensuring minimal performance impact.</p>
-                            </div>
-
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Can I use it with WooCommerce?</h3>
-                                <p class="text-gray-600">Yes, but it's not required. AuthorKit works standalone or alongside WooCommerce.</p>
-                            </div>
-
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Do I need coding skills?</h3>
-                                <p class="text-gray-600">No! AuthorKit is designed for non-technical users with an intuitive admin interface.</p>
-                            </div>
-
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-900 mb-2">How do I get support?</h3>
-                                <p class="text-gray-600">Free users can use the WordPress.org support forums. Premium users get priority email support.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Support -->
-                    <div id="support" class="bg-white rounded-xl shadow-sm p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-4">Support</h2>
-
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="border border-gray-200 rounded-lg p-6">
-                                <h3 class="font-semibold text-gray-900 mb-2">Free Support</h3>
-                                <p class="text-gray-600 text-sm mb-4">Community support via WordPress.org forums</p>
-                                <a href="https://wordpress.org/support/plugin/authorkit/" class="text-blue-600 hover:text-blue-700 text-sm">Visit Forums →</a>
-                            </div>
-
-                            <div class="border border-blue-200 rounded-lg p-6 bg-blue-50">
-                                <h3 class="font-semibold text-gray-900 mb-2">Premium Support</h3>
-                                <p class="text-gray-600 text-sm mb-4">Priority email support for Pro & Agency customers</p>
-                                <a href="mailto:support@authorkit.pro" class="text-blue-600 hover:text-blue-700 text-sm">Email Support →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Redirect message -->
+    <section class="min-h-screen flex items-center justify-center py-20">
+        <div class="max-w-lg mx-auto px-4 text-center">
+            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
             </div>
+            <h1 class="text-2xl font-bold text-gray-900 mb-3">Taking you to the docs...</h1>
+            <p class="text-gray-600 mb-8">AuthorKit documentation is hosted on GitBook. You should be redirected automatically.</p>
+            <a href="https://authorkit.gitbook.io/authorkit-documentation"
+               class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition">
+                Open Documentation
+            </a>
         </div>
     </section>
 
@@ -301,7 +83,7 @@
                 <div>
                     <h4 class="text-white font-semibold mb-4">Resources</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="docs.html" class="hover:text-white">Documentation</a></li>
+                        <li><a href="https://authorkit.gitbook.io/authorkit-documentation" class="hover:text-white">Documentation</a></li>
                         <li><a href="support.html" class="hover:text-white">Support</a></li>
                         <li><a href="changelog.html" class="hover:text-white">Changelog</a></li>
                     </ul>
