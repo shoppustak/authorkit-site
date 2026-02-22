@@ -18,13 +18,17 @@ function createBookCard(book) {
     const card = document.createElement('div');
     card.className = 'book-card';
 
-    // Cover image
+    // Cover image wrapper
+    const coverWrapper = document.createElement('div');
+    coverWrapper.className = 'book-cover-wrapper';
+
     const coverImg = document.createElement('img');
     coverImg.src = book.cover.medium || book.cover.large || '/images/placeholder-book.jpg';
     coverImg.alt = book.title;
     coverImg.className = 'book-cover';
     coverImg.loading = 'lazy';
-    card.appendChild(coverImg);
+    coverWrapper.appendChild(coverImg);
+    card.appendChild(coverWrapper);
 
     // Book info container
     const info = document.createElement('div');
