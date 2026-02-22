@@ -13,11 +13,10 @@
       "schedule": "0 0 */6 * *"
     }
   ],
-  "redirects": [
+  "rewrites": [
     {
       "source": "/",
-      "destination": "/pages/bookshelf/index.html",
-      "permanent": false,
+      "destination": "/public/bookshelf/index.html",
       "has": [
         {
           "type": "host",
@@ -27,8 +26,7 @@
     },
     {
       "source": "/browse",
-      "destination": "/pages/bookshelf/browse.html",
-      "permanent": false,
+      "destination": "/public/bookshelf/browse.html",
       "has": [
         {
           "type": "host",
