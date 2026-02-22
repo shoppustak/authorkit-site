@@ -112,32 +112,40 @@ export default async function handler(req, res) {
     }
 
     // Format books data
-    const formattedBooks = books.map(book => ({
-      id: book.id,
-      title: book.title,
-      slug: book.slug,
-      description: book.description,
-      cover: {
-        medium: book.cover_medium,
-        large: book.cover_large
-      },
-      author: {
-        name: book.author_name,
-        bio: book.author_bio,
-        site_url: book.site_url
-      },
-      genres: book.bookshelf_book_genres?.map(g => g.genre_slug) || [],
-      purchase_links: {
-        amazon_in: book.purchase_amazon_in,
-        amazon_com: book.purchase_amazon_com,
-        other: book.purchase_other
-      },
-      formats: book.formats ? JSON.parse(book.formats) : [],
-      rating: book.rating,
-      review_count: book.review_count,
-      publication_date: book.publication_date,
-      synced_at: book.synced_at
-    }));
+    const formattedBooks = books.map(book => {
+      // Construct the full book URL (assumes default 'books' slug)
+      // Format: site_url/books/book-slug
+      const siteUrl = book.site_url.replace(/\/$/, ''); // Remove trailing slash
+      const bookUrl = book.slug ? `${siteUrl}/books/${book.slug}` : siteUrl;
+
+      return {
+        id: book.id,
+        title: book.title,
+        slug: book.slug,
+        description: book.description,
+        book_url: bookUrl,
+        cover: {
+          medium: book.cover_medium,
+          large: book.cover_large
+        },
+        author: {
+          name: book.author_name,
+          bio: book.author_bio,
+          site_url: book.site_url
+        },
+        genres: book.bookshelf_book_genres?.map(g => g.genre_slug) || [],
+        purchase_links: {
+          amazon_in: book.purchase_amazon_in,
+          amazon_com: book.purchase_amazon_com,
+          other: book.purchase_other
+        },
+        formats: book.formats ? JSON.parse(book.formats) : [],
+        rating: book.rating,
+        review_count: book.review_count,
+        publication_date: book.publication_date,
+        synced_at: book.synced_at
+      };
+    });
 
     // Get stats (total books and authors)
     const { count: totalBooks } = await supabase

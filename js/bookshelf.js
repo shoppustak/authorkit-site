@@ -84,7 +84,7 @@ function createBookCard(book) {
 
     // View on Author's Site button
     const viewSiteBtn = document.createElement('a');
-    viewSiteBtn.href = book.author.site_url;
+    viewSiteBtn.href = book.book_url || book.author.site_url;
     viewSiteBtn.className = 'btn-view-site';
     viewSiteBtn.textContent = "View on Author's Site";
     viewSiteBtn.target = '_blank';
