@@ -8,5 +8,8 @@
   },
   "keywords": ["authorkit", "wordpress", "plugins", "authors"],
   "author": "AuthorKit",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  }
 }

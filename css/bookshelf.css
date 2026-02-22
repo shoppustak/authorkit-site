@@ -1,0 +1,525 @@
+/**
+ * AuthorKit Bookshelf Styles
+ * Styles specific to bookshelf.authorkit.pro pages
+ */
+
+/* ============================================================================
+   Hero Section
+   ========================================================================= */
+.bookshelf-hero {
+    background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.bookshelf-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #EF8E30;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background: #EF8E30;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.3s;
+}
+
+.btn-cta:hover {
+    background: #d97d28;
+}
+
+/* ============================================================================
+   Featured Books Section
+   ========================================================================= */
+.featured-books {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.featured-books h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1E3A5F;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.section-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: #1E3A5F;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #2C5282;
+}
+
+/* ============================================================================
+   Book Card
+   ========================================================================= */
+.book-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.book-cover {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    background: #e0e0e0;
+}
+
+.book-info {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.book-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1E3A5F;
+    line-height: 1.3;
+}
+
+.book-author {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.75rem;
+}
+
+.book-genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1rem;
+}
+
+.genre-badge {
+    background: #EF8E30;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.book-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.stars {
+    color: #f4b824;
+}
+
+.book-actions {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-view-site {
+    display: block;
+    background: #1E3A5F;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-view-site:hover {
+    background: #2C5282;
+}
+
+.btn-buy {
+    display: block;
+    background: #EF8E30;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-buy:hover {
+    background: #d97d28;
+}
+
+/* ============================================================================
+   Genre Links Section
+   ========================================================================= */
+.genre-links {
+    padding: 80px 20px;
+    background: white;
+}
+
+.genre-links h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #1E3A5F;
+}
+
+.genre-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.genre-card {
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #1E3A5F;
+    transition: all 0.3s;
+}
+
+.genre-card:hover {
+    background: #1E3A5F;
+    color: white;
+    border-color: #1E3A5F;
+    transform: translateY(-4px);
+}
+
+.genre-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.genre-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* ============================================================================
+   CTA Section
+   ========================================================================= */
+.cta-section {
+    background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* ============================================================================
+   Browse Page
+   ========================================================================= */
+.browse-header {
+    background: linear-gradient(135deg, #1E3A5F 0%, #2C5282 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.browse-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.browse-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.browse-content {
+    padding: 60px 20px;
+    background: #f8f9fa;
+}
+
+.browse-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+}
+
+/* Sidebar */
+.browse-sidebar {
+    background: white;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.filter-section {
+    margin-bottom: 30px;
+}
+
+.filter-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #1E3A5F;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #EF8E30;
+}
+
+.genre-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.genre-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.genre-checkbox:hover {
+    background: #f8f9fa;
+}
+
+.genre-checkbox input {
+    cursor: pointer;
+}
+
+.sort-select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: white;
+    cursor: pointer;
+}
+
+.sort-select:focus {
+    outline: none;
+    border-color: #EF8E30;
+}
+
+.btn-reset {
+    width: 100%;
+    padding: 12px;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-reset:hover {
+    background: #d0d0d0;
+}
+
+/* Main Content */
+.browse-main {
+    min-height: 600px;
+}
+
+.browse-controls {
+    margin-bottom: 24px;
+}
+
+.results-count {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.page-btn {
+    padding: 10px 16px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: #1E3A5F;
+    color: white;
+    border-color: #1E3A5F;
+}
+
+.page-btn.active {
+    background: #EF8E30;
+    color: white;
+    border-color: #EF8E30;
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ============================================================================
+   Utility States
+   ========================================================================= */
+.loading {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.error {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 1.1rem;
+    color: #d32f2f;
+}
+
+.no-books {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* ============================================================================
+   Responsive Design
+   ========================================================================= */
+@media (max-width: 768px) {
+    .bookshelf-hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-stats {
+        gap: 30px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .browse-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .browse-sidebar {
+        position: static;
+    }
+
+    .genre-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
