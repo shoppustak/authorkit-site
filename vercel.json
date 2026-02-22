@@ -16,7 +16,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/public/bookshelf/index.html",
+      "destination": "/bookshelf-index.html",
       "has": [
         {
           "type": "host",
@@ -26,13 +26,17 @@
     },
     {
       "source": "/browse",
-      "destination": "/public/bookshelf/browse.html",
+      "destination": "/bookshelf-browse.html",
       "has": [
         {
           "type": "host",
           "value": "bookshelf.authorkit.pro"
         }
       ]
+    },
+    {
+      "source": "/:path*",
+      "destination": "/:path*"
     }
   ]
 }
