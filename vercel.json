@@ -12,17 +12,5 @@
       "path": "/api/bookshelf/keepalive",
       "schedule": "0 0 */6 * *"
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "bookshelf.authorkit.pro"
-        }
-      ],
-      "destination": "/pages/bookshelf/:path*"
-    }
   ]
 }
