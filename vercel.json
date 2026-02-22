@@ -12,37 +12,5 @@
       "path": "/api/bookshelf/keepalive",
       "schedule": "0 0 */6 * *"
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/pages/bookshelf/index.html",
-      "has": [
-        {
-          "type": "host",
-          "value": "bookshelf.authorkit.pro"
-        }
-      ]
-    },
-    {
-      "source": "/browse",
-      "destination": "/pages/bookshelf/browse.html",
-      "has": [
-        {
-          "type": "host",
-          "value": "bookshelf.authorkit.pro"
-        }
-      ]
-    },
-    {
-      "source": "/:path(.*)",
-      "destination": "/pages/bookshelf/:path",
-      "has": [
-        {
-          "type": "host",
-          "value": "bookshelf.authorkit.pro"
-        }
-      ]
-    }
   ]
 }
