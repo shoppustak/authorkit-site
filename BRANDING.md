@@ -66,6 +66,29 @@ Orange accent classes are also available:
 - **Body**: Default sans-serif
 - **Logo**: Uses actual logo image, no custom font needed
 
+## Product Naming Convention
+
+**IMPORTANT**: Product names use the format "AuthorKit XXXX" (without "for")
+
+### Correct Format:
+- ✅ AuthorKit Books
+- ✅ AuthorKit Reviews
+- ✅ AuthorKit Contests
+- ✅ AuthorKit Bookshelf
+- ✅ AuthorKit Launches
+
+### Incorrect Format:
+- ❌ AuthorKit for Books
+- ❌ AuthorKit for Reviews
+- ❌ AuthorKit for Contests
+
+This applies to:
+- Page titles and headings
+- Product descriptions
+- Navigation items
+- Marketing copy
+- Documentation
+
 ## Design Principles
 
 1. **Professional** - Clean, modern layout
