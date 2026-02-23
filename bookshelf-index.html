@@ -58,14 +58,29 @@
     <!-- Featured Books Section -->
     <section class="featured-books">
         <div class="container">
-            <div class="section-header">
-                <h2>Latest Additions</h2>
-                <p>Discover the newest books added to our collection</p>
+            <!-- Section Header with Sort -->
+            <div class="books-header">
+                <div class="books-header-left">
+                    <h2>Latest Additions</h2>
+                    <p class="books-count" id="books-count">Loading...</p>
+                </div>
+                <div class="books-header-right">
+                    <label for="index-sort" class="sort-label">Sort by:</label>
+                    <select id="index-sort" class="index-sort-select">
+                        <option value="latest">Latest Added</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="title-asc">Title (A-Z)</option>
+                        <option value="title-desc">Title (Z-A)</option>
+                    </select>
+                </div>
             </div>
+
+            <!-- Books Grid -->
             <div class="books-grid" id="featured-books-grid">
                 <!-- Books loaded dynamically -->
                 <div class="loading">Loading books...</div>
             </div>
+
             <div class="section-footer">
                 <a href="/browse" class="btn-secondary">View All Books →</a>
             </div>
@@ -170,16 +185,38 @@
     <!-- JavaScript -->
     <script src="/js/bookshelf.js"></script>
     <script>
+        let currentSort = 'latest';
+
         // Load stats and featured books on page load
         document.addEventListener('DOMContentLoaded', async () => {
+            // Set up sort change handler
+            const sortSelect = document.getElementById('index-sort');
+            if (sortSelect) {
+                sortSelect.addEventListener('change', (e) => {
+                    currentSort = e.target.value;
+                    loadIndexBooks();
+                });
+            }
+
+            // Initial load
+            loadIndexBooks();
+        });
+
+        async function loadIndexBooks() {
             try {
-                const response = await fetch('/api/bookshelf/books?limit=12&sort=latest');
+                const response = await fetch(`/api/bookshelf/books?limit=12&sort=${currentSort}`);
                 const data = await response.json();
 
                 if (data.success) {
                     // Update stats
                     document.getElementById('total-books').textContent = data.stats.total_books;
                     document.getElementById('total-authors').textContent = data.stats.total_authors;
+
+                    // Update book count
+                    const booksCount = document.getElementById('books-count');
+                    if (booksCount) {
+                        booksCount.textContent = `${data.stats.total_books} books`;
+                    }
 
                     // Render featured books
                     const grid = document.getElementById('featured-books-grid');
@@ -198,7 +235,7 @@
                 document.getElementById('featured-books-grid').innerHTML =
                     '<p class="error">Failed to load books. Please try again later.</p>';
             }
-        });
+        }
     </script>
 </body>
 </html>
