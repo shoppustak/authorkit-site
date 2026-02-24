@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuthorKit - WordPress Plugins for Self-Publishing Authors</title>
-    <meta name="description" content="Professional WordPress plugins designed specifically for self-publishing authors. Manage books, reviews, launches, and more.">
+    <title>AuthorKit — WordPress Plugins Built for Self-Publishing Authors</title>
+    <meta name="description" content="AuthorKit gives indie authors powerful WordPress plugins to manage books, collect reviews, launch new releases, and grow a loyal reader base. Free to start.">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,6 +15,90 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="alternate icon" href="images/favicon.ico">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AuthorKit",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "WordPress",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Professional WordPress plugins for self-publishing authors to manage books, reviews, launches, and reader engagement",
+      "author": {
+        "@type": "Organization",
+        "name": "AuthorKit"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "1"
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is AuthorKit free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! AuthorKit offers free plugins available directly on WordPress.org. Premium plans with advanced features are available for authors who need more power."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to know how to code to use AuthorKit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not at all. AuthorKit plugins are designed for authors, not developers. Install from your WordPress dashboard in minutes — no coding required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will AuthorKit work with my existing WordPress theme?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AuthorKit is 100% theme compatible and works with popular themes like Kadence, Astra, Divi, GeneratePress, and virtually any other WordPress theme."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use AuthorKit if I have books on Amazon, Kindle Unlimited, or other retailers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. AuthorKit lets you link to all major retailers including Amazon, Barnes & Noble, Kobo, Apple Books, and any direct sales platform."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does AuthorKit slow down my website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The opposite. AuthorKit is built with vanilla PHP and JavaScript — no heavy dependencies — making it one of the lightest author plugin suites available for WordPress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I manage a series with AuthorKit Books?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. AuthorKit Books supports full series management with series name, book number, and custom taxonomies so readers can easily discover all books in a series."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50">
     <!-- Navigation -->
@@ -67,19 +151,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                    WordPress Plugins<br>
-                    <span class="text-blue-600">Built for Authors</span>
+                    The WordPress Plugin Suite Every<br>
+                    <span class="text-blue-600">Self-Publishing Author Has Been Waiting For</span>
                 </h1>
                 <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                    Lightweight, professional tools for managing books, reviews, launches, and reader engagement.
-                    No bloat, just what authors need.
+                    Stop duct-taping generic tools together. AuthorKit gives indie authors a complete, lightweight WordPress toolkit — to showcase your books, collect real reader reviews, launch new titles with buzz, and grow your audience. Professional. Plugin-based. Purpose-built for authors.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="pages/download.html" class="bg-blue-600 text-gray-900 px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition">
-                        Download Free Plugins
+                    <a href="pages/download.html" class="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition">
+                        Get Your Free Plugins — No Credit Card
                     </a>
                     <a href="pages/features.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-50 transition border-2 border-blue-600">
-                        Explore Features
+                        See What's Inside →
                     </a>
                 </div>
             </div>
@@ -188,19 +271,62 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Everything you need to know about AuthorKit</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Is AuthorKit free to use?</h3>
+                    <p class="text-gray-600">Yes! AuthorKit offers free plugins available directly on WordPress.org. Premium plans with advanced features are available for authors who need more power.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Do I need to know how to code to use AuthorKit?</h3>
+                    <p class="text-gray-600">Not at all. AuthorKit plugins are designed for authors, not developers. Install from your WordPress dashboard in minutes — no coding required.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Will AuthorKit work with my existing WordPress theme?</h3>
+                    <p class="text-gray-600">AuthorKit is 100% theme compatible and works with popular themes like Kadence, Astra, Divi, GeneratePress, and virtually any other WordPress theme.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Can I use AuthorKit if I have books on Amazon, Kindle Unlimited, or other retailers?</h3>
+                    <p class="text-gray-600">Absolutely. AuthorKit lets you link to all major retailers including Amazon, Barnes & Noble, Kobo, Apple Books, and any direct sales platform.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Does AuthorKit slow down my website?</h3>
+                    <p class="text-gray-600">The opposite. AuthorKit is built with vanilla PHP and JavaScript — no heavy dependencies — making it one of the lightest author plugin suites available for WordPress.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Can I manage a series with AuthorKit Books?</h3>
+                    <p class="text-gray-600">Yes. AuthorKit Books supports full series management with series name, book number, and custom taxonomies so readers can easily discover all books in a series.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="py-20 bg-blue-600">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl font-bold text-white mb-4">Ready to Transform Your Author Website?</h2>
-            <p class="text-xl text-blue-100 mb-8">Start with our free plugins on WordPress.org, upgrade when you need more.</p>
+            <h2 class="text-4xl font-bold text-white mb-4">Your Author Website Deserves Professional Tools</h2>
+            <p class="text-xl text-blue-100 mb-8">Thousands of self-publishing authors are building better websites with AuthorKit. Start free, and upgrade only when you're ready.</p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="pages/download.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-100 transition">
-                    Download Free Plugins
+                    Install Free Plugins on WordPress.org →
                 </a>
-                <a href="pages/pricing.html" class="bg-blue-700 text-gray-900 px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-800 transition border-2 border-white">
+                <a href="pages/pricing.html" class="bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-800 transition border-2 border-white">
                     View Premium Plans
                 </a>
             </div>
+            <p class="text-blue-100 mt-6">⭐ Free plugins. No credit card. No bloat. Just tools that work.</p>
         </div>
     </section>
 
