@@ -197,8 +197,145 @@ Before going live with Lemon Squeezy:
 - [ ] Monitoring/alerting configured
 - [ ] Backup of all environment variables stored securely
 
+## CSRF Protection Decision
+
+### Why CSRF Tokens Are Not Implemented
+
+**Decision**: CSRF protection intentionally not implemented
+**Reasoning**: API-only architecture with stateless authentication
+
+#### CSRF Attack Requirements
+
+CSRF (Cross-Site Request Forgery) attacks specifically target:
+- Cookie-based session authentication
+- Browsers that automatically send cookies with requests
+- State-changing operations relying on cookie authentication
+
+#### Why AuthorKit APIs Don't Need CSRF Protection
+
+1. **No Cookie-Based Authentication**
+   - License keys sent explicitly in request body/headers
+   - No session cookies that browsers auto-include
+   - WordPress plugins authenticate each request independently
+
+2. **Stateless API Design**
+   - No server-side session state to hijack
+   - Each request independently authenticated
+   - Token-based authentication (HMAC-SHA256)
+
+3. **CORS Protection Instead**
+   - Origin validation on sensitive endpoints
+   - License validation checks site URLs
+   - Webhook signature verification
+
+#### When CSRF Would Be Required
+
+Implement CSRF tokens if adding any of:
+- ❌ Browser-based admin dashboard with cookie sessions
+- ❌ OAuth flows with cookie-based state
+- ❌ Server-rendered forms with cookie authentication
+- ❌ Third-party integrations using cookies
+
+#### Current Security Measures
+
+Instead of CSRF, we use:
+- ✅ CORS headers per endpoint
+- ✅ Webhook signature verification (HMAC)
+- ✅ License key + site URL validation
+- ✅ HTTPS-only communication
+- ✅ Origin validation for sensitive operations
+
+---
+
+## Database Connection Pooling
+
+### Current Implementation
+
+**Database**: Supabase PostgreSQL
+**Client**: @supabase/supabase-js
+**Architecture**: Serverless (Vercel)
+
+### Connection Pooling Limitations
+
+#### How Serverless Functions Work
+
+- Each API request spawns a new function instance
+- Functions are stateless and short-lived
+- Connections created per-request, not reused across requests
+- Cold starts create new database connections
+
+#### Current Approach
+
+Supabase JS client provides:
+- Built-in connection pooling via Supabase's backend
+- pgBouncer in transaction mode (Supabase Pro)
+- Connection limits managed by Supabase
+
+```javascript
+// Each function creates its own client
+import { createClient } from '@supabase/supabase-js';
+
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_ANON_KEY
+);
+```
+
+#### Limitations
+
+1. **Cold Start Latency**
+   - First request after idle creates new connection
+   - ~100-300ms additional latency
+   - Subsequent requests (warm functions) are faster
+
+2. **Connection Limits**
+   - Supabase Free: 60 connections
+   - Supabase Pro: 200 connections
+   - Under high load, may hit connection limits
+
+3. **No Persistent Connections**
+   - Connections closed when function terminates
+   - Cannot maintain long-lived connections
+   - Each request = new connection overhead
+
+#### Mitigation Strategies
+
+**Current**:
+- ✅ Supabase's built-in connection pooling
+- ✅ Short query execution times
+- ✅ Efficient query design (see DATABASE-OPTIMIZATION.md)
+
+**Recommended for High Traffic**:
+- ⬜ Upgrade to Supabase Pro (pgBouncer + more connections)
+- ⬜ Implement query result caching (reduce DB hits)
+- ⬜ Use Vercel Edge Functions (faster cold starts)
+- ⬜ Monitor connection usage in Supabase dashboard
+
+#### Monitoring
+
+Track these metrics in Supabase dashboard:
+- Active connections count
+- Connection pool usage %
+- Slow queries (> 1 second)
+- Connection errors
+
+**Alert thresholds**:
+- ⚠️ Warning: > 80% connection pool usage
+- 🚨 Critical: Connection pool exhausted
+
+#### When to Upgrade
+
+Consider upgrading Supabase plan if:
+- Hitting connection limits frequently
+- Cold start latency impacting user experience
+- Supporting > 10,000 requests/day
+- Need pgBouncer for better pooling
+
+---
+
 ## Last Updated
 
-- **Date**: February 15, 2026
-- **Version**: 1.0.0
+- **Date**: February 27, 2026
+- **Version**: 1.1.0
 - **Audited By**: Claude Code (Anthropic)
+- **Updates**: Added CSRF decision documentation, database connection pooling details

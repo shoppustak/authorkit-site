@@ -165,6 +165,14 @@ export default async function handler(req, res) {
     // Get activated sites from license metadata
     // Note: You'll need to update this via update API when sites activate/deactivate
     const activeSites = license.meta?.active_sites || [];
+
+    // Clean the site_url for comparison
+    const cleanSiteUrl = site_url
+      .replace(/^https?:\/\//, '')
+      .replace(/^www\./, '')
+      .replace(/\/$/, '')
+      .toLowerCase();
+
     const isSiteActivated = activeSites.some(site => {
       const cleanActiveSite = site
         .replace(/^https?:\/\//, '')

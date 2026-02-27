@@ -187,7 +187,12 @@ export function validateInput(data, schema) {
  * Uses HMAC-SHA256 for signing
  */
 export function generateSecureToken(payload, expiresIn = 3600) {
-  const secret = process.env.DOWNLOAD_TOKEN_SECRET || 'change-this-in-production';
+  const secret = process.env.DOWNLOAD_TOKEN_SECRET;
+
+  if (!secret) {
+    throw new Error('DOWNLOAD_TOKEN_SECRET environment variable is not configured. This is required for secure token generation.');
+  }
+
   const expiresAt = Date.now() + (expiresIn * 1000);
 
   const data = {
@@ -212,7 +217,12 @@ export function generateSecureToken(payload, expiresIn = 3600) {
  */
 export function verifySecureToken(token) {
   try {
-    const secret = process.env.DOWNLOAD_TOKEN_SECRET || 'change-this-in-production';
+    const secret = process.env.DOWNLOAD_TOKEN_SECRET;
+
+    if (!secret) {
+      throw new Error('DOWNLOAD_TOKEN_SECRET environment variable is not configured. This is required for token verification.');
+    }
+
     const [dataB64, signature] = token.split('.');
 
     if (!dataB64 || !signature) {
@@ -275,14 +285,13 @@ export function sanitizeError(error, isDevelopment = false) {
  * Log security events
  */
 export function logSecurityEvent(event, details = {}) {
-  const timestamp = new Date().toISOString();
-  const logEntry = {
-    timestamp,
-    event,
-    ...details
-  };
-
-  console.log('[SECURITY]', JSON.stringify(logEntry));
+  // Import logger dynamically to avoid potential circular dependencies
+  import('./logger.js').then(({ logger }) => {
+    logger.security(event, details);
+  }).catch(() => {
+    // Fallback to console.log if logger fails
+    console.log('[SECURITY]', event, JSON.stringify(details));
+  });
 
   // In production, send to external logging service
   // Example: Sentry, LogDNA, Datadog, etc.

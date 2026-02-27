@@ -24,6 +24,8 @@
  */
 
 import supabase, { formatSupabaseError, validatePayload } from './_lib/supabase.js';
+import { rateLimit, logSecurityEvent } from './_lib/security.js';
+import logger from './_lib/logger.js';
 
 export default async function handler(req, res) {
   // Allow CORS for WordPress sites
@@ -41,6 +43,23 @@ export default async function handler(req, res) {
     return res.status(405).json({
       success: false,
       error: 'Method not allowed. Use POST.'
+    });
+  }
+
+  // Rate limiting - 10 requests per hour per IP
+  const clientIp = req.headers['x-forwarded-for']?.split(',')[0] || req.headers['x-real-ip'] || 'unknown';
+  const rateLimitResult = rateLimit(clientIp, 10, 3600000); // 10 req/hour
+
+  if (!rateLimitResult.allowed) {
+    logSecurityEvent('rate_limit_exceeded', {
+      ip: clientIp,
+      endpoint: '/api/email-capture'
+    });
+
+    return res.status(429).json({
+      success: false,
+      error: 'Too many requests. Please try again later.',
+      retryAfter: rateLimitResult.retryAfter
     });
   }
 
@@ -110,14 +129,13 @@ export default async function handler(req, res) {
       .single();
 
     if (error) {
-      console.error('Supabase error:', error);
+      logger.error('Supabase error in email capture', error);
       return res.status(500).json(formatSupabaseError(error));
     }
 
     // TODO: Send email notification to support@authorkit.pro
     // This can be done via SendGrid, Mailgun, or other email service
-    // For now, we just log it
-    console.log(`[Email Capture] New subscriber: ${email} from ${site_name} (${site_url})`);
+    logger.info(`[Email Capture] New subscriber: ${email} from ${site_name} (${site_url})`);
 
     // Success response
     return res.status(200).json({
@@ -127,11 +145,14 @@ export default async function handler(req, res) {
     });
 
   } catch (error) {
-    console.error('Unexpected error:', error);
+    logger.error('Unexpected error in email capture', error);
+
+    const isDev = process.env.NODE_ENV === 'development';
+
     return res.status(500).json({
       success: false,
       error: 'Internal server error',
-      message: error.message
+      ...(isDev && { message: error.message })
     });
   }
 }

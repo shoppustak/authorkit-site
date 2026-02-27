@@ -4,12 +4,20 @@
   "description": "Marketing website for AuthorKit WordPress plugins",
   "scripts": {
     "dev": "python3 -m http.server 8000",
-    "serve": "python3 -m http.server 8000"
+    "serve": "python3 -m http.server 8000",
+    "build:css": "tailwindcss -i ./css/input.css -o ./css/styles.css --minify",
+    "watch:css": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
+    "build:js": "terser js/main.js -o js/main.min.js -c -m && terser js/bookshelf.js -o js/bookshelf.min.js -c -m && terser js/bookshelf-browse.js -o js/bookshelf-browse.min.js -c -m",
+    "build": "npm run build:css && npm run build:js"
   },
   "keywords": ["authorkit", "wordpress", "plugins", "authors"],
   "author": "AuthorKit",
   "license": "MIT",
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "terser": "^5.27.0"
   }
 }
