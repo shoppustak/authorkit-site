@@ -252,6 +252,64 @@ Content-Type: application/json
 
 ---
 
+### 6. Email Capture
+
+Captures email subscriptions from AuthorKit plugin users.
+
+**Endpoint**: `POST /api/email-capture`
+
+**Request Body**:
+```json
+{
+  "email": "user@example.com",
+  "site_url": "https://authorsite.com",
+  "site_name": "Jane's Author Site",
+  "user_login": "janeauthor",
+  "user_role": "administrator",
+  "ip_address": "192.168.1.1",
+  "user_agent": "Mozilla/5.0...",
+  "type": "free"
+}
+```
+
+**Success Response** (200):
+```json
+{
+  "success": true,
+  "message": "Email subscription recorded successfully",
+  "subscriber_id": 123
+}
+```
+
+**Success Response - Already Subscribed** (200):
+```json
+{
+  "success": true,
+  "message": "Email already subscribed",
+  "already_subscribed": true
+}
+```
+
+**Error Response - Invalid Email** (400):
+```json
+{
+  "success": false,
+  "error": "Invalid email address",
+  "code": "VALIDATION_ERROR"
+}
+```
+
+**Error Response - Missing Fields** (400):
+```json
+{
+  "success": false,
+  "error": "Missing required fields: email, site_url",
+  "code": "VALIDATION_ERROR"
+}
+```
+
+---
+
 ## Environment Variables
 
 Required environment variables for Vercel deployment:
@@ -261,6 +319,10 @@ Required environment variables for Vercel deployment:
 LEMON_SQUEEZY_API_KEY=your_api_key_here
 LEMON_SQUEEZY_STORE_ID=your_store_id_here
 LEMON_SQUEEZY_WEBHOOK_SECRET=your_webhook_secret_here
+
+# Supabase (for email capture and bookshelf)
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_SERVICE_KEY=your_supabase_service_key
 
 # Node Environment
 NODE_ENV=production
@@ -338,6 +400,20 @@ curl -X POST https://authorkit.pro/api/check-update \
     "plugin_slug": "authorkit-pro",
     "current_version": "1.0.0",
     "site_url": "https://example.com"
+  }'
+```
+
+**Capture Email Subscription**:
+```bash
+curl -X POST https://authorkit.pro/api/email-capture \
+  -H "Content-Type: application/json" \
+  -d '{
+    "email": "user@example.com",
+    "site_url": "https://authorsite.com",
+    "site_name": "My Author Site",
+    "user_login": "authoruser",
+    "user_role": "administrator",
+    "type": "free"
   }'
 ```
 
