@@ -102,43 +102,6 @@
                 <p class="text-gray-600 text-lg">
                     Future transparency reports will appear here as we publish them annually.
                 </p>
-                <p class="text-gray-500 mt-2">
-                    Subscribe below to get notified when new reports are published.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Signup Section -->
-    <section class="py-12 bg-gray-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-lg shadow-sm p-8 text-center">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">Get Notified of New Reports</h2>
-                <p class="text-gray-600 mb-6">
-                    Subscribe to receive our annual transparency reports and important AuthorKit updates.
-                </p>
-                <form id="newsletter-form" class="max-w-md mx-auto">
-                    <div class="flex flex-col sm:flex-row gap-3">
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="your@email.com"
-                            required
-                            class="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                        >
-                        <button
-                            type="submit"
-                            class="px-6 py-3 bg-orange-600 text-white font-medium rounded-md hover:bg-orange-700 transition-colors duration-200"
-                        >
-                            Subscribe
-                        </button>
-                    </div>
-                    <p class="text-xs text-gray-500 mt-3">
-                        We respect your privacy. Unsubscribe anytime.
-                    </p>
-                </form>
-                <div id="form-message" class="mt-4 text-sm"></div>
             </div>
         </div>
     </section>
@@ -150,46 +113,5 @@
     <script src="js/header-loader.js"></script>
     <script src="js/footer-loader.js"></script>
     <script src="js/main.min.js"></script>
-
-    <!-- Newsletter Form Handling -->
-    <script>
-        document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            const email = document.getElementById('email').value;
-            const messageEl = document.getElementById('form-message');
-            const submitBtn = e.target.querySelector('button[type="submit"]');
-
-            // Disable button during submission
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Subscribing...';
-
-            try {
-                const response = await fetch('/api/email-capture', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ email })
-                });
-
-                const data = await response.json();
-
-                if (response.ok) {
-                    messageEl.className = 'mt-4 text-sm text-green-600';
-                    messageEl.textContent = '✓ Successfully subscribed! Check your email for confirmation.';
-                    document.getElementById('email').value = '';
-                } else {
-                    throw new Error(data.error || 'Subscription failed');
-                }
-            } catch (error) {
-                messageEl.className = 'mt-4 text-sm text-red-600';
-                messageEl.textContent = '✗ ' + error.message;
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Subscribe';
-            }
-        });
-    </script>
 </body>
 </html>
