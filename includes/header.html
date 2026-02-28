@@ -1,0 +1,48 @@
+<!-- Navigation -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="{{BASE_PATH}}index.html" class="flex items-center">
+                    <img src="{{BASE_PATH}}images/logo-authorkit.svg" alt="AuthorKit" class="logo-img">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="{{BASE_PATH}}index.html" class="nav-link text-gray-600 hover:text-blue-600" data-page="home">Home</a>
+                <a href="{{BASE_PATH}}pages/features.html" class="nav-link text-gray-600 hover:text-blue-600" data-page="features">Features</a>
+                <a href="{{BASE_PATH}}pages/pricing.html" class="nav-link text-gray-600 hover:text-blue-600" data-page="pricing">Pricing</a>
+                <a href="https://bookshelf.authorkit.pro" class="nav-link text-gray-600 hover:text-blue-600" target="_blank">Bookshelf</a>
+                <a href="{{BASE_PATH}}blog.html" class="nav-link text-gray-600 hover:text-blue-600" data-page="blog">Blog</a>
+                <a href="{{BASE_PATH}}pages/about.html" class="nav-link text-gray-600 hover:text-blue-600" data-page="about">About</a>
+                <a href="{{BASE_PATH}}pages/docs.html" class="nav-link text-gray-600 hover:text-blue-600" data-page="docs">Docs</a>
+                <a href="{{BASE_PATH}}pages/download.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Download Free</a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button type="button" class="text-gray-600 hover:text-gray-900" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="hidden md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+            <a href="{{BASE_PATH}}index.html" class="nav-link-mobile block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md" data-page="home">Home</a>
+            <a href="{{BASE_PATH}}pages/features.html" class="nav-link-mobile block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md" data-page="features">Features</a>
+            <a href="{{BASE_PATH}}pages/pricing.html" class="nav-link-mobile block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md" data-page="pricing">Pricing</a>
+            <a href="https://bookshelf.authorkit.pro" class="nav-link-mobile block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md" target="_blank">Bookshelf</a>
+            <a href="{{BASE_PATH}}blog.html" class="nav-link-mobile block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md" data-page="blog">Blog</a>
+            <a href="{{BASE_PATH}}pages/about.html" class="nav-link-mobile block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md" data-page="about">About</a>
+            <a href="{{BASE_PATH}}pages/docs.html" class="nav-link-mobile block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md" data-page="docs">Docs</a>
+            <a href="{{BASE_PATH}}pages/download.html" class="block px-3 py-2 text-blue-600 font-medium rounded-md">Download Free</a>
+        </div>
+    </div>
+</nav>
