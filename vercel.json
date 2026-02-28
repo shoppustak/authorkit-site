@@ -2,6 +2,7 @@
   "version": 2,
   "name": "authorkit-pro",
   "buildCommand": "npm run build",
+  "outputDirectory": ".",
   "functions": {
     "api/**/*.js": {
       "memory": 1024,

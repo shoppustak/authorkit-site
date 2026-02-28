@@ -17,9 +17,6 @@ npm-debug.log*
 dist/
 build/
 .cache/
-*.min.js
-*.min.css
-css/styles.css
 
 # Environment
 .env
