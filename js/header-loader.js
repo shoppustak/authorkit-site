@@ -1,14 +1,6 @@
 (function() {
     'use strict';
 
-    function getBasePath() {
-        const path = window.location.pathname;
-        if (path.includes('/pages/')) {
-            return '../';
-        }
-        return '';
-    }
-
     function getCurrentPage() {
         const path = window.location.pathname;
         const filename = path.substring(path.lastIndexOf('/') + 1);
@@ -26,13 +18,8 @@
 
     async function loadHeader() {
         try {
-            const basePath = getBasePath();
-            const headerPath = basePath + 'includes/header.html';
-            const response = await fetch(headerPath);
-            let headerHTML = await response.text();
-
-            // Replace all {{BASE_PATH}} placeholders
-            headerHTML = headerHTML.replace(/\{\{BASE_PATH\}\}/g, basePath);
+            const response = await fetch('includes/header.html');
+            const headerHTML = await response.text();
 
             const headerPlaceholder = document.getElementById('header-placeholder');
             if (headerPlaceholder) {
