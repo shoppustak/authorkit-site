@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuthorKit Transparency Reports — Building in Public</title>
+    <meta name="description" content="Annual transparency reports from AuthorKit: revenue, growth metrics, challenges, and goals. We believe in building in public and sharing our journey with the WordPress community.">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="alternate icon" href="images/favicon.ico">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "AuthorKit Blog",
+      "description": "Annual transparency reports and updates from the AuthorKit team",
+      "publisher": {
+        "@type": "Organization",
+        "name": "AuthorKit",
+        "url": "https://authorkit.pro"
+      }
+    }
+    </script>
+</head>
+<body class="bg-white font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center">
+                        <img src="images/logo.svg" alt="AuthorKit Logo" class="h-12 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="/features.html" class="text-gray-700 hover:text-orange-600 transition-colors duration-200">Features</a>
+                    <a href="/pricing.html" class="text-gray-700 hover:text-orange-600 transition-colors duration-200">Pricing</a>
+                    <a href="https://docs.authorkit.pro" class="text-gray-700 hover:text-orange-600 transition-colors duration-200">Docs</a>
+                    <a href="https://bookshelf.authorkit.pro" class="text-gray-700 hover:text-orange-600 transition-colors duration-200">Bookshelf</a>
+                    <a href="/blog.html" class="text-orange-600 font-semibold transition-colors duration-200">Blog</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="/download.html" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-orange-600 hover:bg-orange-700 transition-colors duration-200">
+                        Download Free
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-orange-600" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+                <a href="/features.html" class="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 rounded-md">Features</a>
+                <a href="/pricing.html" class="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 rounded-md">Pricing</a>
+                <a href="https://docs.authorkit.pro" class="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 rounded-md">Docs</a>
+                <a href="https://bookshelf.authorkit.pro" class="block px-3 py-2 text-gray-700 hover:text-orange-600 hover:bg-gray-50 rounded-md">Bookshelf</a>
+                <a href="/blog.html" class="block px-3 py-2 text-orange-600 font-semibold bg-orange-50 rounded-md">Blog</a>
+                <a href="/download.html" class="block px-3 py-2 text-white bg-orange-600 hover:bg-orange-700 rounded-md text-center">Download Free</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Building in Public</h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-6">Annual transparency reports from the AuthorKit team</p>
+            <p class="text-lg text-blue-200 max-w-3xl mx-auto">
+                We believe in transparency and community. Every December 31st, we share our revenue, growth metrics, challenges, lessons learned, and goals for the year ahead.
+            </p>
+        </div>
+    </section>
+
+    <!-- Why Transparency Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-lg shadow-sm p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Why We Share Transparency Reports</h2>
+                <div class="prose prose-lg text-gray-600">
+                    <p>Inspired by companies like <a href="https://barn2.com/tag/transparency-reports/" target="_blank" rel="noopener noreferrer" class="text-orange-600 hover:text-orange-700">Barn2</a>, we believe in building in public. Our annual transparency reports serve multiple purposes:</p>
+                    <ul class="space-y-2 mt-4">
+                        <li><strong>Build Trust</strong> — Show our customers and the WordPress community that we're here for the long term</li>
+                        <li><strong>Share Learnings</strong> — Help other plugin developers learn from our successes and mistakes</li>
+                        <li><strong>Create Accountability</strong> — Publicly stating our goals keeps us committed to delivering value</li>
+                        <li><strong>Celebrate Milestones</strong> — Reflect on progress and acknowledge the community that makes it possible</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reports List Section -->
+    <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Transparency Reports</h2>
+
+            <!-- Report 2026 - Coming Soon -->
+            <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-6">
+                <div class="flex items-start justify-between">
+                    <div class="flex-1">
+                        <div class="flex items-center space-x-3 mb-2">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-100 text-orange-800">
+                                Coming December 31, 2026
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">2026 Year in Review</h3>
+                        <p class="text-gray-600 mb-4">
+                            Our first annual transparency report will cover AuthorKit's launch year: revenue metrics, customer growth, WordPress.org performance, lessons learned from our simultaneous free + paid launch, and goals for 2027.
+                        </p>
+                        <div class="text-sm text-gray-500">
+                            <p class="mb-1"><strong>What we'll share:</strong></p>
+                            <ul class="list-disc list-inside space-y-1 text-gray-600">
+                                <li>Total revenue and growth metrics</li>
+                                <li>Free vs. Pro customer breakdown</li>
+                                <li>WordPress.org download stats and ratings</li>
+                                <li>Challenges faced during launch</li>
+                                <li>Strategic pivots and decisions</li>
+                                <li>High-level goals for 2027</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Future Reports -->
+            <div class="text-center py-8">
+                <p class="text-gray-600 text-lg">
+                    Future transparency reports will appear here as we publish them annually.
+                </p>
+                <p class="text-gray-500 mt-2">
+                    Subscribe below to get notified when new reports are published.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-lg shadow-sm p-8 text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Get Notified of New Reports</h2>
+                <p class="text-gray-600 mb-6">
+                    Subscribe to receive our annual transparency reports and important AuthorKit updates.
+                </p>
+                <form id="newsletter-form" class="max-w-md mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-3">
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="your@email.com"
+                            required
+                            class="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                        >
+                        <button
+                            type="submit"
+                            class="px-6 py-3 bg-orange-600 text-white font-medium rounded-md hover:bg-orange-700 transition-colors duration-200"
+                        >
+                            Subscribe
+                        </button>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-3">
+                        We respect your privacy. Unsubscribe anytime.
+                    </p>
+                </form>
+                <div id="form-message" class="mt-4 text-sm"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo & Description -->
+                <div class="md:col-span-1">
+                    <img src="images/logo-white.svg" alt="AuthorKit Logo" class="h-10 w-auto mb-4">
+                    <p class="text-sm text-gray-400">
+                        Professional WordPress plugins built for self-publishing authors.
+                    </p>
+                </div>
+
+                <!-- Product Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Product</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/features.html" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="/pricing.html" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="/download.html" class="hover:text-white transition-colors">Download</a></li>
+                        <li><a href="https://bookshelf.authorkit.pro" class="hover:text-white transition-colors">Bookshelf</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://docs.authorkit.pro" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="/blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="mailto:support@authorkit.pro" class="hover:text-white transition-colors">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/pages/about.html" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="/pages/privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="/pages/terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2026 AuthorKit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.min.js"></script>
+
+    <!-- Newsletter Form Handling -->
+    <script>
+        document.getElementById('newsletter-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const messageEl = document.getElementById('form-message');
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+
+            // Disable button during submission
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Subscribing...';
+
+            try {
+                const response = await fetch('/api/email-capture', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    messageEl.className = 'mt-4 text-sm text-green-600';
+                    messageEl.textContent = '✓ Successfully subscribed! Check your email for confirmation.';
+                    document.getElementById('email').value = '';
+                } else {
+                    throw new Error(data.error || 'Subscription failed');
+                }
+            } catch (error) {
+                messageEl.className = 'mt-4 text-sm text-red-600';
+                messageEl.textContent = '✗ ' + error.message;
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Subscribe';
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
