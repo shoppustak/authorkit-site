@@ -1,0 +1,247 @@
+/**
+ * Monochrome Components
+ * Minimalist component utilities following Minimalist Monochrome design system
+ */
+
+/* Import design tokens */
+@import './design-tokens.css';
+
+/* ================================
+ * NAVIGATION COMPONENTS
+ * ================================ */
+
+/* Container - responsive padding with max width */
+.nav-container {
+  max-width: 1280px;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .nav-container {
+    padding: 0 2rem;
+  }
+}
+
+/* Navigation bar - sticky header with black border */
+.nav-bar {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-black);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 64px;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+/* Navigation links - clean black text with instant underline on hover */
+.nav-link {
+  color: var(--color-black);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Active navigation link - black bottom border */
+.nav-link-active {
+  border-bottom: 2px solid var(--color-black);
+}
+
+/* Navigation logo */
+.nav-logo {
+  height: 40px;
+  width: auto;
+}
+
+/* ================================
+ * MOBILE MENU COMPONENTS
+ * ================================ */
+
+/* Mobile menu container - white background, black border */
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  right: 16px;
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  display: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+/* Mobile menu button - clean button with no decoration */
+.mobile-menu-button {
+  padding: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+/* Mobile menu icon - black stroke */
+.mobile-menu-icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-black);
+  stroke-width: 2;
+}
+
+/* Mobile navigation links - full width with subtle borders */
+.mobile-nav-link {
+  display: block;
+  padding: 16px 24px;
+  color: var(--color-black);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.mobile-nav-link:last-child {
+  border-bottom: none;
+}
+
+/* ================================
+ * BUTTON COMPONENTS
+ * ================================ */
+
+/* Primary button - black background, white text, instant color inversion on hover */
+.btn-primary {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 12px 24px;
+  border: 2px solid var(--color-black);
+  font-weight: 600;
+  min-height: 44px;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.btn-primary:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Secondary button - white background, black text */
+.btn-secondary {
+  background: var(--color-white);
+  color: var(--color-black);
+  padding: 12px 24px;
+  border: 2px solid var(--color-black);
+  font-weight: 600;
+  min-height: 44px;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.btn-secondary:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Accent button - brand color background */
+.btn-accent {
+  background: var(--color-brand-orange);
+  color: var(--color-white);
+  padding: 12px 24px;
+  border: 2px solid var(--color-brand-orange);
+  font-weight: 600;
+  min-height: 44px;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.btn-accent:hover {
+  background: var(--color-white);
+  color: var(--color-brand-orange);
+}
+
+/* ================================
+ * CARD COMPONENTS
+ * ================================ */
+
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  padding: 32px;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+/* ================================
+ * FORM COMPONENTS
+ * ================================ */
+
+.form-input {
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  padding: 12px 16px;
+  min-height: 44px;
+  font-size: 16px;
+  font-family: inherit;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+.form-input:focus {
+  border: 2px solid var(--color-black);
+  outline: none;
+}
+
+.form-label {
+  color: var(--color-black);
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* ================================
+ * UTILITY CLASSES
+ * ================================ */
+
+/* Ensure no decorations can slip through */
+.no-decoration {
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+}
+
+/* Hidden state for mobile menu */
+.hidden {
+  display: none;
+}
