@@ -81,12 +81,19 @@ Plans:
 
 **Goal**: Redesign all reusable components to Minimalist Monochrome aesthetic.
 
+**Plans:** 3 plans
+
 **Duration**: 3-4 days
+
+Plans:
+- [ ] 02-01-PLAN.md — Redesign header navigation component
+- [ ] 02-02-PLAN.md — Redesign footer component
+- [ ] 02-03-PLAN.md — Create button, card, and form components
 
 ### Tasks:
 
 2.1. **Header & Navigation Redesign**
-- Redesign `includes/header.php` with minimalist navigation
+- Redesign `includes/header.html` with minimalist navigation
 - Pure black logo area with generous padding
 - Black text on white background
 - Zero border-radius, no shadows
@@ -95,7 +102,7 @@ Plans:
 - Desktop horizontal navigation with clean spacing
 
 2.2. **Footer Redesign**
-- Redesign `includes/footer.php` with clean layout
+- Redesign `includes/footer.html` with clean layout
 - Black border separator at top
 - Organized link columns with generous spacing
 - Copyright and social links
@@ -126,8 +133,8 @@ Plans:
 - Instant state changes (no animations)
 
 **Deliverables**:
-- Redesigned `includes/header.php`
-- Redesigned `includes/footer.php`
+- Redesigned `includes/header.html`
+- Redesigned `includes/footer.html`
 - Updated CSS classes for all core components
 - Component documentation with usage examples
 
