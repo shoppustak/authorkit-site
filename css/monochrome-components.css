@@ -115,120 +115,7 @@
   border-bottom: none;
 }
 
-/* ================================
- * BUTTON COMPONENTS
- * ================================ */
 
-/* Primary button - black background, white text, instant color inversion on hover */
-.btn-primary {
-  background: var(--color-black);
-  color: var(--color-white);
-  padding: 12px 24px;
-  border: 2px solid var(--color-black);
-  font-weight: 600;
-  min-height: 44px;
-  cursor: pointer;
-  font-family: var(--font-ui);
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  border-radius: 0;
-  box-shadow: none;
-  transition: none;
-}
-
-.btn-primary:hover {
-  background: var(--color-white);
-  color: var(--color-black);
-}
-
-/* Secondary button - white background, black text */
-.btn-secondary {
-  background: var(--color-white);
-  color: var(--color-black);
-  padding: 12px 24px;
-  border: 2px solid var(--color-black);
-  font-weight: 600;
-  min-height: 44px;
-  cursor: pointer;
-  font-family: var(--font-ui);
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  border-radius: 0;
-  box-shadow: none;
-  transition: none;
-}
-
-.btn-secondary:hover {
-  background: var(--color-black);
-  color: var(--color-white);
-}
-
-/* Accent button - brand color background */
-.btn-accent {
-  background: var(--color-brand-orange);
-  color: var(--color-white);
-  padding: 12px 24px;
-  border: 2px solid var(--color-brand-orange);
-  font-weight: 600;
-  min-height: 44px;
-  cursor: pointer;
-  font-family: var(--font-ui);
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
-  border-radius: 0;
-  box-shadow: none;
-  transition: none;
-}
-
-.btn-accent:hover {
-  background: var(--color-white);
-  color: var(--color-brand-orange);
-}
-
-/* ================================
- * CARD COMPONENTS
- * ================================ */
-
-.card {
-  background: var(--color-white);
-  border: 1px solid var(--color-black);
-  padding: 32px;
-  border-radius: 0;
-  box-shadow: none;
-  transition: none;
-}
-
-/* ================================
- * FORM COMPONENTS
- * ================================ */
-
-.form-input {
-  background: var(--color-white);
-  border: 1px solid var(--color-black);
-  padding: 12px 16px;
-  min-height: 44px;
-  font-size: 16px;
-  font-family: inherit;
-  width: 100%;
-  border-radius: 0;
-  box-shadow: none;
-  transition: none;
-}
-
-.form-input:focus {
-  border: 2px solid var(--color-black);
-  outline: none;
-}
-
-.form-label {
-  color: var(--color-black);
-  font-weight: 500;
-  margin-bottom: 8px;
-  display: block;
-}
 
 /* ================================
  * UTILITY CLASSES
@@ -492,4 +379,144 @@
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* ================================
+ * CARD COMPONENTS (COMPREHENSIVE)
+ * ================================ */
+
+.card {
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  padding: 32px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.card-hover:hover {
+  border-width: 2px;
+  margin: -1px; /* Compensate for border width change */
+}
+
+.card-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-family: var(--font-headline);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin: 0;
+}
+
+.card-body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-black);
+}
+
+.card-footer {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ================================
+ * FORM COMPONENTS (COMPREHENSIVE)
+ * ================================ */
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-black);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  padding: 12px 16px;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  color: var(--color-black);
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+  min-height: 44px;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-width: 2px;
+  margin: -1px; /* Compensate for border width */
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* Form States */
+.form-error {
+  border-color: #DC2626;
+  color: #DC2626;
+}
+
+.form-success {
+  border-color: #059669;
+  color: #059669;
+}
+
+.form-help {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 4px;
+}
+
+.form-error-message {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  color: #DC2626;
+  margin-top: 4px;
+}
+
+/* Checkbox and Radio */
+.form-checkbox,
+.form-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-black);
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.form-checkbox {
+  border-radius: 0;
+}
+
+.form-radio {
+  border-radius: 50%; /* Exception for radio buttons */
 }
