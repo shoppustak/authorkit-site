@@ -376,3 +376,120 @@
   background: var(--color-white);
   color: var(--color-black);
 }
+
+/* ================================
+ * BUTTON COMPONENTS (COMPREHENSIVE)
+ * ================================ */
+
+/* Primary Button - Black background, white text */
+.btn-primary {
+  background: var(--color-black);
+  color: var(--color-white);
+  border: 2px solid var(--color-black);
+  padding: 12px 24px;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Secondary Button - White background, black text */
+.btn-secondary {
+  background: var(--color-white);
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
+  padding: 12px 24px;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Accent Button - Brand orange for CTAs */
+.btn-accent {
+  background: #FF9900;
+  color: var(--color-white);
+  border: 2px solid #FF9900;
+  padding: 12px 24px;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+  text-decoration: none;
+}
+
+.btn-accent:hover {
+  background: var(--color-black);
+  border-color: var(--color-black);
+}
+
+/* Link Button - Text only with underline */
+.btn-link {
+  background: transparent;
+  color: #1E3A5F;
+  border: none;
+  padding: 8px 16px;
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: none;
+}
+
+.btn-link:hover {
+  color: var(--color-black);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 14px;
+  min-height: 36px;
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 18px;
+  min-height: 52px;
+}
+
+/* Button States */
+.btn-disabled,
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
