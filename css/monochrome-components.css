@@ -245,3 +245,134 @@
 .hidden {
   display: none;
 }
+
+/* ================================
+ * FOOTER COMPONENTS
+ * ================================ */
+
+/* Footer container - white background with black top border */
+.footer-container {
+  background: var(--color-white);
+  border-top: 1px solid var(--color-black);
+  padding: 64px 0 32px;
+}
+
+.footer-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+/* Footer text and link classes */
+.footer-heading {
+  font-family: var(--font-headline);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 16px;
+}
+
+.footer-text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-black);
+  margin-bottom: 8px;
+}
+
+.footer-link {
+  font-family: var(--font-ui);
+  font-size: 16px;
+  color: var(--color-black);
+  text-decoration: none;
+  display: block;
+  padding: 4px 0;
+  border-radius: 0;
+  transition: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 8px;
+}
+
+/* Footer bottom/copyright section */
+.footer-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 32px;
+  margin-top: 48px;
+  text-align: center;
+}
+
+.footer-copyright {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  color: var(--color-black);
+}
+
+/* Footer Email Signup */
+.footer-signup {
+  margin-top: 24px;
+}
+
+.footer-signup-form {
+  display: flex;
+  gap: 8px;
+  max-width: 320px;
+}
+
+.footer-signup-input {
+  flex: 1;
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  padding: 8px 12px;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  color: var(--color-black);
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+  min-height: 40px;
+}
+
+.footer-signup-input:focus {
+  outline: none;
+  border-width: 2px;
+  margin: -1px;
+}
+
+.footer-signup-button {
+  background: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-black);
+  padding: 8px 16px;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: none;
+  transition: none;
+  min-height: 40px;
+}
+
+.footer-signup-button:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+}
