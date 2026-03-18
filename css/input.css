@@ -9,6 +9,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Minimalist Monochrome Component System
+ * - All components use zero border-radius (sharp corners)
+ * - No shadows or decorative effects
+ * - Instant interactions (no transitions)
+ * - Pure black (#000) and white (#FFF) primary colors
+ * - Brand colors used only as accents
+ */
+
+/* Import monochrome components */
+@import './monochrome-components.css';
+
 /* Base Layer Overrides */
 @layer base {
   /* Global defaults enforcing Minimalist Monochrome */
