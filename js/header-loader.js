@@ -31,15 +31,13 @@
                     // Desktop navigation
                     const navLinks = document.querySelectorAll('.nav-link[data-page="' + currentPage + '"]');
                     navLinks.forEach(link => {
-                        link.classList.remove('text-gray-600');
-                        link.classList.add('text-gray-900', 'font-semibold');
+                        link.classList.add('nav-link-active');
                     });
 
                     // Mobile navigation
-                    const mobileLinks = document.querySelectorAll('.nav-link-mobile[data-page="' + currentPage + '"]');
+                    const mobileLinks = document.querySelectorAll('.mobile-nav-link[data-page="' + currentPage + '"]');
                     mobileLinks.forEach(link => {
-                        link.classList.remove('text-gray-700');
-                        link.classList.add('text-blue-600', 'font-semibold', 'bg-blue-50');
+                        link.classList.add('nav-link-active');
                     });
                 }
 
