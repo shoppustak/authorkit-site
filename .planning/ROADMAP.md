@@ -150,7 +150,14 @@ Plans:
 
 **Goal**: Redesign the 4 most critical pages that drive conversion and usage.
 
+**Plans:** 3 plans
+
 **Duration**: 4-5 days
+
+Plans:
+- [ ] 03-01-PLAN.md — Redesign homepage with hero section and features grid
+- [ ] 03-02-PLAN.md — Redesign features page with detailed capabilities
+- [ ] 03-03-PLAN.md — Redesign pricing and documentation pages
 
 ### Tasks:
 
