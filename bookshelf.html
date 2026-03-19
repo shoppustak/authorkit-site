@@ -1,7 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuthorKit Bookshelf</title>
+
+    <!-- Font Preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap">
+
+    <!-- Design System Styles -->
+    <link rel="stylesheet" href="/css/design-tokens.css">
+    <link rel="stylesheet" href="/css/monochrome-components.css">
+
+    <style>
+        /* Inline styles for instant redirect page styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #FFFFFF;
+            color: #000000;
+            font-family: 'Source Serif 4', serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            text-align: center;
+        }
+
+        /* Remove all decorative CSS */
+        * {
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            transition: none !important;
+        }
+    </style>
+
+    <!-- Redirect Script -->
     <script>
         // Redirect to bookshelf index
         window.location.replace('/pages/bookshelf/index.html');
