@@ -5,99 +5,242 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Changelog - AuthorKit</title>
     <meta name="description" content="AuthorKit version history and changelog.">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Preloading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&display=swap" as="style">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Design System CSS -->
+    <link rel="stylesheet" href="css/design-tokens.css">
+    <link rel="stylesheet" href="css/monochrome-components.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="alternate icon" href="images/favicon.ico">
+
+    <style>
+        /* Monochrome overrides - zero decorations */
+        * {
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            transition: none !important;
+        }
+
+        body {
+            background: #FFFFFF;
+            color: #000000;
+            font-family: 'Source Serif 4', serif;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #000000;
+        }
+
+        h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 36px;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+
+        section {
+            padding: 96px 32px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background: #FFFFFF;
+            text-align: center;
+            padding: 96px 32px;
+        }
+
+        .version-card {
+            background: #FFFFFF;
+            border: 2px solid #000000;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        .version-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #000000;
+        }
+
+        .version-badge {
+            background: #1E3A5F;
+            color: #FFFFFF;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .dev-card {
+            background: #FFFFFF;
+            border: 2px solid #000000;
+            padding: 32px;
+        }
+
+        .dev-section {
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 24px;
+            margin-top: 16px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            body {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 64px 16px;
+            }
+
+            .version-header {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-50">
+<body>
     <!-- Header (Loaded from shared component) -->
     <div id="header-placeholder"></div>
 
     <!-- Hero -->
-    <section class="bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl font-bold text-gray-900 mb-4">Changelog</h1>
-            <p class="text-xl text-gray-600">Version history and updates</p>
+    <section class="hero">
+        <div class="container" style="max-width: 900px;">
+            <h1>Changelog</h1>
+            <p style="font-size: 20px; margin-top: 16px;">Version history and updates</p>
         </div>
     </section>
 
     <!-- Changelog Content -->
-    <section class="py-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section style="background: #FFFFFF; border-top: 1px solid #000000;">
+        <div class="container" style="max-width: 900px;">
 
             <!-- Version 1.0.0 -->
-            <div class="bg-white rounded-xl shadow-sm p-8 mb-6">
-                <div class="flex items-center justify-between mb-4">
+            <div class="version-card">
+                <div class="version-header">
                     <div>
-                        <h2 class="text-2xl font-bold text-gray-900">Version 1.0.0</h2>
-                        <p class="text-gray-600">February 16, 2026</p>
+                        <h2 style="margin-bottom: 8px;">Version 1.0.0</h2>
+                        <p style="font-size: 16px; text-transform: uppercase; letter-spacing: 0.05em;">February 16, 2026</p>
                     </div>
-                    <span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">Latest</span>
+                    <span class="version-badge">Latest</span>
                 </div>
 
-                <div class="space-y-4">
-                    <div>
-                        <h3 class="font-semibold text-gray-900 mb-2">🎉 New Features</h3>
-                        <ul class="list-disc pl-6 text-gray-700 space-y-1">
-                            <li>Initial release of AuthorKit Core plugin</li>
-                            <li>Books Module with 27 custom meta fields</li>
-                            <li>3 taxonomies: Categories, Series, Age Range</li>
-                            <li>Amazon-style book display templates</li>
-                            <li>Schema.org structured data for SEO</li>
-                            <li>Multiple format support (Kindle, Paperback, Audio, etc.)</li>
-                            <li>Purchase links integration</li>
-                            <li>Coming soon badges for unreleased books</li>
-                            <li>Author bio and social links</li>
-                            <li>Shortcodes for displaying books</li>
-                        </ul>
-                    </div>
+                <div style="margin-bottom: 32px;">
+                    <h3 style="margin-bottom: 16px;">New Features</h3>
+                    <ul>
+                        <li>Initial release of AuthorKit Core plugin</li>
+                        <li>Books Module with 27 custom meta fields</li>
+                        <li>3 taxonomies: Categories, Series, Age Range</li>
+                        <li>Amazon-style book display templates</li>
+                        <li>Schema.org structured data for SEO</li>
+                        <li>Multiple format support (Kindle, Paperback, Audio, etc.)</li>
+                        <li>Purchase links integration</li>
+                        <li>Coming soon badges for unreleased books</li>
+                        <li>Author bio and social links</li>
+                        <li>Shortcodes for displaying books</li>
+                    </ul>
+                </div>
 
-                    <div>
-                        <h3 class="font-semibold text-gray-900 mb-2">🔧 Technical</h3>
-                        <ul class="list-disc pl-6 text-gray-700 space-y-1">
-                            <li>Built with vanilla PHP and JavaScript (no dependencies)</li>
-                            <li>WordPress 5.0+ compatibility</li>
-                            <li>PHP 7.0+ required</li>
-                            <li>GPL v2.0+ licensed</li>
-                            <li>Optimized for performance and speed</li>
-                        </ul>
-                    </div>
+                <div>
+                    <h3 style="margin-bottom: 16px;">Technical</h3>
+                    <ul>
+                        <li>Built with vanilla PHP and JavaScript (no dependencies)</li>
+                        <li>WordPress 5.0+ compatibility</li>
+                        <li>PHP 7.0+ required</li>
+                        <li>GPL v2.0+ licensed</li>
+                        <li>Optimized for performance and speed</li>
+                    </ul>
                 </div>
             </div>
 
             <!-- Currently in Development -->
-            <div class="bg-blue-50 rounded-xl p-8 border-2 border-blue-200">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">Currently in Development</h2>
+            <div class="dev-card">
+                <h2 style="margin-bottom: 32px;">Currently in Development</h2>
 
-                <div class="space-y-4">
-                    <p class="text-gray-700">We're actively developing new features for both our free and Pro versions. We don't pre-announce specific features or timelines — we prefer to ship quality tools when they're ready.</p>
+                <p style="margin-bottom: 32px;">We're actively developing new features for both our free and Pro versions. We don't pre-announce specific features or timelines — we prefer to ship quality tools when they're ready.</p>
 
-                    <div class="bg-white rounded-lg p-6 border border-blue-200">
-                        <h3 class="font-bold text-gray-900 mb-3">Pro: Growing Bundle</h3>
-                        <p class="text-gray-700 text-sm mb-3">Pro customers automatically receive all new features as they're released — at no extra charge. Your license is a growing bundle that gets better over time.</p>
-                        <ul class="list-disc pl-6 text-gray-700 space-y-1 text-sm">
-                            <li>Advanced author marketing tools</li>
-                            <li>Premium book display templates</li>
-                            <li>Reader engagement features</li>
-                            <li>Enhanced SEO capabilities</li>
-                            <li>And more surprises when they're ready</li>
-                        </ul>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-6 border border-blue-200">
-                        <h3 class="font-bold text-gray-900 mb-3">Free: Core Improvements</h3>
-                        <p class="text-gray-700 text-sm mb-3">We're continuously improving the free version with bug fixes, performance enhancements, and polish.</p>
-                        <ul class="list-disc pl-6 text-gray-700 space-y-1 text-sm">
-                            <li>WordPress.org compliance and testing</li>
-                            <li>Security hardening and audits</li>
-                            <li>Performance optimizations</li>
-                            <li>UI/UX refinements</li>
-                        </ul>
-                    </div>
-
-                    <p class="text-sm text-gray-600 italic mt-4">
-                        "We ship useful tools when they're ready — not when we promised them. Quality over deadlines."
-                    </p>
+                <div class="dev-section">
+                    <h3 style="margin-bottom: 16px;">Pro: Growing Bundle</h3>
+                    <p style="font-size: 16px; margin-bottom: 16px;">Pro customers automatically receive all new features as they're released — at no extra charge. Your license is a growing bundle that gets better over time.</p>
+                    <ul>
+                        <li>Advanced author marketing tools</li>
+                        <li>Premium book display templates</li>
+                        <li>Reader engagement features</li>
+                        <li>Enhanced SEO capabilities</li>
+                        <li>And more surprises when they're ready</li>
+                    </ul>
                 </div>
+
+                <div class="dev-section">
+                    <h3 style="margin-bottom: 16px;">Free: Core Improvements</h3>
+                    <p style="font-size: 16px; margin-bottom: 16px;">We're continuously improving the free version with bug fixes, performance enhancements, and polish.</p>
+                    <ul>
+                        <li>WordPress.org compliance and testing</li>
+                        <li>Security hardening and audits</li>
+                        <li>Performance optimizations</li>
+                        <li>UI/UX refinements</li>
+                    </ul>
+                </div>
+
+                <p style="font-size: 16px; font-style: italic; margin-top: 32px; padding-top: 24px; border-top: 1px solid #000000;">
+                    "We ship useful tools when they're ready — not when we promised them. Quality over deadlines."
+                </p>
             </div>
 
         </div>
@@ -109,7 +252,6 @@
     <!-- JavaScript -->
     <script src="js/header-loader.js"></script>
     <script src="js/footer-loader.js"></script>
-
     <script src="js/main.js"></script>
 </body>
 </html>
