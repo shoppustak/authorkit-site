@@ -1,296 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features - AuthorKit</title>
-    <meta name="description" content="Explore all AuthorKit features for WordPress authors.">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features - AuthorKit</title>
+  <meta name="description" content="Explore all AuthorKit features for WordPress authors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/monochrome-components.css">
+  <style>
+    /* Hero Section */
+    .features-hero {
+      background: #FFFFFF;
+      padding: 96px 0;
+      border-bottom: 1px solid #000000;
+      text-align: center;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 24px;
+    }
+    .hero-text {
+      font-family: 'Source Serif 4', serif;
+      font-size: 20px;
+      color: #000000;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Primary Features */
+    .primary-features {
+      background: #FFFFFF;
+      padding: 96px 0;
+    }
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 64px;
+    }
+    .feature-item {
+      display: flex;
+      gap: 24px;
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+    }
+    .feature-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+    .feature-description {
+      font-family: 'Source Serif 4', serif;
+      font-size: 16px;
+      color: #000000;
+      line-height: 1.7;
+    }
+
+    /* Detailed Features */
+    .detailed-features {
+      background: #000000;
+      color: #FFFFFF;
+      padding: 96px 0;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 64px;
+      text-align: center;
+    }
+    .detailed-features .section-title {
+      color: #FFFFFF;
+    }
+    .features-checklist {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 48px;
+    }
+    .checklist-column {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .checklist-item {
+      font-family: 'Source Serif 4', serif;
+      font-size: 16px;
+      margin-bottom: 16px;
+      position: relative;
+      padding-left: 24px;
+    }
+    .checklist-mark {
+      position: absolute;
+      left: 0;
+    }
+
+    /* Comparison Table */
+    .comparison {
+      background: #FFFFFF;
+      padding: 96px 0;
+      border-top: 1px solid #000000;
+    }
+    .comparison .section-title {
+      color: #000000;
+    }
+    .comparison-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .table-header {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      padding: 16px;
+      text-align: left;
+      border-bottom: 2px solid #000000;
+    }
+    .table-cell {
+      font-family: 'Source Serif 4', serif;
+      font-size: 16px;
+      padding: 16px;
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    .text-center {
+      text-align: center;
+    }
+
+    /* CTA Section */
+    .features-cta {
+      background: #FFFFFF;
+      padding: 96px 0;
+      text-align: center;
+    }
+    .cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #000000;
+      margin-bottom: 24px;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 640px) {
+      .features-hero .hero-title { font-size: 32px; }
+      .features-hero .hero-text { font-size: 18px; }
+      .features-list { grid-template-columns: 1fr; gap: 48px; }
+      .feature-item { flex-direction: column; text-align: center; }
+      .feature-icon { margin: 0 auto; }
+      .comparison-table { font-size: 14px; }
+      .comparison-table th,
+      .comparison-table td { padding: 12px 8px; }
+      .features-hero { padding: 64px 0; }
+      .primary-features { padding: 64px 0; }
+      .detailed-features { padding: 64px 0; }
+      .comparison { padding: 64px 0; }
+      .features-cta { padding: 64px 0; }
+      .container { padding: 0 16px; }
+    }
+  </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header (Loaded from shared component) -->
-    <div id="header-placeholder"></div>
+<body>
+  <!-- Header (Loaded from shared component) -->
+  <div id="header-placeholder"></div>
 
-    <!-- Hero -->
-    <section class="bg-gradient-to-br from-blue-50 to-indigo-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl font-bold text-gray-900 mb-4">Powerful Features for Authors</h1>
-            <p class="text-xl text-gray-600">Everything you need to manage and market your books</p>
+  <!-- Hero Section -->
+  <section class="features-hero">
+    <div class="container">
+      <h1 class="hero-title">
+        Powerful Features for Professional Authors
+      </h1>
+      <p class="hero-text">
+        Everything you need to showcase your books, manage your author brand, and grow your readership.
+      </p>
+    </div>
+  </section>
+
+  <!-- Primary Features -->
+  <section class="primary-features">
+    <div class="container">
+      <div class="features-list">
+
+        <!-- Book Showcase Feature -->
+        <div class="feature-item">
+          <img src="images/feature-icons/book-icon.svg" alt="Book icon" class="feature-icon">
+          <div class="feature-content">
+            <h3 class="feature-title">
+              Beautiful Book Showcases
+            </h3>
+            <p class="feature-description">
+              Display your books with customizable layouts. Grid view, list view, or carousel - choose what works for your site. Automatically pulls metadata from Amazon and other retailers.
+            </p>
+          </div>
         </div>
-    </section>
 
-    <!-- Core Features -->
-    <section class="py-20">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Core Features (FREE)</h2>
-
-            <div class="grid md:grid-cols-3 gap-8">
-
-            <!-- Books Module -->
-            <div class="bg-white rounded-xl shadow-sm p-6">
-                <div class="flex items-start gap-3 mb-4">
-                    <div class="flex-shrink-0">
-                        <div style="width:56px;height:56px;background:#ffedd6;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <img src="images/icon-books.svg" alt="Books Module" style="width:32px;height:32px;">
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-1">AuthorKit Books</h3>
-                        <p class="text-gray-600 text-sm">Complete book catalog management</p>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 gap-2">
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">27 custom meta fields</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Categories, series, age ranges</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Amazon-style templates</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Schema.org structured data</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Multiple format support</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Buy links & coming soon badges</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bookshelf Module -->
-            <div class="bg-white rounded-xl shadow-sm p-6">
-                <div class="flex items-start gap-3 mb-4">
-                    <div class="flex-shrink-0">
-                        <div style="width:56px;height:56px;background:#ffedd6;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <img src="images/icon-bookshelf.svg" alt="Bookshelf" style="width:32px;height:32px;">
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-1">AuthorKit Bookshelf</h3>
-                        <p class="text-gray-600 text-sm">Free book discovery platform</p>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 gap-2">
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">List books on bookshelf.authorkit.pro</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Free discoverability for indie authors</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Advanced search & filters</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Direct links back to your site</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Reach readers worldwide</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Auto-sync from your catalog</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Reviews Module -->
-            <div class="bg-white rounded-xl shadow-sm p-6">
-                <div class="flex items-start gap-3 mb-4">
-                    <div class="flex-shrink-0">
-                        <div style="width:56px;height:56px;background:#ffedd6;border-radius:50%;display:flex;align-items:center;justify-content:center;">
-                            <img src="images/icon-reviews.svg" alt="Review System" style="width:32px;height:32px;">
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-1">AuthorKit Reviews</h3>
-                        <p class="text-gray-600 text-sm">Amazon-style reader reviews (up to 3 per book free, unlimited in Pro)</p>
-                    </div>
-                </div>
-                <div class="grid grid-cols-1 gap-2">
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">5-star rating system</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Frontend submission form</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Moderation queue</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Verified purchase badges</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Helpful/not helpful voting</span>
-                    </div>
-                    <div class="flex items-start gap-2">
-                        <svg class="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                        </svg>
-                        <span class="text-gray-700 text-sm">Review schema markup</span>
-                    </div>
-                </div>
-            </div>
-
-            </div>
+        <!-- Series Management -->
+        <div class="feature-item">
+          <img src="images/feature-icons/series-icon.svg" alt="Series icon" class="feature-icon">
+          <div class="feature-content">
+            <h3 class="feature-title">
+              Series Management
+            </h3>
+            <p class="feature-description">
+              Organize books into series with automatic numbering and navigation. Readers can easily discover all books in order. Perfect for multi-book series and interconnected stories.
+            </p>
+          </div>
         </div>
-    </section>
 
-    <!-- Premium Features -->
-    <section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <span class="inline-block bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-semibold mb-4">PREMIUM</span>
-                <h2 class="text-3xl font-bold text-gray-900">Unlock More with Pro</h2>
-                <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Pro customers get unlimited books and reviews, enhanced SEO, and all future features we build — automatically included at no extra charge.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Unlimited Usage -->
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">No Limits</h3>
-                    <p class="text-gray-600 mb-4">Remove all restrictions — unlimited books, unlimited reviews per book, and full bookshelf sync control.</p>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Unlimited books in your catalog</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Unlimited reviews per book</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Complete bookshelf control</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Advanced Features -->
-                <div class="bg-white p-8 rounded-xl shadow-sm">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Premium Tools</h3>
-                    <p class="text-gray-600 mb-4">Access professional author marketing features and advanced display options that help you sell more books.</p>
-                    <ul class="space-y-2 text-sm text-gray-700">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Enhanced SEO with rich schema</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-4 h-4 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span>Priority email support</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Growing Bundle -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border-2 border-blue-600 md:col-span-2">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center shrink-0">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                            </svg>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">All Future Features Included</h3>
-                            <p class="text-gray-600 mb-3">Your Pro license is a growing bundle. As we build new author marketing tools and features, you get them automatically — no extra charges, no upsells.</p>
-                            <div class="bg-blue-50 rounded-lg p-4">
-                                <p class="text-sm text-gray-700 italic">"We don't pre-announce features or set hard timelines. Instead, we focus on building quality tools and shipping them when they're ready. Pro customers are always first to know when something new lands in their dashboard."</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-12">
-                <a href="pricing.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition">
-                    View Pricing & Upgrade
-                </a>
-            </div>
+        <!-- Universal Buy Links -->
+        <div class="feature-item">
+          <img src="images/feature-icons/links-icon.svg" alt="Links icon" class="feature-icon">
+          <div class="feature-content">
+            <h3 class="feature-title">
+              Universal Buy Links
+            </h3>
+            <p class="feature-description">
+              One link for all retailers. Readers choose their preferred store - Amazon, Apple Books, Barnes & Noble, Kobo, and more. Maximize sales across all platforms.
+            </p>
+          </div>
         </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="py-16 bg-blue-600">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-            <p class="text-xl text-blue-100 mb-8">Download our free plugins from WordPress.org</p>
-            <a href="download.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-medium hover:bg-gray-100 transition inline-block">
-                Download Free
-            </a>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer (Loaded from shared component) -->
-    <div id="footer-placeholder"></div>
+  <!-- Detailed Features -->
+  <section class="detailed-features">
+    <div class="container">
+      <h2 class="section-title">
+        Everything Included
+      </h2>
+      <div class="features-checklist">
+        <ul class="checklist-column">
+          <li class="checklist-item">
+            <span class="checklist-mark">✓</span> Custom book pages
+          </li>
+          <li class="checklist-item">
+            <span class="checklist-mark">✓</span> Author bio section
+          </li>
+          <li class="checklist-item">
+            <span class="checklist-mark">✓</span> Newsletter signup
+          </li>
+        </ul>
+        <ul class="checklist-column">
+          <li class="checklist-item">
+            <span class="checklist-mark">✓</span> Review display
+          </li>
+          <li class="checklist-item">
+            <span class="checklist-mark">✓</span> Social media integration
+          </li>
+          <li class="checklist-item">
+            <span class="checklist-mark">✓</span> SEO optimization
+          </li>
+        </ul>
+        <ul class="checklist-column">
+          <li class="checklist-item">
+            <span class="checklist-mark">✓</span> Mobile responsive
+          </li>
+          <li class="checklist-item">
+            <span class="checklist-mark">✓</span> Fast loading
+          </li>
+          <li class="checklist-item">
+            <span class="checklist-mark">✓</span> Regular updates
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- JavaScript -->
-    <script src="js/header-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
+  <!-- Comparison Section -->
+  <section class="comparison">
+    <div class="container">
+      <h2 class="section-title">
+        Free vs Pro
+      </h2>
+      <div class="comparison-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="table-header">Feature</th>
+              <th class="table-header text-center">Free</th>
+              <th class="table-header text-center">Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-cell">Book Showcase</td>
+              <td class="table-cell text-center">✓</td>
+              <td class="table-cell text-center">✓</td>
+            </tr>
+            <tr>
+              <td class="table-cell">Universal Links</td>
+              <td class="table-cell text-center">3 books</td>
+              <td class="table-cell text-center">Unlimited</td>
+            </tr>
+            <tr>
+              <td class="table-cell">Custom Styling</td>
+              <td class="table-cell text-center">—</td>
+              <td class="table-cell text-center">✓</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
 
-    <script src="js/main.js"></script>
+  <!-- CTA Section -->
+  <section class="features-cta">
+    <div class="container">
+      <h2 class="cta-title">
+        See AuthorKit in Action
+      </h2>
+      <a href="download.html" class="btn-accent">Try It Free</a>
+    </div>
+  </section>
+
+  <!-- Footer (Loaded from shared component) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JavaScript -->
+  <script src="js/header-loader.js"></script>
+  <script src="js/footer-loader.js"></script>
 </body>
 </html>
