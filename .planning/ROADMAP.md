@@ -209,9 +209,15 @@ Plans:
 
 ## Phase 4: Priority 2 Pages (Supporting Journey)
 
-**Goal**: Redesign supporting pages for download, account, checkout, and support.
+**Goal**: Redesign supporting pages for download, account, checkout, and support while preserving all original strategic copy.
+
+**Plans:** 2 plans
 
 **Duration**: 3-4 days
+
+Plans:
+- [ ] 04-01-PLAN.md — Redesign download and account pages with monochrome design
+- [ ] 04-02-PLAN.md — Redesign checkout and support pages with monochrome design
 
 ### Tasks:
 
