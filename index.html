@@ -114,15 +114,23 @@
     </script>
 
     <style>
-        /* Hero Section Styles */
+        /* Minimalist Monochrome Design System */
+        body {
+            background: #FFFFFF;
+            font-family: 'Source Serif 4', serif;
+            color: #000000;
+        }
+
+        /* Hero Section */
         .hero-section {
             background: #FFFFFF;
-            padding: 96px 0;
+            padding: 96px 32px;
+            border-bottom: 1px solid #000000;
         }
-        .container {
+        .hero-container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 32px;
+            text-align: center;
         }
         .hero-headline {
             font-family: 'Playfair Display', serif;
@@ -131,7 +139,6 @@
             color: #000000;
             margin-bottom: 24px;
             line-height: 1.2;
-            text-align: center;
         }
         .hero-subtitle {
             font-family: 'Source Serif 4', serif;
@@ -139,25 +146,66 @@
             color: #000000;
             margin-bottom: 48px;
             line-height: 1.6;
-            text-align: center;
-            max-width: 800px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
-        .hero-cta {
-            text-align: center;
+        .hero-cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
-        /* Features Section Styles */
+        /* Stats Section */
+        .stats-section {
+            background: #FFFFFF;
+            padding: 64px 32px;
+        }
+        .stats-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+            text-align: center;
+        }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 8px;
+        }
+        .stat-label {
+            font-family: 'Source Serif 4', serif;
+            font-size: 16px;
+            color: #000000;
+        }
+
+        /* Features Section */
         .features-section {
             background: #FFFFFF;
-            padding: 96px 0;
+            padding: 96px 32px;
             border-top: 1px solid #000000;
+        }
+        .features-container {
+            max-width: 1280px;
+            margin: 0 auto;
         }
         .section-heading {
             font-family: 'Playfair Display', serif;
             font-size: 36px;
             font-weight: 600;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .section-subtitle {
+            font-family: 'Source Serif 4', serif;
+            font-size: 20px;
             color: #000000;
             text-align: center;
             margin-bottom: 64px;
@@ -168,39 +216,51 @@
             gap: 48px;
         }
 
-        /* Social Proof Section */
-        .social-proof {
+        /* FAQ Section */
+        .faq-section {
             background: #FFFFFF;
-            padding: 96px 0;
-            text-align: center;
+            padding: 96px 32px;
+            border-top: 1px solid #000000;
         }
-        .testimonial {
-            font-family: 'Source Serif 4', serif;
-            font-size: 24px;
-            font-style: italic;
-            color: #000000;
+        .faq-container {
+            max-width: 1024px;
             margin: 0 auto;
-            max-width: 800px;
         }
-        .testimonial-author {
-            font-family: 'Source Serif 4', serif;
-            font-size: 16px;
-            font-style: normal;
+        .faq-item {
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+        .faq-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
             color: #000000;
-            display: block;
-            margin-top: 24px;
+            margin-bottom: 16px;
+        }
+        .faq-answer {
+            font-family: 'Source Serif 4', serif;
+            font-size: 18px;
+            color: #000000;
+            line-height: 1.6;
         }
 
         /* CTA Section */
         .cta-section {
             background: #000000;
             color: #FFFFFF;
-            padding: 96px 0;
+            padding: 96px 32px;
+        }
+        .cta-container {
+            max-width: 1024px;
+            margin: 0 auto;
             text-align: center;
         }
         .cta-heading {
             font-family: 'Playfair Display', serif;
             font-size: 36px;
+            font-weight: 600;
             color: #FFFFFF;
             margin-bottom: 24px;
         }
@@ -209,15 +269,28 @@
             font-size: 20px;
             color: #FFFFFF;
             margin-bottom: 48px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            line-height: 1.6;
+        }
+        .cta-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        .cta-note {
+            font-family: 'Source Serif 4', serif;
+            font-size: 16px;
+            color: #FFFFFF;
         }
 
-        /* Mobile Responsive Styles */
+        /* Mobile Responsive */
         @media (max-width: 640px) {
-            .hero-section {
-                padding: 64px 0;
+            .hero-section, .features-section, .faq-section, .cta-section {
+                padding: 64px 16px;
+            }
+            .stats-section {
+                padding: 48px 16px;
             }
             .hero-headline {
                 font-size: 32px;
@@ -225,99 +298,163 @@
             .hero-subtitle {
                 font-size: 18px;
             }
-            .container {
-                padding: 0 16px;
+            .section-heading, .cta-heading {
+                font-size: 28px;
             }
-            .features-section, .social-proof, .cta-section {
-                padding: 64px 0;
+            .section-subtitle, .cta-text {
+                font-size: 18px;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+            .stat-number {
+                font-size: 36px;
             }
             .features-grid {
                 grid-template-columns: 1fr;
                 gap: 32px;
             }
-            .section-heading {
-                font-size: 28px;
-                margin-bottom: 48px;
+            .faq-item {
+                padding: 24px;
             }
-            .testimonial {
-                font-size: 20px;
-            }
-            .cta-heading {
-                font-size: 28px;
-            }
-            .cta-text {
+            .faq-question {
                 font-size: 18px;
-                margin-bottom: 32px;
+            }
+            .faq-answer {
+                font-size: 16px;
+            }
+            .hero-cta-group, .cta-group {
+                flex-direction: column;
             }
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body>
     <!-- Header (Loaded from shared component) -->
     <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container">
+        <div class="hero-container">
             <h1 class="hero-headline">
-                The WordPress Plugin for Authors
+                The WordPress <span class="text-blue-600">Plugin Built for Authors</span>
             </h1>
             <p class="hero-subtitle">
-                Showcase your books beautifully. Manage your author brand professionally.
+                Stop duct-taping generic tools together. AuthorKit is a complete, lightweight WordPress plugin — to showcase your books, collect real reader reviews, launch new titles with buzz, and grow your audience. One plugin, everything you need.
             </p>
-            <div class="hero-cta">
-                <a href="download.html" class="btn-accent">Download AuthorKit Free</a>
+            <div class="hero-cta-group">
+                <a href="pages/download.html" class="btn-accent">
+                    Download Free — No Credit Card
+                </a>
+                <a href="pages/features.html" class="btn-secondary">
+                    See What's Inside →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Bundled Plugin</div>
+                </div>
+                <div>
+                    <div class="stat-number">27</div>
+                    <div class="stat-label">Book Meta Fields</div>
+                </div>
+                <div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Theme Compatible</div>
+                </div>
+                <div>
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Dependencies</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features-section">
-        <div class="container">
-            <h2 class="section-heading">
-                Everything Authors Need
-            </h2>
+        <div class="features-container">
+            <h2 class="section-heading">Everything You Need to Publish</h2>
+            <p class="section-subtitle">Purpose-built tools for modern self-publishing authors</p>
+
             <div class="features-grid">
                 <div class="card">
-                    <h3 class="card-title">Book Showcase</h3>
-                    <p class="card-body">Display your books with beautiful, customizable layouts that convert readers into buyers.</p>
+                    <h3 class="card-title">AuthorKit Books</h3>
+                    <p class="card-body">Manage your entire catalog with 27 custom fields, taxonomies, and Amazon-style displays.</p>
                 </div>
+
                 <div class="card">
-                    <h3 class="card-title">Series Management</h3>
-                    <p class="card-body">Organize books into series with automatic ordering and navigation between titles.</p>
+                    <h3 class="card-title">AuthorKit Reviews</h3>
+                    <p class="card-body">Amazon-style reviews with star ratings, verified purchases, and moderation controls.</p>
                 </div>
+
                 <div class="card">
-                    <h3 class="card-title">Universal Links</h3>
-                    <p class="card-body">One link for all retailers - Amazon, Apple Books, Barnes & Noble, and more.</p>
+                    <h3 class="card-title">Lightning Fast & Growing</h3>
+                    <p class="card-body">Vanilla PHP and JavaScript — no bloat, no dependencies. Pro customers get all future features as we build them.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Proof Section -->
-    <section class="social-proof">
-        <div class="container">
-            <blockquote class="testimonial">
-                "AuthorKit transformed how I showcase my books online. Sales increased 40% in the first month."
-            </blockquote>
-            <cite class="testimonial-author">
-                — Sarah Mitchell, Bestselling Author
-            </cite>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="section-heading">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about AuthorKit</p>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Is AuthorKit free to use?</h3>
+                <p class="faq-answer">Yes! AuthorKit is available for free on WordPress.org with limits on books (10) and reviews (3 per book). All books sync to the free Bookshelf catalog automatically. Premium plans with unlimited usage and advanced features are available for authors who need more power.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Do I need to know how to code to use AuthorKit?</h3>
+                <p class="faq-answer">Not at all. AuthorKit is designed for authors, not developers. Install from your WordPress dashboard in minutes — no coding required.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Will AuthorKit work with my existing WordPress theme?</h3>
+                <p class="faq-answer">AuthorKit is 100% theme compatible and works with popular themes like Kadence, Astra, Divi, GeneratePress, and virtually any other WordPress theme.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Can I use AuthorKit if I have books on Amazon, Kindle Unlimited, or other retailers?</h3>
+                <p class="faq-answer">Absolutely. AuthorKit lets you link to all major retailers including Amazon, Barnes & Noble, Kobo, Apple Books, and any direct sales platform.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Does AuthorKit slow down my website?</h3>
+                <p class="faq-answer">The opposite. AuthorKit is built with vanilla PHP and JavaScript — no heavy dependencies — making it one of the lightest author plugin suites available for WordPress.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Can I manage a series with AuthorKit Books?</h3>
+                <p class="faq-answer">Yes. AuthorKit Books supports full series management with series name, book number, and custom taxonomies so readers can easily discover all books in a series.</p>
+            </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="container">
-            <h2 class="cta-heading">
-                Ready to Elevate Your Author Brand?
-            </h2>
-            <p class="cta-text">
-                Join thousands of authors using AuthorKit to grow their readership.
-            </p>
-            <a href="download.html" class="btn-primary">
-                Start Free Today
-            </a>
+        <div class="cta-container">
+            <h2 class="cta-heading">Your Author Website Deserves Professional Tools</h2>
+            <p class="cta-text">Thousands of self-publishing authors are building better websites with AuthorKit. Start free, and upgrade only when you're ready.</p>
+            <div class="cta-group">
+                <a href="pages/download.html" class="btn-primary">
+                    Install Free on WordPress.org →
+                </a>
+                <a href="pages/pricing.html" class="btn-secondary">
+                    View Premium Plans
+                </a>
+            </div>
+            <p class="cta-note">⭐ Free forever. No credit card. No bloat. Just tools that work.</p>
         </div>
     </section>
 
