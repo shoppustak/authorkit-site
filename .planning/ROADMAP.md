@@ -263,30 +263,41 @@ Plans:
 
 ## Phase 5: Priority 3 Pages (Content & Legal)
 
-**Goal**: Redesign remaining content pages for consistency.
+**Goal**: Redesign remaining content and legal pages with Minimalist Monochrome design while preserving all strategic copy exactly.
+
+**Plans:** 3 plans
 
 **Duration**: 2-3 days
+
+Plans:
+- [ ] 05-01-PLAN.md — Redesign content pages (about, blog, changelog)
+- [ ] 05-02-PLAN.md — Redesign bookshelf pages (index, browse, redirect)
+- [ ] 05-03-PLAN.md — Redesign legal pages (privacy, terms, refund)
 
 ### Tasks:
 
 5.1. **Content Pages Redesign**
-- About page: Clean layout with team/company info
-- Changelog page: Minimal version list with clean formatting
-- Privacy Policy: Clean legal text with clear sections
-- Terms of Use: Clean legal text with clear sections
-- Refund Policy: Clean legal text with clear sections
+- About page: Clean layout with team/company info preserved
+- Blog page: Minimal post cards with black borders
+- Changelog page: Version list with clean formatting
 
-5.2. **Remaining HTML Pages**
-- Audit all remaining ~30 pages
-- Apply design system consistently
-- Update headers/footers to new design
-- Ensure mobile responsiveness
+5.2. **Bookshelf Pages Redesign**
+- Bookshelf index: Book grid with search/filter functionality
+- Bookshelf browse: Category navigation with thumbnails
+- Bookshelf redirect: Maintain redirect functionality
+
+5.3. **Legal Pages Redesign**
+- Privacy Policy: Clean legal text with clear sections
+- Terms of Use: Numbered sections with hierarchy
+- Refund Policy: Clear policy terms and conditions
 
 **Deliverables**:
-- All 40+ HTML pages redesigned and consistent
+- All 9 remaining HTML pages redesigned and consistent
 
 **Success Criteria**:
 - 100% of site pages use new design system
+- All original copy preserved exactly
+- Legal text remains fully intact
 - No visual inconsistencies across pages
 - All pages mobile-responsive
 
