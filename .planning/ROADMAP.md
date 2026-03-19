@@ -150,7 +150,7 @@ Plans:
 
 **Goal**: Redesign the 4 most critical pages that drive conversion and usage.
 
-**Plans:** 3 plans
+**Plans:** 3/3 plans complete
 
 **Duration**: 4-5 days
 
