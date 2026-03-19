@@ -6,7 +6,346 @@
     <title>Browse Books - AuthorKit Bookshelf</title>
     <meta name="description" content="Browse and filter books from self-publishing authors powered by AuthorKit.">
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+    <!-- Font Preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap">
+
+    <!-- Design System Styles -->
+    <link rel="stylesheet" href="/css/design-tokens.css">
+    <link rel="stylesheet" href="/css/monochrome-components.css">
+
+    <!-- Legacy Bookshelf Styles (for compatibility) -->
     <link rel="stylesheet" href="/css/bookshelf.css">
+
+    <style>
+        /* Monochrome Design Overrides */
+        * {
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            transition: none !important;
+        }
+
+        body {
+            background: #FFFFFF;
+            color: #000000;
+            font-family: 'Source Serif 4', serif;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Header */
+        .site-header {
+            background: #FFFFFF;
+            border-bottom: 1px solid #000000;
+        }
+
+        /* Browse Header */
+        .browse-header {
+            background: #FFFFFF;
+            padding: 3rem 1rem 2rem;
+            border-bottom: 1px solid #000000;
+        }
+
+        .browse-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            line-height: 1.2;
+            color: #000000;
+            margin-bottom: 0.5rem;
+        }
+
+        .browse-header p {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.25rem;
+            line-height: 1.7;
+            color: #000000;
+        }
+
+        /* Browse Layout */
+        .browse-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 3rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 1024px) {
+            .browse-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .browse-sidebar {
+                order: 2;
+            }
+
+            .browse-main {
+                order: 1;
+            }
+        }
+
+        /* Sidebar */
+        .browse-sidebar {
+            position: sticky;
+            top: 2rem;
+            height: fit-content;
+        }
+
+        .filter-section {
+            margin-bottom: 2rem;
+        }
+
+        .filter-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+
+        /* Search Input */
+        .search-input {
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            padding: 12px 16px;
+            font-family: 'Source Serif 4', serif;
+            font-size: 1rem;
+            color: #000000;
+            min-height: 44px;
+        }
+
+        .search-input:focus {
+            border: 2px solid #000000;
+            outline: none;
+        }
+
+        /* Genre Checkboxes */
+        .genre-filters {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .genre-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            font-family: 'Source Serif 4', serif;
+            font-size: 0.9375rem;
+            color: #000000;
+        }
+
+        .genre-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000000;
+            cursor: pointer;
+        }
+
+        .genre-checkbox input[type="checkbox"]:focus {
+            outline: 2px solid #000000;
+            outline-offset: 2px;
+        }
+
+        /* Sort Select */
+        .sort-select {
+            width: 100%;
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            padding: 12px 16px;
+            font-family: 'Source Serif 4', serif;
+            font-size: 1rem;
+            color: #000000;
+            min-height: 44px;
+        }
+
+        .sort-select:focus {
+            border: 2px solid #000000;
+            outline: none;
+        }
+
+        /* Reset Button */
+        .btn-reset {
+            width: 100%;
+            background: #FFFFFF;
+            color: #000000;
+            border: 2px solid #000000;
+            padding: 12px 24px;
+            font-family: 'Source Serif 4', serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            min-height: 44px;
+        }
+
+        .btn-reset:hover {
+            background: #000000;
+            color: #FFFFFF;
+        }
+
+        /* Browse Controls */
+        .browse-controls {
+            margin-bottom: 1.5rem;
+        }
+
+        .results-count {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000000;
+        }
+
+        /* Books Grid */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .book-card {
+            background: #FFFFFF;
+            border: 1px solid #000000;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .book-card:hover {
+            border: 2px solid #000000;
+            margin: -1px;
+        }
+
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 3rem 0;
+        }
+
+        .pagination button {
+            background: #FFFFFF;
+            color: #000000;
+            border: 2px solid #000000;
+            padding: 8px 16px;
+            font-family: 'Source Serif 4', serif;
+            font-weight: 600;
+            cursor: pointer;
+            min-height: 44px;
+            min-width: 44px;
+        }
+
+        .pagination button:hover:not(:disabled) {
+            background: #000000;
+            color: #FFFFFF;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .pagination button.active {
+            background: #000000;
+            color: #FFFFFF;
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #000000;
+            color: #FFFFFF;
+            padding: 3rem 1rem 1.5rem;
+            border-top: 1px solid #000000;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #FFFFFF;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col p,
+        .footer-col a {
+            color: #FFFFFF;
+            font-family: 'Source Serif 4', serif;
+            font-size: 0.9375rem;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #FFFFFF;
+        }
+
+        .footer-bottom p {
+            color: #FFFFFF;
+            font-family: 'Source Serif 4', serif;
+            font-size: 0.875rem;
+        }
+
+        /* Loading and Error States */
+        .loading,
+        .error {
+            font-family: 'Source Serif 4', serif;
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #000000;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background: #000000;
+            color: #FFFFFF;
+            border: 2px solid #000000;
+            padding: 12px 24px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: #FFFFFF;
+            color: #000000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .browse-header h1 {
+                font-size: 2rem;
+            }
+
+            .browse-header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
