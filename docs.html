@@ -1,43 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation - AuthorKit</title>
-    <meta name="description" content="Complete documentation for AuthorKit WordPress plugins. Installation guides, shortcode reference, developer docs and more.">
-    <meta http-equiv="refresh" content="0; url=https://authorkit.gitbook.io/authorkit-documentation">
-    <script>window.location.replace("https://authorkit.gitbook.io/authorkit-documentation");</script>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation - AuthorKit</title>
+  <meta name="description" content="Complete documentation for AuthorKit WordPress plugins. Installation guides, shortcode reference, developer docs and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/monochrome-components.css">
+  <style>
+    /* Hero Section */
+    .docs-hero {
+      background: #000000;
+      color: #FFFFFF;
+      padding: 96px 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .hero-text {
+      font-family: 'Source Serif 4', serif;
+      font-size: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Quick Links */
+    .quick-links {
+      background: #FFFFFF;
+      padding: 96px 0;
+      border-bottom: 1px solid #000000;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .links-grid .card {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    /* Documentation Categories */
+    .docs-categories {
+      background: #FFFFFF;
+      padding: 96px 0;
+    }
+    .docs-layout {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 64px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .docs-nav {
+      position: sticky;
+      top: 96px;
+      height: fit-content;
+    }
+    .nav-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 24px;
+    }
+    .nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-item {
+      margin-bottom: 16px;
+    }
+    /* Use nav-link class from monochrome-components.css */
+
+    /* Documentation Content */
+    .docs-article {
+      margin-bottom: 64px;
+    }
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: #000000;
+      margin-bottom: 24px;
+    }
+    .article-text {
+      font-family: 'Source Serif 4', serif;
+      font-size: 16px;
+      color: #000000;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .article-list {
+      font-family: 'Source Serif 4', serif;
+      font-size: 16px;
+      color: #000000;
+      line-height: 1.7;
+      padding-left: 24px;
+    }
+    .article-list li {
+      margin-bottom: 12px;
+    }
+
+    /* Search Section */
+    .docs-search {
+      background: #FFFFFF;
+      padding: 48px 0;
+      border-bottom: 1px solid #000000;
+    }
+    .search-form {
+      display: flex;
+      gap: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .search-form .form-input {
+      flex: 1;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .docs-layout {
+        grid-template-columns: 1fr;
+      }
+      .docs-nav {
+        position: static;
+        border-bottom: 1px solid #000000;
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+      }
+    }
+    @media (max-width: 640px) {
+      .docs-hero .hero-title { font-size: 32px; }
+      .links-grid { grid-template-columns: 1fr; }
+      section { padding: 64px 0; }
+      .container { padding: 0 16px; }
+    }
+  </style>
 </head>
-<body class="bg-gray-50">
-    <!-- Header (Loaded from shared component) -->
-    <div id="header-placeholder"></div>
+<body>
+  <!-- Header (Loaded from shared component) -->
+  <div id="header-placeholder"></div>
 
-    <!-- Redirect message -->
-    <section class="min-h-screen flex items-center justify-center py-20">
-        <div class="max-w-lg mx-auto px-4 text-center">
-            <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                </svg>
-            </div>
-            <h1 class="text-2xl font-bold text-gray-900 mb-3">Taking you to the docs...</h1>
-            <p class="text-gray-600 mb-8">AuthorKit documentation is hosted on GitBook. You should be redirected automatically.</p>
-            <a href="https://authorkit.gitbook.io/authorkit-documentation"
-               class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition">
-                Open Documentation
-            </a>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="docs-hero">
+    <div class="container">
+      <h1 class="hero-title">
+        Documentation
+      </h1>
+      <p class="hero-text">
+        Everything you need to know about using AuthorKit to showcase your books.
+      </p>
+    </div>
+  </section>
 
-    <!-- Footer (Loaded from shared component) -->
-    <div id="footer-placeholder"></div>
+  <!-- Search Section -->
+  <section class="docs-search">
+    <div class="container">
+      <form class="search-form">
+        <input type="text" placeholder="Search documentation..." class="form-input">
+        <button type="submit" class="btn-primary">Search</button>
+      </form>
+    </div>
+  </section>
 
-    <!-- JavaScript -->
-    <script src="js/header-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
+  <!-- Quick Links -->
+  <section class="quick-links">
+    <div class="container">
+      <h2 class="section-title">
+        Quick Start
+      </h2>
+      <div class="links-grid">
 
-    <script src="js/main.js"></script>
+        <a href="#installation" class="card card-hover">
+          <h3 class="card-title">
+            Installation
+          </h3>
+          <p class="card-body">
+            Get AuthorKit up and running in 5 minutes
+          </p>
+        </a>
+
+        <a href="#first-book" class="card card-hover">
+          <h3 class="card-title">
+            Add Your First Book
+          </h3>
+          <p class="card-body">
+            Learn how to add and customize book displays
+          </p>
+        </a>
+
+        <a href="#customization" class="card card-hover">
+          <h3 class="card-title">
+            Customization
+          </h3>
+          <p class="card-body">
+            Make AuthorKit match your site design
+          </p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Documentation Categories -->
+  <section class="docs-categories">
+    <div class="container">
+      <div class="docs-layout">
+
+        <!-- Sidebar Navigation -->
+        <nav class="docs-nav">
+          <h3 class="nav-title">
+            Topics
+          </h3>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#getting-started" class="nav-link">
+                Getting Started
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#books" class="nav-link">
+                Managing Books
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#layouts" class="nav-link">
+                Layouts & Display
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#retailers" class="nav-link">
+                Retailer Links
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#advanced" class="nav-link">
+                Advanced Features
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#troubleshooting" class="nav-link">
+                Troubleshooting
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="docs-content">
+          <article id="getting-started" class="docs-article">
+            <h2 class="article-title">
+              Getting Started
+            </h2>
+            <p class="article-text">
+              Welcome to AuthorKit! This guide will help you get up and running quickly.
+            </p>
+            <ol class="article-list">
+              <li>Download AuthorKit from the WordPress repository</li>
+              <li>Install and activate the plugin</li>
+              <li>Navigate to AuthorKit settings</li>
+              <li>Add your first book</li>
+            </ol>
+          </article>
+
+          <article id="books" class="docs-article">
+            <h2 class="article-title">
+              Managing Books
+            </h2>
+            <p class="article-text">
+              Learn how to add, edit, and organize your books in AuthorKit.
+            </p>
+          </article>
+        </main>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Loaded from shared component) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- JavaScript -->
+  <script src="js/header-loader.js"></script>
+  <script src="js/footer-loader.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
