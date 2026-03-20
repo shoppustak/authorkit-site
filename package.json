@@ -6,9 +6,14 @@
     "dev": "python3 -m http.server 8000",
     "serve": "python3 -m http.server 8000",
     "build:css": "tailwindcss -i ./css/input.css -o ./css/styles.css --minify",
+    "build:css:watch": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
+    "build:css:debug": "tailwindcss -i ./css/input.css -o ./css/styles.css",
     "watch:css": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
+    "analyze:css": "tailwindcss -i ./css/input.css -o ./css/styles.css --minify && ls -lh ./css/styles.css",
     "build:js": "terser js/main.js -o js/main.min.js -c -m && terser js/bookshelf.js -o js/bookshelf.min.js -c -m && terser js/bookshelf-browse.js -o js/bookshelf-browse.min.js -c -m",
-    "build": "npm run build:css && npm run build:js"
+    "build": "npm run build:css && npm run build:js",
+    "build:prod": "NODE_ENV=production npm run build:css && npm run build:js",
+    "clean": "rm -f css/styles.css js/*.min.js"
   },
   "keywords": ["authorkit", "wordpress", "plugins", "authors"],
   "author": "AuthorKit",
