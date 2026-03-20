@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom AuthorKit styles */
+@layer components {
+  .btn-primary {
+    @apply bg-authorkit-orange text-gray-900 font-semibold px-6 py-3 rounded-lg hover:bg-orange-600 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-authorkit-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-800 transition-colors;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Test - Always Visible</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/monochrome-components.css">
+    <style>
+        /* Override responsive hiding for testing */
+        .test-nav {
+            display: flex !important;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="background: yellow; padding: 10px;">TEST PAGE - Navigation Below (Always Visible)</h1>
+
+    <!-- Navigation - Desktop Menu Always Visible for Testing -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/logo-authorkit.svg" alt="AuthorKit" class="nav-logo">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation - FORCED VISIBLE FOR TESTING -->
+                <div class="test-nav items-center space-x-8" style="background: lightblue; padding: 10px;">
+                    <a href="index.html" class="nav-link" style="background: pink; padding: 5px;">Home</a>
+                    <a href="features.html" class="nav-link" style="background: pink; padding: 5px;">Features</a>
+                    <a href="pricing.html" class="nav-link" style="background: pink; padding: 5px;">Pricing</a>
+                    <a href="blog.html" class="nav-link" style="background: pink; padding: 5px;">Blog</a>
+                    <a href="docs.html" class="nav-link" style="background: pink; padding: 5px;">Docs</a>
+                    <a href="download.html" class="btn-primary" style="display: inline-block;">Download Free</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div style="margin-top: 100px; padding: 20px; background: #f0f0f0;">
+        <h2>Diagnostic Results</h2>
+        <p><strong>What you should see above:</strong></p>
+        <ul>
+            <li>✓ Yellow "TEST PAGE" banner</li>
+            <li>✓ Black horizontal line (nav-bar border)</li>
+            <li>✓ Light blue background (nav container)</li>
+            <li>✓ Pink boxes with link text: Home, Features, Pricing, Blog, Docs</li>
+            <li>✓ Black "Download Free" button</li>
+        </ul>
+
+        <h3 style="margin-top: 30px;">Your Screen Width</h3>
+        <p id="screen-width"></p>
+        <script>
+            document.getElementById('screen-width').innerHTML =
+                'Window width: <strong>' + window.innerWidth + 'px</strong><br>' +
+                'Screen needs to be ≥1024px for normal navigation to show.<br>' +
+                (window.innerWidth < 1024 ?
+                    '<span style="color: red; font-weight: bold;">⚠ Your screen is too narrow! Desktop nav is hidden. Widen your browser window to ≥1024px.</span>' :
+                    '<span style="color: green; font-weight: bold;">✓ Your screen is wide enough for desktop navigation.</span>');
+        </script>
+    </div>
+</body>
+</html>

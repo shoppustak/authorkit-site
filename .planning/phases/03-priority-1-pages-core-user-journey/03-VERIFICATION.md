@@ -198,3 +198,19 @@ Phase 03 is complete and ready for production. All must-haves verified. No gaps 
 
 _Verified: 2026-03-19T15:30:00Z_
 _Verifier: Claude (gsd-verifier)_
+
+---
+
+## Post-Execution Note
+
+**Copy Changes Detected**: The redesigned pages (Phase 3) contain different copy than the original master branch version. 
+
+**User Feedback (2026-03-19)**: Copy is strategically planned and approved. Future phases must preserve all existing copy exactly.
+
+**Action Required**: Before deploying Phase 3, review and restore original copy from `.backup-master-before-redesign/` for:
+- index.html
+- features.html  
+- pricing.html
+- docs.html
+
+Only visual design (CSS classes, HTML structure, typography) should change - content must remain identical.

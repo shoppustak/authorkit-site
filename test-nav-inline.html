@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Test - Inline</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/monochrome-components.css">
+</head>
+<body>
+    <h1 style="background: yellow; padding: 10px;">TEST PAGE - Navigation should appear below</h1>
+
+    <!-- Navigation - Directly Embedded (not via JS) -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/logo-authorkit.svg" alt="AuthorKit" class="nav-logo" style="max-height: 40px;">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="features.html" class="nav-link">Features</a>
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="docs.html" class="nav-link">Docs</a>
+                    <a href="download.html" class="btn-primary">Download Free</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <button type="button" class="mobile-menu-button">
+                        <span>MENU</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div style="margin-top: 100px; padding: 20px;">
+        <h2>Content Area</h2>
+        <p>If you see the navigation bar above with black border and links, the CSS is working!</p>
+        <ul>
+            <li>Check 1: Do you see a black border line at the top?</li>
+            <li>Check 2: Do you see navigation links (Home, Features, Pricing, etc)?</li>
+            <li>Check 3: Is there a "Download Free" button?</li>
+        </ul>
+    </div>
+</body>
+</html>
