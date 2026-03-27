@@ -266,5 +266,55 @@ grep -E "padding:\s*(96|128)px" *.html
 
 ---
 
+## Alternating Backgrounds Pattern
+
+### Core Principle
+Replace harsh black border dividers between sections with gentle alternation between white (#FFFFFF) and cream (#f4f2ea) backgrounds. This creates a softer, more premium visual rhythm while maintaining clear section separation.
+
+### Pattern Rules
+
+1. **Start with white** - First content section after header is typically white
+2. **Alternate consistently** - white → cream → white → cream throughout the page
+3. **Exception for black CTAs** - Black (#000000) background sections can interrupt the pattern as they provide strong visual separation
+4. **Header/footer keep borders** - Site boundaries maintain their black border dividers:
+   - Header: `border-bottom: 1px solid #000000`
+   - Footer: `border-top: 1px solid #000000`
+5. **No borders between sections** - Inner sections separate by background color only
+6. **Maintain 64px padding** - Vertical spacing remains consistent regardless of background
+
+### Implementation
+
+```css
+/* Remove all inner borders */
+.section {
+  /* border-top: none; */
+  /* border-bottom: none; */
+}
+
+/* Apply alternating backgrounds */
+.section:nth-of-type(odd) { background: #FFFFFF; }
+.section:nth-of-type(even) { background: #f4f2ea; }
+
+/* Or apply explicitly per section */
+.hero-section { background: #FFFFFF; }
+.features-section { background: #f4f2ea; }
+.testimonials-section { background: #FFFFFF; }
+```
+
+### Visual Impact
+
+- **Before**: Rigid segments divided by black lines
+- **After**: Flowing sections with gentle color transitions
+- **Result**: More premium, bookish, and inviting aesthetic
+
+### Accessibility
+
+- Background colors are presentational only
+- Section structure maintained through semantic HTML
+- Heading hierarchy provides navigation
+- Generous padding ensures clear visual separation
+
+---
+
 *Last updated: 2026-03-27*
-*Version: 1.0*
+*Version: 1.1*
