@@ -7,18 +7,17 @@
     <meta name="description" content="Browse books from self-publishing authors powered by AuthorKit. Discover your next great read from independent authors.">
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 
-    <!-- Font Preloading -->
+    <!-- DNS prefetch and preconnect for faster font loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap">
+
+    <!-- Google Fonts with font-display swap to prevent FOIT -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap">
 
-    <!-- Design System Styles -->
-    <link rel="stylesheet" href="/css/design-tokens.css">
-    <link rel="stylesheet" href="/css/monochrome-components.css">
-
-    <!-- Legacy Bookshelf Styles (for compatibility) -->
-    <link rel="stylesheet" href="/css/bookshelf.css">
+    <!-- Optimized CSS (consolidated + bookshelf-specific) -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bookshelf.css">
 
     <style>
         /* Monochrome Design Overrides */

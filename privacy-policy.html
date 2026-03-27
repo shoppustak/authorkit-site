@@ -6,15 +6,16 @@
     <title>Privacy Policy - AuthorKit</title>
     <meta name="description" content="Privacy Policy for AuthorKit WordPress plugins and services.">
 
-    <!-- Font Preloading -->
+    <!-- DNS prefetch and preconnect for faster font loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@400;500;600&display=swap">
+
+    <!-- Google Fonts with font-display swap to prevent FOIT -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Monochrome Design System -->
-    <link rel="stylesheet" href="css/design-tokens.css">
-    <link rel="stylesheet" href="css/monochrome-components.css">
+    <!-- Optimized CSS (consolidated) -->
+    <link rel="stylesheet" href="css/styles.css">
 
     <style>
         /* Legal page specific styles - Pure Monochrome */
@@ -343,9 +344,9 @@
     <!-- Footer (Loaded from shared component) -->
     <div id="footer-placeholder"></div>
 
-    <!-- JavaScript -->
-    <script src="js/header-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
-    <script src="js/main.js"></script>
+    <!-- JavaScript (deferred for optimal performance) -->
+    <script src="js/header-loader.js" defer></script>
+    <script src="js/footer-loader.js" defer></script>
+    <script src="js/main.min.js" defer></script>
 </body>
 </html>

@@ -6,17 +6,17 @@
     <title>AuthorKit Transparency Reports — Building in Public</title>
     <meta name="description" content="Annual transparency reports from AuthorKit: revenue, growth metrics, challenges, and goals. We believe in building in public and sharing our journey with the WordPress community.">
 
-    <!-- Font Preloading -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&display=swap" as="style">
+    <!-- DNS prefetch and preconnect for faster font loading -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Fonts -->
+    <!-- Google Fonts with font-display swap to prevent FOIT -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Design System CSS -->
-    <link rel="stylesheet" href="css/design-tokens.css">
-    <link rel="stylesheet" href="css/monochrome-components.css">
+    <!-- Optimized CSS (consolidated) -->
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
@@ -222,9 +222,9 @@
     <!-- Footer (Loaded from shared component) -->
     <div id="footer-placeholder"></div>
 
-    <!-- JavaScript -->
-    <script src="js/header-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
-    <script src="js/main.min.js"></script>
+    <!-- JavaScript (deferred for optimal performance) -->
+    <script src="js/header-loader.js" defer></script>
+    <script src="js/footer-loader.js" defer></script>
+    <script src="js/main.min.js" defer></script>
 </body>
 </html>
