@@ -25,3 +25,18 @@ build/
 # Logs
 logs/
 *.log
+
+# Image optimization artifacts
+images/*-320.*
+images/*-640.*
+images/*-1280.*
+images/**/*-320.*
+images/**/*-640.*
+images/**/*-1280.*
+# Keep original images and base WebP conversions
+!images/*.webp
+!images/*.jpg
+!images/*.png
+!images/**/*.webp
+!images/**/*.jpg
+!images/**/*.png

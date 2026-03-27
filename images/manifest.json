@@ -1,0 +1,12 @@
+{
+  "optimized": true,
+  "formats": ["webp", "jpg"],
+  "variants": {
+    "hero-dark": ["320w", "640w"],
+    "hero-light": ["320w", "640w"],
+    "maulik-mehta": ["320w", "640w", "800w"],
+    "swati-joshi": ["320w", "640w", "800w"]
+  },
+  "last_optimized": "2026-03-27",
+  "notes": "Team photos converted to WebP with 56-62% size reduction"
+}
