@@ -59,14 +59,12 @@
     <section class="pt-12 pb-2">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-center gap-4">
-                <span id="label-annual" class="text-sm font-semibold text-gray-900">Annual</span>
-                <button id="billing-toggle" onclick="toggleBilling()"
-                    class="relative inline-flex h-6 w-11 items-center rounded-full bg-gray-200 transition-colors focus:outline-none"
-                    aria-pressed="false">
-                    <span id="toggle-knob" class="inline-block h-4 w-4 transform rounded-full bg-white shadow transition-transform translate-x-1"></span>
+                <span id="label-annual" class="active">Annual</span>
+                <button id="billing-toggle" onclick="toggleBilling()" aria-pressed="false">
+                    <span id="toggle-knob"></span>
                 </button>
-                <span id="label-lifetime" class="text-sm font-medium text-gray-500">
-                    Lifetime <span class="text-orange-600 font-semibold text-xs ml-1">Save 60%+</span>
+                <span id="label-lifetime">
+                    Lifetime <span style="color: #FF9900; font-weight: 700; font-size: 14px; margin-left: 4px;">Save 60%+</span>
                 </span>
             </div>
         </div>
@@ -413,33 +411,22 @@
         function toggleBilling() {
             isLifetime = !isLifetime;
             var toggle = document.getElementById('billing-toggle');
-            var knob = document.getElementById('toggle-knob');
             var labelAnnual = document.getElementById('label-annual');
             var labelLifetime = document.getElementById('label-lifetime');
 
+            // Toggle aria-pressed for CSS styling
+            toggle.setAttribute('aria-pressed', isLifetime ? 'true' : 'false');
+
+            // Toggle active state on labels
             if (isLifetime) {
-                toggle.setAttribute('aria-pressed', 'true');
-                toggle.classList.remove('bg-gray-200');
-                toggle.classList.add('bg-blue-600');
-                knob.classList.remove('translate-x-1');
-                knob.classList.add('translate-x-6');
-                labelAnnual.classList.remove('font-semibold', 'text-gray-900');
-                labelAnnual.classList.add('font-medium', 'text-gray-500');
-                labelLifetime.querySelector('span:first-child') || (labelLifetime.childNodes[0].textContent = 'Lifetime ');
-                labelLifetime.classList.remove('text-gray-500');
-                labelLifetime.classList.add('font-semibold', 'text-gray-900');
+                labelAnnual.classList.remove('active');
+                labelLifetime.classList.add('active');
             } else {
-                toggle.setAttribute('aria-pressed', 'false');
-                toggle.classList.remove('bg-blue-600');
-                toggle.classList.add('bg-gray-200');
-                knob.classList.remove('translate-x-6');
-                knob.classList.add('translate-x-1');
-                labelAnnual.classList.add('font-semibold', 'text-gray-900');
-                labelAnnual.classList.remove('font-medium', 'text-gray-500');
-                labelLifetime.classList.remove('font-semibold', 'text-gray-900');
-                labelLifetime.classList.add('text-gray-500');
+                labelAnnual.classList.add('active');
+                labelLifetime.classList.remove('active');
             }
 
+            // Show/hide pricing sections
             document.querySelectorAll('.billing-annual').forEach(function(el) {
                 el.classList.toggle('hidden', isLifetime);
             });

@@ -613,3 +613,53 @@ div[class*="rounded-xl shadow"] ul {
   text-align: center;
   margin-top: 32px;
 }
+
+/* ==================================================
+   BILLING TOGGLE - MINIMALIST SQUARE DESIGN
+   ================================================== */
+
+/* Toggle container - rectangular track */
+#billing-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  width: 64px;
+  background: var(--color-white);
+  border: 2px solid var(--color-black);
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Toggle knob - square slider */
+#toggle-knob {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background: var(--color-black);
+  transform: translateX(0);
+}
+
+/* Active state - knob slides to right */
+#billing-toggle[aria-pressed="true"] #toggle-knob {
+  transform: translateX(28px);
+}
+
+/* Toggle labels */
+#label-annual,
+#label-lifetime {
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+#label-annual.active,
+#label-lifetime.active {
+  font-weight: 700;
+}
+
+#label-annual:not(.active),
+#label-lifetime:not(.active) {
+  opacity: 0.5;
+}
