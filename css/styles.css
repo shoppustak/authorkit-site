@@ -628,6 +628,43 @@ div[class*="rounded-xl shadow"] {
 div[class*="rounded-xl shadow"] ul {
   flex-grow: 1;
 }
+/* ==================================================
+   PRICING CARDS - POLISHED FOR CONVERSION
+   ================================================== */
+/* Restore rounded corners for pricing cards */
+section:has(.grid.md\:grid-cols-3) div[class*="rounded-xl"] {
+  border-radius: 0.75rem !important;
+}
+/* Restore rounded corners for badges */
+section:has(.grid.md\:grid-cols-3) span[class*="rounded-full"] {
+  border-radius: 9999px !important;
+}
+/* Restore shadows for depth */
+section:has(.grid.md\:grid-cols-3) div.shadow-sm {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+}
+section:has(.grid.md\:grid-cols-3) div.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+}
+/* Restore transitions for better UX */
+section:has(.grid.md\:grid-cols-3) a,
+section:has(.grid.md\:grid-cols-3) button {
+  transition: all 150ms ease-in-out !important;
+}
+/* Polish the billing toggle */
+#billing-toggle {
+  border-radius: 9999px !important;
+  transition: background-color 200ms ease-in-out !important;
+}
+#toggle-knob {
+  border-radius: 9999px !important;
+  transition: transform 200ms ease-in-out !important;
+}
+/* Ensure buttons have proper rounded corners */
+section:has(.grid.md\:grid-cols-3) a[class*="rounded-lg"],
+section:has(.grid.md\:grid-cols-3) button[class*="rounded-lg"] {
+  border-radius: 0.5rem !important;
+}
 /* Tailwind Directives */
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
@@ -1358,9 +1395,6 @@ input, textarea, select {
 .max-w-4xl{
   max-width: 56rem;
 }
-.max-w-5xl{
-  max-width: 64rem;
-}
 .max-w-7xl{
   max-width: 80rem;
 }
@@ -1442,6 +1476,9 @@ input, textarea, select {
 }
 .gap-4{
   gap: 2rem;
+}
+.gap-6{
+  gap: 3rem;
 }
 .gap-8{
   gap: 4rem;
