@@ -307,6 +307,8 @@ Plans:
 
 **Goal**: Achieve Lighthouse scores of 95+ across all metrics through systematic optimization of CSS, JavaScript, images, and resource loading.
 
+**Requirements:** [PERF-01, PERF-02, PERF-03, PERF-04, PERF-05, PERF-06, PERF-07, PERF-08]
+
 **Plans:** 4 plans
 
 **Duration**: 2-3 days
