@@ -17,7 +17,11 @@
     "build:js": "terser js/main.js -o js/main.min.js -c -m && terser js/bookshelf.js -o js/bookshelf.min.js -c -m && terser js/bookshelf-browse.js -o js/bookshelf-browse.min.js -c -m",
     "build": "npm run build:css && npm run build:js",
     "build:prod": "npm run build:css:full && npm run build:js",
-    "clean": "rm -f css/styles.css css/styles.min.css css/merged-legacy.css js/*.min.js"
+    "clean": "rm -f css/styles.css css/styles.min.css css/merged-legacy.css js/*.min.js",
+    "test:lighthouse": "lighthouse http://localhost:8000 --view",
+    "test:lighthouse:quick": "lighthouse http://localhost:8000 --only-categories=performance --view",
+    "test:lighthouse:ci": "lhci autorun --config=.lighthouse/lighthouserc.json",
+    "test:perf": "./scripts/test-performance.sh"
   },
   "keywords": ["authorkit", "wordpress", "plugins", "authors"],
   "author": "AuthorKit",
