@@ -611,15 +611,30 @@ div[class*="rounded-xl shadow"] ul {
   margin: 0;
 }
 
-/* Pricing card sections with padding */
-.pricing-header,
-.pricing-price,
-.pricing-button,
-.pricing-features-container {
-  padding: 32px 40px;
+/* Pricing card sections with padding - more delicate */
+.pricing-header {
+  padding: 32px 40px 24px 40px;
 }
 
-/* Feature list - clean spacing and typography */
+.pricing-price {
+  padding: 24px 40px;
+}
+
+.pricing-button {
+  padding: 24px 40px;
+}
+
+.pricing-features-container {
+  padding: 24px 40px 32px 40px;
+}
+
+/* Subtitle styling - lighter color */
+.pricing-header p {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 15px;
+}
+
+/* Feature list - delicate spacing and typography */
 .pricing-features {
   list-style: none;
   padding: 0;
@@ -627,17 +642,26 @@ div[class*="rounded-xl shadow"] ul {
 }
 
 .pricing-features li {
-  padding: 16px 0;
+  padding: 12px 0;
   font-family: var(--font-ui);
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.5;
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: 8px;
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .pricing-features li:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Smaller, more delicate checkmarks */
+.pricing-features svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 /* CTA buttons within pricing cards - full width, bold */
