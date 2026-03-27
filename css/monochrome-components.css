@@ -534,47 +534,82 @@ div[class*="rounded-xl shadow"] ul {
 }
 
 /* ==================================================
-   PRICING CARDS - POLISHED FOR CONVERSION
+   PRICING CARDS - MINIMALIST VISUAL HIERARCHY
    ================================================== */
 
-/* Restore rounded corners for pricing cards */
-section:has(.grid.md\:grid-cols-3) div[class*="rounded-xl"] {
-  border-radius: 0.75rem !important;
+/* Base pricing card styling with clear borders */
+.pricing-card-base {
+  border: 2px solid var(--color-black);
+  padding: 40px;
 }
 
-/* Restore rounded corners for badges */
-section:has(.grid.md\:grid-cols-3) span[class*="rounded-full"] {
-  border-radius: 9999px !important;
+/* Featured/Pro card - stronger visual emphasis through thicker border */
+.pricing-card-featured {
+  border: 3px solid var(--color-black);
+  padding: 40px;
+  position: relative;
 }
 
-/* Restore shadows for depth */
-section:has(.grid.md\:grid-cols-3) div.shadow-sm {
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+/* Badge styling - high contrast, uppercase for prominence */
+.pricing-badge {
+  display: inline-block;
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 8px 24px;
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
 }
 
-section:has(.grid.md\:grid-cols-3) div.shadow-xl {
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+/* Price display - large, bold, high contrast */
+.pricing-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-black);
+  margin-bottom: 8px;
 }
 
-/* Restore transitions for better UX */
-section:has(.grid.md\:grid-cols-3) a,
-section:has(.grid.md\:grid-cols-3) button {
-  transition: all 150ms ease-in-out !important;
+/* Plan title - strong hierarchy */
+.pricing-title {
+  font-family: var(--font-ui);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
 }
 
-/* Polish the billing toggle */
-#billing-toggle {
-  border-radius: 9999px !important;
-  transition: background-color 200ms ease-in-out !important;
+/* Feature list - clean spacing and typography */
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0;
 }
 
-#toggle-knob {
-  border-radius: 9999px !important;
-  transition: transform 200ms ease-in-out !important;
+.pricing-features li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-/* Ensure buttons have proper rounded corners */
-section:has(.grid.md\:grid-cols-3) a[class*="rounded-lg"],
-section:has(.grid.md\:grid-cols-3) button[class*="rounded-lg"] {
-  border-radius: 0.5rem !important;
+.pricing-features li:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* CTA buttons within pricing cards - full width, bold */
+.pricing-cta {
+  width: 100%;
+  padding: 16px 24px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 32px;
 }
