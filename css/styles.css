@@ -1579,11 +1579,11 @@ input, textarea, select {
   text-align: center;
 }
 .text-sm{
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 .text-xs{
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 1.4;
 }
 .font-bold{
