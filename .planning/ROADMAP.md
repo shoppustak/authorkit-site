@@ -314,8 +314,8 @@ Plans:
 **Duration**: 2-3 days
 
 Plans:
-- [ ] 06-01-PLAN.md — Set up CSS optimization pipeline and performance monitoring
-- [ ] 06-02-PLAN.md — Optimize resource loading across all HTML pages
+- [x] 06-01-PLAN.md — Set up CSS optimization pipeline and performance monitoring ✅ (completed 2026-03-27)
+- [x] 06-02-PLAN.md — Optimize resource loading across all HTML pages ✅ (completed 2026-03-27)
 - [ ] 06-03-PLAN.md — Optimize images with WebP conversion and lazy loading
 - [ ] 06-04-PLAN.md — Run comprehensive Lighthouse validation and verify targets
 
