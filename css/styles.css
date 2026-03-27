@@ -344,7 +344,7 @@
 }
 .footer-copyright {
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-black);
 }
 /* Footer Email Signup */
@@ -362,7 +362,7 @@
   border: 1px solid var(--color-black);
   padding: 8px 12px;
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-black);
   border-radius: 0;
   box-shadow: none;
@@ -380,7 +380,7 @@
   border: 1px solid var(--color-black);
   padding: 8px 16px;
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   border-radius: 0;
@@ -483,7 +483,7 @@
 /* Button Sizes */
 .btn-sm {
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 16px;
   min-height: 36px;
 }
 .btn-lg {
@@ -543,7 +543,7 @@ button:disabled {
 .form-label {
   display: block;
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--color-black);
   margin-bottom: 8px;
@@ -591,13 +591,13 @@ button:disabled {
 }
 .form-help {
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.6);
   margin-top: 4px;
 }
 .form-error-message {
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   color: #DC2626;
   margin-top: 4px;
 }
@@ -1094,13 +1094,18 @@ p {
     line-height: 1.7;
     margin-bottom: 1.5rem;
   }
+/* Ensure minimum readable font size for all text */
+body {
+    font-size: 17px; /* Minimum readable size */
+  }
 /* Mobile typography adjustments */
 @media (max-width: 639px) {
     h1 { font-size: 2rem; } /* 32px mobile */
     h2 { font-size: 1.75rem; } /* 28px mobile */
     h3 { font-size: 1.25rem; } /* 20px mobile */
     h4 { font-size: 1.125rem; } /* 18px mobile */
-    p { font-size: 1rem; } /* 16px mobile */
+    p { font-size: 1.0625rem; } /* 17px mobile - more readable than 16px */
+    body { font-size: 17px; }
   }
 /* Links */
 a {

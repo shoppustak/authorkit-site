@@ -78,13 +78,19 @@
     margin-bottom: 1.5rem;
   }
 
+  /* Ensure minimum readable font size for all text */
+  body {
+    font-size: 17px; /* Minimum readable size */
+  }
+
   /* Mobile typography adjustments */
   @media (max-width: 639px) {
     h1 { font-size: 2rem; } /* 32px mobile */
     h2 { font-size: 1.75rem; } /* 28px mobile */
     h3 { font-size: 1.25rem; } /* 20px mobile */
     h4 { font-size: 1.125rem; } /* 18px mobile */
-    p { font-size: 1rem; } /* 16px mobile */
+    p { font-size: 1.0625rem; } /* 17px mobile - more readable than 16px */
+    body { font-size: 17px; }
   }
 
   /* Links */

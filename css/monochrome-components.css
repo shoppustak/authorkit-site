@@ -206,7 +206,7 @@
 
 .footer-copyright {
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-black);
 }
 
@@ -227,7 +227,7 @@
   border: 1px solid var(--color-black);
   padding: 8px 12px;
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-black);
   border-radius: 0;
   box-shadow: none;
@@ -247,7 +247,7 @@
   border: 1px solid var(--color-black);
   padding: 8px 16px;
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   border-radius: 0;
@@ -361,7 +361,7 @@
 /* Button Sizes */
 .btn-sm {
   padding: 8px 16px;
-  font-size: 14px;
+  font-size: 16px;
   min-height: 36px;
 }
 
@@ -433,7 +433,7 @@ button:disabled {
 .form-label {
   display: block;
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--color-black);
   margin-bottom: 8px;
@@ -488,14 +488,14 @@ button:disabled {
 
 .form-help {
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.6);
   margin-top: 4px;
 }
 
 .form-error-message {
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 16px;
   color: #DC2626;
   margin-top: 4px;
 }
