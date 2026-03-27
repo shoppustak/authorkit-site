@@ -517,3 +517,18 @@ button:disabled {
 .form-radio {
   border-radius: 50%; /* Exception for radio buttons */
 }
+
+
+/* Pricing cards - ensure proper height and spacing */
+.pricing-card,
+div[class*="rounded-xl shadow"] {
+  min-height: 600px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pricing feature lists should expand to fill space */
+.pricing-card ul,
+div[class*="rounded-xl shadow"] ul {
+  flex-grow: 1;
+}
