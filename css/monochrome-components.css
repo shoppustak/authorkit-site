@@ -541,6 +541,8 @@ div[class*="rounded-xl shadow"] ul {
 .pricing-card-base {
   border: 2px solid var(--color-black);
   padding: 40px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Featured/Pro card - stronger visual emphasis through thicker border */
@@ -548,20 +550,24 @@ div[class*="rounded-xl shadow"] ul {
   border: 3px solid var(--color-black);
   padding: 40px;
   position: relative;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
-/* Badge styling - high contrast, uppercase for prominence */
+/* Badge styling - small label on top border */
 .pricing-badge {
-  display: inline-block;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--color-black);
   color: var(--color-white);
-  padding: 8px 24px;
+  padding: 4px 16px;
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 24px;
 }
 
 /* Price display - large, bold, high contrast */

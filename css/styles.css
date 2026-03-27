@@ -635,25 +635,31 @@ div[class*="rounded-xl shadow"] ul {
 .pricing-card-base {
   border: 2px solid var(--color-black);
   padding: 40px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 /* Featured/Pro card - stronger visual emphasis through thicker border */
 .pricing-card-featured {
   border: 3px solid var(--color-black);
   padding: 40px;
   position: relative;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
-/* Badge styling - high contrast, uppercase for prominence */
+/* Badge styling - small label on top border */
 .pricing-badge {
-  display: inline-block;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--color-black);
   color: var(--color-white);
-  padding: 8px 24px;
+  padding: 4px 16px;
   font-family: var(--font-ui);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 24px;
 }
 /* Price display - large, bold, high contrast */
 .pricing-amount {
@@ -1598,10 +1604,6 @@ input, textarea, select {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
-}
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
@@ -1644,10 +1646,6 @@ input, textarea, select {
 .py-16{
   padding-top: 8rem;
   padding-bottom: 8rem;
-}
-.py-2{
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 .py-20{
   padding-top: 10rem;
