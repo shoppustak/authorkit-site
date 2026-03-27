@@ -672,12 +672,12 @@ div[class*="rounded-xl shadow"] ul {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* Price display - extra large, bold, high contrast */
+/* Price display - bold, high contrast, more compact */
 .pricing-amount {
   font-family: 'Playfair Display', serif;
-  font-size: 72px;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 0.9;
+  line-height: 1;
   color: var(--color-black);
   margin-bottom: 8px;
 }
@@ -693,23 +693,22 @@ div[class*="rounded-xl shadow"] ul {
   border-bottom: 3px solid var(--color-black);
   padding-bottom: 16px;
 }
-/* Full-width divider */
+/* Full-width divider - hidden for compact layout */
 .pricing-divider {
-  border-top: 1px solid var(--color-black);
-  margin: 0;
+  display: none;
 }
-/* Pricing card sections with padding - more delicate */
+/* Pricing card sections with padding - compact layout */
 .pricing-header {
-  padding: 32px 40px 24px 40px;
+  padding: 24px 40px 16px 40px;
 }
 .pricing-price {
-  padding: 24px 40px;
+  padding: 16px 40px;
 }
 .pricing-button {
-  padding: 24px 40px;
+  padding: 16px 40px;
 }
 .pricing-features-container {
-  padding: 24px 40px 32px 40px;
+  padding: 16px 40px 24px 40px;
 }
 /* Subtitle styling - lighter color */
 .pricing-header p {
