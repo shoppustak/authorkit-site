@@ -724,7 +724,7 @@ div[class*="rounded-xl shadow"] ul {
 }
 .pricing-features li {
   padding: 12px 0;
-  font-family: var(--font-ui);
+  font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.5;
   display: flex;
