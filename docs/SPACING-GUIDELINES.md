@@ -316,5 +316,68 @@ Replace harsh black border dividers between sections with gentle alternation bet
 
 ---
 
+## Button Size Guidelines
+
+### Core Principle
+Restrict button sizes to only **small** and **medium** for visual consistency and delicate spacing throughout the site.
+
+### Allowed Button Sizes
+
+**Small buttons** (px-4 py-2):
+- Use for: Secondary actions, compact layouts, mobile views
+- Padding: 16px horizontal × 8px vertical
+
+**Medium buttons** (px-6 py-3):
+- Use for: Primary actions, CTAs, standard buttons
+- Padding: 24px horizontal × 12px vertical
+
+### Prohibited Button Sizes
+
+The following button sizes are **NOT ALLOWED** as they create excessive visual weight:
+
+- ❌ Large (px-8 py-4) — 32px × 16px padding
+- ❌ Extra Large (px-10 py-5) — 40px × 20px padding
+- ❌ Jumbo (px-12 py-6) — 48px × 24px padding
+
+### Implementation Examples
+
+**Inline styles:**
+```html
+<!-- Small button -->
+<button style="padding: 8px 16px;">Secondary Action</button>
+
+<!-- Medium button -->
+<button style="padding: 12px 24px;">Primary Action</button>
+```
+
+**Tailwind classes:**
+```html
+<!-- Small button -->
+<button class="px-4 py-2">Secondary Action</button>
+
+<!-- Medium button -->
+<button class="px-6 py-3">Primary Action</button>
+```
+
+**CSS classes:**
+```css
+.btn-small {
+    padding: 8px 16px;
+}
+
+.btn-medium {
+    padding: 12px 24px;
+}
+```
+
+### Design Rationale
+
+1. **Consistent Visual Rhythm:** Small and medium sizes maintain the delicate, minimalist aesthetic
+2. **Appropriate Scale:** Large buttons overpower the elegant typography and generous whitespace
+3. **Mobile-First:** Smaller buttons work better on constrained mobile screens
+4. **Premium Feel:** Restrained button sizes create a more sophisticated appearance
+
+---
+
 *Last updated: 2026-03-27*
-*Version: 1.1*
+*Version: 1.2*
