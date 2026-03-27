@@ -353,11 +353,12 @@
 }
 .footer-signup-form {
   display: flex;
+  flex-direction: column;
   gap: 8px;
   max-width: 320px;
 }
 .footer-signup-input {
-  flex: 1;
+  width: 100%;
   background: var(--color-white);
   border: 1px solid var(--color-black);
   padding: 8px 12px;
@@ -375,6 +376,7 @@
   margin: -1px;
 }
 .footer-signup-button {
+  width: 100%;
   background: var(--color-black);
   color: var(--color-white);
   border: 1px solid var(--color-black);
@@ -1442,6 +1444,9 @@ input, textarea, select {
 .mt-2{
   margin-top: 1rem;
 }
+.mt-3{
+  margin-top: 1.5rem;
+}
 .mt-8{
   margin-top: 4rem;
 }
@@ -1501,9 +1506,6 @@ input, textarea, select {
 }
 .max-w-2xl{
   max-width: 42rem;
-}
-.max-w-3xl{
-  max-width: 48rem;
 }
 .max-w-4xl{
   max-width: 56rem;
@@ -1634,9 +1636,6 @@ input, textarea, select {
 }
 .border-b{
   border-bottom-width: 1px;
-}
-.border-b-2{
-  border-bottom-width: 2px;
 }
 .border-t-2{
   border-top-width: 2px;
