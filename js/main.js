@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Close mobile menu when window is resized to desktop size
         window.addEventListener('resize', function() {
-            if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+            if (window.innerWidth >= 1024 && !mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
             }
