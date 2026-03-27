@@ -40,36 +40,36 @@ run_lighthouse() {
         --screenEmulation.height=640 \
         --quiet
 
-    # Extract scores from JSON
-    local perf=$(jq '.categories.performance.score * 100' ".lighthouse/optimized/${name}.json")
-    local a11y=$(jq '.categories.accessibility.score * 100' ".lighthouse/optimized/${name}.json")
-    local bp=$(jq '.["categories"]["best-practices"]["score"] * 100' ".lighthouse/optimized/${name}.json")
-    local seo=$(jq '.categories.seo.score * 100' ".lighthouse/optimized/${name}.json")
+    # Extract scores from JSON using node
+    local perf=$(node -p "Math.round(require('./.lighthouse/optimized/${name}.json').categories.performance.score * 100)")
+    local a11y=$(node -p "Math.round(require('./.lighthouse/optimized/${name}.json').categories.accessibility.score * 100)")
+    local bp=$(node -p "Math.round(require('./.lighthouse/optimized/${name}.json').categories['best-practices'].score * 100)")
+    local seo=$(node -p "Math.round(require('./.lighthouse/optimized/${name}.json').categories.seo.score * 100)")
 
     # Extract key metrics
-    local fcp=$(jq '.audits["first-contentful-paint"].numericValue' ".lighthouse/optimized/${name}.json")
-    local lcp=$(jq '.audits["largest-contentful-paint"].numericValue' ".lighthouse/optimized/${name}.json")
-    local tbt=$(jq '.audits["total-blocking-time"].numericValue' ".lighthouse/optimized/${name}.json")
-    local cls=$(jq '.audits["cumulative-layout-shift"].numericValue' ".lighthouse/optimized/${name}.json")
+    local fcp=$(node -p "require('./.lighthouse/optimized/${name}.json').audits['first-contentful-paint'].numericValue")
+    local lcp=$(node -p "require('./.lighthouse/optimized/${name}.json').audits['largest-contentful-paint'].numericValue")
+    local tbt=$(node -p "require('./.lighthouse/optimized/${name}.json').audits['total-blocking-time'].numericValue")
+    local cls=$(node -p "require('./.lighthouse/optimized/${name}.json').audits['cumulative-layout-shift'].numericValue")
 
     # Convert ms to seconds for display
-    fcp_s=$(echo "scale=2; $fcp / 1000" | bc)
-    lcp_s=$(echo "scale=2; $lcp / 1000" | bc)
-    tbt_ms=$(echo "scale=0; $tbt / 1" | bc)
+    fcp_s=$(node -p "($fcp / 1000).toFixed(2)")
+    lcp_s=$(node -p "($lcp / 1000).toFixed(2)")
+    tbt_ms=$(node -p "Math.round($tbt)")
 
     # Display results with color coding
     echo "Lighthouse Scores:"
-    [[ $(echo "$perf >= 95" | bc) -eq 1 ]] && echo -e "${GREEN}Performance: ${perf}${NC}" || echo -e "${RED}Performance: ${perf} (target: 95+)${NC}"
-    [[ $(echo "$a11y >= 100" | bc) -eq 1 ]] && echo -e "${GREEN}Accessibility: ${a11y}${NC}" || echo -e "${YELLOW}Accessibility: ${a11y} (target: 100)${NC}"
-    [[ $(echo "$bp >= 95" | bc) -eq 1 ]] && echo -e "${GREEN}Best Practices: ${bp}${NC}" || echo -e "${YELLOW}Best Practices: ${bp} (target: 95+)${NC}"
-    [[ $(echo "$seo >= 95" | bc) -eq 1 ]] && echo -e "${GREEN}SEO: ${seo}${NC}" || echo -e "${YELLOW}SEO: ${seo} (target: 95+)${NC}"
+    [[ $perf -ge 95 ]] && echo -e "${GREEN}Performance: ${perf}${NC}" || echo -e "${RED}Performance: ${perf} (target: 95+)${NC}"
+    [[ $a11y -ge 100 ]] && echo -e "${GREEN}Accessibility: ${a11y}${NC}" || echo -e "${YELLOW}Accessibility: ${a11y} (target: 100)${NC}"
+    [[ $bp -ge 95 ]] && echo -e "${GREEN}Best Practices: ${bp}${NC}" || echo -e "${YELLOW}Best Practices: ${bp} (target: 95+)${NC}"
+    [[ $seo -ge 95 ]] && echo -e "${GREEN}SEO: ${seo}${NC}" || echo -e "${YELLOW}SEO: ${seo} (target: 95+)${NC}"
 
     echo ""
     echo "Core Web Vitals:"
-    [[ $(echo "$fcp <= 1800" | bc) -eq 1 ]] && echo -e "${GREEN}FCP: ${fcp_s}s${NC}" || echo -e "${YELLOW}FCP: ${fcp_s}s (target: <1.8s)${NC}"
-    [[ $(echo "$lcp <= 2500" | bc) -eq 1 ]] && echo -e "${GREEN}LCP: ${lcp_s}s${NC}" || echo -e "${RED}LCP: ${lcp_s}s (target: <2.5s)${NC}"
-    [[ $(echo "$tbt <= 200" | bc) -eq 1 ]] && echo -e "${GREEN}TBT: ${tbt_ms}ms${NC}" || echo -e "${YELLOW}TBT: ${tbt_ms}ms (target: <200ms)${NC}"
-    [[ $(echo "$cls <= 0.1" | bc) -eq 1 ]] && echo -e "${GREEN}CLS: ${cls}${NC}" || echo -e "${YELLOW}CLS: ${cls} (target: <0.1)${NC}"
+    [[ $(node -p "$fcp <= 1800 ? 1 : 0") -eq 1 ]] && echo -e "${GREEN}FCP: ${fcp_s}s${NC}" || echo -e "${YELLOW}FCP: ${fcp_s}s (target: <1.8s)${NC}"
+    [[ $(node -p "$lcp <= 2500 ? 1 : 0") -eq 1 ]] && echo -e "${GREEN}LCP: ${lcp_s}s${NC}" || echo -e "${RED}LCP: ${lcp_s}s (target: <2.5s)${NC}"
+    [[ $(node -p "$tbt <= 200 ? 1 : 0") -eq 1 ]] && echo -e "${GREEN}TBT: ${tbt_ms}ms${NC}" || echo -e "${YELLOW}TBT: ${tbt_ms}ms (target: <200ms)${NC}"
+    [[ $(node -p "$cls <= 0.1 ? 1 : 0") -eq 1 ]] && echo -e "${GREEN}CLS: ${cls}${NC}" || echo -e "${YELLOW}CLS: ${cls} (target: <0.1)${NC}"
 
     # Store for summary
     echo "$name,$perf,$a11y,$bp,$seo,$lcp_s" >> .lighthouse/optimized/summary.csv
