@@ -1638,9 +1638,6 @@ input, textarea, select {
 .bg-gradient-to-br{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
-.p-10{
-  padding: 5rem;
-}
 .p-4{
   padding: 2rem;
 }
@@ -1688,9 +1685,6 @@ input, textarea, select {
 }
 .pb-2{
   padding-bottom: 1rem;
-}
-.pb-4{
-  padding-bottom: 2rem;
 }
 .pt-12{
   padding-top: 6rem;

@@ -140,129 +140,161 @@
                 </div>
 
                 <!-- Pro (1 site) — highlighted -->
-                <div class="bg-white p-10 border-3 border-black relative">
+                <div class="bg-white border-3 border-black relative">
                     <span class="pricing-badge">MOST POPULAR</span>
 
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold text-black mb-2 uppercase" style="letter-spacing: 0.5px;">Pro</h3>
-                        <p class="text-base text-black mb-6" style="opacity: 0.7;">1 site license</p>
+                    <!-- Header -->
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">PRO</h3>
+                        <p class="text-base text-black" style="opacity: 0.7;">1 site license</p>
+                    </div>
 
+                    <div class="pricing-divider"></div>
+
+                    <!-- Price -->
+                    <div class="pricing-price">
                         <!-- Annual price -->
                         <div id="pro-annual-price" class="billing-annual">
-                            <div class="flex items-baseline gap-2">
-                                <span class="text-6xl font-bold text-black" style="font-family: 'Playfair Display', serif; line-height: 1;">$49</span>
-                                <span class="text-base text-black" style="opacity: 0.6;">/year</span>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span class="pricing-amount">$49</span>
+                                <span class="text-lg text-black" style="opacity: 0.6;">/year</span>
                             </div>
-                            <p class="text-sm font-bold mt-2" style="color: #059669;">Founding price — regular $79/year</p>
+                            <p class="text-sm font-bold" style="color: #059669;">Founding price — regular $79/year</p>
                         </div>
 
                         <!-- Lifetime price -->
                         <div id="pro-lifetime-price" class="billing-lifetime hidden">
-                            <div class="flex items-baseline gap-2">
-                                <span class="text-6xl font-bold text-black" style="font-family: 'Playfair Display', serif; line-height: 1;">$149</span>
-                                <span class="text-base text-black" style="opacity: 0.6;">one-time</span>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span class="pricing-amount">$149</span>
+                                <span class="text-lg text-black" style="opacity: 0.6;">one-time</span>
                             </div>
-                            <p class="text-sm font-bold mt-2" style="color: #059669;">Founding price — regular $249 one-time</p>
+                            <p class="text-sm font-bold" style="color: #059669;">Founding price — regular $249 one-time</p>
                         </div>
                     </div>
 
-                    <a id="pro-btn-annual" href="checkout.html?plan=pro-annual"
-                       class="billing-annual btn-primary block w-full text-center px-6 py-4 font-bold text-lg mb-8">
-                        Get Pro — $49/year
-                    </a>
-                    <a id="pro-btn-lifetime" href="checkout.html?plan=pro-lifetime"
-                       class="billing-lifetime hidden btn-primary block w-full text-center px-6 py-4 font-bold text-lg mb-8">
-                        Get Pro — $149 lifetime
-                    </a>
+                    <div class="pricing-divider"></div>
 
-                    <ul class="space-y-4 text-base">
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black font-bold">Everything in Free, Plus:</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Unlimited books</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Unlimited reviews per book</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Enhanced SEO with rich schema</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Full bookshelf sync control</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Priority email support</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">All future features included</span>
-                        </li>
-                    </ul>
+                    <!-- Button -->
+                    <div class="pricing-button">
+                        <a id="pro-btn-annual" href="checkout.html?plan=pro-annual"
+                           class="billing-annual btn-primary block w-full text-center px-6 py-4 font-bold text-lg">
+                            Get Pro — $49/year
+                        </a>
+                        <a id="pro-btn-lifetime" href="checkout.html?plan=pro-lifetime"
+                           class="billing-lifetime hidden btn-primary block w-full text-center px-6 py-4 font-bold text-lg">
+                            Get Pro — $149 lifetime
+                        </a>
+                    </div>
+
+                    <div class="pricing-divider"></div>
+
+                    <!-- Features -->
+                    <div class="pricing-features-container">
+                        <ul class="pricing-features">
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span class="font-bold">Everything in Free, Plus:</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Unlimited books</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Unlimited reviews per book</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Enhanced SEO with rich schema</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Full bookshelf sync control</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Priority email support</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>All future features included</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Pro Max (5 sites) -->
-                <div class="bg-white p-10 border-2 border-black">
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold text-black mb-2 uppercase" style="letter-spacing: 0.5px;">Pro Max</h3>
-                        <p class="text-base text-black mb-6" style="opacity: 0.7;">5 site licenses — for publishers &amp; book coaches</p>
+                <div class="bg-white border-2 border-black">
+                    <!-- Header -->
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">PRO MAX</h3>
+                        <p class="text-base text-black" style="opacity: 0.7;">5 site licenses — for publishers &amp; book coaches</p>
+                    </div>
 
+                    <div class="pricing-divider"></div>
+
+                    <!-- Price -->
+                    <div class="pricing-price">
                         <!-- Annual price -->
                         <div id="multi-annual-price" class="billing-annual">
-                            <div class="flex items-baseline gap-2">
-                                <span class="text-6xl font-bold text-black" style="font-family: 'Playfair Display', serif; line-height: 1;">$99</span>
-                                <span class="text-base text-black" style="opacity: 0.6;">/year</span>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span class="pricing-amount">$99</span>
+                                <span class="text-lg text-black" style="opacity: 0.6;">/year</span>
                             </div>
-                            <p class="text-sm font-bold mt-2" style="color: #059669;">Founding price — regular $149/year</p>
+                            <p class="text-sm font-bold" style="color: #059669;">Founding price — regular $149/year</p>
                         </div>
 
                         <!-- Lifetime price -->
                         <div id="multi-lifetime-price" class="billing-lifetime hidden">
-                            <div class="flex items-baseline gap-2">
-                                <span class="text-6xl font-bold text-black" style="font-family: 'Playfair Display', serif; line-height: 1;">$249</span>
-                                <span class="text-base text-black" style="opacity: 0.6;">one-time</span>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span class="pricing-amount">$249</span>
+                                <span class="text-lg text-black" style="opacity: 0.6;">one-time</span>
                             </div>
-                            <p class="text-sm font-bold mt-2" style="color: #059669;">Founding price — regular $399 one-time</p>
+                            <p class="text-sm font-bold" style="color: #059669;">Founding price — regular $399 one-time</p>
                         </div>
                     </div>
 
-                    <a id="multi-btn-annual" href="checkout.html?plan=multi-annual"
-                       class="billing-annual btn-primary block w-full text-center px-6 py-4 font-bold text-lg mb-8">
-                        Get Pro Max — $99/year
-                    </a>
-                    <a id="multi-btn-lifetime" href="checkout.html?plan=multi-lifetime"
-                       class="billing-lifetime hidden btn-primary block w-full text-center px-6 py-4 font-bold text-lg mb-8">
-                        Get Pro Max — $249 lifetime
-                    </a>
+                    <div class="pricing-divider"></div>
 
-                    <ul class="space-y-4 text-base">
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black font-bold">Everything in Pro</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">5 site licenses</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Ideal for managing multiple author sites</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Priority email support</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">All future modules included</span>
-                        </li>
-                    </ul>
+                    <!-- Button -->
+                    <div class="pricing-button">
+                        <a id="multi-btn-annual" href="checkout.html?plan=multi-annual"
+                           class="billing-annual btn-primary block w-full text-center px-6 py-4 font-bold text-lg">
+                            Get Pro Max — $99/year
+                        </a>
+                        <a id="multi-btn-lifetime" href="checkout.html?plan=multi-lifetime"
+                           class="billing-lifetime hidden btn-primary block w-full text-center px-6 py-4 font-bold text-lg">
+                            Get Pro Max — $249 lifetime
+                        </a>
+                    </div>
+
+                    <div class="pricing-divider"></div>
+
+                    <!-- Features -->
+                    <div class="pricing-features-container">
+                        <ul class="pricing-features">
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span class="font-bold">Everything in Pro</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>5 site licenses</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Ideal for managing multiple author sites</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Priority email support</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>All future modules included</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
