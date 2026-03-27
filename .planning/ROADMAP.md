@@ -305,9 +305,17 @@ Plans:
 
 ## Phase 6: Performance Optimization
 
-**Goal**: Achieve Lighthouse scores of 95+ across all metrics.
+**Goal**: Achieve Lighthouse scores of 95+ across all metrics through systematic optimization of CSS, JavaScript, images, and resource loading.
+
+**Plans:** 4 plans
 
 **Duration**: 2-3 days
+
+Plans:
+- [ ] 06-01-PLAN.md — Set up CSS optimization pipeline and performance monitoring
+- [ ] 06-02-PLAN.md — Optimize resource loading across all HTML pages
+- [ ] 06-03-PLAN.md — Optimize images with WebP conversion and lazy loading
+- [ ] 06-04-PLAN.md — Run comprehensive Lighthouse validation and verify targets
 
 ### Tasks:
 
