@@ -13,9 +13,8 @@
     <!-- Fonts - Playfair Display + Source Serif 4 -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Design System Stylesheets -->
-    <link rel="stylesheet" href="css/design-tokens.css">
-    <link rel="stylesheet" href="css/monochrome-components.css">
+    <!-- Optimized CSS (consolidated) -->
+    <link rel="stylesheet" href="css/styles.css">
 
     <style>
         /* Override any legacy styles - enforce monochrome design */
@@ -434,10 +433,9 @@
     <!-- Footer (Loaded from shared component) -->
     <div id="footer-placeholder"></div>
 
-    <!-- JavaScript -->
-    <script src="js/header-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
-
-    <script src="js/main.js"></script>
+    <!-- JavaScript (deferred for optimal performance) -->
+    <script src="js/header-loader.js" defer></script>
+    <script src="js/footer-loader.js" defer></script>
+    <script src="js/main.min.js" defer></script>
 </body>
 </html>

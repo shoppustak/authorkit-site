@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap">
 
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="css/monochrome-components.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Optimized CSS (consolidated) -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- LemonSqueezy payment integration -->
     <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
 
     <style>
@@ -400,11 +401,10 @@
     <!-- Footer (Loaded from shared component) -->
     <div id="footer-placeholder"></div>
 
-    <!-- JavaScript -->
-    <script src="js/header-loader.js"></script>
-    <script src="js/footer-loader.js"></script>
-
-    <script src="js/main.js"></script>
+    <!-- JavaScript (deferred for optimal performance) -->
+    <script src="js/header-loader.js" defer></script>
+    <script src="js/footer-loader.js" defer></script>
+    <script src="js/main.min.js" defer></script>
     <script>
         window.createLemonSqueezy && window.createLemonSqueezy();
 
