@@ -1,10 +1,8 @@
 /**
  * Monochrome Components
  * Minimalist component utilities following Minimalist Monochrome design system
+ * Note: design-tokens.css is imported in input.css
  */
-
-/* Import design tokens */
-@import './design-tokens.css';
 
 /* ================================
  * NAVIGATION COMPONENTS

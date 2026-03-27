@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "python3 -m http.server 8000",
     "serve": "python3 -m http.server 8000",
-    "build:css": "tailwindcss -i ./css/input.css -o ./css/styles.css --minify",
+    "build:css": "postcss css/input.css -o css/styles.css",
     "build:css:prod": "NODE_ENV=production postcss css/input.css -o css/styles.min.css",
     "build:css:merge": "cat css/design-tokens.css css/monochrome-components.css css/style.css > css/merged-legacy.css 2>/dev/null || true",
     "build:css:full": "npm run build:css:merge && NODE_ENV=production postcss css/input.css -o css/styles.min.css --config postcss.config.js",
@@ -29,7 +29,12 @@
     "test:lighthouse:ci": "lhci autorun --config=.lighthouse/lighthouserc.json",
     "test:perf": "./scripts/test-performance.sh"
   },
-  "keywords": ["authorkit", "wordpress", "plugins", "authors"],
+  "keywords": [
+    "authorkit",
+    "wordpress",
+    "plugins",
+    "authors"
+  ],
   "author": "AuthorKit",
   "license": "MIT",
   "dependencies": {
@@ -44,6 +49,7 @@
     "lighthouse": "^13.0.3",
     "postcss": "^8.4.47",
     "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.1.1",
     "tailwindcss": "^3.4.1",
     "terser": "^5.46.1"
   }

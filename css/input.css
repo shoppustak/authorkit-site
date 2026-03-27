@@ -4,6 +4,9 @@
 /* Design Tokens */
 @import './design-tokens.css';
 
+/* Import monochrome components (must be before Tailwind directives for postcss-import) */
+@import './monochrome-components.css';
+
 /* Tailwind Directives */
 @tailwind base;
 @tailwind components;
@@ -17,9 +20,6 @@
  * - Pure black (#000) and white (#FFF) primary colors
  * - Brand colors used only as accents
  */
-
-/* Import monochrome components */
-@import './monochrome-components.css';
 
 /* Base Layer Overrides */
 @layer base {
