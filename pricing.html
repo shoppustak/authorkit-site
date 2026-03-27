@@ -76,51 +76,67 @@
             <div class="grid md:grid-cols-3 gap-6">
 
                 <!-- Free -->
-                <div class="bg-white p-10 border-2 border-black">
-                    <div class="mb-8">
-                        <h3 class="text-2xl font-bold text-black mb-2 uppercase" style="letter-spacing: 0.5px;">Free</h3>
-                        <p class="text-base text-black mb-6" style="opacity: 0.7;">WordPress.org — always free</p>
-                        <div class="flex items-baseline gap-2">
-                            <span class="text-6xl font-bold text-black" style="font-family: 'Playfair Display', serif; line-height: 1;">$0</span>
-                            <span class="text-base text-black" style="opacity: 0.6;">/forever</span>
+                <div class="bg-white border-2 border-black">
+                    <!-- Header -->
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">FREE</h3>
+                        <p class="text-base text-black" style="opacity: 0.7;">WordPress.org — always free</p>
+                    </div>
+
+                    <div class="pricing-divider"></div>
+
+                    <!-- Price -->
+                    <div class="pricing-price">
+                        <div class="flex items-baseline gap-2 mb-2">
+                            <span class="pricing-amount">$0</span>
+                            <span class="text-lg text-black" style="opacity: 0.6;">/forever</span>
                         </div>
                     </div>
 
-                    <a href="download.html"
-                       class="btn-secondary block w-full text-center px-6 py-4 font-bold text-lg mb-8">
-                        Download Free
-                    </a>
+                    <div class="pricing-divider"></div>
 
-                    <ul class="space-y-4 text-base">
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Up to 10 books</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">3 reviews per book</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Bookshelf sync (all books)</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">All 27 metadata fields</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Amazon-style book display</span>
-                        </li>
-                        <li class="flex items-start gap-3 pb-4 border-b border-black" style="border-opacity: 0.1;">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Basic schema markup</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-black mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                            <span class="text-black">Community support</span>
-                        </li>
-                    </ul>
+                    <!-- Button -->
+                    <div class="pricing-button">
+                        <a href="download.html" class="btn-secondary block w-full text-center px-6 py-4 font-bold text-lg">
+                            Download Free
+                        </a>
+                    </div>
+
+                    <div class="pricing-divider"></div>
+
+                    <!-- Features -->
+                    <div class="pricing-features-container">
+                        <ul class="pricing-features">
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Up to 10 books</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>3 reviews per book</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Bookshelf sync (all books)</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>All 27 metadata fields</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Amazon-style book display</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Basic schema markup</span>
+                            </li>
+                            <li>
+                                <svg class="w-5 h-5 text-black shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                <span>Community support</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Pro (1 site) — highlighted -->

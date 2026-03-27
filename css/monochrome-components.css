@@ -540,18 +540,30 @@ div[class*="rounded-xl shadow"] ul {
 /* Base pricing card styling with clear borders */
 .pricing-card-base {
   border: 2px solid var(--color-black);
-  padding: 40px;
+  display: flex;
+  flex-direction: column;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  height: 100%;
 }
 
 /* Featured/Pro card - stronger visual emphasis through thicker border */
 .pricing-card-featured {
   border: 3px solid var(--color-black);
-  padding: 40px;
+  display: flex;
+  flex-direction: column;
   position: relative;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  height: 100%;
+}
+
+/* Card inner padding container */
+.pricing-card-content {
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Badge styling - small label on top border */
@@ -570,44 +582,62 @@ div[class*="rounded-xl shadow"] ul {
   letter-spacing: 1px;
 }
 
-/* Price display - large, bold, high contrast */
+/* Price display - extra large, bold, high contrast */
 .pricing-amount {
   font-family: 'Playfair Display', serif;
-  font-size: 56px;
+  font-size: 72px;
   font-weight: 700;
-  line-height: 1;
+  line-height: 0.9;
   color: var(--color-black);
   margin-bottom: 8px;
 }
 
-/* Plan title - strong hierarchy */
+/* Plan title - strong hierarchy with border accent */
 .pricing-title {
-  font-family: var(--font-ui);
-  font-size: 24px;
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
   font-weight: 700;
   color: var(--color-black);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  border-bottom: 3px solid var(--color-black);
+  padding-bottom: 16px;
+}
+
+/* Full-width divider */
+.pricing-divider {
+  border-top: 1px solid var(--color-black);
+  margin: 0;
+}
+
+/* Pricing card sections with padding */
+.pricing-header,
+.pricing-price,
+.pricing-button,
+.pricing-features-container {
+  padding: 32px 40px;
 }
 
 /* Feature list - clean spacing and typography */
 .pricing-features {
   list-style: none;
   padding: 0;
-  margin: 32px 0;
+  margin: 0;
 }
 
 .pricing-features li {
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
   font-family: var(--font-ui);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 
-.pricing-features li:first-child {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+.pricing-features li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* CTA buttons within pricing cards - full width, bold */
