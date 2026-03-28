@@ -42,7 +42,13 @@
                 }
 
                 // Dispatch event to notify that header is loaded
+                console.log('[header-loader] Header loaded, dispatching headerLoaded event');
                 document.dispatchEvent(new CustomEvent('headerLoaded'));
+
+                // Debug: check if menu elements exist
+                const menuCheck = document.getElementById('mobile-menu');
+                const buttonCheck = document.getElementById('mobile-menu-button');
+                console.log('[header-loader] Menu exists:', !!menuCheck, 'Button exists:', !!buttonCheck);
             }
         } catch (error) {
             console.error('Error loading header:', error);

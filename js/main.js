@@ -5,16 +5,24 @@
 
 // Mobile Menu Toggle
 function initMobileMenu() {
+    console.log('[main.js] initMobileMenu called');
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
+    console.log('[main.js] Button:', mobileMenuButton, 'Menu:', mobileMenu);
+
     if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function() {
+        console.log('[main.js] Attaching mobile menu click listener');
+        mobileMenuButton.addEventListener('click', function(e) {
+            console.log('[main.js] Mobile menu button clicked!');
+            e.preventDefault();
+            e.stopPropagation();
             mobileMenu.classList.toggle('hidden');
 
             // Update aria-expanded for accessibility
             const isExpanded = !mobileMenu.classList.contains('hidden');
             mobileMenuButton.setAttribute('aria-expanded', isExpanded);
+            console.log('[main.js] Menu toggled, hidden:', mobileMenu.classList.contains('hidden'));
         });
 
         // Close mobile menu when clicking outside
@@ -34,14 +42,23 @@ function initMobileMenu() {
                 mobileMenuButton.setAttribute('aria-expanded', 'false');
             }
         });
+    } else {
+        console.log('[main.js] Mobile menu elements not found!');
     }
 }
 
 // Initialize when header is loaded (dynamically loaded via header-loader.js)
-document.addEventListener('headerLoaded', initMobileMenu);
+console.log('[main.js] Setting up headerLoaded listener');
+document.addEventListener('headerLoaded', function() {
+    console.log('[main.js] headerLoaded event received!');
+    initMobileMenu();
+});
 
 // Also try to initialize on DOMContentLoaded (in case header is already in DOM)
-document.addEventListener('DOMContentLoaded', initMobileMenu);
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('[main.js] DOMContentLoaded fired');
+    initMobileMenu();
+});
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
