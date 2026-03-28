@@ -227,7 +227,9 @@
 .mobile-menu {
   position: absolute;
   top: 100%;
-  right: 16px;
+  left: 0;
+  right: 0;
+  width: 100%;
   background: var(--color-white);
   border: 1px solid var(--color-black);
   display: none;
@@ -278,6 +280,23 @@
 /* Hidden state for mobile menu */
 .hidden {
   display: none;
+}
+/* Responsive utility classes */
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none !important;
+  }
+  .md\:block {
+    display: block !important;
+  }
+}
+@media (min-width: 1024px) {
+  .lg\:hidden {
+    display: none !important;
+  }
+  .lg\:block {
+    display: block !important;
+  }
 }
 /* ================================
  * FOOTER COMPONENTS
