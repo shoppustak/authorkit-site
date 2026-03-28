@@ -18,7 +18,7 @@
     "optimize:images": "./scripts/optimize-images.sh",
     "build:images": "npm run optimize:images",
     "build:all": "npm run build:css:prod && npm run build:js && npm run build:images",
-    "build": "npm run build:css && npm run build:js",
+    "build": "npm run build:css:prod && npm run build:js",
     "build:prod": "npm run build:css:full && npm run build:js",
     "prebuild": "npm run clean",
     "postbuild": "echo '✅ Build complete. Run npm run test:perf to validate performance.'",
