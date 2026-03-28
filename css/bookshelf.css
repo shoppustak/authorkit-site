@@ -64,10 +64,10 @@ body {
 }
 
 .main-nav a {
-    color: rgba(0, 0, 0, 0.6);
+    color: #000000;
     text-decoration: none;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .main-nav a:hover {
@@ -114,7 +114,7 @@ body {
 .hero-subtitle {
     font-size: 18px;
     margin-bottom: 30px;
-    color: rgba(0, 0, 0, 0.6);
+    color: #000000;
     line-height: 1.6;
     max-width: 700px;
     margin-left: auto;
@@ -142,8 +142,8 @@ body {
 }
 
 .stat-label {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    color: #000000;
     font-weight: 500;
 }
 
@@ -183,7 +183,7 @@ body {
 
 .section-header p {
     font-size: 18px;
-    color: rgba(0, 0, 0, 0.6);
+    color: #000000;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -207,8 +207,8 @@ body {
 }
 
 .books-count {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    color: #000000;
     margin: 0;
 }
 
@@ -219,7 +219,7 @@ body {
 }
 
 .sort-label {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--color-black);
 }
@@ -228,7 +228,7 @@ body {
     padding: 8px 32px 8px 12px;
     border: 1px solid var(--color-black);
     border-radius: 0;
-    font-size: 14px;
+    font-size: 16px;
     background: var(--color-white);
     cursor: pointer;
     color: var(--color-black);
@@ -336,8 +336,8 @@ body {
 }
 
 .book-author {
-    font-size: 13px;
-    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    color: #000000;
     margin: 0;
     font-weight: 500;
 }
@@ -354,7 +354,7 @@ body {
     color: var(--color-black);
     padding: 3px 8px;
     border-radius: 0;
-    font-size: 11px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: capitalize;
     border: 1px solid var(--color-black);
@@ -364,13 +364,13 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
-    font-size: 12px;
+    font-size: 16px;
     margin: 4px 0;
 }
 
 .stars {
     color: var(--color-black);
-    font-size: 13px;
+    font-size: 16px;
     letter-spacing: 0.5px;
 }
 
@@ -380,12 +380,12 @@ body {
 }
 
 .book-rating .review-count {
-    color: rgba(0, 0, 0, 0.6);
+    color: #000000;
 }
 
 .book-description {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    color: #000000;
     line-height: 1.5;
     display: none;
 }
@@ -406,7 +406,7 @@ body {
     border-radius: 0;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
     border: 1px solid var(--color-black);
@@ -471,7 +471,7 @@ body {
 }
 
 .genre-name {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -525,7 +525,7 @@ body {
 
 .browse-header p {
     font-size: 18px;
-    color: rgba(0, 0, 0, 0.6);
+    color: #000000;
 }
 
 .browse-content {
@@ -562,7 +562,7 @@ body {
 }
 
 .filter-section h3 {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 12px;
     color: var(--color-black);
     font-weight: 700;
@@ -575,7 +575,7 @@ body {
     padding: 10px 14px;
     border: 1px solid var(--color-black);
     border-radius: 0;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .search-input:focus {
@@ -584,7 +584,7 @@ body {
 }
 
 .search-input::placeholder {
-    color: rgba(0, 0, 0, 0.6);
+    color: #000000;
 }
 
 .genre-filters {
@@ -614,7 +614,7 @@ body {
 
 .genre-checkbox label {
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--color-black);
     font-weight: 500;
 }
@@ -624,7 +624,7 @@ body {
     padding: 10px 14px;
     border: 1px solid var(--color-black);
     border-radius: 0;
-    font-size: 15px;
+    font-size: 16px;
     background: var(--color-white);
     cursor: pointer;
 }
@@ -643,7 +643,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     color: var(--color-black);
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .btn-reset:hover {
@@ -668,8 +668,8 @@ body {
 }
 
 .results-count {
-    font-size: 15px;
-    color: rgba(0, 0, 0, 0.6);
+    font-size: 16px;
+    color: #000000;
 }
 
 .results-count strong {
@@ -696,7 +696,7 @@ body {
     border-radius: 0;
     cursor: pointer;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     color: var(--color-black);
 }
 
@@ -731,7 +731,7 @@ body {
 .loading,
 .no-books {
     font-size: 18px;
-    color: rgba(0, 0, 0, 0.6);
+    color: #000000;
 }
 
 .no-books h2 {
@@ -744,7 +744,7 @@ body {
 .no-books p {
     margin: 0 0 25px 0;
     font-size: 18px;
-    color: rgba(0, 0, 0, 0.6);
+    color: #000000;
 }
 
 .error {
@@ -781,7 +781,7 @@ body {
 .footer-section p {
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.7;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .footer-links {
@@ -795,7 +795,7 @@ body {
 .footer-links a {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .footer-links a:hover {
@@ -808,7 +808,7 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /* ============================================================================

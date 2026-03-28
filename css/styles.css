@@ -50,8 +50,8 @@
   --text-h4: 1.25rem;       /* 20px */
   --text-body-large: 1.25rem; /* 20px */
   --text-body: 1.125rem;    /* 18px */
-  --text-small: 0.875rem;   /* 14px */
-  --text-caption: 0.75rem;  /* 12px */
+  --text-small: 1rem;       /* 16px (minimum) */
+  --text-caption: 1rem;     /* 16px (minimum) */
 
   /* Line Heights */
   --leading-tight: 1.1;
@@ -594,7 +594,7 @@ button:disabled {
 .form-help {
   font-family: var(--font-ui);
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.6);
+  color: #000000;
   margin-top: 4px;
 }
 .form-error-message {
@@ -669,7 +669,7 @@ div[class*="rounded-xl shadow"] ul {
   color: var(--color-white);
   padding: 4px 16px;
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -712,10 +712,10 @@ div[class*="rounded-xl shadow"] ul {
 .pricing-features-container {
   padding: 16px 40px 24px 40px;
 }
-/* Subtitle styling - lighter color */
+/* Subtitle styling - pure black */
 .pricing-header p {
-  color: rgba(0, 0, 0, 0.65);
-  font-size: 15px;
+  color: #000000;
+  font-size: 16px;
 }
 /* Feature list - delicate spacing and typography */
 .pricing-features {
@@ -726,12 +726,12 @@ div[class*="rounded-xl shadow"] ul {
 .pricing-features li {
   padding: 12px 0;
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.5;
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  color: rgba(0, 0, 0, 0.85);
+  color: #000000;
 }
 .pricing-features li:not(:last-child) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);

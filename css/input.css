@@ -80,7 +80,7 @@
 
   /* Ensure minimum readable font size for all text */
   body {
-    font-size: 17px; /* Minimum readable size */
+    font-size: 18px; /* Optimal readable size */
   }
 
   /* Mobile typography adjustments */
@@ -90,7 +90,7 @@
     h3 { font-size: 1.25rem; } /* 20px mobile */
     h4 { font-size: 1.125rem; } /* 18px mobile */
     p { font-size: 1.0625rem; } /* 17px mobile - more readable than 16px */
-    body { font-size: 17px; }
+    body { font-size: 18px; }
   }
 
   /* Links */
