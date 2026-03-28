@@ -41,14 +41,8 @@
                     });
                 }
 
-                // Initialize mobile menu toggle
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenu = document.getElementById('mobile-menu');
-                if (mobileMenuButton && mobileMenu) {
-                    mobileMenuButton.addEventListener('click', function() {
-                        mobileMenu.classList.toggle('hidden');
-                    });
-                }
+                // Dispatch event to notify that header is loaded
+                document.dispatchEvent(new CustomEvent('headerLoaded'));
             }
         } catch (error) {
             console.error('Error loading header:', error);

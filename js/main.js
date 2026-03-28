@@ -4,7 +4,7 @@
  */
 
 // Mobile Menu Toggle
-document.addEventListener('DOMContentLoaded', function() {
+function initMobileMenu() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
@@ -35,7 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
+}
+
+// Initialize when header is loaded (dynamically loaded via header-loader.js)
+document.addEventListener('headerLoaded', initMobileMenu);
+
+// Also try to initialize on DOMContentLoaded (in case header is already in DOM)
+document.addEventListener('DOMContentLoaded', initMobileMenu);
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
