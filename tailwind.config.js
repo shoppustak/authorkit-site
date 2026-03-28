@@ -43,7 +43,7 @@ module.exports = {
       'body-lg': ['1.25rem', { lineHeight: '1.6' }],
       'body': ['1.125rem', { lineHeight: '1.7' }],
       'sm': ['1rem', { lineHeight: '1.5' }],      // 16px minimum (was 14px)
-      'xs': ['0.875rem', { lineHeight: '1.4' }],  // 14px minimum (was 12px)
+      'xs': ['1rem', { lineHeight: '1.4' }],  // 16px minimum (was 14px)
     },
 
     spacing: {
