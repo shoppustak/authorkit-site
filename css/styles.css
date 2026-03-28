@@ -308,6 +308,18 @@
   height: 100%;
   object-fit: cover;
 }
+/* Grid overflow prevention */
+.grid {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* Mobile-specific card overflow prevention */
+@media (max-width: 767px) {
+  .grid > * {
+    max-width: 100%;
+    min-width: 0;
+  }
+}
 /* ================================
  * FOOTER COMPONENTS
  * ================================ */
