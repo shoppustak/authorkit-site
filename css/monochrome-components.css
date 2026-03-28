@@ -58,6 +58,7 @@
 .nav-logo {
   height: 40px;
   width: auto;
+  aspect-ratio: 346 / 70;
 }
 
 /* ================================
