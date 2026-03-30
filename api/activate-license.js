@@ -127,8 +127,10 @@ export default async function handler(req, res) {
     const license = validateData.license_key;
     const meta = validateData.meta || {};
 
-    // Check license status
-    if (license.status !== 'active') {
+    // Check license status - reject disabled, expired, or cancelled
+    // Note: "inactive" is valid - it means not yet activated on any instance
+    const invalidStatuses = ['disabled', 'expired', 'cancelled'];
+    if (invalidStatuses.includes(license.status)) {
       return res.status(400).json({
         success: false,
         message: `Cannot activate. License is ${license.status}.`
