@@ -84,6 +84,13 @@ export default async function handler(req, res) {
 
     const { license_key, site_url, site_name } = validation.data;
 
+    // Clean and normalize site URL
+    const cleanSiteUrl = site_url
+      .replace(/^https?:\/\//, '')
+      .replace(/^www\./, '')
+      .replace(/\/$/, '')
+      .toLowerCase();
+
     const lsApiKey = process.env.LEMON_SQUEEZY_API_KEY;
 
     if (!lsApiKey) {
