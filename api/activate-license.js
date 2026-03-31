@@ -158,62 +158,43 @@ export default async function handler(req, res) {
       maxActivations = 999999;
     }
 
-    // Get current activations from license metadata
-    // Note: In production, you'd store this in a database
-    // For now, we'll use Lemon Squeezy's metadata feature
-    const activeSites = license.meta?.active_sites || [];
+    // Get current activations from LemonSqueezy instances (more reliable than metadata)
+    const instances = validateData.meta?.instances || [];
 
-    // Check if site is already activated
-    const existingActivation = activeSites.find(site => {
-      const cleanActiveSite = site.url
-        .replace(/^https?:\/\//, '')
-        .replace(/^www\./, '')
-        .replace(/\/$/, '')
-        .toLowerCase();
-      return cleanActiveSite === cleanSiteUrl;
+    // Check if site is already activated by checking instance names
+    const existingInstance = instances.find(inst => {
+      const instanceName = (inst.name || '').toLowerCase();
+      return instanceName.includes(cleanSiteUrl) || cleanSiteUrl.includes(instanceName);
     });
 
-    if (existingActivation) {
+    if (existingInstance) {
       return res.status(200).json({
         success: true,
         message: `License already activated on ${cleanSiteUrl}`,
         data: {
           tier: tier,
-          activated_at: existingActivation.activated_at,
-          sites_remaining: tier === 'agency' ? 999999 : Math.max(0, maxActivations - activeSites.length)
+          activated_at: existingInstance.created_at,
+          expires_at: license.expires_at,
+          instance_id: existingInstance.id,
+          sites_remaining: tier === 'agency' ? 999999 : Math.max(0, maxActivations - instances.length)
         }
       });
     }
 
     // Check activation limit (for Pro tier)
-    if (tier === 'pro' && activeSites.length >= maxActivations) {
+    if (tier === 'pro' && instances.length >= maxActivations) {
       return res.status(400).json({
         success: false,
         message: `Activation limit reached. Pro licenses can only be activated on ${maxActivations} site(s). Please deactivate from another site first.`,
         data: {
           max_activations: maxActivations,
-          active_sites: activeSites.map(s => s.url),
+          active_instances: instances.map(i => i.name),
           upgrade_url: 'https://authorkit.pro/pricing'
         }
       });
     }
 
-    // Add new activation
-    const newActivation = {
-      url: cleanSiteUrl,
-      name: site_name || cleanSiteUrl,
-      activated_at: new Date().toISOString(),
-      last_checked: new Date().toISOString()
-    };
-
-    activeSites.push(newActivation);
-
-    // Update license metadata via Lemon Squeezy API
-    // Note: This is a simplified version. In production, you'd:
-    // 1. Use a database to store activations
-    // 2. Or use Lemon Squeezy's license activation endpoints
-    // 3. Store activation metadata
-
+    // Activate instance via LemonSqueezy API
     const activateResponse = await fetch(
       `https://api.lemonsqueezy.com/v1/licenses/activate`,
       {
@@ -247,8 +228,8 @@ export default async function handler(req, res) {
       message: `License successfully activated on ${cleanSiteUrl}`,
       data: {
         tier: tier,
-        activated_at: newActivation.activated_at,
-        sites_remaining: tier === 'agency' ? 999999 : Math.max(0, maxActivations - activeSites.length),
+        activated_at: new Date().toISOString(),
+        sites_remaining: tier === 'agency' ? 999999 : Math.max(0, maxActivations - instances.length - 1),
         expires_at: license.expires_at,
         instance_id: activateData.instance?.id
       }
