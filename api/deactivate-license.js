@@ -84,11 +84,22 @@ export default async function handler(req, res) {
 
     const { license_key, site_url, instance_id } = validation.data;
 
-    // Require either site_url or instance_id
-    if (!site_url && !instance_id) {
-      return res.status(400).json({
-        success: false,
-        message: 'Either site_url or instance_id is required'
+    // If no instance_id is provided, return success immediately
+    // This handles legacy activations that don't have instance tracking
+    if (!instance_id || instance_id.trim() === '') {
+      logSecurityEvent('deactivation_no_instance', {
+        ip: clientIp,
+        license_key_hash: hashSensitiveData(license_key),
+        site_url: site_url
+      });
+
+      return res.status(200).json({
+        success: true,
+        message: `License successfully deactivated locally. Note: This site was activated before instance tracking was implemented.`,
+        data: {
+          deactivated_at: new Date().toISOString(),
+          note: 'Legacy activation - instance not tracked in LemonSqueezy'
+        }
       });
     }
 
@@ -101,7 +112,7 @@ export default async function handler(req, res) {
       });
     }
 
-    // Deactivate via Lemon Squeezy API
+    // Deactivate via Lemon Squeezy API with instance_id
     const deactivateResponse = await fetch(
       `https://api.lemonsqueezy.com/v1/licenses/deactivate`,
       {
@@ -122,17 +133,21 @@ export default async function handler(req, res) {
       const errorData = await deactivateResponse.json();
       console.error('Lemon Squeezy deactivation error:', errorData);
 
-      // Check if instance not found
+      // Check if instance not found - treat as success since it's already deactivated
       if (deactivateResponse.status === 404) {
-        return res.status(404).json({
-          success: false,
-          message: 'Activation not found for this site'
+        return res.status(200).json({
+          success: true,
+          message: 'License deactivated (instance not found in LemonSqueezy)',
+          data: {
+            deactivated_at: new Date().toISOString(),
+            note: 'Instance already deactivated or not found'
+          }
         });
       }
 
       return res.status(500).json({
         success: false,
-        message: 'Failed to deactivate license'
+        message: 'Failed to deactivate license from LemonSqueezy'
       });
     }
 
