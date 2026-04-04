@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuthorKit vs Competitors - WordPress Plugin Comparison for Authors</title>
+    <meta name="description" content="Compare AuthorKit with Mooberry Book Manager, Novelist Plugin, and generic page builders. See why authors choose AuthorKit for WordPress.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AuthorKit vs Other WordPress Author Plugins">
+    <meta property="og:description" content="Detailed comparison of AuthorKit features versus other WordPress plugins for authors. Free plugins, better performance.">
+    <meta property="og:type" content="website">
+
+    <!-- Self-hosted fonts for optimal performance -->
+    <link rel="preload" as="style" href="css/fonts.css">
+    <link rel="stylesheet" href="css/fonts.css">
+
+    <link rel="stylesheet" href="css/styles.min.css">
+
+    <style>
+        body {
+            background: #FFFFFF;
+            font-family: 'Source Serif 4', serif;
+        }
+        /* Monochrome Design System - Remove all rounded corners, shadows, gradients */
+        .bg-gradient-to-br { background: #FFFFFF !important; border-bottom: 1px solid #000000; }
+        .rounded-xl { border-radius: 0 !important; border: 1px solid #000000; }
+        .shadow-sm { box-shadow: none !important; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #000000; }
+        p, span, div { color: #000000; }
+
+        /* Comparison Table Styles */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-family: 'Source Serif 4', serif;
+        }
+        .comparison-table thead {
+            background: #f4f2ea;
+            border-bottom: 2px solid #000000;
+        }
+        .comparison-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 700;
+            border: 1px solid #000000;
+            color: #000000;
+        }
+        .comparison-table th.authorkit-column {
+            background: #000000;
+            color: #FFFFFF;
+        }
+        .comparison-table td {
+            padding: 0.75rem 1rem;
+            border: 1px solid #000000;
+            color: #000000;
+        }
+        .comparison-table tbody tr:nth-child(even) {
+            background: #f4f2ea;
+        }
+        .comparison-table td:first-child {
+            font-weight: 600;
+        }
+        .comparison-table .category-row td {
+            background: #e5e3db;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Mobile responsive table */
+        @media (max-width: 768px) {
+            .comparison-table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            .comparison-table {
+                min-width: 600px;
+            }
+        }
+
+        /* Advantage cards */
+        .advantage-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .advantage-card {
+            padding: 2rem;
+            border: 2px solid #000000;
+            background: #FFFFFF;
+        }
+        .advantage-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .advantage-card p {
+            font-size: 1.125rem;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: #f4f2ea;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 1px solid #000000;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .btn-primary {
+            background: #000000;
+            color: #FFFFFF;
+            border: 2px solid #000000;
+            padding: 12px 24px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 0;
+            cursor: pointer;
+        }
+        .btn-secondary {
+            background: #FFFFFF;
+            color: #000000;
+            border: 2px solid #000000;
+            padding: 12px 24px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 0;
+            cursor: pointer;
+        }
+        .btn-primary:hover {
+            background: #333333;
+        }
+        .btn-secondary:hover {
+            background: #f4f2ea;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (Loaded from shared component) -->
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section style="background: #f4f2ea;" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl font-bold mb-4" style="color: #000000;">How AuthorKit Compares to Other WordPress Author Plugins</h1>
+            <p class="text-xl" style="color: #000000;">Most WordPress author tools were built as afterthoughts. AuthorKit was designed from the ground up for self-publishing authors.</p>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section style="background: #FFFFFF; padding: 4rem 0;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-8" style="color: #000000;">Feature Comparison</h2>
+
+            <div class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th class="authorkit-column">AuthorKit</th>
+                            <th>Mooberry Book Manager</th>
+                            <th>Novelist Plugin</th>
+                            <th>Generic Page Builders</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="category-row">
+                            <td colspan="5">Book Management</td>
+                        </tr>
+                        <tr>
+                            <td>Custom book meta fields</td>
+                            <td>✅ 27 fields</td>
+                            <td>✅ Limited</td>
+                            <td>✅ Basic</td>
+                            <td>❌ None</td>
+                        </tr>
+                        <tr>
+                            <td>Series management</td>
+                            <td>✅ Full support</td>
+                            <td>✅ Basic</td>
+                            <td>✅ Basic</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>Multiple formats</td>
+                            <td>✅ All formats</td>
+                            <td>⚠️ Partial</td>
+                            <td>⚠️ Partial</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr class="category-row">
+                            <td colspan="5">Reader Engagement</td>
+                        </tr>
+                        <tr>
+                            <td>Review system</td>
+                            <td>✅ Full system</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>Star ratings</td>
+                            <td>✅ Built-in</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>Contest/giveaways</td>
+                            <td>✅ Free</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr class="category-row">
+                            <td colspan="5">Discovery</td>
+                        </tr>
+                        <tr>
+                            <td>Book discovery platform</td>
+                            <td>✅ Included free</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>SEO Schema markup</td>
+                            <td>✅ Built-in</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr class="category-row">
+                            <td colspan="5">Marketing Tools</td>
+                        </tr>
+                        <tr>
+                            <td>Launch countdowns</td>
+                            <td>✅ Premium</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>Universal book links</td>
+                            <td>✅ Premium</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>Reader magnets</td>
+                            <td>✅ Premium</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>Email integration</td>
+                            <td>✅ Yes</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>⚠️ Varies</td>
+                        </tr>
+                        <tr class="category-row">
+                            <td colspan="5">Performance</td>
+                        </tr>
+                        <tr>
+                            <td>Zero dependencies</td>
+                            <td>✅ Vanilla PHP/JS</td>
+                            <td>❌ Heavy</td>
+                            <td>❌ Heavy</td>
+                            <td>❌ Heavy</td>
+                        </tr>
+                        <tr>
+                            <td>No jQuery required</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                        </tr>
+                        <tr>
+                            <td>Caching friendly</td>
+                            <td>✅</td>
+                            <td>⚠️ Partial</td>
+                            <td>⚠️ Partial</td>
+                            <td>⚠️ Varies</td>
+                        </tr>
+                        <tr class="category-row">
+                            <td colspan="5">Support</td>
+                        </tr>
+                        <tr>
+                            <td>Theme compatibility</td>
+                            <td>✅ 100%</td>
+                            <td>⚠️ Partial</td>
+                            <td>⚠️ Partial</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Active development</td>
+                            <td>✅ Weekly updates</td>
+                            <td>⚠️ Sporadic</td>
+                            <td>⚠️ Sporadic</td>
+                            <td>✅</td>
+                        </tr>
+                        <tr>
+                            <td>Documentation</td>
+                            <td>✅ Comprehensive</td>
+                            <td>⚠️ Basic</td>
+                            <td>⚠️ Basic</td>
+                            <td>✅</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Advantages Section -->
+    <section style="background: #f4f2ea; padding: 4rem 0;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-8" style="color: #000000;">Only in AuthorKit</h2>
+
+            <div class="advantage-cards">
+                <div class="advantage-card">
+                    <h3 style="color: #000000;">Free Book Discovery Platform</h3>
+                    <p style="color: #000000;">Your books listed on bookshelf.authorkit.pro — no other plugin offers this. Get discovered by new readers without spending a cent on ads.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3 style="color: #000000;">Built-in Review System</h3>
+                    <p style="color: #000000;">Collect and display reader reviews directly on your site — Amazon-style. Stop sending readers elsewhere to see your social proof.</p>
+                </div>
+                <div class="advantage-card">
+                    <h3 style="color: #000000;">Contest Management</h3>
+                    <p style="color: #000000;">Run book giveaways to grow your email list — included free. Entry management, winner selection, and notifications all built-in.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose AuthorKit Section -->
+    <section style="background: #FFFFFF; padding: 4rem 0;">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12" style="color: #000000;">Why Authors Choose AuthorKit</h2>
+
+            <div style="display: grid; gap: 2rem;">
+                <div style="border-left: 4px solid #000000; padding-left: 1.5rem;">
+                    <h3 class="text-2xl font-bold mb-2" style="color: #000000;">Purpose-Built for Authors</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.6; color: #000000;">Unlike generic plugins, every AuthorKit feature was designed specifically for self-publishing authors. No bloat, no features you'll never use — just the tools authors actually need.</p>
+                </div>
+
+                <div style="border-left: 4px solid #000000; padding-left: 1.5rem;">
+                    <h3 class="text-2xl font-bold mb-2" style="color: #000000;">Lightning Fast Performance</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.6; color: #000000;">Zero bloat, zero dependencies. AuthorKit uses vanilla PHP and JavaScript with no jQuery, no React, no heavy frameworks. Your site stays fast even with hundreds of books.</p>
+                </div>
+
+                <div style="border-left: 4px solid #000000; padding-left: 1.5rem;">
+                    <h3 class="text-2xl font-bold mb-2" style="color: #000000;">Start Free, Scale When Ready</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.6; color: #000000;">Four free plugins give you everything to launch your author website professionally. Premium add-ons unlock advanced features when you need more power.</p>
+                </div>
+
+                <div style="border-left: 4px solid #000000; padding-left: 1.5rem;">
+                    <h3 class="text-2xl font-bold mb-2" style="color: #000000;">Most Complete Metadata</h3>
+                    <p style="font-size: 1.125rem; line-height: 1.6; color: #000000;">27 custom book fields cover everything: ISBN, ASIN, publisher, page count, publication date, series info, age range, formats, buy links, and more. More metadata than any competing plugin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold mb-4" style="color: #000000;">Ready to Switch?</h2>
+            <p style="font-size: 1.25rem; color: #000000; margin-bottom: 2rem;">Join thousands of authors using AuthorKit</p>
+            <div class="cta-buttons">
+                <a href="/download.html" class="btn-primary">Get Started Free</a>
+                <a href="/features.html" class="btn-secondary">Explore All Features</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Loaded from shared component) -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load shared header/footer components -->
+    <script>
+        // Load header
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('header-placeholder').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading header:', error));
+
+        // Load footer
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    </script>
+</body>
+</html>
