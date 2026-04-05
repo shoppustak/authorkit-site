@@ -12,6 +12,42 @@
     <link rel="preload" as="style" href="css/fonts.css">
     <link rel="stylesheet" href="css/fonts.css">
 
+    <!-- Critical CSS for mobile rendering -->
+    <style id="critical-css">
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{font-family:'Source Serif 4',serif;font-size:16px;line-height:1.7;background:#FFFFFF;color:#000000;-webkit-font-smoothing:antialiased}
+        body{font-size:18px;margin:0}
+        .nav-bar{background:#FFFFFF;border-bottom:1px solid #000000;position:sticky;top:0;z-index:50}
+        .nav-container{max-width:1280px;margin:0 auto;padding:0 1rem}
+        .nav-logo{height:40px;width:auto}
+        .nav-link{color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;font-weight:500;text-decoration:none}
+        .flex{display:flex}
+        .items-center{align-items:center}
+        .justify-between{justify-content:space-between}
+        .h-16{height:4rem}
+        .hidden{display:none}
+        .mobile-menu{position:absolute;top:100%;right:16px;background:#FFFFFF;border:1px solid #000000;width:200px;z-index:100}
+        .mobile-menu-button{background:transparent;border:none;cursor:pointer;padding:8px}
+        .mobile-menu-icon{height:24px;stroke:#000000;stroke-width:2;width:24px}
+        .mobile-nav-link{display:block;padding:16px 24px;color:#000000;border-bottom:1px solid rgba(0,0,0,.1);text-decoration:none}
+        .mobile-nav-link:last-child{border-bottom:none}
+        .btn-primary{background:#000000;border:2px solid #000000;color:#FFFFFF;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;font-weight:600;min-height:44px;padding:12px 24px;text-decoration:none}
+        .btn-secondary{background:#FFFFFF;border:2px solid #000000;color:#000000;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;font-weight:600;min-height:44px;padding:12px 24px;text-decoration:none}
+        .btn-accent{background:#FF9900;border:2px solid #FF9900;color:#FFFFFF;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;font-weight:600;min-height:44px;padding:12px 24px;text-decoration:none}
+        .footer-container{background:#FFFFFF;border-top:1px solid #000000;padding:64px 0 32px}
+        .footer-wrapper{max-width:1280px;margin:0 auto;padding:0 32px}
+        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:48px;margin-bottom:48px}
+        .footer-heading{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#000000;margin-bottom:16px}
+        .footer-text{font-family:'Source Serif 4',serif;font-size:16px;line-height:1.6;color:#000000;margin-bottom:8px}
+        .footer-link{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;color:#000000;text-decoration:none;display:block;padding:4px 0}
+        .footer-link:hover{text-decoration:underline}
+        .footer-list{list-style:none;padding:0;margin:0}
+        .footer-list li{margin-bottom:8px}
+        .footer-bottom{border-top:1px solid rgba(0,0,0,.1);padding-top:32px;margin-top:48px;text-align:center}
+        .footer-copyright{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;color:#000000}
+        @media (min-width:1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.nav-container{padding:0 2rem}}
+    </style>
+
     <link rel="stylesheet" href="css/styles.min.css">
 
     <!-- LemonSqueezy payment integration -->
