@@ -220,6 +220,19 @@
   width: auto;
   aspect-ratio: 346 / 70;
 }
+
+/* Mobile logo sizing */
+@media (max-width: 768px) {
+  .nav-logo {
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    height: 28px;
+  }
+}
 /* ================================
  * MOBILE MENU COMPONENTS
  * ================================ */
@@ -394,6 +407,22 @@
 .footer-signup-button:hover {
   background: var(--color-white);
   color: var(--color-black);
+}
+/* Footer Logo - Responsive sizing */
+.footer-logo {
+  height: auto;
+  max-width: 200px;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .footer-logo {
+    max-width: 160px;
+  }
+}
+@media (max-width: 480px) {
+  .footer-logo {
+    max-width: 140px;
+  }
 }
 /* ================================
  * BUTTON COMPONENTS (COMPREHENSIVE)
