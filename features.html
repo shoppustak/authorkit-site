@@ -43,7 +43,25 @@
         .footer-list li{margin-bottom:8px}
         .footer-bottom{border-top:1px solid rgba(0,0,0,.1);padding-top:32px;margin-top:48px;text-align:center}
         .footer-copyright{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;color:#000000}
-        @media (min-width:1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.nav-container{padding:0 2rem}}
+
+        /* Essential layout utilities for page content */
+        .py-16{padding-top:4rem;padding-bottom:4rem}
+        .px-4{padding-left:1rem;padding-right:1rem}
+        .max-w-7xl{max-width:80rem}
+        .max-w-screen-xl{max-width:1280px}
+        .mx-auto{margin-left:auto;margin-right:auto}
+        .text-center{text-align:center}
+        .mb-4{margin-bottom:1rem}
+        .mb-12{margin-bottom:3rem}
+        .text-5xl{font-size:3rem;line-height:1}
+        .text-xl{font-size:1.25rem;line-height:1.75rem}
+        .font-bold{font-weight:700}
+        .grid{display:grid}
+        .gap-6{gap:1.5rem}
+
+        @media (min-width:1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}.nav-container{padding:0 2rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}}
+        @media (min-width:640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}
+        @media (min-width:768px){.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
     </style>
 
     <link rel="stylesheet" href="css/styles.min.css">
