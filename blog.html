@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AuthorKit Transparency Reports — Building in Public</title>
-    <meta name="description" content="Annual transparency reports from AuthorKit: revenue, growth metrics, challenges, and goals. We believe in building in public and sharing our journey with the WordPress community.">
+    <title>AuthorKit Blog — Tutorials, Guides & Transparency Reports</title>
+    <meta name="description" content="WordPress tutorials for authors, plugin guides, and annual transparency reports. Learn how to build your author platform and follow our journey building in public.">
 
 
 
@@ -190,16 +190,52 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container" style="max-width: 900px;">
-            <h1>Building in Public</h1>
-            <p style="font-size: 24px; line-height: 1.3; margin: 24px 0;">Annual transparency reports from the AuthorKit team</p>
+            <h1>AuthorKit Blog</h1>
+            <p style="font-size: 24px; line-height: 1.3; margin: 24px 0;">Tutorials, guides, and transparency reports for indie authors</p>
             <p style="font-size: 18px; line-height: 1.7;">
-                We believe in transparency and community. Every December 31st, we share our revenue, growth metrics, challenges, lessons learned, and goals for the year ahead.
+                Learn how to build your WordPress author platform with step-by-step tutorials, plugin guides, and best practices. Plus annual transparency reports where we share our journey building in public.
             </p>
         </div>
     </section>
 
+    <!-- Category Filter -->
+    <section style="background: #FFFFFF; padding: 24px 32px; border-bottom: 1px solid #000000;">
+        <div class="container" style="max-width: 900px; text-align: center;">
+            <button class="category-filter active" data-category="all" style="background: #000000; color: #FFFFFF; padding: 12px 24px; border: 2px solid #000000; margin: 0 8px; cursor: pointer; font-size: 16px; font-weight: 600;">All Posts</button>
+            <button class="category-filter" data-category="tutorials" style="background: #FFFFFF; color: #000000; padding: 12px 24px; border: 2px solid #000000; margin: 0 8px; cursor: pointer; font-size: 16px; font-weight: 600;">Tutorials & Guides</button>
+            <button class="category-filter" data-category="reports" style="background: #FFFFFF; color: #000000; padding: 12px 24px; border: 2px solid #000000; margin: 0 8px; cursor: pointer; font-size: 16px; font-weight: 600;">Annual Reports</button>
+        </div>
+    </section>
+
+    <!-- Tutorials Section -->
+    <section style="background: #FFFFFF;" class="content-section" data-category="tutorials">
+        <div class="container" style="max-width: 900px;">
+            <h2 style="margin-bottom: 48px;">Latest Tutorials & Guides</h2>
+
+            <!-- Tutorial Post 1 -->
+            <article class="card" style="cursor: pointer;" onclick="window.location.href='/blog/how-to-collect-book-reviews-wordpress.html'">
+                <div style="margin-bottom: 16px;">
+                    <span class="badge">Tutorial</span>
+                    <span style="font-size: 14px; color: #666;">April 11, 2026 · 10 min read</span>
+                </div>
+                <h3 style="margin-bottom: 16px;">How to Collect Book Reviews on Your WordPress Site (Step-by-Step)</h3>
+                <p style="margin-bottom: 24px;">
+                    Learn how to set up a complete review collection system on your WordPress author website in under 30 minutes. This comprehensive guide covers review forms, moderation, automated emails, and display options.
+                </p>
+                <a href="/blog/how-to-collect-book-reviews-wordpress.html" style="font-weight: 600; text-decoration: none; border-bottom: 2px solid #000000;">Read Tutorial →</a>
+            </article>
+
+            <!-- More tutorials will appear here -->
+            <div style="text-align: center; padding: 32px 0;">
+                <p style="font-size: 16px; color: #666;">
+                    More tutorials coming soon. Subscribe to our newsletter for updates.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Why Transparency Section -->
-    <section style="background: #f4f2ea;">
+    <section style="background: #f4f2ea;" class="content-section" data-category="reports">
         <div class="container" style="max-width: 900px;">
             <div class="card">
                 <h2 style="margin-bottom: 24px;">Why We Share Transparency Reports</h2>
@@ -215,7 +251,7 @@
     </section>
 
     <!-- Reports List Section -->
-    <section style="background: #FFFFFF;">
+    <section style="background: #FFFFFF;" class="content-section" data-category="reports">
         <div class="container" style="max-width: 900px;">
             <h2 style="margin-bottom: 48px;">Transparency Reports</h2>
 
@@ -257,5 +293,39 @@
     <script src="js/header-loader.js" defer></script>
     <script src="js/footer-loader.js" defer></script>
     <script src="js/main.min.js" defer></script>
+
+    <!-- Category Filtering Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.category-filter');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+
+                    // Update active button
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.style.background = '#FFFFFF';
+                        btn.style.color = '#000000';
+                    });
+                    this.classList.add('active');
+                    this.style.background = '#000000';
+                    this.style.color = '#FFFFFF';
+
+                    // Show/hide content sections
+                    contentSections.forEach(section => {
+                        const sectionCategory = section.getAttribute('data-category');
+                        if (category === 'all' || sectionCategory === category) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
