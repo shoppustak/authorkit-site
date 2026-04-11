@@ -18,7 +18,7 @@
 
     async function loadHeader() {
         try {
-            const response = await fetch('includes/header.html');
+            const response = await fetch('/includes/header.html');
             const headerHTML = await response.text();
 
             const headerPlaceholder = document.getElementById('header-placeholder');

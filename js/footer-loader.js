@@ -9,7 +9,7 @@
     // Load and insert footer
     async function loadFooter() {
         try {
-            const response = await fetch('includes/footer.html');
+            const response = await fetch('/includes/footer.html');
             if (!response.ok) {
                 throw new Error(`Failed to load footer: ${response.status}`);
             }
