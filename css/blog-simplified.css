@@ -7,12 +7,12 @@
     transition: none !important;
 }
 
-/* Body - Reduced from 21px to 18px for better readability */
+/* Body - Set to 20px for optimal readability */
 body {
     background: #FFFFFF;
     color: #1a1a1a;
     font-family: 'Source Serif 4', serif;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.65;
     font-weight: 400;
 }
@@ -55,7 +55,7 @@ h3 {
 
 /* H4 - Same as body size but bold */
 h4 {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
     margin-top: 24px;
     margin-bottom: 12px;
@@ -84,7 +84,7 @@ p {
     margin-bottom: 24px;
 }
 
-/* Lead paragraph - Reduced from 24px to 20px */
+/* Lead paragraph - Same as body for consistency */
 .lead {
     font-size: 20px;
     line-height: 1.6;
@@ -96,7 +96,7 @@ p {
 ul, ol {
     margin-bottom: 24px;
     padding-left: 40px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.65;
 }
 
@@ -133,7 +133,7 @@ a:hover {
 }
 
 .cta-box p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
 }
 
@@ -164,18 +164,18 @@ a:hover {
 }
 
 .info-box h4 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     margin-top: 0;
 }
 
 .info-box p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.65;
 }
 
 .info-box ul {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* Code Block - Keep at 16px for readability */
@@ -195,7 +195,7 @@ a:hover {
     width: 100%;
     border-collapse: collapse;
     margin: 28px 0;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .comparison-table th,
@@ -203,7 +203,7 @@ a:hover {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
 }
 
@@ -230,7 +230,7 @@ a:hover {
 .toc ul,
 .toc ol {
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
 }
 
@@ -239,7 +239,7 @@ a:hover {
 }
 
 .toc a {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     color: #000000;
 }
@@ -281,7 +281,7 @@ a:hover {
 /* Mobile - Simplified responsive typography */
 @media (max-width: 768px) {
     body {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     h1 {
@@ -293,11 +293,11 @@ a:hover {
     }
 
     h3 {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     .lead {
-        font-size: 18px;
+        font-size: 19px;
     }
 
     .container {
