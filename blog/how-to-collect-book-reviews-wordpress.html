@@ -9,7 +9,7 @@
     <!-- Self-hosted fonts -->
     <link rel="preload" as="style" href="../css/fonts.css">
     <link rel="stylesheet" href="../css/fonts.css">
-    <link rel="stylesheet" href="../css/styles.min.css">
+    <link rel="stylesheet" href="../css/blog-simplified.css">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
@@ -34,271 +34,6 @@
     }
     </script>
 
-    <style>
-        /* Monochrome blog post styling */
-        * {
-            border-radius: 0 !important;
-            box-shadow: none !important;
-            transition: none !important;
-        }
-
-        body {
-            background: #FFFFFF;
-            color: #1a1a1a;
-            font-family: 'Source Serif 4', serif;
-            font-size: 21px;
-            line-height: 1.8;
-            font-weight: 400;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Playfair Display', serif;
-            color: #000000;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        strong {
-            font-weight: 700;
-            color: #000000;
-        }
-
-        h1 {
-            font-size: 52px;
-            line-height: 1.15;
-            margin-bottom: 32px;
-        }
-
-        h2 {
-            font-size: 36px;
-            line-height: 1.25;
-            margin-top: 56px;
-            margin-bottom: 28px;
-            font-weight: 700;
-        }
-
-        h3 {
-            font-size: 28px;
-            line-height: 1.35;
-            margin-top: 40px;
-            margin-bottom: 24px;
-            font-weight: 700;
-        }
-
-        h4 {
-            font-size: 21px;
-            line-height: 1.4;
-            margin-top: 32px;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
-
-        .article-meta {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 32px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 64px 32px;
-        }
-
-        article {
-            max-width: 720px;
-        }
-
-        p {
-            margin-bottom: 32px;
-        }
-
-        ul, ol {
-            margin-bottom: 32px;
-            padding-left: 40px;
-            font-size: 21px;
-            line-height: 1.8;
-        }
-
-        li {
-            margin-bottom: 16px;
-            line-height: 1.8;
-            padding-left: 8px;
-        }
-
-        li strong {
-            font-weight: 700;
-        }
-
-        a {
-            color: #000000;
-            text-decoration: underline;
-        }
-
-        a:hover {
-            opacity: 0.7;
-        }
-
-        .cta-box {
-            background: #FF9900;
-            color: #FFFFFF;
-            padding: 32px;
-            margin: 48px 0;
-            text-align: center;
-            border: 2px solid #000000;
-        }
-
-        .cta-box h3 {
-            color: #FFFFFF;
-            margin-top: 0;
-            font-size: 28px;
-        }
-
-        .cta-box p {
-            font-size: 21px;
-            line-height: 1.8;
-        }
-
-        .cta-box a {
-            background: #000000;
-            color: #FFFFFF;
-            padding: 16px 32px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 16px;
-            border: 2px solid #000000;
-            font-weight: 600;
-            font-size: 18px;
-        }
-
-        .cta-box a:hover {
-            background: #FFFFFF;
-            color: #000000;
-            opacity: 1;
-        }
-
-        .info-box {
-            background: #f4f2ea;
-            padding: 24px;
-            border-left: 4px solid #000000;
-            margin: 32px 0;
-        }
-
-        .info-box h4 {
-            font-size: 21px;
-            font-weight: 700;
-        }
-
-        .info-box p {
-            font-size: 21px;
-            line-height: 1.8;
-        }
-
-        .info-box ul {
-            font-size: 21px;
-        }
-
-        .code-block {
-            background: #f4f2ea;
-            padding: 24px;
-            font-family: monospace;
-            font-size: 16px;
-            border: 1px solid #000000;
-            margin: 32px 0;
-            overflow-x: auto;
-            line-height: 1.6;
-        }
-
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 32px 0;
-            font-size: 21px;
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            border: 1px solid #000000;
-            padding: 16px;
-            text-align: left;
-            font-size: 21px;
-            line-height: 1.6;
-        }
-
-        .comparison-table th {
-            background: #f4f2ea;
-            font-weight: 700;
-        }
-
-        .toc {
-            background: #f4f2ea;
-            padding: 24px;
-            border: 1px solid #000000;
-            margin: 32px 0;
-        }
-
-        .toc h2 {
-            font-size: 21px;
-            margin-top: 0;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
-
-        .toc ul {
-            margin-bottom: 0;
-        }
-
-        .toc ol {
-            font-size: 21px;
-            line-height: 1.8;
-        }
-
-        .toc li {
-            margin-bottom: 12px;
-        }
-
-        .toc a {
-            font-size: 21px;
-            font-weight: 400;
-            color: #000000;
-        }
-
-        .badge {
-            background: #FF9900;
-            color: #FFFFFF;
-            padding: 4px 12px;
-            font-size: 14px;
-            font-weight: 600;
-            display: inline-block;
-            margin-right: 8px;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                font-size: 19px;
-            }
-
-            h1 {
-                font-size: 36px;
-            }
-
-            h2 {
-                font-size: 28px;
-            }
-
-            h3 {
-                font-size: 22px;
-            }
-
-            .container {
-                padding: 32px 20px;
-            }
-
-            ul, ol {
-                padding-left: 28px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -314,7 +49,7 @@
 
             <h1>How to Collect Book Reviews on Your WordPress Site (Step-by-Step)</h1>
 
-            <p class="lead" style="font-size: 24px; line-height: 1.7; margin-bottom: 40px; color: #333;">
+            <p class="lead">
                 Collecting book reviews on your website shouldn't require technical skills or complicated plugins. In this comprehensive guide, you'll learn exactly how to set up a review collection system on your WordPress author site in under 30 minutes.
             </p>
 
@@ -424,9 +159,9 @@
             </ol>
 
             <div class="info-box">
-                <h4 style="margin-top: 0;">What Readers See</h4>
+                <h4>What Readers See</h4>
                 <p>Your review form presents a clean, professional experience:</p>
-                <ul style="margin-bottom: 0;">
+                <ul>
                     <li>5-star rating selector (click to choose rating)</li>
                     <li>Text area for their review</li>
                     <li>Name and optional email fields</li>
@@ -583,8 +318,8 @@ Winner announced [Date]. Your review helps other readers find great books!
             </div>
 
             <div class="info-box">
-                <h4 style="margin-top: 0;">AuthorKit Pro Feature</h4>
-                <p style="margin-bottom: 0;"><strong>Automated Review Request Emails</strong> are available in AuthorKit Pro ($9/month). Set up email sequences that automatically send based on purchase date, with customizable templates and A/B testing for subject lines.</p>
+                <h4>AuthorKit Pro Feature</h4>
+                <p><strong>Automated Review Request Emails</strong> are available in AuthorKit Pro ($9/month). Set up email sequences that automatically send based on purchase date, with customizable templates and A/B testing for subject lines.</p>
             </div>
 
             <!-- Section 7 -->
@@ -725,7 +460,7 @@ Winner announced [Date]. Your review helps other readers find great books!
                 <h3>Ready to Collect Book Reviews?</h3>
                 <p>Install AuthorKit Free and start collecting reviews on your WordPress site today. No credit card required.</p>
                 <a href="https://authorkit.pro/pricing.html">Get AuthorKit Free →</a>
-                <p style="margin-top: 16px; font-size: 16px;"><a href="https://authorkit.pro/pricing.html" style="color: #FFFFFF;">Compare Free vs Pro Features →</a></p>
+                <p class="cta-secondary"><a href="https://authorkit.pro/pricing.html">Compare Free vs Pro Features →</a></p>
             </div>
 
             <!-- FAQs -->
@@ -749,10 +484,10 @@ Winner announced [Date]. Your review helps other readers find great books!
             <h3>Do reviews help with SEO?</h3>
             <p>Yes! Reviews provide fresh user-generated content, include natural keywords, and AuthorKit automatically adds schema markup that helps reviews appear in Google search results.</p>
 
-            <hr style="border: none; border-top: 1px solid #000000; margin: 48px 0;">
+            <hr class="divider">
 
-            <p style="font-size: 16px;"><strong>Recommended Next Steps:</strong></p>
-            <ol style="font-size: 16px;">
+            <p class="small-text"><strong>Recommended Next Steps:</strong></p>
+            <ol class="small-text">
                 <li><a href="https://authorkit.pro/pricing.html">Install AuthorKit Free</a></li>
                 <li><a href="/blog.html">Read: Why You're Losing Sales Without Reviews</a></li>
                 <li><a href="/blog.html">Learn: Hidden Cost of Amazon-Only Reviews</a></li>
