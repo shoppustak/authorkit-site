@@ -108,7 +108,7 @@ Simplified and improved the blog post styling to enhance readability and reduce 
 1. **Created:** `/css/blog-simplified.css`
    - New simplified stylesheet with all blog styling
 
-2. **Modified:** `/blog/how-to-collect-book-reviews-wordpress.html`
+2. **Modified:** `/blog/how-to-display-book-reviews-wordpress.html`
    - Removed inline `<style>` block (300+ lines)
    - Linked external CSS file
    - Removed all inline `style=""` attributes
