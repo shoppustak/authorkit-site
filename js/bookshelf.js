@@ -1,13 +1,13 @@
 /**
- * AuthorKit Bookshelf - Shared JavaScript
+ * BookPeek Bookshelf - Shared JavaScript
  * Common functions used across bookshelf pages
  */
 
 /**
- * AuthorKit Amazon Affiliate Tag
+ * BookPeek Amazon Affiliate Tag
  * All Amazon buy links use this tag for revenue attribution
  */
-const AMAZON_AFFILIATE_TAG = 'authorkit-20'; // Update with actual tag
+const AMAZON_AFFILIATE_TAG = 'bookpeek-20'; // Update with actual tag
 
 /**
  * Creates a book card element

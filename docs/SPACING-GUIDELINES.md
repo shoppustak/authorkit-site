@@ -1,10 +1,10 @@
 # Spacing Guidelines
 
-**Purpose:** Maintain consistent, elegant spacing across all pages of the AuthorKit.pro website to create a premium, minimalist aesthetic.
+**Purpose:** Maintain consistent, elegant spacing across all pages of the BookPeek.pro website to create a premium, minimalist aesthetic.
 
 ## Core Spacing Principles
 
-The AuthorKit.pro design uses an 8px base spacing unit, creating a harmonious rhythm throughout the site.
+The BookPeek.pro design uses an 8px base spacing unit, creating a harmonious rhythm throughout the site.
 
 **Base Unit:** 8px
 

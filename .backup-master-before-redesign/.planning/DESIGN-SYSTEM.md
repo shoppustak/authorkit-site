@@ -1,4 +1,4 @@
-# AuthorKit Minimalist Monochrome Design System
+# BookPeek Minimalist Monochrome Design System
 
 **Version:** 1.0.0
 **Last Updated:** 2026-03-18
@@ -19,8 +19,8 @@
 - **Pure White**: #FFFFFF (rgb(255, 255, 255)) - Backgrounds, inverted text
 
 ### Brand Accent Colors (Use Sparingly)
-- **AuthorKit Orange**: #FF9900 (Primary CTAs only)
-- **AuthorKit Blue**: #1E3A5F (Secondary accents, links)
+- **BookPeek Orange**: #FF9900 (Primary CTAs only)
+- **BookPeek Blue**: #1E3A5F (Secondary accents, links)
 
 ### Semantic Colors
 - **Success**: #059669 (emerald-600, WCAG AA on white)

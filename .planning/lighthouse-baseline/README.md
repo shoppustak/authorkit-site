@@ -1,6 +1,6 @@
 # Lighthouse Baseline Measurement Methodology
 
-This directory contains baseline Lighthouse performance measurements for the AuthorKit.pro marketing site taken before the Phase 1 redesign optimization work.
+This directory contains baseline Lighthouse performance measurements for the BookPeek.pro marketing site taken before the Phase 1 redesign optimization work.
 
 ## Measurement Settings
 
@@ -115,7 +115,7 @@ After measurements are complete, analyze results in `BASELINE-ANALYSIS.md`:
 Start local development server before running Lighthouse:
 
 ```bash
-cd /Users/maulik/authorkit-site
+cd /Users/maulik/bookpeek-site
 python3 -m http.server 8000
 ```
 

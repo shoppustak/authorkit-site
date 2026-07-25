@@ -1,7 +1,7 @@
 /**
  * POST /api/email-capture
  *
- * Captures email subscriptions from AuthorKit plugin users.
+ * Captures email subscriptions from BookPeek plugin users.
  * Stores subscriber emails in Supabase and can trigger email notifications.
  *
  * Request body:
@@ -133,7 +133,7 @@ export default async function handler(req, res) {
       return res.status(500).json(formatSupabaseError(error));
     }
 
-    // TODO: Send email notification to support@authorkit.pro
+    // TODO: Send email notification to support@bookpeek.club
     // This can be done via SendGrid, Mailgun, or other email service
     logger.info(`[Email Capture] New subscriber: ${email} from ${site_name} (${site_url})`);
 

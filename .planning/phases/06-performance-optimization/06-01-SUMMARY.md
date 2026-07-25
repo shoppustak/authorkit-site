@@ -214,10 +214,10 @@ metrics:
 
 ### File Verification
 ```bash
-✓ FOUND: /Users/maulik/authorkit-site/postcss.config.js
-✓ FOUND: /Users/maulik/authorkit-site/.lighthouse/lighthouserc.json
-✓ FOUND: /Users/maulik/authorkit-site/scripts/test-performance.sh
-✓ FOUND: /Users/maulik/authorkit-site/css/styles.min.css
+✓ FOUND: /Users/maulik/bookpeek-site/postcss.config.js
+✓ FOUND: /Users/maulik/bookpeek-site/.lighthouse/lighthouserc.json
+✓ FOUND: /Users/maulik/bookpeek-site/scripts/test-performance.sh
+✓ FOUND: /Users/maulik/bookpeek-site/css/styles.min.css
 ```
 
 ### Commit Verification

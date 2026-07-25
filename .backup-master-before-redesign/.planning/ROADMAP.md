@@ -1,6 +1,6 @@
-# AuthorKit.pro Visual Redesign Roadmap
+# BookPeek.pro Visual Redesign Roadmap
 
-**Project**: AuthorKit.pro Visual Redesign to Minimalist Monochrome
+**Project**: BookPeek.pro Visual Redesign to Minimalist Monochrome
 **Milestone**: v2.0 - Lighthouse Optimized, High-End Visual Design
 **Started**: 2026-03-18
 
@@ -8,7 +8,7 @@
 
 ## Milestone: v2.0 - Minimalist Monochrome Redesign
 
-**Goal**: Transform AuthorKit.pro into a high-end, Lighthouse-optimized marketing site with Minimalist Monochrome design while preserving all existing content and functionality.
+**Goal**: Transform BookPeek.pro into a high-end, Lighthouse-optimized marketing site with Minimalist Monochrome design while preserving all existing content and functionality.
 
 **Success Criteria**:
 - ✅ Lighthouse scores: Performance 95+, Accessibility 100, Best Practices 95+, SEO 95+
@@ -420,7 +420,7 @@ Plans:
 - Track mobile vs desktop performance
 
 **Deliverables**:
-- Redesigned site live at authorkit.pro
+- Redesigned site live at bookpeek.club
 - `DESIGN-SYSTEM.md` documentation
 - `STYLE-GUIDE.md` for future maintenance
 - Post-launch monitoring report (first week)

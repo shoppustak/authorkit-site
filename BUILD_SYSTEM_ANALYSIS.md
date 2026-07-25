@@ -1,14 +1,14 @@
-# AuthorKit Site - Comprehensive Build System & Architecture Analysis
+# BookPeek Site - Comprehensive Build System & Architecture Analysis
 
 **Date**: March 28, 2026
 **Analyzed By**: Claude Code
-**Repository**: /Users/maulik/authorkit-site
+**Repository**: /Users/maulik/bookpeek-site
 
 ---
 
 ## Executive Summary
 
-The AuthorKit.pro website is a **static HTML marketing site with a light Node.js build system** optimized for performance. The build process uses Tailwind CSS, PostCSS, and Terser for minification. Despite the minimal tooling, there are several architectural opportunities and constraints that impact performance.
+The BookPeek.pro website is a **static HTML marketing site with a light Node.js build system** optimized for performance. The build process uses Tailwind CSS, PostCSS, and Terser for minification. Despite the minimal tooling, there are several architectural opportunities and constraints that impact performance.
 
 **Key Finding**: CSS file consolidation is intentional and necessary, but **file bloat and loading strategy need optimization** to improve Core Web Vitals (LCP, CLS, FCP).
 
@@ -18,7 +18,7 @@ The AuthorKit.pro website is a **static HTML marketing site with a light Node.js
 
 ## 1.1 Package.json Scripts Analysis
 
-**File**: `/Users/maulik/authorkit-site/package.json`
+**File**: `/Users/maulik/bookpeek-site/package.json`
 
 ### Build Scripts Inventory
 
@@ -73,7 +73,7 @@ TESTING SCRIPTS:
 
 ## 1.2 PostCSS Configuration
 
-**File**: `/Users/maulik/authorkit-site/postcss.config.js`
+**File**: `/Users/maulik/bookpeek-site/postcss.config.js`
 
 ```javascript
 plugins: [
@@ -97,7 +97,7 @@ plugins: [
 
 ## 1.3 Tailwind Configuration
 
-**File**: `/Users/maulik/authorkit-site/tailwind.config.js` (162 lines)
+**File**: `/Users/maulik/bookpeek-site/tailwind.config.js` (162 lines)
 
 ```javascript
 content: [
@@ -133,7 +133,7 @@ content: [
 
 ## 2.1 File Structure & Organization
 
-**Directory**: `/Users/maulik/authorkit-site/css/`
+**Directory**: `/Users/maulik/bookpeek-site/css/`
 
 ```
 css/ (120 KB total)
@@ -201,7 +201,7 @@ input.css (ENTRY POINT)
 
 ## 2.4 Design Tokens System
 
-**File**: `/Users/maulik/authorkit-site/css/design-tokens.css` (167 lines)
+**File**: `/Users/maulik/bookpeek-site/css/design-tokens.css` (167 lines)
 
 Comprehensive CSS variable system:
 
@@ -263,7 +263,7 @@ Comprehensive CSS variable system:
 
 ## 3.1 File Structure & Sizes
 
-**Directory**: `/Users/maulik/authorkit-site/js/`
+**Directory**: `/Users/maulik/bookpeek-site/js/`
 
 ```
 js/ (52 KB total)
@@ -392,7 +392,7 @@ terser js/bookshelf-browse.js -o js/bookshelf-browse.min.js -c -m
 
 ## 4.1 Image Optimization Workflow
 
-**Script**: `/Users/maulik/authorkit-site/scripts/optimize-images.sh` (1617 bytes)
+**Script**: `/Users/maulik/bookpeek-site/scripts/optimize-images.sh` (1617 bytes)
 
 ```bash
 #!/bin/bash
@@ -406,15 +406,15 @@ Key Features:
 5. Recursive processing
 ```
 
-**Directory**: `/Users/maulik/authorkit-site/images/` (956 KB total)
+**Directory**: `/Users/maulik/bookpeek-site/images/` (956 KB total)
 
 ```
 images/ (956 KB)
 ├── favicon.svg              (1.7 KB)
-├── icon-authorkit.svg       (2.8 KB)
+├── icon-bookpeek.svg       (2.8 KB)
 ├── icon-books.svg           (3.8 KB)
-├── logo-authorkit.svg       (4.9 KB)
-├── logo-authorkit-white.svg (4.8 KB)
+├── logo-bookpeek.svg       (4.9 KB)
+├── logo-bookpeek-white.svg (4.8 KB)
 ├── hero-bg.webp             (44 B) ← OPTIMIZED
 ├── hero-bg-mobile.webp      (44 B) ← OPTIMIZED
 ├── feature-icons/           (multiple SVGs)
@@ -471,7 +471,7 @@ images/ (956 KB)
 
 ## 5.1 README.md
 
-**File**: `/Users/maulik/authorkit-site/README.md` (65 lines)
+**File**: `/Users/maulik/bookpeek-site/README.md` (65 lines)
 
 States:
 - "Tailwind CSS via CDN" (OUTDATED - actually uses local build)
@@ -481,7 +481,7 @@ States:
 
 ## 5.2 Spacing Guidelines
 
-**File**: `/Users/maulik/authorkit-site/docs/SPACING-GUIDELINES.md` (383 lines)
+**File**: `/Users/maulik/bookpeek-site/docs/SPACING-GUIDELINES.md` (383 lines)
 
 Comprehensive spacing documentation:
 
@@ -510,10 +510,10 @@ Buttons:
 
 ## 5.3 Performance Testing Scripts
 
-**Location**: `/Users/maulik/authorkit-site/scripts/`
+**Location**: `/Users/maulik/bookpeek-site/scripts/`
 
 ### test-live-performance.sh
-- Tests live site (https://authorkit.pro)
+- Tests live site (https://bookpeek.club)
 - Uses Lighthouse with mobile emulation
 - Tests 4 pages: index, features, pricing, docs
 - Generates JSON + HTML reports in `.lighthouse/live-${TIMESTAMP}`
@@ -526,7 +526,7 @@ Buttons:
 
 ## 5.4 Lighthouse CI Configuration
 
-**File**: `/Users/maulik/authorkit-site/.lighthouse/lighthouserc.json`
+**File**: `/Users/maulik/bookpeek-site/.lighthouse/lighthouserc.json`
 
 **Test Settings**:
 - 3 runs per page (3 URL types)
@@ -557,7 +557,7 @@ Buttons:
 ## 6.1 Complete Directory Tree
 
 ```
-authorkit-site/
+bookpeek-site/
 ├── .lighthouse/                    # Lighthouse configs & reports
 │   ├── lighthouserc.json
 │   ├── live-*/                     # Live test reports
@@ -913,7 +913,7 @@ content: ['./*.html', './includes/**/*.html', './js/**/*.js']
 
 # CONCLUSION
 
-The AuthorKit.pro build system is **functional but suboptimal for Core Web Vitals optimization**. The main bottleneck is **CSS and font loading blocking the render path**. 
+The BookPeek.pro build system is **functional but suboptimal for Core Web Vitals optimization**. The main bottleneck is **CSS and font loading blocking the render path**. 
 
 The single-file CSS consolidation strategy (styles.css) works fine for HTTP/2 but creates bloat when pages don't need all styles (e.g., home page doesn't need 18 KB bookshelf.css).
 

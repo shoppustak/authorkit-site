@@ -1,7 +1,7 @@
 {
-  "name": "authorkit-website",
+  "name": "bookpeek-website",
   "version": "1.0.0",
-  "description": "Marketing website for AuthorKit WordPress plugins",
+  "description": "Marketing website for BookPeek WordPress plugins",
   "scripts": {
     "dev": "python3 -m http.server 8000",
     "serve": "python3 -m http.server 8000",
@@ -30,12 +30,12 @@
     "test:perf": "./scripts/test-performance.sh"
   },
   "keywords": [
-    "authorkit",
+    "bookpeek",
     "wordpress",
     "plugins",
     "authors"
   ],
-  "author": "AuthorKit",
+  "author": "BookPeek",
   "license": "MIT",
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0"

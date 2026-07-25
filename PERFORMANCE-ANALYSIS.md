@@ -1,4 +1,4 @@
-# AuthorKit.pro Performance Analysis & Fix Plan
+# BookPeek.pro Performance Analysis & Fix Plan
 **Date**: March 28, 2026
 **Test Results**: Live site Lighthouse scores
 
@@ -102,8 +102,8 @@ Recent tests show significant regression vs. March 27 baseline:
 **Issue**: docs.html loads full page + assets, then immediately redirects
 
 ```html
-<meta http-equiv="refresh" content="0; url=https://authorkit.gitbook.io/authorkit-documentation">
-<script>window.location.replace("https://authorkit.gitbook.io/authorkit-documentation");</script>
+<meta http-equiv="refresh" content="0; url=https://bookpeek.gitbook.io/bookpeek-documentation">
+<script>window.location.replace("https://bookpeek.gitbook.io/bookpeek-documentation");</script>
 ```
 
 **Impact**:
@@ -287,9 +287,9 @@ Create new lightweight docs.html:
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://authorkit.gitbook.io/authorkit-documentation">
+    <meta http-equiv="refresh" content="0; url=https://bookpeek.gitbook.io/bookpeek-documentation">
     <title>Redirecting to Documentation...</title>
-    <script>window.location.replace("https://authorkit.gitbook.io/authorkit-documentation");</script>
+    <script>window.location.replace("https://bookpeek.gitbook.io/bookpeek-documentation");</script>
     <style>
         body {
             font-family: system-ui;
@@ -300,7 +300,7 @@ Create new lightweight docs.html:
 </head>
 <body>
     <h1>Redirecting to Documentation...</h1>
-    <p>If you are not redirected, <a href="https://authorkit.gitbook.io/authorkit-documentation">click here</a>.</p>
+    <p>If you are not redirected, <a href="https://bookpeek.gitbook.io/bookpeek-documentation">click here</a>.</p>
 </body>
 </html>
 ```
@@ -504,7 +504,7 @@ Add to package.json:
 ```json
 "scripts": {
   "predeploy": "./scripts/prepare-deploy.sh",
-  "deploy": "rsync -avz ... authorkit.pro"
+  "deploy": "rsync -avz ... bookpeek.club"
 }
 ```
 

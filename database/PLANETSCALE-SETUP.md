@@ -1,6 +1,6 @@
-# PlanetScale Database Setup for AuthorKit Bookshelf
+# PlanetScale Database Setup for BookPeek Bookshelf
 
-This guide walks you through setting up PlanetScale (MySQL) for the AuthorKit Bookshelf feature.
+This guide walks you through setting up PlanetScale (MySQL) for the BookPeek Bookshelf feature.
 
 ## Why PlanetScale?
 
@@ -19,7 +19,7 @@ This guide walks you through setting up PlanetScale (MySQL) for the AuthorKit Bo
 2. Sign up with GitHub (easiest) or email
 3. Click **"New database"**
 4. Fill in the details:
-   - **Name**: `authorkit-bookshelf`
+   - **Name**: `bookpeek-bookshelf`
    - **Region**: Choose closest to your users (e.g., `us-east` for US)
    - **Plan**: **Hobby** (free - no credit card required)
 5. Click **"Create database"**
@@ -50,7 +50,7 @@ brew install planetscale/tap/pscale
 pscale auth login
 
 # Connect to database
-pscale shell authorkit-bookshelf main
+pscale shell bookpeek-bookshelf main
 
 # Paste schema SQL and execute
 ```
@@ -83,7 +83,7 @@ PlanetScale uses connection strings instead of separate URL/keys.
 You'll see something like:
 
 ```javascript
-DATABASE_URL="mysql://xxxxxxxx:pscale_pw_xxxxxxxx@aws.connect.psdb.cloud/authorkit-bookshelf?sslaccept=strict"
+DATABASE_URL="mysql://xxxxxxxx:pscale_pw_xxxxxxxx@aws.connect.psdb.cloud/bookpeek-bookshelf?sslaccept=strict"
 ```
 
 **IMPORTANT**: Copy this URL immediately - it's shown only once!
@@ -93,7 +93,7 @@ DATABASE_URL="mysql://xxxxxxxx:pscale_pw_xxxxxxxx@aws.connect.psdb.cloud/authork
 ## Step 5: Add Environment Variable to Vercel
 
 1. Go to your Vercel dashboard
-2. Select the `authorkit-site` project
+2. Select the `bookpeek-site` project
 3. Go to **Settings** → **Environment Variables**
 4. Add **ONE** variable:
 
@@ -111,7 +111,7 @@ That's it! No need for separate URL/key/service key like Supabase.
 
 ```bash
 # Make sure dependencies are installed
-cd authorkit-site
+cd bookpeek-site
 npm install
 
 # Commit changes
@@ -129,7 +129,7 @@ Vercel will automatically deploy with the new `DATABASE_URL` environment variabl
 After deployment, test with cURL:
 
 ```bash
-curl -X POST https://authorkit.pro/api/bookshelf/register \
+curl -X POST https://bookpeek.club/api/bookshelf/register \
   -H "Content-Type: application/json" \
   -d '{
     "site_url": "https://test-author.com",
@@ -169,14 +169,14 @@ PlanetScale uses **safe schema migrations** with branches:
 
 1. Create a development branch:
    ```bash
-   pscale branch create authorkit-bookshelf dev
+   pscale branch create bookpeek-bookshelf dev
    ```
 
 2. Make schema changes on the `dev` branch (via Console or CLI)
 
 3. Create a deploy request (like a pull request):
    ```bash
-   pscale deploy-request create authorkit-bookshelf dev
+   pscale deploy-request create bookpeek-bookshelf dev
    ```
 
 4. Review and deploy the changes to `main`
@@ -201,7 +201,7 @@ This prevents accidental schema changes in production!
 | **Storage** | 5 GB | Enough for ~50,000 books with covers |
 | **Row reads** | 1 billion/month | ~385 reads/second average |
 | **Row writes** | 10 million/month | ~4 writes/second average |
-| **Databases** | 1 | Plenty for AuthorKit |
+| **Databases** | 1 | Plenty for BookPeek |
 | **Branches** | 1 production | Use for safe schema changes |
 
 For the Bookshelf use case, free tier is **more than sufficient** unless you get massive traffic.
@@ -285,7 +285,7 @@ PlanetScale Free tier doesn't include automated backups, but you have options:
 
 ```bash
 # Export all data to SQL
-pscale dump authorkit-bookshelf main --output backup.sql
+pscale dump bookpeek-bookshelf main --output backup.sql
 ```
 
 Run this weekly/monthly and store in Google Drive or S3.
@@ -314,7 +314,7 @@ If you already have data in Supabase:
 
 2. Import to PlanetScale using CLI or Console
 
-Need help? Contact support@authorkit.pro
+Need help? Contact support@bookpeek.club
 
 ---
 

@@ -1,4 +1,4 @@
-# AuthorKit Color Usage Guide
+# BookPeek Color Usage Guide
 
 ## Quick Reference
 
@@ -25,19 +25,19 @@
 ### CSS Variables Defined
 ```css
 /* Navy - Foundation */
---authorkit-navy: #1E3A5F
---authorkit-navy-light: #2C5282
---authorkit-navy-dark: #152C46
+--bookpeek-navy: #1E3A5F
+--bookpeek-navy-light: #2C5282
+--bookpeek-navy-dark: #152C46
 
 /* Orange - Actions */
---authorkit-orange: #ff9900  
---authorkit-orange-hover: #e88900
---authorkit-orange-dark: #d97706
+--bookpeek-orange: #ff9900  
+--bookpeek-orange-hover: #e88900
+--bookpeek-orange-dark: #d97706
 
 /* Supporting */
---authorkit-star-orange: #ffa41c
---authorkit-price-orange: #c45500
---authorkit-wp-blue: #2271b1
+--bookpeek-star-orange: #ffa41c
+--bookpeek-price-orange: #c45500
+--bookpeek-wp-blue: #2271b1
 ```
 
 ### Current Implementation
@@ -90,7 +90,7 @@
 
 ### Plugin Files Use:
 ```css
-/* From authorkit-public.css */
+/* From bookpeek-public.css */
 background-color: #ff9900;  /* buttons */
 color: #ffa41c;             /* star ratings */
 color: #c45500;             /* prices */
@@ -102,8 +102,8 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 ### Website Now Uses:
 ```css
 /* Matches plugins exactly */
---authorkit-orange: #ff9900;
---authorkit-gray-200: #e0e0e0;
+--bookpeek-orange: #ff9900;
+--bookpeek-gray-200: #e0e0e0;
 border-radius: 8px;
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 ```

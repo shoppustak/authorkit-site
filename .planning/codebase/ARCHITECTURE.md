@@ -6,7 +6,7 @@
 
 **Overall:** Hybrid Static + Serverless API Architecture
 
-The authorkit-site is a **static HTML marketing website with embedded serverless API functions** deployed on Vercel. It combines:
+The bookpeek-site is a **static HTML marketing website with embedded serverless API functions** deployed on Vercel. It combines:
 - Static HTML pages served with CDN caching
 - Client-side JavaScript for interactivity and component loading
 - Edge-deployed serverless functions (Vercel Functions) for business logic
@@ -15,7 +15,7 @@ The authorkit-site is a **static HTML marketing website with embedded serverless
 **Key Characteristics:**
 - Zero server maintenance - purely static + serverless
 - Content delivery optimized with aggressive caching (1 year for assets, 1 hour for HTML)
-- Multi-domain support via middleware (bookshelf.authorkit.pro routing)
+- Multi-domain support via middleware (bookshelf.bookpeek.club routing)
 - Licensed plugin validation via API with rate limiting
 - Bookshelf discovery platform with filtering and pagination
 
@@ -52,7 +52,7 @@ The authorkit-site is a **static HTML marketing website with embedded serverless
 **API Gateway & Middleware (Edge/Serverless):**
 - Purpose: Route requests, set security headers, handle multi-domain logic
 - Location: `api/_middleware.js`
-- Contains: Hostname-based routing for bookshelf.authorkit.pro subdomain
+- Contains: Hostname-based routing for bookshelf.bookpeek.club subdomain
 - Depends on: Vercel middleware runtime
 - Used by: All API requests
 
@@ -107,7 +107,7 @@ The authorkit-site is a **static HTML marketing website with embedded serverless
 
 **Bookshelf Discovery Flow:**
 
-1. Browser navigates to `bookshelf.authorkit.pro/`
+1. Browser navigates to `bookshelf.bookpeek.club/`
 2. Middleware detects hostname and rewrites to `bookshelf-index.html`
 3. Page loads with header/footer injected
 4. JavaScript (`js/bookshelf.js`) initializes:
@@ -157,7 +157,7 @@ The authorkit-site is a **static HTML marketing website with embedded serverless
 
 **Marketing Website:**
 - Location: `index.html`
-- Triggers: User visits authorkit.pro domain
+- Triggers: User visits bookpeek.club domain
 - Responsibilities: Showcase product features, pricing, call-to-action for download/signup
 
 **Product Features Page:**
@@ -172,7 +172,7 @@ The authorkit-site is a **static HTML marketing website with embedded serverless
 
 **Bookshelf Discovery:**
 - Location: `bookshelf-index.html` + `bookshelf-browse.html`
-- Triggers: User visits bookshelf.authorkit.pro
+- Triggers: User visits bookshelf.bookpeek.club
 - Responsibilities: Display books, enable filtering/search, track author engagement
 
 **License Activation API:**

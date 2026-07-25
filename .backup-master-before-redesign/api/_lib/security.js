@@ -1,5 +1,5 @@
 /**
- * Security Utilities for AuthorKit API
+ * Security Utilities for BookPeek API
  * Provides CORS, rate limiting, validation, and security headers
  */
 
@@ -10,8 +10,8 @@ import crypto from 'crypto';
  * WordPress sites will be validated via license key, not CORS
  */
 const ALLOWED_ORIGINS = [
-  'https://authorkit.pro',
-  'https://www.authorkit.pro',
+  'https://bookpeek.club',
+  'https://www.bookpeek.club',
   // Add localhost for development only
   ...(process.env.NODE_ENV === 'development' ? [
     'http://localhost',

@@ -1,4 +1,4 @@
-# AuthorKit Site Redesign - Session Handoff
+# BookPeek Site Redesign - Session Handoff
 
 **Date:** 2026-03-19
 **Branch:** redesign-v2-development
@@ -118,7 +118,7 @@ Goals:
 
 ### Option 1: Continue with Phase 6 (Recommended)
 ```bash
-cd /Users/maulik/authorkit-site
+cd /Users/maulik/bookpeek-site
 git checkout redesign-v2-development
 /gsd:plan-phase 6 --auto
 ```

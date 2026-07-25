@@ -119,7 +119,7 @@
 - Should run multiple tests to confirm
 
 ### 3. Incomplete Deployment
-- GitHub repo updated but live site (authorkit.pro) may not auto-deploy
+- GitHub repo updated but live site (bookpeek.club) may not auto-deploy
 - May need manual deployment step (rsync, FTP, etc.)
 - Docs page minimal version not reflected in results
 
@@ -143,14 +143,14 @@
 1. **Verify Deployment**
    ```bash
    # Check if minified CSS is being served
-   curl -s -I https://authorkit.pro/css/styles.min.css
+   curl -s -I https://bookpeek.club/css/styles.min.css
 
    # Check if docs page is new version
-   curl -s https://authorkit.pro/docs.html | wc -c  # Should be ~2 KB not 30+ KB
+   curl -s https://bookpeek.club/docs.html | wc -c  # Should be ~2 KB not 30+ KB
    ```
 
 2. **Manual Deployment** (if needed)
-   - Changes may be in GitHub but not deployed to authorkit.pro
+   - Changes may be in GitHub but not deployed to bookpeek.club
    - Need to push to actual web server
    - Check deployment process/CI-CD
 
@@ -162,7 +162,7 @@
 
 4. **Check What's Actually Served**
    - Open browser DevTools → Network tab
-   - Load https://authorkit.pro/
+   - Load https://bookpeek.club/
    - Verify styles.min.css is loaded (not styles.css)
    - Verify single Google Fonts request
 
@@ -191,7 +191,7 @@
 - May just be deployment propagation delay
 
 **Option B - Manual Deployment**
-- Manually deploy files to authorkit.pro server
+- Manually deploy files to bookpeek.club server
 - Clear CDN cache if using CDN
 - Test immediately after
 
@@ -212,7 +212,7 @@
 - Lighthouse version: 13.0.3
 - Test device: Mobile (360×640px)
 - Network throttling: 150ms RTT, 1638 Kbps, 4× CPU slowdown
-- Test URL: https://authorkit.pro/
+- Test URL: https://bookpeek.club/
 - Test run: Single pass per page (not averaged)
 
 ---

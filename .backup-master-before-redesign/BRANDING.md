@@ -1,8 +1,8 @@
-# AuthorKit Branding Guide
+# BookPeek Branding Guide
 
 ## Color Scheme
 
-Based on the official AuthorKit logo and Amazon-inspired design language:
+Based on the official BookPeek logo and Amazon-inspired design language:
 
 ### Primary Colors
 
@@ -53,26 +53,26 @@ All colors are defined in `css/style.css` as CSS custom properties:
 ```css
 :root {
     /* Primary Orange (Amazon-style) */
-    --authorkit-orange: #ff9900;
-    --authorkit-orange-hover: #e88900;
-    --authorkit-orange-dark: #d97706;
+    --bookpeek-orange: #ff9900;
+    --bookpeek-orange-hover: #e88900;
+    --bookpeek-orange-dark: #d97706;
 
     /* Secondary Navy Blue (brand) */
-    --authorkit-navy: #1E3A5F;
-    --authorkit-navy-light: #2C5282;
-    --authorkit-navy-dark: #152C46;
+    --bookpeek-navy: #1E3A5F;
+    --bookpeek-navy-light: #2C5282;
+    --bookpeek-navy-dark: #152C46;
 
     /* Additional Colors */
-    --authorkit-star-orange: #ffa41c;
-    --authorkit-price-orange: #c45500;
-    --authorkit-wp-blue: #2271b1; /* Avoid using */
+    --bookpeek-star-orange: #ffa41c;
+    --bookpeek-price-orange: #c45500;
+    --bookpeek-wp-blue: #2271b1; /* Avoid using */
 
     /* Neutrals */
-    --authorkit-gray-50: #F9FAFB;
-    --authorkit-gray-100: #F3F4F6;
-    --authorkit-gray-200: #e0e0e0;
-    --authorkit-gray-600: #646970;
-    --authorkit-gray-900: #1d2327;
+    --bookpeek-gray-50: #F9FAFB;
+    --bookpeek-gray-100: #F3F4F6;
+    --bookpeek-gray-200: #e0e0e0;
+    --bookpeek-gray-600: #646970;
+    --bookpeek-gray-900: #1d2327;
 }
 ```
 
@@ -99,19 +99,19 @@ Explicit orange classes:
 
 ## Product Naming Convention
 
-**IMPORTANT**: Product names use the format "AuthorKit XXXX" (without "for")
+**IMPORTANT**: Product names use the format "BookPeek XXXX" (without "for")
 
 ### Correct Format:
-- ✅ AuthorKit Books
-- ✅ AuthorKit Reviews
-- ✅ AuthorKit Contests
-- ✅ AuthorKit Bookshelf
-- ✅ AuthorKit Launches
+- ✅ BookPeek Books
+- ✅ BookPeek Reviews
+- ✅ BookPeek Contests
+- ✅ BookPeek Bookshelf
+- ✅ BookPeek Launches
 
 ### Incorrect Format:
-- ❌ AuthorKit for Books
-- ❌ AuthorKit for Reviews
-- ❌ AuthorKit for Contests
+- ❌ BookPeek for Books
+- ❌ BookPeek for Reviews
+- ❌ BookPeek for Contests
 
 This applies to:
 - Page titles and headings
@@ -126,7 +126,7 @@ This applies to:
 
 **Primary Button (Orange with Black Text)**
 ```css
-.authorkit-button-primary {
+.bookpeek-button-primary {
     background-color: #ff9900;
     color: #000000;
     border: none;
@@ -136,14 +136,14 @@ This applies to:
     cursor: pointer;
 }
 
-.authorkit-button-primary:hover {
+.bookpeek-button-primary:hover {
     background-color: #e88900;
 }
 ```
 
 **Secondary Button (White with Orange Border)**
 ```css
-.authorkit-button-secondary {
+.bookpeek-button-secondary {
     background-color: #ffffff;
     color: #ff9900;
     border: 2px solid #ff9900;
@@ -153,7 +153,7 @@ This applies to:
     cursor: pointer;
 }
 
-.authorkit-button-secondary:hover {
+.bookpeek-button-secondary:hover {
     background-color: #fff7ed; /* Light orange tint */
 }
 ```
@@ -162,7 +162,7 @@ This applies to:
 
 **WordPress Admin Card with Orange Border**
 ```css
-.authorkit-card {
+.bookpeek-card {
     background: #ffffff;
     border-left: 4px solid #ff9900;
     border-radius: 4px;
@@ -173,7 +173,7 @@ This applies to:
 
 **Badge/Label**
 ```css
-.authorkit-badge {
+.bookpeek-badge {
     display: inline-block;
     background: #ff9900;
     color: #ffffff;
@@ -189,12 +189,12 @@ This applies to:
 
 **Active Module Card**
 ```css
-.authorkit-module-card.active {
+.bookpeek-module-card.active {
     border: 2px solid #ff9900;
     background: #fff7ed; /* Light orange background */
 }
 
-.authorkit-module-card.inactive {
+.bookpeek-module-card.inactive {
     border: 2px solid #e0e0e0;
     background: #ffffff;
 }

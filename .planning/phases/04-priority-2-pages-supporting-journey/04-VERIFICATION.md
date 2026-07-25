@@ -22,7 +22,7 @@ re_verification: false
 
 | # | Truth | Status | Evidence |
 |---|-------|--------|----------|
-| 1 | Original strategic copy preserved exactly on download page | ✓ VERIFIED | "Download AuthorKit Free", "Quick Install (Recommended)", all feature lists preserved from backup |
+| 1 | Original strategic copy preserved exactly on download page | ✓ VERIFIED | "Download BookPeek Free", "Quick Install (Recommended)", all feature lists preserved from backup |
 | 2 | Original strategic copy preserved exactly on account page | ✓ VERIFIED | "My Account", "Customer Portal" section, 6-step activation guide preserved from backup |
 | 3 | Original strategic copy preserved exactly on checkout page | ✓ VERIFIED | "Choose Your Plan", pricing ($79 Pro, $199 Agency), "30-Day Money-Back Guarantee" preserved from backup |
 | 4 | Original strategic copy preserved exactly on support page | ✓ VERIFIED | "We're here to help you succeed", support channel descriptions, response times preserved from backup |
@@ -40,7 +40,7 @@ re_verification: false
 
 | Artifact | Expected | Status | Details |
 |----------|----------|--------|---------|
-| `download.html` | Monochrome download page with preserved copy | ✓ VERIFIED | 553 lines, links monochrome-components.css, contains "Download AuthorKit Free" headline |
+| `download.html` | Monochrome download page with preserved copy | ✓ VERIFIED | 553 lines, links monochrome-components.css, contains "Download BookPeek Free" headline |
 | `account.html` | Monochrome account page with preserved copy | ✓ VERIFIED | 496 lines, links monochrome-components.css, contains "My Account" headline, Customer Portal section |
 | `checkout.html` | Monochrome checkout page with preserved copy | ✓ VERIFIED | 499 lines, links monochrome-components.css, contains pricing cards, Lemon Squeezy integration |
 | `support.html` | Monochrome support page with preserved copy | ✓ VERIFIED | 444 lines, links monochrome-components.css, contains Support options, Resources grid |
@@ -115,9 +115,9 @@ No formal requirement IDs tracked for this phase. Phase goal defines success cri
 
 #### 5. Support Email Link Test
 
-**Test:** Click support email links (support@authorkit.pro) on account.html and support.html.
+**Test:** Click support email links (support@bookpeek.club) on account.html and support.html.
 
-**Expected:** Default email client opens with "To:" field pre-filled with support@authorkit.pro.
+**Expected:** Default email client opens with "To:" field pre-filled with support@bookpeek.club.
 
 **Why human:** Email client integration varies by OS/browser.
 
@@ -201,9 +201,9 @@ No formal requirement IDs tracked for this phase. Phase goal defines success cri
 
 ### Download Page
 
-✓ **Hero headline:** "Download AuthorKit Free" (preserved exactly)
+✓ **Hero headline:** "Download BookPeek Free" (preserved exactly)
 
-✓ **Hero description:** "Get started with AuthorKit today - one plugin, everything you need. 100% free on WordPress.org" (preserved exactly)
+✓ **Hero description:** "Get started with BookPeek today - one plugin, everything you need. 100% free on WordPress.org" (preserved exactly)
 
 ✓ **Quick Install section:** "Quick Install (Recommended)" with 5 numbered steps (preserved exactly)
 
@@ -236,7 +236,7 @@ No formal requirement IDs tracked for this phase. Phase goal defines success cri
 1. "Download the plugin from your customer portal"
 2. "Install the plugin in WordPress (Plugins → Add New → Upload Plugin)"
 3. "Activate the plugin in WordPress"
-4. "Go to Settings → AuthorKit → License"
+4. "Go to Settings → BookPeek → License"
 5. "Enter your license key and click 'Activate License'"
 6. "You're all set! Premium features are now unlocked"
 
@@ -279,7 +279,7 @@ No formal requirement IDs tracked for this phase. Phase goal defines success cri
 - Changelog: "See what's new in each version"
 
 ✓ **Contact information:** All details preserved:
-- Email: support@authorkit.pro
+- Email: support@bookpeek.club
 - Response time: "Within 24-48 hours (Premium: within 24 hours)"
 
 ✓ **Support guidelines:** Full notice preserved: "Before contacting support: Please check our documentation and FAQ first..."

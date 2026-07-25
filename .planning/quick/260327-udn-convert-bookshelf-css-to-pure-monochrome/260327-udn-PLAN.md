@@ -51,7 +51,7 @@ Output: Transformed bookshelf.css with monochrome design
 
     1. Replace color variables:
        - Remove all --gray-* variables
-       - Remove --authorkit-navy, --authorkit-orange variables
+       - Remove --bookpeek-navy, --bookpeek-orange variables
        - Add monochrome variables from main design system:
          - --color-black: #000000
          - --color-white: #FFFFFF
@@ -61,8 +61,8 @@ Output: Transformed bookshelf.css with monochrome design
        - --gray-200, --border-color → rgba(0,0,0,0.1) for subtle borders
        - --gray-600 → rgba(0,0,0,0.6) for secondary text
        - --gray-900 → --color-black for primary text
-       - --authorkit-navy → --color-black
-       - --authorkit-orange → --color-black
+       - --bookpeek-navy → --color-black
+       - --bookpeek-orange → --color-black
        - Orange hover states → --color-black with thicker border
 
     3. Remove all decorative properties:
@@ -100,7 +100,7 @@ Output: Transformed bookshelf.css with monochrome design
        - Remove checkbox accent-color property
   </action>
   <verify>
-    <automated>grep -E "(gray-|authorkit-|border-radius:|box-shadow:|transition:)" css/bookshelf.css | wc -l</automated>
+    <automated>grep -E "(gray-|bookpeek-|border-radius:|box-shadow:|transition:)" css/bookshelf.css | wc -l</automated>
   </verify>
   <done>bookshelf.css contains zero references to gray variables, brand colors, border-radius (except 0), shadows, or transitions</done>
 </task>

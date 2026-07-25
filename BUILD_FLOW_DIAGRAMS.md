@@ -1,4 +1,4 @@
-# AuthorKit Build System - Visual Flow Diagrams
+# BookPeek Build System - Visual Flow Diagrams
 
 ---
 

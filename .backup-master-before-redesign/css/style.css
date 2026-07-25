@@ -1,30 +1,30 @@
-/* AuthorKit Site Custom Styles */
+/* BookPeek Site Custom Styles */
 
 /* ==========================================
-   AUTHORKIT BRAND COLORS - Matches WordPress Plugins
+   BOOKPEEK BRAND COLORS - Matches WordPress Plugins
    ========================================== */
 :root {
     /* Primary Orange (from plugins - buttons, CTAs, badges) */
-    --authorkit-orange: #ff9900;
-    --authorkit-orange-hover: #e88900;
-    --authorkit-orange-dark: #d97706;
+    --bookpeek-orange: #ff9900;
+    --bookpeek-orange-hover: #e88900;
+    --bookpeek-orange-dark: #d97706;
 
     /* Secondary Navy Blue (from logo - text, accents) */
-    --authorkit-navy: #1E3A5F;
-    --authorkit-navy-light: #2C5282;
-    --authorkit-navy-dark: #152C46;
+    --bookpeek-navy: #1E3A5F;
+    --bookpeek-navy-light: #2C5282;
+    --bookpeek-navy-dark: #152C46;
 
     /* Additional Colors */
-    --authorkit-star-orange: #ffa41c;
-    --authorkit-price-orange: #c45500;
-    --authorkit-wp-blue: #2271b1;
+    --bookpeek-star-orange: #ffa41c;
+    --bookpeek-price-orange: #c45500;
+    --bookpeek-wp-blue: #2271b1;
 
     /* Neutrals */
-    --authorkit-gray-50: #F9FAFB;
-    --authorkit-gray-100: #F3F4F6;
-    --authorkit-gray-200: #e0e0e0;
-    --authorkit-gray-600: #646970;
-    --authorkit-gray-900: #1d2327;
+    --bookpeek-gray-50: #F9FAFB;
+    --bookpeek-gray-100: #F3F4F6;
+    --bookpeek-gray-200: #e0e0e0;
+    --bookpeek-gray-600: #646970;
+    --bookpeek-gray-900: #1d2327;
 }
 
 /* ==========================================
@@ -32,19 +32,19 @@
    ========================================== */
 
 /* Primary Buttons = ORANGE (like plugins) */
-.bg-blue-600 { background-color: var(--authorkit-orange) !important; }
-.bg-blue-700 { background-color: var(--authorkit-orange-hover) !important; }
-.hover\:bg-blue-700:hover { background-color: var(--authorkit-orange-hover) !important; }
-.hover\:bg-blue-800:hover { background-color: var(--authorkit-orange-dark) !important; }
+.bg-blue-600 { background-color: var(--bookpeek-orange) !important; }
+.bg-blue-700 { background-color: var(--bookpeek-orange-hover) !important; }
+.hover\:bg-blue-700:hover { background-color: var(--bookpeek-orange-hover) !important; }
+.hover\:bg-blue-800:hover { background-color: var(--bookpeek-orange-dark) !important; }
 
 /* Text Links = Navy Blue */
-.text-blue-600 { color: var(--authorkit-navy) !important; }
-.text-blue-700 { color: var(--authorkit-navy-dark) !important; }
-.hover\:text-blue-600:hover { color: var(--authorkit-orange) !important; }
-.hover\:text-blue-700:hover { color: var(--authorkit-orange) !important; }
+.text-blue-600 { color: var(--bookpeek-navy) !important; }
+.text-blue-700 { color: var(--bookpeek-navy-dark) !important; }
+.hover\:text-blue-600:hover { color: var(--bookpeek-orange) !important; }
+.hover\:text-blue-700:hover { color: var(--bookpeek-orange) !important; }
 
 /* Borders */
-.border-blue-600 { border-color: var(--authorkit-orange) !important; }
+.border-blue-600 { border-color: var(--bookpeek-orange) !important; }
 .border-blue-200 { border-color: #BFDBFE !important; }
 
 /* Backgrounds - Light */
@@ -53,15 +53,15 @@
 .text-blue-100 { color: #ffedd5 !important; }
 
 /* Orange Utility Classes */
-.bg-orange-600 { background-color: var(--authorkit-orange) !important; }
-.text-orange-600 { color: var(--authorkit-orange) !important; }
-.border-orange-600 { border-color: var(--authorkit-orange) !important; }
-.hover\:bg-orange-700:hover { background-color: var(--authorkit-orange-hover) !important; }
+.bg-orange-600 { background-color: var(--bookpeek-orange) !important; }
+.text-orange-600 { color: var(--bookpeek-orange) !important; }
+.border-orange-600 { border-color: var(--bookpeek-orange) !important; }
+.hover\:bg-orange-700:hover { background-color: var(--bookpeek-orange-hover) !important; }
 
 /* Navy Utility Classes */
-.bg-navy-600 { background-color: var(--authorkit-navy) !important; }
-.text-navy-600 { color: var(--authorkit-navy) !important; }
-.border-navy-600 { border-color: var(--authorkit-navy) !important; }
+.bg-navy-600 { background-color: var(--bookpeek-navy) !important; }
+.text-navy-600 { color: var(--bookpeek-navy) !important; }
+.border-navy-600 { border-color: var(--bookpeek-navy) !important; }
 
 /* Smooth Scrolling */
 html {
@@ -143,13 +143,13 @@ button:focus {
     background-size: 40px 40px;
 }
 
-/* AuthorKit Plugin-Style Components */
+/* BookPeek Plugin-Style Components */
 
 /* Buttons matching plugin style */
-.authorkit-button {
+.bookpeek-button {
     display: inline-block;
     padding: 12px 24px;
-    background-color: var(--authorkit-orange);
+    background-color: var(--bookpeek-orange);
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -159,26 +159,26 @@ button:focus {
     cursor: pointer;
 }
 
-.authorkit-button:hover {
-    background-color: var(--authorkit-orange-hover);
+.bookpeek-button:hover {
+    background-color: var(--bookpeek-orange-hover);
     color: white;
 }
 
-.authorkit-button-secondary {
+.bookpeek-button-secondary {
     background-color: transparent;
-    color: var(--authorkit-navy);
-    border: 2px solid var(--authorkit-navy);
+    color: var(--bookpeek-navy);
+    border: 2px solid var(--bookpeek-navy);
 }
 
-.authorkit-button-secondary:hover {
-    background-color: var(--authorkit-navy);
+.bookpeek-button-secondary:hover {
+    background-color: var(--bookpeek-navy);
     color: white;
 }
 
 /* Coming Soon Badge - matching plugins */
-.authorkit-badge {
+.bookpeek-badge {
     display: inline-block;
-    background: var(--authorkit-orange);
+    background: var(--bookpeek-orange);
     color: white;
     padding: 4px 12px;
     border-radius: 4px;
@@ -188,23 +188,23 @@ button:focus {
 }
 
 /* Star Rating - matching plugins */
-.authorkit-star-rating {
+.bookpeek-star-rating {
     display: inline-flex;
     gap: 2px;
-    color: var(--authorkit-star-orange);
+    color: var(--bookpeek-star-orange);
 }
 
 /* Card with plugin-style shadow */
-.authorkit-card {
+.bookpeek-card {
     background: white;
-    border: 1px solid var(--authorkit-gray-200);
+    border: 1px solid var(--bookpeek-gray-200);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease;
 }
 
-.authorkit-card:hover {
+.bookpeek-card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -220,7 +220,7 @@ button:focus {
 
 /* Gradient Text - Navy to Orange */
 .gradient-text {
-    background: linear-gradient(135deg, var(--authorkit-navy), var(--authorkit-orange));
+    background: linear-gradient(135deg, var(--bookpeek-navy), var(--bookpeek-orange));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -236,12 +236,12 @@ button:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--authorkit-orange);
+    background: var(--bookpeek-orange);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--authorkit-orange-hover);
+    background: var(--bookpeek-orange-hover);
 }
 
 /* Loading State */
@@ -271,8 +271,8 @@ button:focus {
 
 .message-info {
     background-color: #fff7ed;
-    color: var(--authorkit-navy-dark);
-    border-left: 4px solid var(--authorkit-orange);
+    color: var(--bookpeek-navy-dark);
+    border-left: 4px solid var(--bookpeek-orange);
 }
 
 /* Responsive Typography */
@@ -308,7 +308,7 @@ button:focus {
     position: absolute;
     top: -40px;
     left: 0;
-    background: var(--authorkit-orange);
+    background: var(--bookpeek-orange);
     color: white;
     padding: 8px;
     text-decoration: none;

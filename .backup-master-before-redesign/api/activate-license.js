@@ -184,7 +184,7 @@ export default async function handler(req, res) {
         data: {
           max_activations: maxActivations,
           active_sites: activeSites.map(s => s.url),
-          upgrade_url: 'https://authorkit.pro/pricing'
+          upgrade_url: 'https://bookpeek.club/pricing'
         }
       });
     }

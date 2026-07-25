@@ -144,9 +144,9 @@ Next: Continue with Phase 01 remaining plans or move to Phase 02 component redes
 
 Verified files exist:
 ```
-FOUND: /Users/maulik/authorkit-site/package.json
-FOUND: /Users/maulik/authorkit-site/tailwind.config.js
-FOUND: /Users/maulik/authorkit-site/css/input.css
+FOUND: /Users/maulik/bookpeek-site/package.json
+FOUND: /Users/maulik/bookpeek-site/tailwind.config.js
+FOUND: /Users/maulik/bookpeek-site/css/input.css
 ```
 
 Verified commits exist:

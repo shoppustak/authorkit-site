@@ -1,4 +1,4 @@
--- Create email_subscribers table for AuthorKit email capture
+-- Create email_subscribers table for BookPeek email capture
 -- This table stores email subscriptions from WordPress plugin users
 
 -- Drop table if exists (for development/testing only - remove for production)
@@ -57,7 +57,7 @@ CREATE TRIGGER update_email_subscribers_updated_at
     EXECUTE FUNCTION update_updated_at_column();
 
 -- Add comments for documentation
-COMMENT ON TABLE email_subscribers IS 'Stores email subscriptions from AuthorKit plugin users';
+COMMENT ON TABLE email_subscribers IS 'Stores email subscriptions from BookPeek plugin users';
 COMMENT ON COLUMN email_subscribers.email IS 'Subscriber email address';
 COMMENT ON COLUMN email_subscribers.site_url IS 'WordPress site URL where subscription originated';
 COMMENT ON COLUMN email_subscribers.site_name IS 'WordPress site name';

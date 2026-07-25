@@ -1,8 +1,8 @@
 /**
  * GET /api/bookshelf/books
  *
- * Fetches books from the AuthorKit Bookshelf with optional filtering and pagination.
- * Used by the frontend to display books on bookshelf.authorkit.pro.
+ * Fetches books from the BookPeek Bookshelf with optional filtering and pagination.
+ * Used by the frontend to display books on bookshelf.bookpeek.club.
  *
  * Query parameters:
  * - genre: Filter by genre slug (e.g., "fantasy")

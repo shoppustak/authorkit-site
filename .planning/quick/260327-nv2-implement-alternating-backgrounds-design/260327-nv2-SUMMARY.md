@@ -44,7 +44,7 @@ metrics:
 
 ## What Was Built
 
-Implemented a comprehensive alternating backgrounds design pattern across the entire AuthorKit.pro website, replacing inner section borders with gentle color alternation while preserving header and footer boundaries.
+Implemented a comprehensive alternating backgrounds design pattern across the entire BookPeek.pro website, replacing inner section borders with gentle color alternation while preserving header and footer boundaries.
 
 ### Task 1: Primary Pages
 - **index.html**: Removed hero/features/FAQ borders, added #f4f2ea to FAQ section

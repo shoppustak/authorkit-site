@@ -48,7 +48,7 @@ metrics:
 
 ## What Was Built
 
-Comprehensive Lighthouse performance baseline measurement system for AuthorKit.pro marketing site:
+Comprehensive Lighthouse performance baseline measurement system for BookPeek.pro marketing site:
 
 1. **Lighthouse CLI Infrastructure**
    - Installed Lighthouse 11.5.0 globally and as dev dependency

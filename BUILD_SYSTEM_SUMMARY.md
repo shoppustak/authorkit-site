@@ -1,7 +1,7 @@
-# AuthorKit Build System - Executive Summary
+# BookPeek Build System - Executive Summary
 
 **Created**: March 28, 2026
-**Repository**: authorkit-site
+**Repository**: bookpeek-site
 **Status**: Static HTML + Node.js build pipeline
 
 ---

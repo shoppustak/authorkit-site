@@ -1,12 +1,12 @@
-# AuthorKit API Documentation
+# BookPeek API Documentation
 
-This document describes the AuthorKit licensing and update API endpoints.
+This document describes the BookPeek licensing and update API endpoints.
 
 ---
 
 ## Base URL
 
-**Production**: `https://authorkit.pro/api`
+**Production**: `https://bookpeek.club/api`
 **Local Development**: `http://localhost:3000/api`
 
 ---
@@ -106,7 +106,7 @@ Activates a license key on a specific domain.
   "data": {
     "max_activations": 1,
     "active_sites": ["othersite.com"],
-    "upgrade_url": "https://authorkit.pro/pricing"
+    "upgrade_url": "https://bookpeek.club/pricing"
   }
 }
 ```
@@ -159,7 +159,7 @@ Checks if a new plugin version is available (requires valid license).
 ```json
 {
   "license_key": "AKPRO-XXXX-XXXX-XXXX",
-  "plugin_slug": "authorkit-pro",
+  "plugin_slug": "bookpeek-pro",
   "current_version": "1.0.0",
   "site_url": "https://example.com"
 }
@@ -169,17 +169,17 @@ Checks if a new plugin version is available (requires valid license).
 ```json
 {
   "update_available": true,
-  "id": "authorkit-pro",
-  "slug": "authorkit-pro",
-  "plugin": "authorkit-pro/authorkit-pro.php",
+  "id": "bookpeek-pro",
+  "slug": "bookpeek-pro",
+  "plugin": "bookpeek-pro/bookpeek-pro.php",
   "new_version": "1.1.0",
-  "url": "https://authorkit.pro",
-  "package": "https://authorkit.pro/downloads/authorkit-pro-1.1.0.zip?token=...",
+  "url": "https://bookpeek.club",
+  "package": "https://bookpeek.club/downloads/bookpeek-pro-1.1.0.zip?token=...",
   "tested": "6.4",
   "requires_php": "7.0",
   "icons": {
-    "1x": "https://authorkit.pro/images/icon-128x128.png",
-    "2x": "https://authorkit.pro/images/icon-256x256.png"
+    "1x": "https://bookpeek.club/images/icon-128x128.png",
+    "2x": "https://bookpeek.club/images/icon-256x256.png"
   },
   "sections": {
     "description": "Professional WordPress plugin suite for self-publishing authors.",
@@ -254,7 +254,7 @@ Content-Type: application/json
 
 ### 6. Email Capture
 
-Captures email subscriptions from AuthorKit plugin users.
+Captures email subscriptions from BookPeek plugin users.
 
 **Endpoint**: `POST /api/email-capture`
 
@@ -372,7 +372,7 @@ Access-Control-Allow-Headers: Content-Type
 
 **Validate License**:
 ```bash
-curl -X POST https://authorkit.pro/api/validate-license \
+curl -X POST https://bookpeek.club/api/validate-license \
   -H "Content-Type: application/json" \
   -d '{
     "license_key": "AKPRO-XXXX-XXXX-XXXX",
@@ -382,7 +382,7 @@ curl -X POST https://authorkit.pro/api/validate-license \
 
 **Activate License**:
 ```bash
-curl -X POST https://authorkit.pro/api/activate-license \
+curl -X POST https://bookpeek.club/api/activate-license \
   -H "Content-Type: application/json" \
   -d '{
     "license_key": "AKPRO-XXXX-XXXX-XXXX",
@@ -393,11 +393,11 @@ curl -X POST https://authorkit.pro/api/activate-license \
 
 **Check for Updates**:
 ```bash
-curl -X POST https://authorkit.pro/api/check-update \
+curl -X POST https://bookpeek.club/api/check-update \
   -H "Content-Type: application/json" \
   -d '{
     "license_key": "AKPRO-XXXX-XXXX-XXXX",
-    "plugin_slug": "authorkit-pro",
+    "plugin_slug": "bookpeek-pro",
     "current_version": "1.0.0",
     "site_url": "https://example.com"
   }'
@@ -405,7 +405,7 @@ curl -X POST https://authorkit.pro/api/check-update \
 
 **Capture Email Subscription**:
 ```bash
-curl -X POST https://authorkit.pro/api/email-capture \
+curl -X POST https://bookpeek.club/api/email-capture \
   -H "Content-Type: application/json" \
   -d '{
     "email": "user@example.com",
@@ -441,7 +441,7 @@ curl -X POST https://authorkit.pro/api/email-capture \
 
 2. Deploy:
    ```bash
-   cd authorkit-site
+   cd bookpeek-site
    vercel
    ```
 
@@ -461,4 +461,4 @@ curl -X POST https://authorkit.pro/api/email-capture \
 
 ## Support
 
-For API support, contact: support@authorkit.pro
+For API support, contact: support@bookpeek.club

@@ -916,7 +916,7 @@
             "entity": "Google Fonts"
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "rendererStartTime": 289.99499999918044,
@@ -2918,7 +2918,7 @@
             "totalBytes": 15488
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "totalBytes": 5219
           },
           {
@@ -3340,7 +3340,7 @@
             "wastedBytes": 15488
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "cacheLifetimeMs": 0,
             "totalBytes": 5219,
             "wastedBytes": 5219

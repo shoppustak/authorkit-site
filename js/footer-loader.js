@@ -1,5 +1,5 @@
 /**
- * AuthorKit Footer Loader
+ * BookPeek Footer Loader
  * Loads the centralized footer component
  */
 
@@ -67,7 +67,7 @@
                     body: JSON.stringify({
                         email: email,
                         site_url: window.location.origin,
-                        site_name: 'AuthorKit Website',
+                        site_name: 'BookPeek Website',
                         type: 'free'
                     })
                 });

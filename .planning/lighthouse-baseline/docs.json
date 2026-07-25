@@ -1,13 +1,13 @@
 {
   "lighthouseVersion": "12.8.2",
   "requestedUrl": "http://localhost:8000/docs.html",
-  "mainDocumentUrl": "https://docs.authorkit.pro/",
-  "finalDisplayedUrl": "https://docs.authorkit.pro/",
-  "finalUrl": "https://docs.authorkit.pro/",
+  "mainDocumentUrl": "https://docs.bookpeek.club/",
+  "finalDisplayedUrl": "https://docs.bookpeek.club/",
+  "finalUrl": "https://docs.bookpeek.club/",
   "fetchTime": "2026-03-20T11:13:38.050Z",
   "gatherMode": "navigation",
   "runWarnings": [
-    "The page may not be loading as expected because your test URL (http://localhost:8000/docs.html) was redirected to https://docs.authorkit.pro/. Try testing the second URL directly."
+    "The page may not be loading as expected because your test URL (http://localhost:8000/docs.html) was redirected to https://docs.bookpeek.club/. Try testing the second URL directly."
   ],
   "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/128.0.0.0 Safari/537.36",
   "environment": {
@@ -295,7 +295,7 @@
         ],
         "items": [
           {
-            "url": "https://docs.authorkit.pro/",
+            "url": "https://docs.bookpeek.club/",
             "responseTime": 5070.811
           }
         ],
@@ -400,11 +400,11 @@
             "wastedMs": 618.94175
           },
           {
-            "url": "https://authorkit.gitbook.io/authorkit-documentation",
+            "url": "https://bookpeek.gitbook.io/bookpeek-documentation",
             "wastedMs": 1272.0592499999998
           },
           {
-            "url": "https://docs.authorkit.pro/",
+            "url": "https://docs.bookpeek.club/",
             "wastedMs": 0
           }
         ],
@@ -830,7 +830,7 @@
             "entity": "localhost"
           },
           {
-            "url": "https://authorkit.gitbook.io/authorkit-documentation",
+            "url": "https://bookpeek.gitbook.io/bookpeek-documentation",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 27.921000000089407,
@@ -846,7 +846,7 @@
             "entity": "gitbook.io"
           },
           {
-            "url": "https://docs.authorkit.pro/",
+            "url": "https://docs.bookpeek.club/",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 546.8730000001378,
@@ -860,10 +860,10 @@
             "resourceType": "Document",
             "priority": "VeryHigh",
             "experimentalFromMainFrame": true,
-            "entity": "authorkit.pro"
+            "entity": "bookpeek.club"
           },
           {
-            "url": "https://docs.authorkit.pro/~gitbook/image?url=https%3A%2F%2F3801477943-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FEdutBcviUp7nGEGJzXcG%252Fsites%252Fsite_IRgRl%252Flogo%252FhuK1bhDltC93RiEBKOgj%252Flogo%2520160x160.jpg%3Falt%3Dmedia%26token%3D72e8339c-86c6-4da5-8c93-2c14552fd552&width=260&dpr=1&quality=100&sign=cd52b562&sv=2",
+            "url": "https://docs.bookpeek.club/~gitbook/image?url=https%3A%2F%2F3801477943-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FEdutBcviUp7nGEGJzXcG%252Fsites%252Fsite_IRgRl%252Flogo%252FhuK1bhDltC93RiEBKOgj%252Flogo%2520160x160.jpg%3Falt%3Dmedia%26token%3D72e8339c-86c6-4da5-8c93-2c14552fd552&width=260&dpr=1&quality=100&sign=cd52b562&sv=2",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 5696.162000000011,
@@ -878,7 +878,7 @@
             "priority": "High",
             "isLinkPreload": true,
             "experimentalFromMainFrame": true,
-            "entity": "authorkit.pro"
+            "entity": "bookpeek.club"
           },
           {
             "url": "https://static-2v.gitbook.com/_next/static/css/8f95264edb3f86f8.css?dpl=c4a2604b4d4173dbd18994b213419f3c6ff4852d",
@@ -1392,7 +1392,7 @@
             "entity": "gitbook.com"
           },
           {
-            "url": "https://docs.authorkit.pro/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+            "url": "https://docs.bookpeek.club/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 5701.322999999858,
@@ -1406,7 +1406,7 @@
             "resourceType": "Script",
             "priority": "Medium",
             "experimentalFromMainFrame": true,
-            "entity": "authorkit.pro"
+            "entity": "bookpeek.club"
           },
           {
             "url": "https://ka-p.fontawesome.com/releases/v7.1.0/svgs/regular/bars.svg?v=2&token=a463935e93",
@@ -1664,7 +1664,7 @@
             "entity": "FontAwesome CDN"
           },
           {
-            "url": "https://docs.authorkit.pro/~gitbook/image?url=https%3A%2F%2F3801477943-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FEdutBcviUp7nGEGJzXcG%252Fsites%252Fsite_IRgRl%252Ficon%252FWbgwUI3hPM7b6bCEFmuI%252Flogo%2520160x160.jpg%3Falt%3Dmedia%26token%3Db2e268b0-ce2f-40a7-b6d2-c54fe48abebd&width=48&height=48&sign=6b1e915e&sv=2",
+            "url": "https://docs.bookpeek.club/~gitbook/image?url=https%3A%2F%2F3801477943-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FEdutBcviUp7nGEGJzXcG%252Fsites%252Fsite_IRgRl%252Ficon%252FWbgwUI3hPM7b6bCEFmuI%252Flogo%2520160x160.jpg%3Falt%3Dmedia%26token%3Db2e268b0-ce2f-40a7-b6d2-c54fe48abebd&width=48&height=48&sign=6b1e915e&sv=2",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 6555.690999999642,
@@ -1678,7 +1678,7 @@
             "resourceType": "Other",
             "priority": "High",
             "experimentalFromMainFrame": true,
-            "entity": "authorkit.pro"
+            "entity": "bookpeek.club"
           },
           {
             "url": "https://app.gitbook.com/__session/2/?proposed=0e797c06-41b9-42fe-9e70-1a193a5e2432R",
@@ -1698,7 +1698,7 @@
             "entity": "gitbook.com"
           },
           {
-            "url": "https://docs.authorkit.pro/~gitbook/image?url=https%3A%2F%2F3801477943-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FEdutBcviUp7nGEGJzXcG%252Fsites%252Fsite_IRgRl%252Ficon%252FWbgwUI3hPM7b6bCEFmuI%252Flogo%2520160x160.jpg%3Falt%3Dmedia%26token%3Db2e268b0-ce2f-40a7-b6d2-c54fe48abebd&width=48&height=48&sign=6b1e915e&sv=2",
+            "url": "https://docs.bookpeek.club/~gitbook/image?url=https%3A%2F%2F3801477943-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FEdutBcviUp7nGEGJzXcG%252Fsites%252Fsite_IRgRl%252Ficon%252FWbgwUI3hPM7b6bCEFmuI%252Flogo%2520160x160.jpg%3Falt%3Dmedia%26token%3Db2e268b0-ce2f-40a7-b6d2-c54fe48abebd&width=48&height=48&sign=6b1e915e&sv=2",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 6853.953999999911,
@@ -1712,10 +1712,10 @@
             "resourceType": "Other",
             "priority": "High",
             "experimentalFromMainFrame": true,
-            "entity": "authorkit.pro"
+            "entity": "bookpeek.club"
           },
           {
-            "url": "https://docs.authorkit.pro/getting-started/quick-start?_rsc=h4e7f",
+            "url": "https://docs.bookpeek.club/getting-started/quick-start?_rsc=h4e7f",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 6899.339999999851,
@@ -1729,10 +1729,10 @@
             "resourceType": "Fetch",
             "priority": "Low",
             "experimentalFromMainFrame": true,
-            "entity": "authorkit.pro"
+            "entity": "bookpeek.club"
           },
           {
-            "url": "https://docs.authorkit.pro/getting-started/installation?_rsc=h4e7f",
+            "url": "https://docs.bookpeek.club/getting-started/installation?_rsc=h4e7f",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 6900.2319999998435,
@@ -1746,10 +1746,10 @@
             "resourceType": "Fetch",
             "priority": "Low",
             "experimentalFromMainFrame": true,
-            "entity": "authorkit.pro"
+            "entity": "bookpeek.club"
           },
           {
-            "url": "https://docs.authorkit.pro/getting-started/system-requirements?_rsc=h4e7f",
+            "url": "https://docs.bookpeek.club/getting-started/system-requirements?_rsc=h4e7f",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 6900.9860000000335,
@@ -1763,10 +1763,10 @@
             "resourceType": "Fetch",
             "priority": "Low",
             "experimentalFromMainFrame": true,
-            "entity": "authorkit.pro"
+            "entity": "bookpeek.club"
           },
           {
-            "url": "https://docs.authorkit.pro/authorkit-bookshelf/publishing-books?_rsc=h4e7f",
+            "url": "https://docs.bookpeek.club/bookpeek-bookshelf/publishing-books?_rsc=h4e7f",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 6901.740999999922,
@@ -1780,10 +1780,10 @@
             "resourceType": "Fetch",
             "priority": "Low",
             "experimentalFromMainFrame": true,
-            "entity": "authorkit.pro"
+            "entity": "bookpeek.club"
           },
           {
-            "url": "https://docs.authorkit.pro/",
+            "url": "https://docs.bookpeek.club/",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 6947.933999999892,
@@ -1797,10 +1797,10 @@
             "resourceType": "Fetch",
             "priority": "High",
             "experimentalFromMainFrame": true,
-            "entity": "authorkit.pro"
+            "entity": "bookpeek.club"
           },
           {
-            "url": "https://docs.authorkit.pro/~gitbook/__evt?o=EdutBcviUp7nGEGJzXcG&s=site_IRgRl",
+            "url": "https://docs.bookpeek.club/~gitbook/__evt?o=EdutBcviUp7nGEGJzXcG&s=site_IRgRl",
             "sessionTargetType": "page",
             "protocol": "h3",
             "rendererStartTime": 6963.848999999929,
@@ -1814,7 +1814,7 @@
             "resourceType": "Fetch",
             "priority": "High",
             "experimentalFromMainFrame": true,
-            "entity": "authorkit.pro"
+            "entity": "bookpeek.club"
           }
         ],
         "debugData": {
@@ -1871,271 +1871,271 @@
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 3149
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 3316
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 3483
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 3650
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 3817
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 3984
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 4151
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 4318
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 4485
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 4668
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 4815
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 4968
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 5124
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 5288
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 5444
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 5600
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 5753
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 5906
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 6059
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 6212
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 6365
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 6518
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 6671
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 6824
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 6977
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 7130
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 7364
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 7516
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 7668
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 7821
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 0,
               "columnNumber": 8042
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 188985
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 156913
             },
@@ -2145,7 +2145,7 @@
             },
             {
               "type": "parser",
-              "url": "https://docs.authorkit.pro/",
+              "url": "https://docs.bookpeek.club/",
               "lineNumber": 196,
               "columnNumber": 188994
             }
@@ -2183,11 +2183,11 @@
             "rtt": 25.769000000000002
           },
           {
-            "origin": "https://authorkit.gitbook.io",
+            "origin": "https://bookpeek.gitbook.io",
             "rtt": 24.229999999999997
           },
           {
-            "origin": "https://docs.authorkit.pro",
+            "origin": "https://docs.bookpeek.club",
             "rtt": 21.182
           },
           {
@@ -2238,11 +2238,11 @@
         ],
         "items": [
           {
-            "origin": "https://docs.authorkit.pro",
+            "origin": "https://docs.bookpeek.club",
             "serverResponseTime": 679.15
           },
           {
-            "origin": "https://authorkit.gitbook.io",
+            "origin": "https://bookpeek.gitbook.io",
             "serverResponseTime": 449.59200000000004
           },
           {
@@ -2721,7 +2721,7 @@
                 "width": 177,
                 "height": 20
               },
-              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"/authorkit-bookshelf/publishing-books\">",
+              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"/bookpeek-bookshelf/publishing-books\">",
               "nodeLabel": "Publishing to Bookshelf"
             },
             "subItems": {
@@ -2775,7 +2775,7 @@
                 "width": 211,
                 "height": 20
               },
-              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://github.com/shoppustak/authorkit-docs/blob/master/authorkit-contest…\">",
+              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://github.com/shoppustak/bookpeek-docs/blob/master/bookpeek-contest…\">",
               "nodeLabel": "Running a Book Giveaway"
             },
             "subItems": {
@@ -2803,7 +2803,7 @@
                 "height": 3538
               },
               "snippet": "<div class=\"transition-all duration-300 motion-reduce:transition-none lg:chat-open:mr-…\">",
-              "nodeLabel": "Ask\nWelcome to AuthorKit\n\nAuthorKit is a modular suite of WordPress plugins des…"
+              "nodeLabel": "Ask\nWelcome to BookPeek\n\nBookPeek is a modular suite of WordPress plugins des…"
             },
             "subItems": {
               "type": "subitems",
@@ -2910,7 +2910,7 @@
                 "width": 271,
                 "height": 20
               },
-              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://github.com/shoppustak/authorkit-docs/blob/master/authorkit-books/s…\">",
+              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://github.com/shoppustak/bookpeek-docs/blob/master/bookpeek-books/s…\">",
               "nodeLabel": "Displaying Books with Shortcodes"
             },
             "subItems": {
@@ -2937,7 +2937,7 @@
                 "width": 187,
                 "height": 20
               },
-              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://github.com/shoppustak/authorkit-docs/blob/master/authorkit-books/m…\">",
+              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://github.com/shoppustak/bookpeek-docs/blob/master/bookpeek-books/m…\">",
               "nodeLabel": "Adding Your First Book"
             },
             "subItems": {
@@ -3072,7 +3072,7 @@
                 "width": 148,
                 "height": 20
               },
-              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"mailto:support@authorkit.pro\">",
+              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"mailto:support@bookpeek.club\">",
               "nodeLabel": "Premium Support"
             },
             "subItems": {
@@ -3099,7 +3099,7 @@
                 "width": 199,
                 "height": 20
               },
-              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://github.com/shoppustak/authorkit-docs/blob/master/authorkit-reviews…\">",
+              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://github.com/shoppustak/bookpeek-docs/blob/master/bookpeek-reviews…\">",
               "nodeLabel": "Managing Book Reviews"
             },
             "subItems": {
@@ -3242,7 +3242,7 @@
                 "width": 166,
                 "height": 20
               },
-              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://wordpress.org/support/plugin/authorkit/\">",
+              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://wordpress.org/support/plugin/bookpeek/\">",
               "nodeLabel": "Community Support"
             },
             "subItems": {
@@ -3296,7 +3296,7 @@
                 "width": 138,
                 "height": 20
               },
-              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://github.com/shoppustak/authorkit-docs/blob/master/changelog.md\">",
+              "snippet": "<a class=\"underline decoration-[max(0.07em,1px)] underline-offset-2 links-accent:und…\" data-state=\"closed\" href=\"https://github.com/shoppustak/bookpeek-docs/blob/master/changelog.md\">",
               "nodeLabel": "View Changelog"
             },
             "subItems": {
@@ -4301,7 +4301,7 @@
             ]
           },
           {
-            "name": "https://docs.authorkit.pro/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+            "name": "https://docs.bookpeek.club/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
             "resourceBytes": 1239,
             "encodedBytes": 613,
             "unusedBytes": 117
@@ -5551,7 +5551,7 @@
             "wastedBytes": 1329
           },
           {
-            "url": "https://docs.authorkit.pro/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+            "url": "https://docs.bookpeek.club/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
             "debugData": {
               "type": "debugdata",
               "public": true
@@ -5631,7 +5631,7 @@
             "totalBytes": 44833
           },
           {
-            "url": "https://docs.authorkit.pro/",
+            "url": "https://docs.bookpeek.club/",
             "totalBytes": 40348
           },
           {
@@ -6816,7 +6816,7 @@
             "wastedBytes": 1329
           },
           {
-            "url": "https://docs.authorkit.pro/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+            "url": "https://docs.bookpeek.club/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
             "cacheLifetimeMs": 2842000,
             "totalBytes": 726,
             "wastedBytes": 599.9079166666667
@@ -7184,7 +7184,7 @@
         ],
         "items": [
           {
-            "url": "https://docs.authorkit.pro/~gitbook/image?url=https%3A%2F%2F3801477943-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FEdutBcviUp7nGEGJzXcG%252Fsites%252Fsite_IRgRl%252Flogo%252FhuK1bhDltC93RiEBKOgj%252Flogo%2520160x160.jpg%3Falt%3Dmedia%26token%3D72e8339c-86c6-4da5-8c93-2c14552fd552&width=260&dpr=1&quality=100&sign=cd52b562&sv=2",
+            "url": "https://docs.bookpeek.club/~gitbook/image?url=https%3A%2F%2F3801477943-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Forganizations%252FEdutBcviUp7nGEGJzXcG%252Fsites%252Fsite_IRgRl%252Flogo%252FhuK1bhDltC93RiEBKOgj%252Flogo%2520160x160.jpg%3Falt%3Dmedia%26token%3D72e8339c-86c6-4da5-8c93-2c14552fd552&width=260&dpr=1&quality=100&sign=cd52b562&sv=2",
             "totalBytes": 23164,
             "wastedBytes": 22897,
             "subItems": {
@@ -7374,13 +7374,13 @@
               "type": "network-tree",
               "chains": {
                 "65065695ACDE7EAEAA6ADD237A00FD8F": {
-                  "url": "https://docs.authorkit.pro/",
+                  "url": "https://docs.bookpeek.club/",
                   "navStartToEndTime": 5685,
                   "transferSize": 40348,
                   "isLongest": true,
                   "children": {
                     "65065695ACDE7EAEAA6ADD237A00FD8F": {
-                      "url": "https://docs.authorkit.pro/",
+                      "url": "https://docs.bookpeek.club/",
                       "navStartToEndTime": 5685,
                       "transferSize": 40348,
                       "isLongest": true,
@@ -7443,7 +7443,7 @@
                           "children": {}
                         },
                         "4647.35": {
-                          "url": "https://docs.authorkit.pro/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+                          "url": "https://docs.bookpeek.club/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
                           "navStartToEndTime": 5695,
                           "transferSize": 726,
                           "children": {}
@@ -8789,14 +8789,14 @@
     {
       "name": "gitbook.io",
       "origins": [
-        "https://authorkit.gitbook.io"
+        "https://bookpeek.gitbook.io"
       ],
       "isUnrecognized": true
     },
     {
-      "name": "authorkit.pro",
+      "name": "bookpeek.club",
       "origins": [
-        "https://docs.authorkit.pro"
+        "https://docs.bookpeek.club"
       ],
       "isFirstParty": true,
       "isUnrecognized": true
@@ -13407,7 +13407,7 @@
         {
           "values": {
             "requested": "http://localhost:8000/docs.html",
-            "final": "https://docs.authorkit.pro/"
+            "final": "https://docs.bookpeek.club/"
           },
           "path": "runWarnings[0]"
         }

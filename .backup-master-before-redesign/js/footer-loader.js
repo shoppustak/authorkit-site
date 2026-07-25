@@ -1,5 +1,5 @@
 /**
- * AuthorKit Footer Loader
+ * BookPeek Footer Loader
  * Loads the centralized footer component
  */
 

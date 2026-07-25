@@ -20,7 +20,7 @@ import {
 // Define available plugin versions
 // In production, you'd store this in a database or config file
 const PLUGIN_VERSIONS = {
-  'authorkit-pro': {
+  'bookpeek-pro': {
     version: '1.0.0',
     tested_up_to: '6.4',
     requires_php: '7.0',
@@ -45,9 +45,9 @@ const PLUGIN_VERSIONS = {
 - Fixed timezone handling in countdowns
 - Resolved schema markup validation issues
 `,
-    download_url: 'https://authorkit.pro/downloads/authorkit-pro-1.0.0.zip'
+    download_url: 'https://bookpeek.club/downloads/bookpeek-pro-1.0.0.zip'
   },
-  'authorkit-agency': {
+  'bookpeek-agency': {
     version: '1.0.0',
     tested_up_to: '6.4',
     requires_php: '7.0',
@@ -65,7 +65,7 @@ const PLUGIN_VERSIONS = {
 - Multi-site network support
 - Enhanced performance
 `,
-    download_url: 'https://authorkit.pro/downloads/authorkit-agency-1.0.0.zip'
+    download_url: 'https://bookpeek.club/downloads/bookpeek-agency-1.0.0.zip'
   }
 };
 
@@ -232,17 +232,17 @@ export default async function handler(req, res) {
       slug: plugin_slug,
       plugin: `${plugin_slug}/${plugin_slug}.php`,
       new_version: latestVersion.version,
-      url: 'https://authorkit.pro',
+      url: 'https://bookpeek.club',
       package: secureDownloadUrl,
       tested: latestVersion.tested_up_to,
       requires_php: latestVersion.requires_php,
       icons: {
-        '1x': 'https://authorkit.pro/images/icon-128x128.png',
-        '2x': 'https://authorkit.pro/images/icon-256x256.png'
+        '1x': 'https://bookpeek.club/images/icon-128x128.png',
+        '2x': 'https://bookpeek.club/images/icon-256x256.png'
       },
       banners: {
-        '1x': 'https://authorkit.pro/images/banner-772x250.png',
-        '2x': 'https://authorkit.pro/images/banner-1544x500.png'
+        '1x': 'https://bookpeek.club/images/banner-772x250.png',
+        '2x': 'https://bookpeek.club/images/banner-1544x500.png'
       },
       sections: {
         description: 'Professional WordPress plugin suite for self-publishing authors.',

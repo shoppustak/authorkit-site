@@ -1,7 +1,7 @@
 /**
  * POST /api/bookshelf/sync
  *
- * Syncs a book from a WordPress site to the AuthorKit Bookshelf.
+ * Syncs a book from a WordPress site to the BookPeek Bookshelf.
  * Called when an author saves a book with the "Include in Bookshelf" checkbox enabled.
  *
  * Request body: Full book payload (22 fields per RFC)

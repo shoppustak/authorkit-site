@@ -230,11 +230,11 @@ All success criteria met:
 
 **Modified files verified:**
 ```bash
-[ -f "/Users/maulik/authorkit-site/docs/SPACING-GUIDELINES.md" ] && echo "FOUND: SPACING-GUIDELINES.md" || echo "MISSING"
-[ -f "/Users/maulik/authorkit-site/css/styles.css" ] && echo "FOUND: styles.css" || echo "MISSING"
-[ -f "/Users/maulik/authorkit-site/pricing.html" ] && echo "FOUND: pricing.html" || echo "MISSING"
-[ -f "/Users/maulik/authorkit-site/includes/header.html" ] && echo "FOUND: header.html" || echo "MISSING"
-[ -f "/Users/maulik/authorkit-site/js/main.js" ] && echo "FOUND: main.js" || echo "MISSING"
+[ -f "/Users/maulik/bookpeek-site/docs/SPACING-GUIDELINES.md" ] && echo "FOUND: SPACING-GUIDELINES.md" || echo "MISSING"
+[ -f "/Users/maulik/bookpeek-site/css/styles.css" ] && echo "FOUND: styles.css" || echo "MISSING"
+[ -f "/Users/maulik/bookpeek-site/pricing.html" ] && echo "FOUND: pricing.html" || echo "MISSING"
+[ -f "/Users/maulik/bookpeek-site/includes/header.html" ] && echo "FOUND: header.html" || echo "MISSING"
+[ -f "/Users/maulik/bookpeek-site/js/main.js" ] && echo "FOUND: main.js" || echo "MISSING"
 ```
 Result: ALL FILES FOUND
 

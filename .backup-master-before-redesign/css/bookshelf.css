@@ -1,15 +1,15 @@
 /**
- * AuthorKit Bookshelf Styles
- * Clean, professional design matching AuthorKit archive pages
+ * BookPeek Bookshelf Styles
+ * Clean, professional design matching BookPeek archive pages
  */
 
 /* ============================================================================
-   CSS Variables - AuthorKit Brand Colors
+   CSS Variables - BookPeek Brand Colors
    ========================================================================= */
 :root {
-    --authorkit-navy: #1E3A5F;
-    --authorkit-orange: #EF8E30;
-    --authorkit-orange-hover: #d97706;
+    --bookpeek-navy: #1E3A5F;
+    --bookpeek-orange: #EF8E30;
+    --bookpeek-orange-hover: #d97706;
     --gray-50: #f8f8f8;
     --gray-100: #F3F4F6;
     --gray-200: #e0e0e0;
@@ -78,11 +78,11 @@ body {
 }
 
 .main-nav a:hover {
-    color: var(--authorkit-navy);
+    color: var(--bookpeek-navy);
 }
 
 .btn-primary {
-    background: var(--authorkit-orange);
+    background: var(--bookpeek-orange);
     color: white;
     padding: 10px 20px;
     border-radius: 4px;
@@ -91,7 +91,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: var(--authorkit-orange-hover);
+    background: var(--bookpeek-orange-hover);
     color: white;
 }
 
@@ -139,7 +139,7 @@ body {
 .stat-number {
     font-size: 28px;
     font-weight: 700;
-    color: var(--authorkit-navy);
+    color: var(--bookpeek-navy);
     line-height: 1;
     display: block;
     margin-bottom: 5px;
@@ -153,7 +153,7 @@ body {
 
 .btn-cta {
     display: inline-block;
-    background: var(--authorkit-orange);
+    background: var(--bookpeek-orange);
     color: white;
     padding: 12px 30px;
     border-radius: 4px;
@@ -164,7 +164,7 @@ body {
 }
 
 .btn-cta:hover {
-    background: var(--authorkit-orange-hover);
+    background: var(--bookpeek-orange-hover);
     transform: translateY(-2px);
 }
 
@@ -239,7 +239,7 @@ body {
 
 .index-sort-select:focus {
     outline: none;
-    border-color: var(--authorkit-navy);
+    border-color: var(--bookpeek-navy);
 }
 
 /* ============================================================================
@@ -265,18 +265,18 @@ body {
 .btn-secondary {
     display: inline-block;
     background: white;
-    color: var(--authorkit-navy);
+    color: var(--bookpeek-navy);
     padding: 12px 30px;
     border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
-    border: 2px solid var(--authorkit-navy);
+    border: 2px solid var(--bookpeek-navy);
     transition: all 0.3s;
 }
 
 .btn-secondary:hover {
-    background: var(--authorkit-navy);
+    background: var(--bookpeek-navy);
     color: white;
     transform: translateY(-2px);
 }
@@ -419,7 +419,7 @@ body {
 }
 
 .btn-view-site {
-    background: var(--authorkit-navy);
+    background: var(--bookpeek-navy);
     color: #ffffff;
 }
 
@@ -428,12 +428,12 @@ body {
 }
 
 .btn-buy {
-    background: var(--authorkit-orange);
+    background: var(--bookpeek-orange);
     color: #ffffff;
 }
 
 .btn-buy:hover {
-    background: var(--authorkit-orange-hover);
+    background: var(--bookpeek-orange-hover);
 }
 
 /* ============================================================================
@@ -457,12 +457,12 @@ body {
     padding: 24px 16px;
     text-align: center;
     text-decoration: none;
-    color: var(--authorkit-navy);
+    color: var(--bookpeek-navy);
     transition: all 0.3s;
 }
 
 .genre-card:hover {
-    border-color: var(--authorkit-navy);
+    border-color: var(--bookpeek-navy);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -482,7 +482,7 @@ body {
    CTA Section
    ========================================================================= */
 .cta-section {
-    background: var(--authorkit-navy);
+    background: var(--bookpeek-navy);
     color: white;
     padding: 60px 0;
     text-align: center;
@@ -582,7 +582,7 @@ body {
 
 .search-input:focus {
     outline: none;
-    border-color: var(--authorkit-navy);
+    border-color: var(--bookpeek-navy);
 }
 
 .search-input::placeholder {
@@ -613,7 +613,7 @@ body {
     width: 16px;
     height: 16px;
     cursor: pointer;
-    accent-color: var(--authorkit-orange);
+    accent-color: var(--bookpeek-orange);
 }
 
 .genre-checkbox label {
@@ -636,7 +636,7 @@ body {
 
 .sort-select:focus {
     outline: none;
-    border-color: var(--authorkit-navy);
+    border-color: var(--bookpeek-navy);
 }
 
 .btn-reset {
@@ -653,8 +653,8 @@ body {
 }
 
 .btn-reset:hover {
-    background: var(--authorkit-navy);
-    border-color: var(--authorkit-navy);
+    background: var(--bookpeek-navy);
+    border-color: var(--bookpeek-navy);
     color: white;
 }
 
@@ -709,13 +709,13 @@ body {
 
 .page-btn:hover:not(:disabled):not(.active) {
     background: var(--gray-50);
-    border-color: var(--authorkit-navy);
+    border-color: var(--bookpeek-navy);
 }
 
 .page-btn.active {
-    background: var(--authorkit-navy);
+    background: var(--bookpeek-navy);
     color: white;
-    border-color: var(--authorkit-navy);
+    border-color: var(--bookpeek-navy);
 }
 
 .page-btn:disabled {
@@ -766,7 +766,7 @@ body {
    Footer
    ========================================================================= */
 .site-footer {
-    background: var(--authorkit-navy);
+    background: var(--bookpeek-navy);
     color: white;
     padding: 60px 0 30px;
 }
@@ -806,7 +806,7 @@ body {
 }
 
 .footer-links a:hover {
-    color: var(--authorkit-orange);
+    color: var(--bookpeek-orange);
 }
 
 .footer-bottom {

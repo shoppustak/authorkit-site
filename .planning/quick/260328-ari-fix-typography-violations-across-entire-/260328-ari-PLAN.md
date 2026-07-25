@@ -5,11 +5,11 @@ type: execute
 wave: 1
 depends_on: []
 files_modified:
-  - /Users/maulik/authorkit-site/tailwind.config.js
-  - /Users/maulik/authorkit-site/css/styles.css
-  - /Users/maulik/authorkit-site/css/monochrome-components.css
-  - /Users/maulik/authorkit-site/css/bookshelf.css
-  - /Users/maulik/authorkit-site/css/design-tokens.css
+  - /Users/maulik/bookpeek-site/tailwind.config.js
+  - /Users/maulik/bookpeek-site/css/styles.css
+  - /Users/maulik/bookpeek-site/css/monochrome-components.css
+  - /Users/maulik/bookpeek-site/css/bookshelf.css
+  - /Users/maulik/bookpeek-site/css/design-tokens.css
 autonomous: true
 must_haves:
   truths:
@@ -17,7 +17,7 @@ must_haves:
     - "All grey rgba text is replaced with pure black"
     - "Body text is consistently 18px for optimal readability"
   artifacts:
-    - path: "/Users/maulik/authorkit-site/css/styles.css"
+    - path: "/Users/maulik/bookpeek-site/css/styles.css"
       provides: "Updated typography sizes and colors"
       contains: "no font-size: 14px or 15px"
   key_links:
@@ -28,14 +28,14 @@ must_haves:
 ---
 
 <objective>
-Fix typography violations across the entire AuthorKit site to comply with monochrome design system standards.
+Fix typography violations across the entire BookPeek site to comply with monochrome design system standards.
 
 Purpose: Increase small text from 14-15px to minimum 16px, replace all grey rgba text with pure black, ensure all body text is 18px for optimal readability. Green accent color (#059669) is kept as valid.
 Output: Updated CSS and HTML files with corrected typography that follows monochrome design principles.
 </objective>
 
 <context>
-The AuthorKit site currently has several typography violations that need correction:
+The BookPeek site currently has several typography violations that need correction:
 1. Small text (14px-15px) throughout various components
 2. Grey rgba text colors instead of pure black
 3. Body text needs to be consistently 18px
@@ -51,7 +51,7 @@ Files with violations found:
 
 <task type="auto">
   <name>Task 1: Fix minimum font sizes in Tailwind configuration</name>
-  <files>/Users/maulik/authorkit-site/tailwind.config.js</files>
+  <files>/Users/maulik/bookpeek-site/tailwind.config.js</files>
   <action>
     1. In tailwind.config.js:
        - Update fontSize definitions to ensure minimum 16px:
@@ -62,14 +62,14 @@ Files with violations found:
     This ensures Tailwind utility classes enforce minimum 16px font sizes.
   </action>
   <verify>
-    <automated>grep -n "0.875rem" /Users/maulik/authorkit-site/tailwind.config.js || echo "No sub-16px font sizes in config - success"</automated>
+    <automated>grep -n "0.875rem" /Users/maulik/bookpeek-site/tailwind.config.js || echo "No sub-16px font sizes in config - success"</automated>
   </verify>
   <done>Tailwind config updated to enforce minimum 16px font size</done>
 </task>
 
 <task type="auto">
   <name>Task 2: Fix typography sizes and colors in CSS files</name>
-  <files>/Users/maulik/authorkit-site/css/styles.css, /Users/maulik/authorkit-site/css/monochrome-components.css, /Users/maulik/authorkit-site/css/bookshelf.css, /Users/maulik/authorkit-site/css/input.css</files>
+  <files>/Users/maulik/bookpeek-site/css/styles.css, /Users/maulik/bookpeek-site/css/monochrome-components.css, /Users/maulik/bookpeek-site/css/bookshelf.css, /Users/maulik/bookpeek-site/css/input.css</files>
   <action>
     1. In css/styles.css:
        - Replace font-size: 15px with font-size: 16px (if found)
@@ -90,17 +90,17 @@ Files with violations found:
        - Update body font-size to 18px consistently across all viewports
 
     5. Rebuild CSS if needed:
-       - Run: cd /Users/maulik/authorkit-site && npx tailwindcss -i ./css/input.css -o ./css/styles.min.css --minify
+       - Run: cd /Users/maulik/bookpeek-site && npx tailwindcss -i ./css/input.css -o ./css/styles.min.css --minify
   </action>
   <verify>
-    <automated>grep -n "font-size: 1[45]px" /Users/maulik/authorkit-site/css/*.css || echo "No 14px or 15px fonts found - success"</automated>
+    <automated>grep -n "font-size: 1[45]px" /Users/maulik/bookpeek-site/css/*.css || echo "No 14px or 15px fonts found - success"</automated>
   </verify>
   <done>All CSS files updated with minimum 16px fonts and pure black text, green accents preserved</done>
 </task>
 
 <task type="auto">
   <name>Task 3: Fix inline styles in HTML files</name>
-  <files>/Users/maulik/authorkit-site/index.html, /Users/maulik/authorkit-site/pricing.html, /Users/maulik/authorkit-site/features.html, /Users/maulik/authorkit-site/docs.html</files>
+  <files>/Users/maulik/bookpeek-site/index.html, /Users/maulik/bookpeek-site/pricing.html, /Users/maulik/bookpeek-site/features.html, /Users/maulik/bookpeek-site/docs.html</files>
   <action>
     1. In pricing.html:
        - Line 58: Change font-size: 14px to font-size: 16px (keep green color for accent)
@@ -127,7 +127,7 @@ Files with violations found:
     Note: These changes improve readability with larger fonts and pure black text while preserving green as a valid accent color.
   </action>
   <verify>
-    <automated>grep -n "font-size: 1[45]px" /Users/maulik/authorkit-site/*.html || echo "No small fonts in HTML files - success"</automated>
+    <automated>grep -n "font-size: 1[45]px" /Users/maulik/bookpeek-site/*.html || echo "No small fonts in HTML files - success"</automated>
   </verify>
   <done>All HTML inline styles updated to use minimum 16px fonts and pure black text, green accents preserved</done>
 </task>

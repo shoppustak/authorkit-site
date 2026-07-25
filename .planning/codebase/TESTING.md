@@ -60,25 +60,25 @@ The project is a static HTML marketing website with vanilla JavaScript interacti
 
 **High-Priority Areas:**
 
-1. **API Integration Testing** (`/Users/maulik/authorkit-site/js/bookshelf-browse.js`)
+1. **API Integration Testing** (`/Users/maulik/bookpeek-site/js/bookshelf-browse.js`)
    - Test `loadBooks()` function with mock API responses
    - Verify pagination logic in `renderPagination()`
    - Test filter/search parameter handling in `setupEventListeners()`
 
-2. **DOM Manipulation** (`/Users/maulik/authorkit-site/js/main.js`)
+2. **DOM Manipulation** (`/Users/maulik/bookpeek-site/js/main.js`)
    - Test mobile menu toggle visibility
    - Verify smooth scroll to anchor links
    - Test intersection observer fade-in animations
    - Test keyboard navigation (Escape key to close menu)
 
-3. **Utility Functions** (`/Users/maulik/authorkit-site/js/bookshelf.js`)
+3. **Utility Functions** (`/Users/maulik/bookpeek-site/js/bookshelf.js`)
    - Test `createBookCard()` DOM element creation with various data structures
    - Test `formatGenreName()` slug-to-name conversion
    - Test `getStarRating()` rating display logic
    - Test `addAffiliateTag()` URL manipulation and validation
    - Test `debounce()` function behavior
 
-4. **Component Loading** (`/Users/maulik/authorkit-site/js/footer-loader.js`)
+4. **Component Loading** (`/Users/maulik/bookpeek-site/js/footer-loader.js`)
    - Test footer fetch success/failure scenarios
    - Test DOM placeholder insertion
    - Test error logging

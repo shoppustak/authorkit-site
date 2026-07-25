@@ -222,8 +222,8 @@ Performance targets **NOT YET ACHIEVED**. While significant infrastructure impro
    - Remove external JavaScript files
    - Keep only inline redirect:
    ```html
-   <meta http-equiv="refresh" content="0; url=https://docs.authorkit.pro" />
-   <script>window.location.href = 'https://docs.authorkit.pro';</script>
+   <meta http-equiv="refresh" content="0; url=https://docs.bookpeek.club" />
+   <script>window.location.href = 'https://docs.bookpeek.club';</script>
    ```
 
 3. **OPTIMIZE LCP IMAGES**

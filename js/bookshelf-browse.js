@@ -1,5 +1,5 @@
 /**
- * AuthorKit Bookshelf - Browse Page JavaScript
+ * BookPeek Bookshelf - Browse Page JavaScript
  * Handles filtering, pagination, and book loading for the browse page
  */
 

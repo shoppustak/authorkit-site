@@ -63,7 +63,7 @@ npm install --save-dev lighthouse-ci sharp
 
 ### Recommended Project Structure
 ```
-authorkit-site/
+bookpeek-site/
 ├── .lighthouse/              # Lighthouse reports and CI config
 │   ├── baseline/            # Phase 1 baseline reports (already exists per roadmap)
 │   ├── optimized/           # Phase 6 final reports
@@ -136,7 +136,7 @@ module.exports = {
   <source type="image/avif" srcset="hero-320.avif 320w, hero-640.avif 640w, hero-1280.avif 1280w" sizes="100vw">
   <source type="image/webp" srcset="hero-320.webp 320w, hero-640.webp 640w, hero-1280.webp 1280w" sizes="100vw">
   <img src="hero-1280.jpg"
-       alt="AuthorKit Dashboard"
+       alt="BookPeek Dashboard"
        width="1280"
        height="720"
        loading="lazy"  <!-- NEVER for LCP image! -->
@@ -334,7 +334,7 @@ Verified patterns from official sources:
     sizes="100vw">
   <img
     src="hero-1280.jpg"
-    alt="AuthorKit Dashboard"
+    alt="BookPeek Dashboard"
     width="1280"
     height="720"
     decoding="async"

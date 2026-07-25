@@ -49,7 +49,7 @@ Output: Updated HTML files with standardized spacing, spacing guidelines documen
 </execution_context>
 
 <context>
-The AuthorKit site currently has inconsistent section padding, with some pages using 96px vertical padding which creates excessive whitespace, particularly before the footer. The pricing page has been identified as having optimal "delicate" spacing using 64px vertical padding (py-16 in Tailwind terms).
+The BookPeek site currently has inconsistent section padding, with some pages using 96px vertical padding which creates excessive whitespace, particularly before the footer. The pricing page has been identified as having optimal "delicate" spacing using 64px vertical padding (py-16 in Tailwind terms).
 
 Current issues:
 - blog.html uses `padding: 96px 32px` for sections

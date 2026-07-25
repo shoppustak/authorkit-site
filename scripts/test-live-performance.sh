@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "Testing LIVE site performance: https://authorkit.pro"
+echo "Testing LIVE site performance: https://bookpeek.club"
 echo "===================================================="
 echo ""
 
@@ -81,10 +81,10 @@ run_lighthouse_live() {
 echo "Page,Performance,Accessibility,Best Practices,SEO,FCP(s),LCP(s),TBT(ms),CLS,SI(s)" > "${OUTPUT_DIR}/summary.csv"
 
 # Test key pages on live site
-run_lighthouse_live "https://authorkit.pro/" "homepage"
-run_lighthouse_live "https://authorkit.pro/features.html" "features"
-run_lighthouse_live "https://authorkit.pro/pricing.html" "pricing"
-run_lighthouse_live "https://authorkit.pro/docs.html" "docs"
+run_lighthouse_live "https://bookpeek.club/" "homepage"
+run_lighthouse_live "https://bookpeek.club/features.html" "features"
+run_lighthouse_live "https://bookpeek.club/pricing.html" "pricing"
+run_lighthouse_live "https://bookpeek.club/docs.html" "docs"
 
 echo ""
 echo "===================================================="

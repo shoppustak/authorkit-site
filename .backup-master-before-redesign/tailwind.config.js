@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'authorkit-orange': '#FF9900',
-        'authorkit-blue': '#1E3A5F',
+        'bookpeek-orange': '#FF9900',
+        'bookpeek-blue': '#1E3A5F',
       },
     },
   },

@@ -1,12 +1,12 @@
-# AuthorKit Bookshelf - Deployment Guide (Supabase)
+# BookPeek Bookshelf - Deployment Guide (Supabase)
 
-This guide walks you through deploying the AuthorKit Bookshelf API endpoints and frontend to Vercel with Supabase database.
+This guide walks you through deploying the BookPeek Bookshelf API endpoints and frontend to Vercel with Supabase database.
 
 ## Prerequisites
 
 1. ✅ Supabase database created and configured (see `database/SETUP.md`)
 2. ✅ Supabase `SUPABASE_URL` and `SUPABASE_SERVICE_KEY` ready
-3. ✅ Vercel account with access to the `authorkit-site` project
+3. ✅ Vercel account with access to the `bookpeek-site` project
 4. ✅ Git repository connected to Vercel
 
 ## Step 1: Install Dependencies Locally
@@ -14,7 +14,7 @@ This guide walks you through deploying the AuthorKit Bookshelf API endpoints and
 Before deploying, test the setup locally:
 
 ```bash
-cd authorkit-site
+cd bookpeek-site
 npm install
 ```
 
@@ -23,7 +23,7 @@ This installs `@supabase/supabase-js` and other dependencies.
 ## Step 2: Configure Environment Variables in Vercel
 
 1. Go to [vercel.com/dashboard](https://vercel.com/dashboard)
-2. Select the **authorkit-site** project
+2. Select the **bookpeek-site** project
 3. Go to **Settings** → **Environment Variables**
 4. Add **TWO** variables:
 
@@ -44,7 +44,7 @@ This installs `@supabase/supabase-js` and other dependencies.
 
 ```bash
 git add .
-git commit -m "feat: deploy AuthorKit Bookshelf with Supabase"
+git commit -m "feat: deploy BookPeek Bookshelf with Supabase"
 git push origin master
 ```
 
@@ -65,7 +65,7 @@ After deployment, test each endpoint:
 ### Test 1: Register a Site
 
 ```bash
-curl -X POST https://authorkit.pro/api/bookshelf/register \
+curl -X POST https://bookpeek.club/api/bookshelf/register \
   -H "Content-Type: application/json" \
   -d '{
     "site_url": "https://test-author.com",
@@ -85,7 +85,7 @@ curl -X POST https://authorkit.pro/api/bookshelf/register \
 ### Test 2: Sync a Book
 
 ```bash
-curl -X POST https://authorkit.pro/api/bookshelf/sync \
+curl -X POST https://bookpeek.club/api/bookshelf/sync \
   -H "Content-Type: application/json" \
   -d '{
     "site_url": "https://test-author.com",
@@ -117,7 +117,7 @@ curl -X POST https://authorkit.pro/api/bookshelf/sync \
 ### Test 3: Fetch Books
 
 ```bash
-curl https://authorkit.pro/api/bookshelf/books?limit=5
+curl https://bookpeek.club/api/bookshelf/books?limit=5
 ```
 
 **Expected response:**
@@ -141,7 +141,7 @@ curl https://authorkit.pro/api/bookshelf/books?limit=5
 ### Test 4: Remove a Book
 
 ```bash
-curl -X POST https://authorkit.pro/api/bookshelf/remove \
+curl -X POST https://bookpeek.club/api/bookshelf/remove \
   -H "Content-Type: application/json" \
   -d '{
     "site_url": "https://test-author.com",
@@ -160,7 +160,7 @@ curl -X POST https://authorkit.pro/api/bookshelf/remove \
 ### Test 5: Deregister a Site
 
 ```bash
-curl -X POST https://authorkit.pro/api/bookshelf/deregister \
+curl -X POST https://bookpeek.club/api/bookshelf/deregister \
   -H "Content-Type: application/json" \
   -d '{
     "site_url": "https://test-author.com"
@@ -261,7 +261,7 @@ You should see your test records!
 Once API endpoints are verified:
 1. ✅ Test end-to-end WordPress → API → Supabase flow
 2. ✅ Deploy frontend pages (already included in deployment)
-3. ✅ Configure subdomain `bookshelf.authorkit.pro` if needed
+3. ✅ Configure subdomain `bookshelf.bookpeek.club` if needed
 4. ✅ Add real books from your WordPress site
 
 ## Rollback Procedure
@@ -356,7 +356,7 @@ If you encounter issues:
 1. Check Vercel function logs
 2. Check PlanetScale query logs (Insights tab)
 3. Verify environment variables are set correctly
-4. Contact support@authorkit.pro with:
+4. Contact support@bookpeek.club with:
    - Error message
    - Vercel deployment URL
    - Steps to reproduce

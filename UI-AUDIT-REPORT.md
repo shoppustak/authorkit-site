@@ -1,4 +1,4 @@
-# AuthorKit Website - Comprehensive UI Audit Report
+# BookPeek Website - Comprehensive UI Audit Report
 
 **Date:** 2026-03-27
 **Scope:** Entire site (index.html, pricing.html, features.html, and related pages)
@@ -694,7 +694,7 @@ opacity transitions: no;
 **Before (Wrong):**
 ```html
 <div class="bg-white rounded-xl shadow-sm p-6">
-    <h3 class="text-xl font-bold text-gray-900 mb-1">AuthorKit Books</h3>
+    <h3 class="text-xl font-bold text-gray-900 mb-1">BookPeek Books</h3>
     <p class="text-gray-600 text-sm">Complete book catalog management</p>
     <div class="flex items-start gap-2">
         <svg class="w-4 h-4 text-green-500 mt-0.5">...</svg>
@@ -706,7 +706,7 @@ opacity transitions: no;
 **After (Correct):**
 ```html
 <div class="bg-white border border-black" style="padding: 20px;">
-    <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 4px;">AuthorKit Books</h3>
+    <h3 style="font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 4px;">BookPeek Books</h3>
     <p style="font-size: 15px; color: rgba(0, 0, 0, 0.65); margin-bottom: 16px;">Complete book catalog management</p>
     <div style="display: flex; align-items: flex-start; gap: 8px; padding: 12px 0; border-bottom: 1px solid rgba(0, 0, 0, 0.08);">
         <svg style="width: 16px; height: 16px; color: #059669; flex-shrink: 0; margin-top: 2px;">...</svg>

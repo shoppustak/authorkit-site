@@ -1,15 +1,15 @@
-# AuthorKit Website
+# BookPeek Website
 
-Professional static website for AuthorKit WordPress plugins.
+Professional static website for BookPeek WordPress plugins.
 
 ## 🌐 Overview
 
-This is the marketing website for AuthorKit, a suite of WordPress plugins designed for self-publishing authors. The site is built with vanilla HTML, CSS (Tailwind via CDN), and JavaScript for maximum performance and simplicity.
+This is the marketing website for BookPeek, a suite of WordPress plugins designed for self-publishing authors. The site is built with vanilla HTML, CSS (Tailwind via CDN), and JavaScript for maximum performance and simplicity.
 
 ## 📁 Structure
 
 ```
-authorkit-site/
+bookpeek-site/
 ├── index.html              # Homepage
 ├── pages/
 │   ├── features.html       # Features page
@@ -47,7 +47,7 @@ authorkit-site/
 1. Push code to GitHub
 2. Import repository in Vercel
 3. Deploy (automatic)
-4. Connect domain: authorkit.pro
+4. Connect domain: bookpeek.club
 
 ## 🔧 Local Development
 

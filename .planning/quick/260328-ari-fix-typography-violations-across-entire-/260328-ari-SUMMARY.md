@@ -13,16 +13,16 @@ subsystem: design-system
 key_files:
   created: []
   modified:
-    - /Users/maulik/authorkit-site/tailwind.config.js
-    - /Users/maulik/authorkit-site/css/styles.css
-    - /Users/maulik/authorkit-site/css/monochrome-components.css
-    - /Users/maulik/authorkit-site/css/bookshelf.css
-    - /Users/maulik/authorkit-site/css/input.css
-    - /Users/maulik/authorkit-site/css/style.css
-    - /Users/maulik/authorkit-site/css/styles.min.css
-    - /Users/maulik/authorkit-site/pricing.html
-    - /Users/maulik/authorkit-site/features.html
-    - /Users/maukit/authorkit-site/docs.html
+    - /Users/maulik/bookpeek-site/tailwind.config.js
+    - /Users/maulik/bookpeek-site/css/styles.css
+    - /Users/maulik/bookpeek-site/css/monochrome-components.css
+    - /Users/maulik/bookpeek-site/css/bookshelf.css
+    - /Users/maulik/bookpeek-site/css/input.css
+    - /Users/maulik/bookpeek-site/css/style.css
+    - /Users/maulik/bookpeek-site/css/styles.min.css
+    - /Users/maulik/bookpeek-site/pricing.html
+    - /Users/maulik/bookpeek-site/features.html
+    - /Users/maukit/bookpeek-site/docs.html
 decisions:
   - "Used automated sed commands to efficiently replace all font-size and color violations across CSS files"
   - "Preserved green accent color (#059669) throughout as valid design element per monochrome system"
@@ -41,7 +41,7 @@ tech_stack:
 
 ## Summary
 
-Successfully fixed all typography violations across the AuthorKit site to comply with monochrome design system standards. Increased small text from 14-15px to minimum 16px, replaced grey rgba text with pure black, and ensured body text is consistently 18px for optimal readability.
+Successfully fixed all typography violations across the BookPeek site to comply with monochrome design system standards. Increased small text from 14-15px to minimum 16px, replaced grey rgba text with pure black, and ensured body text is consistently 18px for optimal readability.
 
 ## Tasks Completed
 

@@ -1,7 +1,7 @@
 /**
  * POST /api/bookshelf/remove
  *
- * Removes a single book from the AuthorKit Bookshelf.
+ * Removes a single book from the BookPeek Bookshelf.
  * Called when an author unchecks the "Include in Bookshelf" checkbox.
  *
  * Request body:

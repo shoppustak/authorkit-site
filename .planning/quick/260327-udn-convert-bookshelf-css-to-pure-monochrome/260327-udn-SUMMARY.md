@@ -44,14 +44,14 @@ Transformed all 915 lines of bookshelf.css to pure monochrome design:
 
 **Color Variable Changes:**
 - Removed all --gray-* variables (gray-50, gray-100, gray-200, gray-600, gray-900)
-- Removed all --authorkit-* brand colors (authorkit-navy, authorkit-orange, authorkit-orange-hover)
+- Removed all --bookpeek-* brand colors (bookpeek-navy, bookpeek-orange, bookpeek-orange-hover)
 - Added pure monochrome variables: --color-black: #000000 and --color-white: #FFFFFF
 - Replaced --gray-50, --gray-100 backgrounds → --color-white or rgba(0,0,0,0.03)
 - Replaced --gray-200, --border-color → rgba(0,0,0,0.1) for subtle borders or --color-black for strong borders
 - Replaced --gray-600 → rgba(0,0,0,0.6) for secondary text
 - Replaced --gray-900 → --color-black for primary text
-- Replaced --authorkit-navy → --color-black
-- Replaced --authorkit-orange → --color-black
+- Replaced --bookpeek-navy → --color-black
+- Replaced --bookpeek-orange → --color-black
 - Changed orange star ratings to black for consistency
 
 **Decorative Elements Removed:**
@@ -80,7 +80,7 @@ Transformed all 915 lines of bookshelf.css to pure monochrome design:
 - Removed all orange/navy color schemes
 
 **Footer Updated:**
-- Background: --color-black (was --authorkit-navy)
+- Background: --color-black (was --bookpeek-navy)
 - Text: --color-white
 - Links: rgba(255,255,255,0.8)
 - Hover: --color-white with underline (removed orange color)
@@ -104,7 +104,7 @@ grep -E "\-\-gray\-" css/bookshelf.css | wc -l
 # Output: 0
 
 # No brand color variables remain
-grep -E "\-\-authorkit\-" css/bookshelf.css | wc -l
+grep -E "\-\-bookpeek\-" css/bookshelf.css | wc -l
 # Output: 0
 
 # All border-radius values are 0

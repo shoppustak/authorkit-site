@@ -8,7 +8,7 @@
 - JavaScript files: lowercase with hyphens (e.g., `main.js`, `bookshelf-browse.js`, `footer-loader.js`)
 - HTML files: lowercase with hyphens (e.g., `bookshelf-browse.html`, `privacy-policy.html`)
 - CSS files: lowercase with hyphens (e.g., `input.css`, `styles.css`, `bookshelf.css`)
-- Images: lowercase with hyphens (e.g., `logo-authorkit.svg`, `placeholder-book.jpg`)
+- Images: lowercase with hyphens (e.g., `logo-bookpeek.svg`, `placeholder-book.jpg`)
 
 **Functions:**
 - Camel case for function names (e.g., `createBookCard()`, `formatGenreName()`, `getStarRating()`, `loadBooks()`)
@@ -24,7 +24,7 @@
 **Types/Classes:**
 - CSS classes use lowercase with hyphens (e.g., `book-card`, `book-cover-wrapper`, `btn-primary`, `btn-secondary`, `page-btn`, `genre-badge`)
 - HTML IDs use lowercase with hyphens (e.g., `mobile-menu-button`, `search-input`, `sort-select`, `footer-placeholder`)
-- CSS custom color variables use hyphens (e.g., `authorkit-orange`, `authorkit-blue`)
+- CSS custom color variables use hyphens (e.g., `bookpeek-orange`, `bookpeek-blue`)
 
 ## Code Style
 
@@ -65,7 +65,7 @@
 - Graceful fallbacks for missing DOM elements: check element existence before manipulation
 - Optional chaining and nullish coalescing not used; explicit null/undefined checks preferred
 
-**Example pattern from `/Users/maulik/authorkit-site/js/bookshelf-browse.js`:**
+**Example pattern from `/Users/maulik/bookpeek-site/js/bookshelf-browse.js`:**
 ```javascript
 try {
     const response = await fetch(`/api/bookshelf/books?${params.toString()}`);
@@ -92,9 +92,9 @@ try {
 - No production logging framework in use; simple console output
 - Developer-facing messages styled with CSS (e.g., colored console output)
 
-**Example from `/Users/maulik/authorkit-site/js/main.js`:**
+**Example from `/Users/maulik/bookpeek-site/js/main.js`:**
 ```javascript
-console.log('%cAuthorKit Website', 'font-size: 20px; font-weight: bold; color: #3b82f6;');
+console.log('%cBookPeek Website', 'font-size: 20px; font-weight: bold; color: #3b82f6;');
 console.log('%cBuilt with ❤️ for authors', 'font-size: 14px; color: #6b7280;');
 ```
 
@@ -112,7 +112,7 @@ console.log('%cBuilt with ❤️ for authors', 'font-size: 14px; color: #6b7280;
 - Return types documented in JSDoc (e.g., `@returns {HTMLElement}`, `@returns {string}`, `@returns {Function}`)
 - No TypeScript; JSDoc used for type documentation in vanilla JavaScript
 
-**Example from `/Users/maulik/authorkit-site/js/bookshelf.js`:**
+**Example from `/Users/maulik/bookpeek-site/js/bookshelf.js`:**
 ```javascript
 /**
  * Creates a book card element
@@ -177,7 +177,7 @@ function createBookCard(book) {
 - Variables and functions declared within IIFE have local scope
 - Pattern: `(function() { 'use strict'; ... })();`
 
-**Example from `/Users/maulik/authorkit-site/js/footer-loader.js`:**
+**Example from `/Users/maulik/bookpeek-site/js/footer-loader.js`:**
 ```javascript
 (function() {
     'use strict';

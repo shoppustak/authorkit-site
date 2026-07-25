@@ -170,7 +170,7 @@ None - plan executed exactly as written. All tasks completed successfully with n
 
 ### Created Files
 All files created successfully:
-- ✅ /Users/maulik/authorkit-site/.planning/phases/02-core-component-redesign/02-02-SUMMARY.md
+- ✅ /Users/maulik/bookpeek-site/.planning/phases/02-core-component-redesign/02-02-SUMMARY.md
 
 ### Modified Files Verified
 All planned modifications completed:

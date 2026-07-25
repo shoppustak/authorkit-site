@@ -12,7 +12,7 @@
   - API Access: Used in `/api/activate-license.js`, `/api/deactivate-license.js`, `/api/validate-license.js`, `/api/check-update.js`
 
 **Amazon Affiliate Program:**
-- Amazon Associates affiliate tag: `authorkit-20`
+- Amazon Associates affiliate tag: `bookpeek-20`
 - Used for book purchase links in bookshelf pages
 - Integration: Constructed in `js/bookshelf.js` for affiliate revenue tracking
 
@@ -75,7 +75,7 @@
 
 **Hosting:**
 - Vercel (serverless deployment)
-- Project name: `authorkit-pro`
+- Project name: `bookpeek-pro`
 - Static files: HTML, CSS, JS, images
 - Serverless functions: `/api/**/*.js`
 

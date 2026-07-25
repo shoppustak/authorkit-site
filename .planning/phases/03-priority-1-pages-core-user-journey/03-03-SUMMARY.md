@@ -133,8 +133,8 @@ All acceptance criteria verified:
 
 ## Files Changed
 
-- `/Users/maulik/authorkit-site/pricing.html` - 344 insertions, 428 deletions (complete redesign)
-- `/Users/maulik/authorkit-site/docs.html` - 313 insertions, 43 deletions (complete redesign)
+- `/Users/maulik/bookpeek-site/pricing.html` - 344 insertions, 428 deletions (complete redesign)
+- `/Users/maulik/bookpeek-site/docs.html` - 313 insertions, 43 deletions (complete redesign)
 
 ## Commits
 
@@ -146,8 +146,8 @@ All acceptance criteria verified:
 Verified all created files and commits exist:
 
 **Files:**
-- ✓ FOUND: /Users/maulik/authorkit-site/pricing.html
-- ✓ FOUND: /Users/maulik/authorkit-site/docs.html
+- ✓ FOUND: /Users/maulik/bookpeek-site/pricing.html
+- ✓ FOUND: /Users/maulik/bookpeek-site/docs.html
 
 **Commits:**
 - ✓ FOUND: a4fd62b (pricing page)

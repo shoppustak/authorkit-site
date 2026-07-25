@@ -1,6 +1,6 @@
-# Supabase Database Setup for AuthorKit Bookshelf
+# Supabase Database Setup for BookPeek Bookshelf
 
-This guide walks you through setting up the Supabase database for the AuthorKit Bookshelf feature.
+This guide walks you through setting up the Supabase database for the BookPeek Bookshelf feature.
 
 ## Step 1: Create Supabase Account & Project
 
@@ -8,7 +8,7 @@ This guide walks you through setting up the Supabase database for the AuthorKit 
 2. Sign up or log in
 3. Click "New Project"
 4. Fill in the details:
-   - **Name**: `authorkit-bookshelf`
+   - **Name**: `bookpeek-bookshelf`
    - **Database Password**: Choose a strong password (save this!)
    - **Region**: Choose closest to your target audience (e.g., US East for US audience)
    - **Pricing Plan**: Free tier is fine for MVP
@@ -61,7 +61,7 @@ Copy this - you'll need it as `SUPABASE_URL`
 Once you have the credentials:
 
 1. Go to your Vercel dashboard
-2. Select the `authorkit-site` project
+2. Select the `bookpeek-site` project
 3. Go to **Settings** → **Environment Variables**
 4. Add three variables:
 

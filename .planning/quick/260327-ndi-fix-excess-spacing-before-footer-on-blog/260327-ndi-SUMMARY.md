@@ -78,7 +78,7 @@ grep -E "padding:\s*(96|128)px" *.html | wc -l
 **Status:** COMPLETE
 **Commit:** 1d75658
 
-Created comprehensive SPACING-GUIDELINES.md at /Users/maulik/authorkit-site/docs/SPACING-GUIDELINES.md
+Created comprehensive SPACING-GUIDELINES.md at /Users/maulik/bookpeek-site/docs/SPACING-GUIDELINES.md
 
 **Content Sections:**
 1. Core spacing principles (8px base unit, 64px standard section padding)

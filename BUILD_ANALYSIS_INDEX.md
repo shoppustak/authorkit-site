@@ -1,7 +1,7 @@
-# AuthorKit Build System Analysis - Complete Documentation Index
+# BookPeek Build System Analysis - Complete Documentation Index
 
 **Analysis Date**: March 28, 2026
-**Repository**: /Users/maulik/authorkit-site
+**Repository**: /Users/maulik/bookpeek-site
 **Status**: Static HTML marketing site + Node.js build pipeline
 
 ---
@@ -373,7 +373,7 @@ PROJECT DOCUMENTATION:
 ## Report Metadata
 
 - **Analysis Date**: March 28, 2026
-- **Repository**: /Users/maulik/authorkit-site
+- **Repository**: /Users/maulik/bookpeek-site
 - **Analyzed By**: Claude Code (Haiku 4.5)
 - **Total Analysis Time**: Comprehensive automated investigation
 - **Coverage**: Complete build system, CSS/JS architecture, asset optimization

@@ -21,7 +21,7 @@ actual: CLS = 0.395 on homepage (almost 4x over target). Current Lighthouse perf
 errors: No JavaScript errors. Lighthouse audit shows "Cumulative Layout Shift" score of 27% (failing). Unsized images audit previously showed logo without dimensions (now fixed).
 
 reproduction:
-1. Run Lighthouse test on https://authorkit.pro/
+1. Run Lighthouse test on https://bookpeek.club/
 2. Observe Performance score of 62/100
 3. CLS metric shows 0.395 (red, failing)
 4. Layout shifts occur during: font loading, initial page load, and after JavaScript execution

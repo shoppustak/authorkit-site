@@ -1,4 +1,4 @@
-# AuthorKit.pro Redesign - Project State
+# BookPeek.pro Redesign - Project State
 
 **Last Updated:** 2026-03-18
 **Current Status:** In Progress

@@ -1,4 +1,4 @@
--- AuthorKit Bookshelf Database Schema for PlanetScale (MySQL)
+-- BookPeek Bookshelf Database Schema for PlanetScale (MySQL)
 -- Run this SQL in your PlanetScale dashboard to set up the database
 
 -- ============================================================================

@@ -1,6 +1,6 @@
 # Security Documentation
 
-This document outlines the security measures implemented in the AuthorKit API.
+This document outlines the security measures implemented in the BookPeek API.
 
 ## Security Features Implemented
 
@@ -167,7 +167,7 @@ If you detect a security issue:
 If you discover a security vulnerability:
 
 1. **DO NOT** create a public GitHub issue
-2. Email: security@authorkit.pro (create this email)
+2. Email: security@bookpeek.club (create this email)
 3. Include:
    - Description of vulnerability
    - Steps to reproduce
@@ -211,7 +211,7 @@ CSRF (Cross-Site Request Forgery) attacks specifically target:
 - Browsers that automatically send cookies with requests
 - State-changing operations relying on cookie authentication
 
-#### Why AuthorKit APIs Don't Need CSRF Protection
+#### Why BookPeek APIs Don't Need CSRF Protection
 
 1. **No Cookie-Based Authentication**
    - License keys sent explicitly in request body/headers

@@ -1,7 +1,7 @@
 /**
  * POST /api/bookshelf/register
  *
- * Registers a WordPress site to the AuthorKit Bookshelf.
+ * Registers a WordPress site to the BookPeek Bookshelf.
  * Called when an author enables the Bookshelf feature in their plugin settings.
  *
  * Request body:

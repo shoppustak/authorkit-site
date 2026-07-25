@@ -1,7 +1,7 @@
 {
-  "name": "authorkit-website",
+  "name": "bookpeek-website",
   "version": "1.0.0",
-  "description": "Marketing website for AuthorKit WordPress plugins",
+  "description": "Marketing website for BookPeek WordPress plugins",
   "scripts": {
     "dev": "python3 -m http.server 8000",
     "serve": "python3 -m http.server 8000",
@@ -10,8 +10,8 @@
     "build:js": "terser js/main.js -o js/main.min.js -c -m && terser js/bookshelf.js -o js/bookshelf.min.js -c -m && terser js/bookshelf-browse.js -o js/bookshelf-browse.min.js -c -m",
     "build": "npm run build:css && npm run build:js"
   },
-  "keywords": ["authorkit", "wordpress", "plugins", "authors"],
-  "author": "AuthorKit",
+  "keywords": ["bookpeek", "wordpress", "plugins", "authors"],
+  "author": "BookPeek",
   "license": "MIT",
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0"

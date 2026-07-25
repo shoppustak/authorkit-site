@@ -304,7 +304,7 @@ async function sendEmail(to, subject, body) {
   //       to: [{ email: to }],
   //       subject: subject
   //     }],
-  //     from: { email: 'noreply@authorkit.pro', name: 'AuthorKit' },
+  //     from: { email: 'noreply@bookpeek.club', name: 'BookPeek' },
   //     content: [{ type: 'text/html', value: body }]
   //   })
   // });

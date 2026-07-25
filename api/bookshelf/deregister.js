@@ -1,7 +1,7 @@
 /**
  * POST /api/bookshelf/deregister
  *
- * Deregisters a site from the AuthorKit Bookshelf.
+ * Deregisters a site from the BookPeek Bookshelf.
  * Called when an author disables the Bookshelf feature in their plugin settings.
  * Removes all books from the site and marks the site as inactive.
  *

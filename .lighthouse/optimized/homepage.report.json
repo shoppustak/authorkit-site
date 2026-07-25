@@ -883,7 +883,7 @@
             "entity": "Google Fonts"
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "rendererStartTime": 281.13099999912083,
@@ -1321,7 +1321,7 @@
                 "height": 202
               },
               "snippet": "<p class=\"hero-subtitle\">",
-              "nodeLabel": "Stop duct-taping generic tools together. AuthorKit is a complete, lightweight W…"
+              "nodeLabel": "Stop duct-taping generic tools together. BookPeek is a complete, lightweight W…"
             },
             "score": 0.22040946960449218,
             "subItems": {
@@ -2687,7 +2687,7 @@
             "totalBytes": 15488
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "totalBytes": 5219
           },
           {
@@ -3132,7 +3132,7 @@
             "wastedBytes": 15488
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "cacheLifetimeMs": 0,
             "totalBytes": 5219,
             "wastedBytes": 5219
@@ -3226,7 +3226,7 @@
                     "height": 202
                   },
                   "snippet": "<p class=\"hero-subtitle\">",
-                  "nodeLabel": "Stop duct-taping generic tools together. AuthorKit is a complete, lightweight W…"
+                  "nodeLabel": "Stop duct-taping generic tools together. BookPeek is a complete, lightweight W…"
                 },
                 "score": 0.22040946960449218,
                 "subItems": {
@@ -3554,7 +3554,7 @@
               "height": 202
             },
             "snippet": "<p class=\"hero-subtitle\">",
-            "nodeLabel": "Stop duct-taping generic tools together. AuthorKit is a complete, lightweight W…"
+            "nodeLabel": "Stop duct-taping generic tools together. BookPeek is a complete, lightweight W…"
           }
         ]
       },

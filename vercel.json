@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "authorkit-pro",
+  "name": "bookpeek-pro",
   "buildCommand": "npm run build",
   "outputDirectory": ".",
   "functions": {
@@ -93,7 +93,7 @@
       "has": [
         {
           "type": "host",
-          "value": "bookshelf.authorkit.pro"
+          "value": "bookshelf.bookpeek.club"
         }
       ]
     },
@@ -103,7 +103,7 @@
       "has": [
         {
           "type": "host",
-          "value": "bookshelf.authorkit.pro"
+          "value": "bookshelf.bookpeek.club"
         }
       ]
     },

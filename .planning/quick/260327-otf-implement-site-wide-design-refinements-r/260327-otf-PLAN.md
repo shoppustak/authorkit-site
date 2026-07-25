@@ -41,8 +41,8 @@ Output: Refined CSS, updated guidelines, fixed responsive layout
 </execution_context>
 
 <context>
-@/Users/maulik/authorkit-site/.planning/STATE.md
-@/Users/maulik/authorkit-site/docs/SPACING-GUIDELINES.md
+@/Users/maulik/bookpeek-site/.planning/STATE.md
+@/Users/maulik/bookpeek-site/docs/SPACING-GUIDELINES.md
 </context>
 
 <tasks>

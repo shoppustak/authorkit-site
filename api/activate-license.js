@@ -189,7 +189,7 @@ export default async function handler(req, res) {
         data: {
           max_activations: maxActivations,
           active_instances: instances.map(i => i.name),
-          upgrade_url: 'https://authorkit.pro/pricing'
+          upgrade_url: 'https://bookpeek.club/pricing'
         }
       });
     }
@@ -214,9 +214,13 @@ export default async function handler(req, res) {
     if (!activateResponse.ok) {
       const errorData = await activateResponse.json();
       console.error('Lemon Squeezy activation error:', errorData);
-      return res.status(500).json({
+
+      // Return more detailed error for debugging
+      const errorMessage = errorData.error || errorData.message || 'Failed to activate license';
+      return res.status(activateResponse.status).json({
         success: false,
-        message: 'Failed to activate license'
+        message: errorMessage,
+        debug: process.env.NODE_ENV === 'development' ? errorData : undefined
       });
     }
 

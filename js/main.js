@@ -1,5 +1,5 @@
 /**
- * AuthorKit Website JavaScript
+ * BookPeek Website JavaScript
  * Handles mobile menu, smooth scrolling, and interactive elements
  */
 
@@ -220,6 +220,6 @@ if ('IntersectionObserver' in window) {
 }
 
 // Console message for developers
-console.log('%cAuthorKit Website', 'font-size: 20px; font-weight: bold; color: #3b82f6;');
+console.log('%cBookPeek Website', 'font-size: 20px; font-weight: bold; color: #3b82f6;');
 console.log('%cBuilt with ❤️ for authors', 'font-size: 14px; color: #6b7280;');
-console.log('Interested in contributing? Visit https://github.com/authorkit');
+console.log('Interested in contributing? Visit https://github.com/bookpeek');

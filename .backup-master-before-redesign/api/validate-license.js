@@ -1,7 +1,7 @@
 /**
  * License Validation API Endpoint
  *
- * Validates an AuthorKit license key against Lemon Squeezy
+ * Validates an BookPeek license key against Lemon Squeezy
  *
  * POST /api/validate-license
  * Body: { license_key: string, site_url: string }

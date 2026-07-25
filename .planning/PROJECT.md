@@ -1,7 +1,7 @@
-# AuthorKit.pro Visual Redesign Project
+# BookPeek.pro Visual Redesign Project
 
 **Project Type**: Visual Redesign (Brownfield)
-**Target**: https://authorkit.pro marketing website
+**Target**: https://bookpeek.club marketing website
 **Timeline**: TBD
 **Priority**: High
 
@@ -9,7 +9,7 @@
 
 ## Vision
 
-Transform AuthorKit.pro from a generic WordPress plugin site into a **high-end, minimalist brand experience** that appeals to authors and readers. The redesign focuses exclusively on visual design and performance optimization while preserving the existing content architecture, copy, and brand assets.
+Transform BookPeek.pro from a generic WordPress plugin site into a **high-end, minimalist brand experience** that appeals to authors and readers. The redesign focuses exclusively on visual design and performance optimization while preserving the existing content architecture, copy, and brand assets.
 
 **Design Philosophy**: Minimalist Monochrome - Pure black and white design that emphasizes typography, white space, and content clarity. Zero decorations, instant interactions, and WCAG AAA accessibility.
 

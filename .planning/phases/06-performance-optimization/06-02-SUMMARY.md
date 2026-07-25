@@ -49,7 +49,7 @@ metrics:
 
 ## What Was Built
 
-Optimized resource loading across all AuthorKit.pro HTML pages to fix the 600ms render-blocking delay identified in the Lighthouse baseline. Implemented Google Fonts best practices, consolidated CSS files, and deferred JavaScript execution.
+Optimized resource loading across all BookPeek.pro HTML pages to fix the 600ms render-blocking delay identified in the Lighthouse baseline. Implemented Google Fonts best practices, consolidated CSS files, and deferred JavaScript execution.
 
 ### Task 1: Font Loading Optimization (4 priority pages)
 **Commit:** `8ba226b`

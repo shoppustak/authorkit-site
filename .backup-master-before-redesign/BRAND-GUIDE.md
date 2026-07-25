@@ -1,8 +1,8 @@
-# AuthorKit Brand Guide
+# BookPeek Brand Guide
 
 ## Color Strategy
 
-AuthorKit uses a **dual-color system** across all products (WordPress plugins + website):
+BookPeek uses a **dual-color system** across all products (WordPress plugins + website):
 
 ### Primary Colors
 
@@ -22,7 +22,7 @@ AuthorKit uses a **dual-color system** across all products (WordPress plugins + 
 
 ### Color Usage Rules
 
-#### Website (authorkit-site)
+#### Website (bookpeek-site)
 - **Headings**: Navy Blue
 - **Body Text**: Dark Gray (#333)
 - **Links**: Navy Blue (hover → Orange)
@@ -31,7 +31,7 @@ AuthorKit uses a **dual-color system** across all products (WordPress plugins + 
 - **Badges/Labels**: Orange
 - **Icons**: Navy with orange accents
 
-#### WordPress Plugins (authorkit/)
+#### WordPress Plugins (bookpeek/)
 - **Admin Elements**: WordPress Blue (#2271b1) for WP integration
 - **Primary Buttons**: Orange (#ff9900)
 - **Coming Soon Badges**: Orange
@@ -43,25 +43,25 @@ AuthorKit uses a **dual-color system** across all products (WordPress plugins + 
 
 ```css
 /* Primary Colors */
---authorkit-navy: #1E3A5F;           /* Main navy */
---authorkit-navy-light: #2C5282;     /* Lighter navy */
---authorkit-navy-dark: #152C46;      /* Darker navy */
+--bookpeek-navy: #1E3A5F;           /* Main navy */
+--bookpeek-navy-light: #2C5282;     /* Lighter navy */
+--bookpeek-navy-dark: #152C46;      /* Darker navy */
 
---authorkit-orange: #ff9900;         /* Main orange (buttons, CTAs) */
---authorkit-orange-hover: #e88900;   /* Hover state */
---authorkit-orange-dark: #d97706;    /* Dark variant */
+--bookpeek-orange: #ff9900;         /* Main orange (buttons, CTAs) */
+--bookpeek-orange-hover: #e88900;   /* Hover state */
+--bookpeek-orange-dark: #d97706;    /* Dark variant */
 
 /* Supporting Colors */
---authorkit-star-orange: #ffa41c;    /* Star ratings */
---authorkit-price-orange: #c45500;   /* Price displays */
---authorkit-wp-blue: #2271b1;        /* WordPress admin integration */
+--bookpeek-star-orange: #ffa41c;    /* Star ratings */
+--bookpeek-price-orange: #c45500;   /* Price displays */
+--bookpeek-wp-blue: #2271b1;        /* WordPress admin integration */
 
 /* Neutrals */
---authorkit-gray-50: #F9FAFB;
---authorkit-gray-100: #F3F4F6;
---authorkit-gray-200: #e0e0e0;
---authorkit-gray-600: #646970;
---authorkit-gray-900: #1d2327;
+--bookpeek-gray-50: #F9FAFB;
+--bookpeek-gray-100: #F3F4F6;
+--bookpeek-gray-200: #e0e0e0;
+--bookpeek-gray-600: #646970;
+--bookpeek-gray-900: #1d2327;
 ```
 
 ## Logo Usage
@@ -77,7 +77,7 @@ AuthorKit uses a **dual-color system** across all products (WordPress plugins + 
 - Maintain aspect ratio
 - Use on white or light backgrounds
 - Minimum height: 32px for web
-- Always include "AuthorKit" text with icon when possible
+- Always include "BookPeek" text with icon when possible
 
 ## Typography
 
@@ -149,7 +149,7 @@ Both should use:
 
 ### Implementation
 - **Website**: Uses Tailwind CSS with custom overrides
-- **Plugins**: Uses vanilla CSS with .authorkit- prefixed classes
+- **Plugins**: Uses vanilla CSS with .bookpeek- prefixed classes
 - **Variables**: Both use CSS custom properties for colors
 
 ## Design Principles
@@ -177,4 +177,4 @@ Both should use:
 ---
 
 **Last Updated:** February 15, 2026
-**Maintained By:** AuthorKit Team
+**Maintained By:** BookPeek Team

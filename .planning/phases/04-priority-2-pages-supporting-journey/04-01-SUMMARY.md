@@ -56,8 +56,8 @@ Both pages now feature:
 6. Removed all rounded corners, shadows, and transitions via CSS overrides
 7. Applied typography hierarchy throughout (Playfair headlines, Source Serif body)
 8. Preserved all original copy:
-   - "Download AuthorKit Free" headline
-   - "Get started with AuthorKit today" description
+   - "Download BookPeek Free" headline
+   - "Get started with BookPeek today" description
    - "Quick Install (Recommended)" with 5-step list
    - All plugin descriptions and metadata
    - System requirements
@@ -67,7 +67,7 @@ Both pages now feature:
 ```bash
 ✓ monochrome-components.css linked
 ✓ Playfair Display font loaded
-✓ "Download AuthorKit Free" copy preserved
+✓ "Download BookPeek Free" copy preserved
 ✓ All decorative CSS removed
 ```
 
@@ -145,7 +145,7 @@ All success criteria met:
 ### Copy Preservation
 
 Download page preserved:
-- "Download AuthorKit Free" hero headline
+- "Download BookPeek Free" hero headline
 - "Quick Install (Recommended)" section with 5 numbered steps
 - "One Plugin, Everything You Need" section title
 - All feature list items (10 books, 3 reviews, etc.)
@@ -205,7 +205,7 @@ Phase 04 Plan 02: Redesign remaining Priority 2 pages (if any)
 ```bash
 ✓ download.html links monochrome-components.css
 ✓ download.html loads Playfair Display
-✓ download.html preserves "Download AuthorKit Free"
+✓ download.html preserves "Download BookPeek Free"
 ✓ account.html links monochrome-components.css
 ✓ account.html loads Playfair Display
 ✓ account.html preserves "My Account"

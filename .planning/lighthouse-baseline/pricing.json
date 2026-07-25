@@ -1174,7 +1174,7 @@
             "entity": "localhost"
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "rendererStartTime": 497.945000000298,
@@ -2075,7 +2075,7 @@
         ],
         "items": [
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "node": {
               "type": "node",
               "lhId": "1-53-IMG",
@@ -2089,8 +2089,8 @@
                 "width": 160,
                 "height": 40
               },
-              "snippet": "<img src=\"images/logo-authorkit.svg\" alt=\"AuthorKit\" class=\"nav-logo\">",
-              "nodeLabel": "AuthorKit"
+              "snippet": "<img src=\"images/logo-bookpeek.svg\" alt=\"BookPeek\" class=\"nav-logo\">",
+              "nodeLabel": "BookPeek"
             }
           }
         ]
@@ -2896,7 +2896,7 @@
                       "height": 670
                     },
                     "snippet": "<section class=\"py-16 bg-blue-600\">",
-                    "nodeLabel": "Start free — upgrade when you're ready\n\nAuthorKit Books is free forever on Word…"
+                    "nodeLabel": "Start free — upgrade when you're ready\n\nBookPeek Books is free forever on Word…"
                   }
                 }
               ]
@@ -2917,7 +2917,7 @@
                 "height": 54
               },
               "snippet": "<p class=\"text-xl text-blue-100 mb-8\">",
-              "nodeLabel": "AuthorKit Books is free forever on WordPress.org",
+              "nodeLabel": "BookPeek Books is free forever on WordPress.org",
               "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 1.86 (foreground color: #ffedd5, background color: #ff9900, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
             },
             "subItems": {
@@ -2938,7 +2938,7 @@
                       "height": 670
                     },
                     "snippet": "<section class=\"py-16 bg-blue-600\">",
-                    "nodeLabel": "Start free — upgrade when you're ready\n\nAuthorKit Books is free forever on Word…"
+                    "nodeLabel": "Start free — upgrade when you're ready\n\nBookPeek Books is free forever on Word…"
                   }
                 }
               ]
@@ -3756,7 +3756,7 @@
             "wastedBytes": 7458
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "cacheLifetimeMs": 0,
             "cacheHitProbability": 0,
             "totalBytes": 5219,
@@ -3860,7 +3860,7 @@
             "totalBytes": 7458
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "totalBytes": 5219
           },
           {
@@ -4945,7 +4945,7 @@
             "wastedBytes": 7458
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "cacheLifetimeMs": 0,
             "totalBytes": 5219,
             "wastedBytes": 5219

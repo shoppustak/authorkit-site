@@ -1192,7 +1192,7 @@
             "entity": "localhost"
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "sessionTargetType": "page",
             "protocol": "http/1.0",
             "rendererStartTime": 348.55899999989197,
@@ -2009,7 +2009,7 @@
         ],
         "items": [
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "node": {
               "type": "node",
               "lhId": "1-37-IMG",
@@ -2023,8 +2023,8 @@
                 "width": 160,
                 "height": 40
               },
-              "snippet": "<img src=\"images/logo-authorkit.svg\" alt=\"AuthorKit\" class=\"nav-logo\">",
-              "nodeLabel": "AuthorKit"
+              "snippet": "<img src=\"images/logo-bookpeek.svg\" alt=\"BookPeek\" class=\"nav-logo\">",
+              "nodeLabel": "BookPeek"
             }
           }
         ]
@@ -3327,7 +3327,7 @@
             "wastedBytes": 7458
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "cacheLifetimeMs": 0,
             "cacheHitProbability": 0,
             "totalBytes": 5219,
@@ -3441,7 +3441,7 @@
             "totalBytes": 7458
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "totalBytes": 5219
           },
           {
@@ -4511,7 +4511,7 @@
             "wastedBytes": 7458
           },
           {
-            "url": "http://localhost:8000/images/logo-authorkit.svg",
+            "url": "http://localhost:8000/images/logo-bookpeek.svg",
             "cacheLifetimeMs": 0,
             "totalBytes": 5219,
             "wastedBytes": 5219
