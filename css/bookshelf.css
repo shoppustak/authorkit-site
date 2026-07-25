@@ -21,7 +21,7 @@
 }
 
 body {
-    font-family: 'Source Serif 4', serif;
+    font-family: 'Inter', serif;
     font-size: 18px;
     color: var(--color-black);
     background: var(--color-white);
@@ -104,7 +104,7 @@ body {
 }
 
 .bookshelf-hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fraunces', serif;
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -174,7 +174,7 @@ body {
 }
 
 .section-header h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fraunces', serif;
     font-size: 28px;
     font-weight: 700;
     color: var(--color-black);
@@ -199,7 +199,7 @@ body {
 }
 
 .books-header-left h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fraunces', serif;
     font-size: 28px;
     font-weight: 700;
     color: var(--color-black);
@@ -322,7 +322,7 @@ body {
 }
 
 .book-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fraunces', serif;
     font-size: 16px;
     font-weight: 600;
     color: var(--color-black);
@@ -490,7 +490,7 @@ body {
 }
 
 .cta-section h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fraunces', serif;
     font-size: 32px;
     margin-bottom: 15px;
     font-weight: 700;
@@ -516,7 +516,7 @@ body {
 }
 
 .browse-header h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fraunces', serif;
     font-size: 32px;
     margin-bottom: 10px;
     font-weight: 700;
@@ -735,7 +735,7 @@ body {
 }
 
 .no-books h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fraunces', serif;
     margin: 0 0 15px 0;
     font-size: 28px;
     color: var(--color-black);

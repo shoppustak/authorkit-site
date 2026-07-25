@@ -16,20 +16,20 @@ module.exports = {
 
       // Brand accents (use sparingly for CTAs)
       'brand': {
-        'orange': '#FF9900',
-        'blue': '#1E3A5F',
+        'gold': '#cfab3a',
+        'plum': '#291934',
       },
 
       // Semantic colors (accessibility-compliant)
-      'success': '#059669',
-      'error': '#DC2626',
-      'warning': '#D97706',
-      'info': '#2563EB',
+      'success': '#1a7f37',
+      'error': '#b02a37',
+      'warning': '#9a6700',
+      'info': '#17607d',
     },
 
     fontFamily: {
-      'headline': ['Playfair Display', 'serif'],
-      'body': ['Source Serif 4', 'serif'],
+      'headline': ['Fraunces', 'serif'],
+      'body': ['Inter', 'sans-serif'],
       'ui': ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'system-ui', 'sans-serif'],
     },
 

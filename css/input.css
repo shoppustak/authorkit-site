@@ -36,7 +36,7 @@
 
   /* Root font and color setup */
   html {
-    font-family: 'Source Serif 4', serif;
+    font-family: 'Inter', serif;
     font-size: 16px; /* Base for rem calculations */
     line-height: 1.7;
     color: #000000;
@@ -49,7 +49,7 @@
 
   /* Headings use Playfair Display */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fraunces', serif;
     font-weight: 700;
     line-height: 1.2;
     color: #000000;
@@ -95,7 +95,7 @@
 
   /* Links */
   a {
-    color: #1E3A5F; /* Brand blue for links */
+    color: #291934; /* Brand blue for links */
     text-decoration: none;
   }
 
@@ -180,14 +180,14 @@
   }
 
   .btn-accent {
-    background-color: #FF9900;
+    background-color: #cfab3a;
     color: #FFFFFF;
-    border-color: #FF9900;
+    border-color: #cfab3a;
   }
 
   .btn-accent:hover {
     background-color: #FFFFFF;
-    color: #FF9900;
+    color: #cfab3a;
   }
 }
 

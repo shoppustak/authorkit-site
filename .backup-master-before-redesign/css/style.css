@@ -5,12 +5,12 @@
    ========================================== */
 :root {
     /* Primary Orange (from plugins - buttons, CTAs, badges) */
-    --bookpeek-orange: #ff9900;
+    --bookpeek-orange: #cfab3a;
     --bookpeek-orange-hover: #e88900;
     --bookpeek-orange-dark: #d97706;
 
     /* Secondary Navy Blue (from logo - text, accents) */
-    --bookpeek-navy: #1E3A5F;
+    --bookpeek-navy: #291934;
     --bookpeek-navy-light: #2C5282;
     --bookpeek-navy-dark: #152C46;
 
