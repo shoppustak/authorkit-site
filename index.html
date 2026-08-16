@@ -3,523 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookPeek — WordPress Plugins Built for Self-Publishing Authors</title>
-    <meta name="description" content="BookPeek gives indie authors powerful WordPress plugins to manage books, collect reviews, launch new releases, and grow a loyal reader base. Free to start.">
-
-    <!-- Self-hosted fonts for optimal performance -->
-    <link rel="preload" as="style" href="css/fonts.css">
-    <link rel="stylesheet" href="css/fonts.css">
-
-    <!-- Critical CSS inlined for above-fold content -->
-    <style id="critical-css">
-        /* Reset and Base */
-        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        html{font-family:'Source Serif 4',serif;font-size:16px;line-height:1.7;background:#FFFFFF;color:#000000;-webkit-font-smoothing:antialiased}
-        body{font-size:18px;margin:0}
-
-        /* Navigation (above-fold) */
-        .nav-bar{background:#FFFFFF;border-bottom:1px solid #000000;position:sticky;top:0;z-index:50}
-        .nav-container{max-width:1280px;margin:0 auto;padding:0 1rem}
-        .nav-logo{height:40px;width:auto}
-        .nav-link{color:#000000;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;font-weight:500;text-decoration:none}
-        .flex{display:flex}
-        .items-center{align-items:center}
-        .justify-between{justify-content:space-between}
-        .h-16{height:4rem}
-        .hidden{display:none}
-
-        /* Hero Section (above-fold) */
-        .hero-section{background:#FFFFFF;padding:64px 32px}
-        .hero-container{max-width:1280px;margin:0 auto;text-align:center}
-        .hero-headline{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#000000;margin-bottom:24px;line-height:1.2}
-        .hero-subtitle{font-family:'Source Serif 4',serif;font-size:20px;color:#000000;margin-bottom:48px;line-height:1.6;max-width:900px;margin-left:auto;margin-right:auto}
-        .hero-cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-
-        /* Buttons (critical CTA) */
-        .btn-primary{background:#000000;border:2px solid #000000;color:#FFFFFF;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;font-weight:600;min-height:44px;padding:12px 24px;text-decoration:none;border-radius:0}
-        .btn-secondary{background:#FFFFFF;border:2px solid #000000;color:#000000;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;font-weight:600;min-height:44px;padding:12px 24px;text-decoration:none;border-radius:0}
-        .btn-accent{background:#FF9900;border:2px solid #FF9900;color:#FFFFFF;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;font-weight:600;min-height:44px;padding:12px 24px;text-decoration:none;border-radius:0}
-
-        /* Stats Section (visible on mobile fold) */
-        .stats-section{background:#f4f2ea;padding:48px 32px}
-        .stats-container{max-width:1280px;margin:0 auto}
-        .stat-number{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:#000000;margin-bottom:8px}
-        .stat-label{font-family:'Source Serif 4',serif;font-size:16px;color:#000000}
-
-        /* Mobile Navigation Links */
-        .mobile-nav-link{display:block;padding:16px 24px;color:#000000;border-bottom:1px solid rgba(0,0,0,.1);text-decoration:none;border-radius:0;box-shadow:none;transition:none}
-        .mobile-nav-link:last-child{border-bottom:none}
-
-        /* Footer Styles */
-        .footer-container{background:#FFFFFF;border-top:1px solid #000000;padding:64px 0 32px}
-        .footer-wrapper{max-width:1280px;margin:0 auto;padding:0 32px}
-        .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:48px;margin-bottom:48px}
-        .footer-heading{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:#000000;margin-bottom:16px}
-        .footer-text{font-family:'Source Serif 4',serif;font-size:16px;line-height:1.6;color:#000000;margin-bottom:8px}
-        .footer-link{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;color:#000000;text-decoration:none;display:block;padding:4px 0;border-radius:0;transition:none}
-        .footer-link:hover{text-decoration:underline}
-        .footer-list{list-style:none;padding:0;margin:0}
-        .footer-list li{margin-bottom:8px}
-        .footer-bottom{border-top:1px solid rgba(0,0,0,.1);padding-top:32px;margin-top:48px;text-align:center}
-        .footer-copyright{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;color:#000000}
-        .footer-signup{margin-top:24px}
-        .footer-signup-form{display:flex;flex-direction:column;gap:8px;max-width:320px}
-        .footer-signup-input{width:100%;background:#FFFFFF;border:1px solid #000000;padding:8px 12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;color:#000000;border-radius:0;box-shadow:none;transition:none;min-height:40px}
-        .footer-signup-button{width:100%;background:#000000;color:#FFFFFF;border:1px solid #000000;padding:8px 16px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;font-size:16px;font-weight:600;cursor:pointer;border-radius:0;box-shadow:none;transition:none;min-height:40px}
-
-        @media (min-width:1024px){
-            .lg\:flex{display:flex}
-            .lg\:hidden{display:none}
-            .nav-container{padding:0 2rem}
-        }
-        @media (max-width:639px){
-            .hero-headline{font-size:2.5rem}
-            .hero-subtitle{font-size:18px}
-        }
-    </style>
-
-    <!-- Non-critical CSS (deferred) -->
-    <link rel="preload" as="style" href="css/styles.min.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/styles.min.css"></noscript>
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
-    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
-    <link rel="apple-touch-icon" href="/images/favicon.svg">
-
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "BookPeek",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "WordPress",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "description": "Professional WordPress plugins for self-publishing authors to manage books, reviews, launches, and reader engagement",
-      "author": {
-        "@type": "Organization",
-        "name": "BookPeek"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "ratingCount": "1"
-      }
-    }
-    </script>
-
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is BookPeek free to use?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes! BookPeek offers free plugins available directly on WordPress.org. Premium plans with advanced features are available for authors who need more power."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do I need to know how to code to use BookPeek?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Not at all. BookPeek plugins are designed for authors, not developers. Install from your WordPress dashboard in minutes — no coding required."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Will BookPeek work with my existing WordPress theme?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "BookPeek is 100% theme compatible and works with popular themes like Kadence, Astra, Divi, GeneratePress, and virtually any other WordPress theme."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use BookPeek if I have books on Amazon, Kindle Unlimited, or other retailers?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolutely. BookPeek lets you link to all major retailers including Amazon, Barnes & Noble, Kobo, Apple Books, and any direct sales platform."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does BookPeek slow down my website?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The opposite. BookPeek is built with vanilla PHP and JavaScript — no heavy dependencies — making it one of the lightest author plugin suites available for WordPress."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I manage a series with BookPeek Books?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. BookPeek Books supports full series management with series name, book number, and custom taxonomies so readers can easily discover all books in a series."
-          }
-        }
-      ]
-    }
-    </script>
+    <title>AuthorKit — Professional Tools for Self-Publishing Authors</title>
+    <meta name="description" content="AuthorKit provides powerful WordPress tools for authors to manage books, reviews, and audiences. We are currently undergoing a major rebrand and upgrade.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* Minimalist Monochrome Design System */
+        :root {
+            --bg-color: hsl(0, 0%, 98%);
+            --text-primary: hsl(0, 0%, 10%);
+            --text-secondary: hsl(0, 0%, 40%);
+            --accent-color: hsl(158, 64%, 30%); /* Subtle emerald green for authorkit */
+            --border-color: hsl(0, 0%, 85%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
-            background: #FFFFFF;
             font-family: 'Source Serif 4', serif;
-            color: #000000;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            background: #FFFFFF;
-            padding: 64px 32px;
-        }
-        .hero-container {
-            max-width: 1280px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .hero-headline {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            font-weight: 700;
-            color: #000000;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-        .hero-subtitle {
-            font-family: 'Source Serif 4', serif;
-            font-size: 20px;
-            color: #000000;
-            margin-bottom: 48px;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
             line-height: 1.6;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hero-cta-group {
+            min-height: 100vh;
             display: flex;
-            gap: 16px;
+            flex-direction: column;
             justify-content: center;
-            flex-wrap: wrap;
+            align-items: center;
+            padding: 2rem;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Stats Section */
-        .stats-section {
-            background: #f4f2ea;
-            padding: 48px 32px;
-        }
-        .stats-container {
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 32px;
+        .container {
+            max-width: 800px;
+            width: 100%;
             text-align: center;
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0;
         }
-        .stat-number {
+
+        .badge {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            padding: 0.4rem 0.8rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 48px;
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
-            color: #000000;
-            margin-bottom: 8px;
-        }
-        .stat-label {
-            font-family: 'Source Serif 4', serif;
-            font-size: 16px;
-            color: #000000;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
         }
 
-        /* Features Section */
-        .features-section {
-            background: #FFFFFF;
-            padding: 64px 32px;
-        }
-        .features-container {
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-        .section-heading {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            font-weight: 600;
-            color: #000000;
-            text-align: center;
-            margin-bottom: 16px;
-        }
-        .section-subtitle {
-            font-family: 'Source Serif 4', serif;
-            font-size: 20px;
-            color: #000000;
-            text-align: center;
-            margin-bottom: 64px;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 32px;
-            min-height: 200px;
+        h1 i {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--accent-color);
         }
 
-        /* FAQ Section */
-        .faq-section {
-            background: #f4f2ea;
-            padding: 64px 32px;
-        }
-        .faq-container {
-            max-width: 1024px;
-            margin: 0 auto;
-        }
-        .faq-item {
-            background: #FFFFFF;
-            border: 1px solid #000000;
-            padding: 24px;
-            margin-bottom: 24px;
-        }
-        .faq-question {
-            font-family: 'Playfair Display', serif;
-            font-size: 20px;
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 16px;
-        }
-        .faq-answer {
-            font-family: 'Source Serif 4', serif;
-            font-size: 18px;
-            color: #000000;
-            line-height: 1.6;
+        p.description {
+            font-size: clamp(1.125rem, 2vw, 1.25rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: #000000;
-            color: #FFFFFF;
-            padding: 64px 32px;
-        }
         .cta-container {
-            max-width: 1024px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .cta-heading {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            font-weight: 600;
-            color: #FFFFFF;
-            margin-bottom: 24px;
-        }
-        .cta-text {
-            font-family: 'Source Serif 4', serif;
-            font-size: 20px;
-            color: #FFFFFF;
-            margin-bottom: 48px;
-            line-height: 1.6;
-        }
-        .cta-group {
             display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 24px;
-        }
-        .cta-note {
-            font-family: 'Source Serif 4', serif;
-            font-size: 16px;
-            color: #FFFFFF;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
         }
 
-        /* Mobile Responsive */
-        @media (max-width: 640px) {
-            .hero-section, .features-section, .faq-section, .cta-section {
-                padding: 64px 16px;
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--text-primary);
+            color: var(--bg-color);
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            background-color: hsl(0, 0%, 20%);
+        }
+
+        .contact-link {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--text-primary);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 2rem;
+            width: 100%;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
             }
-            .stats-section {
-                padding: 48px 16px;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
-            .hero-headline {
-                font-size: 32px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.5rem;
             }
-            .hero-subtitle {
-                font-size: 18px;
-            }
-            .section-heading, .cta-heading {
-                font-size: 28px;
-            }
-            .section-subtitle, .cta-text {
-                font-size: 18px;
-            }
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 32px;
-            }
-            .stat-number {
-                font-size: 36px;
-            }
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-            .faq-item {
-                padding: 24px;
-            }
-            .faq-question {
-                font-size: 18px;
-            }
-            .faq-answer {
-                font-size: 16px;
-            }
-            .hero-cta-group, .cta-group {
-                flex-direction: column;
+            .badge {
+                margin-bottom: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header (Loaded from shared component) -->
-    <div id="header-placeholder"></div>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-container">
-            <h1 class="hero-headline">
-                The WordPress <span style="color: #059669;">Plugin Built for Authors</span>
-            </h1>
-            <p class="hero-subtitle">
-                Stop duct-taping generic tools together. BookPeek is a complete, lightweight WordPress plugin — to showcase your books, collect real reader reviews, launch new titles with buzz, and grow your audience. One plugin, everything you need.
-            </p>
-            <div class="hero-cta-group">
-                <a href="download.html" class="btn-accent">
-                    Download Free — No Credit Card
-                </a>
-                <a href="features.html" class="btn-secondary">
-                    See What's Inside →
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="stats-container">
-            <div class="stats-grid">
-                <div>
-                    <div class="stat-number">1</div>
-                    <div class="stat-label">Bundled Plugin</div>
-                </div>
-                <div>
-                    <div class="stat-number">27</div>
-                    <div class="stat-label">Book Meta Fields</div>
-                </div>
-                <div>
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Theme Compatible</div>
-                </div>
-                <div>
-                    <div class="stat-number">0</div>
-                    <div class="stat-label">Dependencies</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="features-container">
-            <h2 class="section-heading">Everything You Need to Publish</h2>
-            <p class="section-subtitle">Purpose-built tools for modern self-publishing authors</p>
-
-            <div class="features-grid">
-                <div class="card">
-                    <h3 class="card-title">BookPeek Books</h3>
-                    <p class="card-body">Manage your entire catalog with 27 custom fields, taxonomies, and Amazon-style displays.</p>
-                </div>
-
-                <div class="card">
-                    <h3 class="card-title">BookPeek Reviews</h3>
-                    <p class="card-body">Amazon-style reviews with star ratings, verified purchases, and moderation controls.</p>
-                </div>
-
-                <div class="card">
-                    <h3 class="card-title">Lightning Fast & Growing</h3>
-                    <p class="card-body">Vanilla PHP and JavaScript — no bloat, no dependencies. Pro customers get all future features as we build them.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="faq-container">
-            <h2 class="section-heading">Frequently Asked Questions</h2>
-            <p class="section-subtitle">Everything you need to know about BookPeek</p>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Is BookPeek free to use?</h3>
-                <p class="faq-answer">Yes! BookPeek is available for free on WordPress.org with limits on books (10) and reviews (3 per book). All books sync to the free Bookshelf catalog automatically. Premium plans with unlimited usage and advanced features are available for authors who need more power.</p>
-            </div>
-
-            <div class="faq-item" style="background: #f4f2ea;">
-                <h3 class="faq-question">Do I need to know how to code to use BookPeek?</h3>
-                <p class="faq-answer">Not at all. BookPeek is designed for authors, not developers. Install from your WordPress dashboard in minutes — no coding required.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Will BookPeek work with my existing WordPress theme?</h3>
-                <p class="faq-answer">BookPeek is 100% theme compatible and works with popular themes like Kadence, Astra, Divi, GeneratePress, and virtually any other WordPress theme.</p>
-            </div>
-
-            <div class="faq-item" style="background: #f4f2ea;">
-                <h3 class="faq-question">Can I use BookPeek if I have books on Amazon, Kindle Unlimited, or other retailers?</h3>
-                <p class="faq-answer">Absolutely. BookPeek lets you link to all major retailers including Amazon, Barnes & Noble, Kobo, Apple Books, and any direct sales platform.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3 class="faq-question">Does BookPeek slow down my website?</h3>
-                <p class="faq-answer">The opposite. BookPeek is built with vanilla PHP and JavaScript — no heavy dependencies — making it one of the lightest author plugin suites available for WordPress.</p>
-            </div>
-
-            <div class="faq-item" style="background: #f4f2ea;">
-                <h3 class="faq-question">Can I manage a series with BookPeek Books?</h3>
-                <p class="faq-answer">Yes. BookPeek Books supports full series management with series name, book number, and custom taxonomies so readers can easily discover all books in a series.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <div class="container">
+        <div class="badge">Site Update in Progress</div>
+        <h1>Something <i>beautiful</i> is coming.</h1>
+        <p class="description">
+            We are currently upgrading AuthorKit to bring you a more powerful suite of WordPress tools designed specifically for self-publishing authors.
+        </p>
+        
         <div class="cta-container">
-            <h2 class="cta-heading">Your Author Website Deserves Professional Tools</h2>
-            <p class="cta-text">Thousands of self-publishing authors are building better websites with BookPeek. Start free, and upgrade only when you're ready.</p>
-            <div class="cta-group">
-                <a href="download.html" class="btn-primary">
-                    Install Free on WordPress.org →
-                </a>
-                <a href="pricing.html" class="btn-secondary">
-                    View Premium Plans
-                </a>
-            </div>
-            <p class="cta-note">⭐ Free forever. No credit card. No bloat. Just tools that work.</p>
+            <a href="mailto:support@authorkit.pro" class="cta-button">Contact Support</a>
+            <a href="https://docs.authorkit.pro" class="contact-link">Read the Documentation →</a>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer (Loaded from shared component) -->
-    <div id="footer-placeholder"></div>
+    <div class="footer">
+        &copy; <span id="year"></span> AuthorKit. All rights reserved.
+    </div>
 
-    <!-- JavaScript (deferred for optimal performance) -->
-    <script src="js/header-loader.js" defer></script>
-    <script src="js/footer-loader.js" defer></script>
-    <script src="js/main.min.js" defer></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
